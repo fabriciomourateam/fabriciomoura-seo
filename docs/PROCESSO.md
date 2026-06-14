@@ -218,9 +218,11 @@ personalizado). Preço sempre escondido → CTA pro WhatsApp (+55 11 91484-9797)
 preto `#080808` + amarelo `#F5C518`, fonte Inter (não foi possível ler o site direto: HTTP 403).
 
 Calendário **reordenado por KDI** (quick wins primeiro):
-1. ✅ `paginas/nutricionista-esportivo.html` — página de serviço (KDI 10, vol 5.400). Hero +
-   "o que faz" + para quem é + como funciona + garantia + FAQ com **dados estruturados (FAQPage
-   JSON-LD)** + CTA WhatsApp. Inclui instruções de publicação no topo do arquivo.
+1. ✅ `paginas/nutricionista-esportivo.html` — versão HTML standalone (referência/fallback).
+   ✅ `paginas/nutricionista-esportivo.elementor.json` — **versão recomendada**: o próprio
+   template Elementor do cliente com os textos reescritos para "nutricionista esportivo"
+   (design, imagens, fontes e botões 100% preservados; FAQ adaptado). Importável direto no
+   Elementor. Cliente usa Elementor para editar — esse é o fluxo definitivo das próximas páginas.
 2. ✅ `ferramentas/calculadora.html` — isca de topo (IMC + gasto calórico), modelo novocare.
 3. ⏳ Página "nutricionista online" (KDI 28, vol 6.600).
 4. ⏳ Artigos quick win: "cardápio p/ quem toma Mounjaro" (KDI 8), "creatina engorda ou emagrece" (KDI 15).
