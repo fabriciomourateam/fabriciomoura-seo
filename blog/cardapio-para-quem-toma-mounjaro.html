@@ -1,22 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <!--
-  ===========================================================================
-  ARTIGO DE BLOG — "Cardápio para quem toma Mounjaro" (alvo SEO, KDI 8)
-  ===========================================================================
-  COMO PUBLICAR NO WORDPRESS:
-  1. Publicações (Posts) → Adicionar novo.
-  2. Título do post: Cardápio para quem toma Mounjaro: o que comer (e o que evitar)
-  3. Adicione um bloco "HTML personalizado" e cole TUDO entre
-     <!-- INÍCIO DO POST --> e <!-- FIM DO POST -->.
+  PUBLICAR NO WORDPRESS:
+  1. Publicações (Posts) > Adicionar novo.
+  2. Título: Cardápio para quem toma Mounjaro: o que comer (e o que evitar)
+  3. Bloco "HTML personalizado" > cole tudo entre INÍCIO DO POST e FIM DO POST.
   4. SEO (RankMath/Yoast):
-     • Slug: cardapio-para-quem-toma-mounjaro
-     • Título SEO: Cardápio para quem toma Mounjaro: o que comer | Fabricio Moura
-     • Meta: Cardápio e dicas de alimentação para quem toma Mounjaro: o que comer, o que
-       evitar e como não perder massa muscular. Guia de um nutricionista esportivo.
-     • Palavra-chave foco: cardápio para quem toma mounjaro
-  5. Defina uma imagem destacada e publique.
-  ===========================================================================
+     Slug: cardapio-para-quem-toma-mounjaro
+     Título SEO: Cardápio para quem toma Mounjaro: o que comer | Fabricio Moura
+     Meta: Cardápio e dicas de alimentação para quem toma Mounjaro: o que comer, o que evitar
+           e como não perder massa muscular. Guia de um nutricionista esportivo.
+     Palavra-chave foco: cardápio para quem toma mounjaro
+  5. Defina imagem destacada e publique.
 -->
 <head>
   <meta charset="UTF-8" />
@@ -25,123 +20,163 @@
   <meta name="description" content="Cardápio e dicas de alimentação para quem toma Mounjaro: o que comer, o que evitar e como não perder massa muscular. Guia de um nutricionista esportivo." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 </head>
 <body>
 <!-- INÍCIO DO POST -->
 <style>
-  .fmp{--y:#FCD404;--y2:#FCC404;--yb:#F3BF1A;--blk:#080808;--d2:#1a1a1a;--d3:#222;--tx:#ededed;--mut:#9a9a9a;
-    --anton:'Anton',sans-serif;--mont:'Montserrat',sans-serif}
-  .fmp *{box-sizing:border-box;margin:0;padding:0}
-  .fmp{background:var(--blk);color:var(--tx);font-family:var(--mont);line-height:1.75}
-  .fmp .wrap{max-width:760px;margin:0 auto;padding:0 20px}
-  .fmp-hero{background:linear-gradient(180deg,#0d0d0d,#080808);padding:54px 0 34px;text-align:center;border-bottom:1px solid var(--d3)}
-  .fmp-badge{display:inline-block;background:var(--y);color:#000;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 13px;border-radius:6px;margin-bottom:16px}
-  .fmp h1{font-family:var(--anton);font-weight:400;text-transform:uppercase;font-size:2.2rem;line-height:1.14;color:#fff}
-  .fmp h1 span{color:inherit}
-  .fmp-sub{color:var(--mut);font-size:1.05rem;margin-top:14px}
-  .fmp article{padding:40px 0 10px}
-  .fmp h2{font-family:var(--mont);font-weight:800;color:#fff;font-size:1.4rem;margin:38px 0 14px;line-height:1.3;padding-left:14px;border-left:4px solid var(--y)}
-  .fmp h2 span{color:inherit}
-  .fmp h3{font-weight:800;font-size:1.12rem;margin:22px 0 8px;color:#fff}
-  .fmp p{margin-bottom:16px;font-size:1.05rem;color:#dcdcdc}
-  .fmp p strong{color:#fff}
-  .fmp ul{list-style:none;margin:0 0 18px}
-  .fmp ul li{position:relative;padding:9px 0 9px 30px;border-bottom:1px solid #161616;color:#dcdcdc}
-  .fmp ul li::before{content:'\2713';position:absolute;left:0;top:9px;color:var(--y);font-weight:900}
-  .fmp ul.avoid li::before{content:'\2715';color:var(--yb)}
-  .fmp .card{background:var(--d2);border:1px solid var(--d3);border-radius:14px;padding:22px;margin:22px 0}
-  .fmp .card h3{margin-top:0;color:var(--y2)}
-  .fmp .meal{display:grid;grid-template-columns:130px 1fr;gap:10px;padding:12px 0;border-bottom:1px solid #161616}
-  .fmp .meal:last-child{border-bottom:0}
-  .fmp .meal .when{font-weight:800;color:var(--y2);text-transform:uppercase;font-size:.8rem;letter-spacing:.03em}
-  .fmp .meal .what{font-size:.98rem}
-  .fmp .note{background:#15110a;border:1px solid var(--yb);border-radius:12px;padding:16px 18px;font-size:.92rem;color:#e8d9b8;margin:22px 0}
-  .fmp .faq{margin-top:10px}
-  .fmp .faq details{background:var(--d2);border:1px solid var(--d3);border-radius:11px;margin-bottom:10px;overflow:hidden}
-  .fmp .faq summary{padding:15px 18px;cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
-  .fmp .faq summary::-webkit-details-marker{display:none}
-  .fmp .faq summary::after{content:'+';color:var(--y);font-weight:900}
-  .fmp .faq details[open] summary::after{content:'\2212'}
-  .fmp .faq .a{padding:0 18px 16px;color:#cfcfcf;font-size:.97rem}
-  .fmp-cta{background:linear-gradient(135deg,#1a1e1a,#0d0d0d);border:1px solid var(--y);border-radius:16px;padding:30px;text-align:center;margin:40px 0}
-  .fmp-cta h2{margin-top:0;border-left:0;padding-left:0;text-align:center;font-family:var(--anton);font-weight:400;text-transform:uppercase}
-  .fmp-cta p{max-width:540px;margin:10px auto 20px}
-  .fmp-btn{display:inline-block;background:linear-gradient(167deg,var(--y),var(--yb) 68%);color:#020101;font-weight:800;text-transform:uppercase;font-size:1rem;padding:15px 30px;border-radius:8px;text-decoration:none}
-  .fmp-disc{font-size:.8rem;color:var(--mut);border-top:1px solid var(--d3);padding:20px 0 40px;line-height:1.6}
-  @media(max-width:600px){.fmp h1{font-size:1.7rem}.fmp h2{font-size:1.3rem}.fmp .meal{grid-template-columns:1fr;gap:2px}}
+  .mj{
+    --gold1:#FFE9A8;--gold2:#FCD404;--gold3:#C9920A;--y:#FCD404;
+    --blk:#070707;--line:rgba(255,255,255,.08);--tx:#e9e9e9;--mut:#8c8c8c;
+    --mont:'Montserrat',sans-serif;--anton:'Anton',sans-serif;
+  }
+  .mj,.mj *{box-sizing:border-box;margin:0;padding:0}
+  .mj{background:var(--blk);color:var(--tx);font-family:var(--mont);line-height:1.78;position:relative;overflow:hidden}
+  .mj .wrap{max-width:720px;margin:0 auto;padding:0 22px;position:relative;z-index:2}
+  .gold{background:linear-gradient(135deg,var(--gold1),var(--gold2) 45%,var(--gold3));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* HERO */
+  .mj-hero{position:relative;text-align:center;padding:64px 0 44px;border-bottom:1px solid var(--line);overflow:hidden}
+  .mj-hero::before{content:'';position:absolute;top:-220px;left:50%;transform:translateX(-50%);width:760px;height:520px;
+    background:radial-gradient(circle, rgba(252,212,4,.14), transparent 62%);pointer-events:none}
+  .mj-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(252,212,4,.1);border:1px solid rgba(252,212,4,.35);
+    color:var(--gold2);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:8px 16px;border-radius:100px;margin-bottom:22px}
+  .mj-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold2);box-shadow:0 0 10px var(--gold2)}
+  .mj-hero h1{font-family:var(--anton);font-weight:400;text-transform:uppercase;color:#fff;font-size:2.7rem;line-height:1.06;letter-spacing:.5px}
+  .mj-hero .sub{color:#cfcfcf;font-size:1.12rem;margin:18px auto 0;max-width:560px}
+  .mj-meta{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:22px;color:var(--mut);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}
+  .mj-meta span{display:inline-flex;align-items:center;gap:7px}
+  .mj-meta i{width:5px;height:5px;border-radius:50%;background:var(--gold2);display:inline-block}
+
+  /* ARTICLE */
+  .mj article{padding:44px 0 10px}
+  .mj p{font-size:1.1rem;margin-bottom:18px;color:#dcdcdc}
+  .mj p b,.mj p strong{color:#fff}
+  .mj h2{font-family:var(--mont);font-weight:800;color:#fff;font-size:1.55rem;line-height:1.25;margin:46px 0 18px;letter-spacing:-.2px}
+  .mj h2 .kick{display:block;font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
+  .mj h3{font-weight:800;font-size:1.18rem;color:#fff;margin:26px 0 6px}
+
+  .mj-quote{border-left:3px solid var(--gold2);padding:6px 0 6px 22px;margin:30px 0;font-family:var(--mont);font-weight:700;
+    font-size:1.32rem;line-height:1.4;color:#fff}
+  .mj-quote b{color:var(--gold2)}
+
+  .mj-plan{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--line);
+    border-radius:20px;padding:8px 26px 18px;margin:28px 0;box-shadow:0 30px 70px -34px rgba(0,0,0,.9)}
+  .mj-plan .ph{display:flex;align-items:center;gap:12px;padding:20px 0 16px;border-bottom:1px solid var(--line);margin-bottom:6px}
+  .mj-plan .ph .ic{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--gold1),var(--gold3));display:flex;align-items:center;justify-content:center;font-size:20px}
+  .mj-plan .ph h3{margin:0;font-size:1.15rem}
+  .mj-meal{display:grid;grid-template-columns:140px 1fr;gap:12px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+  .mj-meal:last-child{border-bottom:0}
+  .mj-meal .w{font-weight:800;color:var(--gold2);text-transform:uppercase;font-size:.74rem;letter-spacing:.06em;padding-top:2px}
+  .mj-meal .d{font-size:1rem;color:#dcdcdc}
+
+  .mj-note{display:flex;gap:14px;background:linear-gradient(135deg,rgba(252,212,4,.08),rgba(252,212,4,.02));border:1px solid rgba(252,212,4,.3);
+    border-radius:16px;padding:18px 20px;margin:28px 0;font-size:.96rem;color:#ecdcb4}
+  .mj-note .x{font-size:20px;line-height:1.2}
+
+  .mj-avoid{list-style:none;margin:8px 0 18px;display:grid;gap:10px}
+  .mj-avoid li{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:13px;padding:14px 16px;font-size:1.02rem;color:#dcdcdc}
+  .mj-avoid li::before{content:'\2715';color:#ff6b6b;font-weight:900;font-size:.95rem;margin-top:2px}
+
+  .mj-faq{margin-top:10px}
+  .mj-faq details{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;transition:.25s}
+  .mj-faq details[open]{border-color:rgba(252,212,4,.4)}
+  .mj-faq summary{padding:18px 20px;cursor:pointer;font-weight:700;font-size:1.04rem;color:#fff;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+  .mj-faq summary::-webkit-details-marker{display:none}
+  .mj-faq summary::after{content:'+';color:var(--gold2);font-weight:800;font-size:1.4rem;line-height:1}
+  .mj-faq details[open] summary::after{content:'\2013'}
+  .mj-faq .a{padding:0 20px 18px;color:#c8c8c8;font-size:1rem}
+
+  .mj-cta{position:relative;text-align:center;margin:48px 0;padding:42px 26px;border-radius:24px;overflow:hidden;
+    background:linear-gradient(160deg,rgba(252,212,4,.12),rgba(252,212,4,.02));border:1px solid rgba(252,212,4,.4)}
+  .mj-cta::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:480px;height:340px;background:radial-gradient(circle,rgba(252,212,4,.22),transparent 65%)}
+  .mj-cta>*{position:relative;z-index:2}
+  .mj-cta h2{font-family:var(--anton);font-weight:400;text-transform:uppercase;font-size:2rem;margin:0 0 12px;line-height:1.08}
+  .mj-cta p{max-width:520px;margin:0 auto 24px;color:#eaeaea}
+  .mj-btn{display:inline-flex;align-items:center;gap:11px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;
+    font-weight:800;text-transform:uppercase;letter-spacing:.03em;font-size:1.02rem;padding:17px 34px;border-radius:14px;text-decoration:none;
+    box-shadow:0 16px 40px -12px rgba(252,212,4,.6);transition:.25s}
+  .mj-btn:hover{transform:translateY(-2px)}
+  .mj-btn svg{width:21px;height:21px;fill:#1a1300}
+
+  .mj-disc{font-size:.82rem;color:#6a6a6a;border-top:1px solid var(--line);padding:22px 0 48px;line-height:1.65}
+  @media(max-width:600px){.mj-hero h1{font-size:1.85rem}.mj h2{font-size:1.3rem}.mj-quote{font-size:1.12rem}.mj-meal{grid-template-columns:1fr;gap:3px}.mj-cta h2{font-size:1.5rem}}
 </style>
 
-<div class="fmp">
-  <header class="fmp-hero">
+<div class="mj">
+  <header class="mj-hero">
     <div class="wrap">
-      <span class="fmp-badge">Nutrição & Emagrecimento</span>
-      <h1>Cardápio para quem toma <span>Mounjaro</span>: o que comer (e o que evitar)</h1>
-      <p class="fmp-sub">Como aproveitar o Mounjaro sem perder massa muscular, com energia e resultado de verdade — explicado por um nutricionista esportivo.</p>
+      <span class="mj-badge">Nutrição & Emagrecimento</span>
+      <h1>Cardápio para quem toma Mounjaro: o que comer (e o que evitar)</h1>
+      <p class="sub">Como aproveitar o Mounjaro sem perder massa muscular, com energia e resultado de verdade.</p>
+      <div class="mj-meta"><span>Por Fabricio Moura</span><i></i><span>Leitura de 4 min</span></div>
     </div>
   </header>
 
   <div class="wrap">
     <article>
-      <p>O Mounjaro (tirzepatida) reduz bastante o apetite — e é justamente aí que mora o risco. Comendo menos, é fácil <strong>perder músculo junto com a gordura</strong>, ficar sem energia e ter deficiência de nutrientes. A medicação ajuda no freio do apetite; a <strong>alimentação certa</strong> é o que garante que você perca gordura mantendo saúde e massa magra.</p>
-      <p>Neste guia você vê os princípios da alimentação, um <strong>cardápio exemplo de um dia</strong> e os erros mais comuns de quem está nesse protocolo.</p>
+      <p>O Mounjaro (tirzepatida) reduz bastante o apetite, e é justamente aí que mora o risco. Comendo pouco, fica fácil perder músculo junto com a gordura, ficar sem energia e abrir buracos de nutrientes no seu dia. A medicação segura o apetite. A <strong>alimentação certa</strong> é o que garante que você perca gordura mantendo saúde e massa magra.</p>
+      <p>Abaixo você vê os princípios da alimentação, um <strong>cardápio de exemplo para um dia</strong> e os erros que mais sabotam quem está nesse protocolo.</p>
 
-      <h2>Os <span>4 princípios</span> da alimentação no Mounjaro</h2>
-      <h3>1. Proteína em primeiro lugar</h3>
-      <p>Como você vai comer menos, cada refeição precisa render. Comece sempre pela proteína (ovos, carnes magras, frango, peixe, iogurte) — ela preserva o músculo e aumenta a saciedade.</p>
+      <div class="mj-quote">A medicação faz você comer menos. A estratégia faz você comer <b>certo</b>. A diferença entre as duas é o seu resultado daqui a seis meses.</div>
+
+      <h2><span class="kick gold">Os fundamentos</span>Os 4 princípios da alimentação no Mounjaro</h2>
+
+      <h3>1. Proteína sempre primeiro</h3>
+      <p>Se você vai comer menos, cada refeição precisa render. Comece sempre pela proteína (ovos, carnes magras, frango, peixe, iogurte). Ela preserva o músculo e segura a fome por mais tempo.</p>
       <h3>2. Refeições menores e mais frequentes</h3>
-      <p>Com o apetite reduzido, pratos grandes incomodam. Prefira porções menores ao longo do dia para bater suas necessidades sem enjoo.</p>
-      <h3>3. Hidratação e fibras</h3>
-      <p>Beba água ao longo do dia e inclua vegetais e fibras — ajuda na digestão e reduz a constipação, efeito comum no início.</p>
-      <h3>4. Vá leve na gordura e no açúcar</h3>
-      <p>Frituras, gordura em excesso e doces tendem a piorar náusea e desconforto. Não é proibição — é estratégia para você passar bem.</p>
+      <p>Com o apetite reduzido, pratos enormes incomodam. Prefira porções menores ao longo do dia para bater o que seu corpo precisa sem enjoo.</p>
+      <h3>3. Água e fibras todos os dias</h3>
+      <p>Beba água ao longo do dia e inclua vegetais e fibras. Isso ajuda na digestão e reduz a constipação, que é comum no começo.</p>
+      <h3>4. Menos gordura pesada e açúcar</h3>
+      <p>Fritura, excesso de gordura e doce costumam piorar náusea e desconforto. A ideia não é proibir nada, é jogar a seu favor para você passar bem.</p>
 
-      <div class="card">
-        <h3>Cardápio exemplo (1 dia)</h3>
-        <div class="meal"><div class="when">Café da manhã</div><div class="what">Ovos mexidos + 1 fatia de pão integral + 1 fruta. Café sem açúcar.</div></div>
-        <div class="meal"><div class="when">Lanche da manhã</div><div class="what">Iogurte natural com proteína + poucas castanhas.</div></div>
-        <div class="meal"><div class="when">Almoço</div><div class="what">Frango ou peixe grelhado + arroz/batata em porção moderada + bastante salada e legumes.</div></div>
-        <div class="meal"><div class="when">Lanche da tarde</div><div class="what">Fruta + uma fonte de proteína (queijo magro, iogurte ou whey).</div></div>
-        <div class="meal"><div class="when">Jantar</div><div class="what">Carne magra + legumes refogados. Leve, fácil de digerir.</div></div>
+      <div class="mj-plan">
+        <div class="ph"><div class="ic">🍽️</div><h3>Cardápio de exemplo para um dia</h3></div>
+        <div class="mj-meal"><div class="w">Café da manhã</div><div class="d">Ovos mexidos, uma fatia de pão integral e uma fruta. Café sem açúcar.</div></div>
+        <div class="mj-meal"><div class="w">Lanche da manhã</div><div class="d">Iogurte natural com boa dose de proteína e poucas castanhas.</div></div>
+        <div class="mj-meal"><div class="w">Almoço</div><div class="d">Frango ou peixe grelhado, arroz ou batata em porção moderada e bastante salada e legumes.</div></div>
+        <div class="mj-meal"><div class="w">Lanche da tarde</div><div class="d">Uma fruta com uma fonte de proteína (queijo magro, iogurte ou whey).</div></div>
+        <div class="mj-meal"><div class="w">Jantar</div><div class="d">Carne magra com legumes refogados. Leve e fácil de digerir.</div></div>
       </div>
-      <div class="note">⚠️ Este é um <strong>exemplo genérico</strong> para ilustração. As quantidades certas dependem do seu peso, treino e meta — é isso que um acompanhamento individual define.</div>
+      <div class="mj-note"><div class="x">⚠️</div><div>Este é um <b>exemplo genérico</b> para ilustrar. As quantidades certas dependem do seu peso, do seu treino e da sua meta. É isso que um acompanhamento individual define.</div></div>
 
-      <h2>O que <span>evitar</span></h2>
-      <ul class="avoid">
-        <li>Frituras e excesso de gordura (pioram náusea)</li>
+      <h2><span class="kick gold">Saia da frente</span>O que evitar</h2>
+      <ul class="mj-avoid">
+        <li>Fritura e excesso de gordura, que pioram a náusea</li>
         <li>Doces e bebidas açucaradas</li>
-        <li>Refeições enormes de uma vez</li>
-        <li>Álcool em excesso (atrapalha resultado e hidratação)</li>
+        <li>Refeições gigantes de uma vez só</li>
+        <li>Álcool em excesso, que atrapalha o resultado e a hidratação</li>
         <li>Ficar muitas horas sem comer proteína</li>
       </ul>
 
-      <h2>O erro que <span>quase todo mundo comete</span></h2>
-      <p>Achar que “como estou comendo pouco, qualquer coisa serve”. Comer pouco <strong>e mal</strong> faz você perder músculo, desacelerar o metabolismo e recuperar o peso quando parar a medicação. O Mounjaro é uma ferramenta — quem constrói o resultado duradouro é a estratégia de nutrição e treino por trás dele.</p>
+      <h2><span class="kick gold">A verdade que ninguém conta</span>O erro que sabota quase todo mundo</h2>
+      <p>Achar que, "como estou comendo pouco, qualquer coisa serve". Comer pouco <strong>e mal</strong> faz você perder músculo, desacelerar o metabolismo e recuperar o peso assim que parar a medicação. O Mounjaro é uma ferramenta poderosa. Quem constrói o resultado que dura é a estratégia de nutrição e treino por trás dele.</p>
 
-      <h2>Perguntas <span>frequentes</span></h2>
-      <div class="faq">
-        <details open><summary>Pode beber álcool tomando Mounjaro?</summary><div class="a">O ideal é evitar ou reduzir bastante: o álcool atrapalha a hidratação, pode aumentar o desconforto gástrico e prejudica o resultado. Se for beber, faça com muita moderação e converse com seu médico.</div></details>
-        <details><summary>Quantas calorias devo comer tomando Mounjaro?</summary><div class="a">Depende do seu gasto calórico (peso, altura, idade e treino). Use a calculadora de gasto calórico do site como ponto de partida — mas o número ideal para emagrecer sem perder músculo é definido no acompanhamento individual.</div></details>
-        <details><summary>Vou perder músculo tomando Mounjaro?</summary><div class="a">Pode acontecer se você comer pouca proteína e não treinar força. Com proteína adequada e treino resistido, você preserva (ou ganha) músculo enquanto perde gordura.</div></details>
+      <h2><span class="kick gold">Tira-dúvidas</span>Perguntas frequentes</h2>
+      <div class="mj-faq">
+        <details open><summary>Pode beber álcool tomando Mounjaro?</summary><div class="a">O ideal é evitar ou reduzir bastante. O álcool atrapalha a hidratação, pode aumentar o desconforto no estômago e prejudica o resultado. Se for beber, faça com muita moderação e converse com o seu médico.</div></details>
+        <details><summary>Quantas calorias devo comer tomando Mounjaro?</summary><div class="a">Depende do seu gasto calórico, que muda conforme peso, altura, idade e treino. Use a calculadora de gasto calórico do site como ponto de partida. O número ideal para emagrecer sem perder músculo é definido no acompanhamento individual.</div></details>
+        <details><summary>Vou perder músculo tomando Mounjaro?</summary><div class="a">Pode acontecer se você comer pouca proteína e não treinar força. Com proteína adequada e treino de força, você preserva (ou até ganha) músculo enquanto perde gordura.</div></details>
         <details><summary>Preciso de acompanhamento mesmo usando a medicação?</summary><div class="a">Sim. A medicação reduz o apetite, mas não ensina o que comer. O acompanhamento garante que você perca gordura com saúde, mantenha o músculo e sustente o resultado a longo prazo.</div></details>
       </div>
 
-      <div class="fmp-cta">
-        <h2>Quer um cardápio <span>feito pra você</span>?</h2>
-        <p>Monto sua estratégia de nutrição e treino individual para você aproveitar o Mounjaro ao máximo — perdendo gordura, mantendo músculo e com acompanhamento de perto. Com garantia.</p>
-        <a class="fmp-btn" href="https://wa.me/+5511914849797?text=Oi%20Fabricio!%20Li%20o%20artigo%20sobre%20card%C3%A1pio%20no%20Mounjaro%20e%20quero%20um%20acompanhamento%20individual." target="_blank" rel="noopener">Falar com o Fabricio no WhatsApp</a>
+      <div class="mj-cta">
+        <h2>Quer um cardápio feito pra você?</h2>
+        <p>Eu monto a sua estratégia de nutrição e treino para você aproveitar o Mounjaro ao máximo, perdendo gordura, mantendo músculo e com acompanhamento de perto. Tudo com garantia.</p>
+        <a class="mj-btn" href="https://wa.me/+5511914849797?text=Oi%20Fabricio!%20Li%20o%20artigo%20sobre%20card%C3%A1pio%20no%20Mounjaro%20e%20quero%20um%20acompanhamento%20individual." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.866 9.866 0 001.51 5.26l-.999 3.648 3.978-1.607z"/></svg>Falar com o Fabricio</a>
       </div>
 
-      <p class="fmp-disc">Aviso: o Mounjaro (tirzepatida) é um medicamento de prescrição médica. Este conteúdo é educativo e não substitui a orientação do seu médico nem avaliação nutricional individual. Sempre siga as recomendações do profissional que acompanha o seu caso.</p>
+      <p class="mj-disc">Aviso: o Mounjaro (tirzepatida) é um medicamento de prescrição médica. Este conteúdo é educativo e não substitui a orientação do seu médico nem uma avaliação nutricional individual. Siga sempre as recomendações do profissional que acompanha o seu caso.</p>
     </article>
   </div>
 </div>
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Pode beber álcool tomando Mounjaro?","acceptedAnswer":{"@type":"Answer","text":"O ideal é evitar ou reduzir bastante: o álcool atrapalha a hidratação, pode aumentar o desconforto gástrico e prejudica o resultado. Se for beber, faça com muita moderação e converse com seu médico."}},
-{"@type":"Question","name":"Quantas calorias devo comer tomando Mounjaro?","acceptedAnswer":{"@type":"Answer","text":"Depende do gasto calórico (peso, altura, idade e treino). O número ideal para emagrecer sem perder músculo é definido em acompanhamento individual."}},
-{"@type":"Question","name":"Vou perder músculo tomando Mounjaro?","acceptedAnswer":{"@type":"Answer","text":"Pode acontecer com pouca proteína e sem treino de força. Com proteína adequada e treino resistido, você preserva ou ganha músculo enquanto perde gordura."}},
+{"@type":"Question","name":"Pode beber álcool tomando Mounjaro?","acceptedAnswer":{"@type":"Answer","text":"O ideal é evitar ou reduzir bastante. O álcool atrapalha a hidratação, pode aumentar o desconforto gástrico e prejudica o resultado. Se for beber, faça com muita moderação e converse com o seu médico."}},
+{"@type":"Question","name":"Quantas calorias devo comer tomando Mounjaro?","acceptedAnswer":{"@type":"Answer","text":"Depende do gasto calórico, que muda conforme peso, altura, idade e treino. O número ideal para emagrecer sem perder músculo é definido em acompanhamento individual."}},
+{"@type":"Question","name":"Vou perder músculo tomando Mounjaro?","acceptedAnswer":{"@type":"Answer","text":"Pode acontecer com pouca proteína e sem treino de força. Com proteína adequada e treino de força, você preserva ou ganha músculo enquanto perde gordura."}},
 {"@type":"Question","name":"Preciso de acompanhamento usando a medicação?","acceptedAnswer":{"@type":"Answer","text":"Sim. A medicação reduz o apetite, mas não ensina o que comer. O acompanhamento garante perda de gordura com saúde, manutenção de músculo e resultado duradouro."}}
 ]}
 </script>
