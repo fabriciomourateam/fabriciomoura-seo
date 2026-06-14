@@ -33,7 +33,7 @@
 | 0 | Setup & diagnóstico | ✅ Concluída |
 | 1 | Concorrentes & palavras-chave | ✅ Concluída |
 | 2 | Calendário editorial 90 dias | ✅ Concluída |
-| 3 | Análise do tráfego pago | ⏳ Pendente |
+| 3 | Análise do tráfego pago | ✅ Concluída |
 | 4 | SEO técnico & on-page | ⏳ Pendente |
 | 5 | Funil & projeção de faturamento | ⏳ Pendente |
 | 6 | Re-análise periódica | 🔁 Agendável |
@@ -102,6 +102,68 @@ Engenharia reversa das páginas que mais geram tráfego no raphaelnutri:
 funilando para "nutricionista online / agendar consulta". O calendário de 18 posts em
 3 meses está em `data.js` (campo `calendario`) e renderizado no dashboard.
 
+### Fase 3 — Análise do tráfego pago / PPC (2026-06-14)
+
+Dados brutos em `snapshots/2026-06-14-ppc.json`; renderizados na aba **💸 Tráfego Pago** do dashboard.
+
+**Achado central — o concorrente nº 1 não faz pago.** `domain_adwords` e `domain_adwords_unique`
+para `raphaelnutri.com` retornaram **NOTHING FOUND**: ele cresce 100% no orgânico. O Fabrício é o
+espelho oposto (100% pago). Cada um domina um canal — daí a tese de juntar os dois para dobrar.
+
+**Footprint pago do Fabrício (`domain_adwords` em fabriciomoura.com):** o Semrush detecta **1 única
+keyword paga**:
+
+| Termo | Posição | Volume | CPC | Competição |
+|---|---|---|---|---|
+| emagrecimento rapido | 4 | 3.600 | R$ 0,15 | 1,00 (máxima) |
+
+Ele investe ≈ R$ 22 mil/mês, mas o footprint rastreável é esse termo genérico, saturado e
+desalinhado com o ticket premium. (Provável que o resto rode em Performance Max/branded, fora do
+rastreio do Semrush — ainda assim, **não há captura dos termos de intenção do nicho**.)
+
+**Termos-alvo (`phrase_these`) — o que custa e se ele compra:**
+
+| Termo | Volume | CPC | Competição | Fabrício anuncia? |
+|---|---|---|---|---|
+| nutricionista | 49.500 | R$ 0,47 | 0,39 | ❌ |
+| nutricionista online | 6.600 | R$ 0,56 | 0,87 | ❌ |
+| nutricionista esportivo | 5.400 | R$ 0,59 | 0,68 | ❌ |
+| nutricionista esportiva | 1.600 | R$ 0,59 | 0,68 | ❌ |
+| emagrecimento rapido | 3.600 | R$ 0,15 | 1,00 | ✅ (único) |
+| cardapio para quem toma mounjaro | 260 | R$ 0,18 | 0,08 | ❌ |
+
+**Concorrentes de PAGO (`domain_adwords_adwords` em fabriciomoura.com)** — note que **não são** os
+mesmos concorrentes do orgânico:
+
+| Domínio | KW pagas | Tráfego pago | Observação |
+|---|---|---|---|
+| novocare.com.br | 119 | 11.141 | Anunciante pesado. Funil pago via calculadoras grátis (IMC, CPC R$ 0,01) → compra "nutricionista online" #1 (CPC R$ 0,60). |
+| joaohenriquefelicio.com.br | 5 | 216 | Cirurgião bariátrico; disputa o MESMO "emagrecimento rapido" #1 do Fabrício. |
+| clinicaevolv.com.br | 1 | 32 | Sobreposição direta, footprint mínimo. |
+
+**Quem compra os termos de dinheiro (`phrase_adwords`):**
+- *nutricionista online:* novocare (#1), drpandini, drthiagocollares, lpfnutrição, nutriroberta, dracamilahames.
+- *nutricionista esportivo:* drpandini, ricardosantosnutricionista, nutrirodrigosousa, jaymecanetto, clinicagabrielli, carolinaragugnetti.
+
+**Modelo de funil pago da novocare (`domain_adwords`)** — referência a copiar:
+
+| Termo | Volume | CPC | Posição |
+|---|---|---|---|
+| calculo imc | 60.500 | R$ 0,01 | #1 |
+| como calcular o imc | 22.200 | R$ 0,01 | #1 |
+| como emagrecer | 8.100 | R$ 0,13 | #1 |
+| nutricionista online | 5.400 | R$ 0,60 | #1 |
+| peso ideal por altura | 9.900 | R$ 0,02 | #2 |
+
+**Conclusões e recomendações:**
+- **Oportunidade:** entrar no pago com termos de intenção (nutricionista online/esportivo, CPC
+  R$ 0,56–0,59) — muito mais qualificados que "emagrecimento rapido".
+- **Oportunidade:** copiar o modelo novocare (calculadora grátis como isca de topo a CPC ~R$ 0,01
+  para alimentar remarketing barato).
+- **Vazamento:** concentrar verba em "emagrecimento rapido" (competição 1,00, público milagreiro,
+  competindo com cirurgia bariátrica) eleva o custo por lead qualificado. Negativar termos de
+  cirurgia/bariátrica e de "solução milagrosa".
+
 ---
 
 ## Metodologia
@@ -117,15 +179,19 @@ Queries exatas executadas (reproduzir com `database: "br"`):
 | Métricas das palavras | `phrase_these` | `{ phrase: "nutricionista esportivo;nutricionista;..." }` |
 | Palavras de um concorrente | `domain_organic` | `{ domain: "raphaelnutri.com", display_sort: "tr_desc" }` |
 | Páginas que mais dão tráfego | `domain_organic_unique` | `{ domain: "raphaelnutri.com", display_sort: "tr_desc" }` |
+| Palavras pagas de um concorrente | `domain_adwords` | `{ domain: "raphaelnutri.com", display_sort: "tr_desc" }` (Fase 3) |
+| Concorrentes de pago do site | `domain_adwords_adwords` | `{ domain: "fabriciomoura.com" }` (Fase 3) |
+| Cópias de anúncio | `domain_adwords_unique` | `{ domain: "raphaelnutri.com" }` (Fase 3) |
+| Quem compra um termo no Ads | `phrase_adwords` | `{ phrase: "nutricionista online" }` (Fase 3) |
+| CPC/competição de termos-alvo | `phrase_these` | `{ phrase: "nutricionista online;nutricionista esportivo;..." }` (Fase 3) |
 
 **Próximas fases usarão:**
-- `domain_adwords` / `domain_adwords_adwords` nos 3 concorrentes → Fase 3 (tráfego pago).
-- `phrase_related` / `phrase_questions` para expandir clusters de conteúdo.
+- `phrase_related` / `phrase_questions` para expandir clusters de conteúdo → Fase 4.
 
 ---
 
 ## Próximos passos
 
-- [ ] **Fase 3** — Analisar palavras pagas dos concorrentes (CPC, anúncios) e cruzar com a conta atual.
+- [x] **Fase 3** — Palavras pagas dos concorrentes (CPC, anúncios) cruzadas com a conta atual. ✅
 - [ ] **Fase 4** — SEO técnico/on-page e páginas de serviço.
 - [ ] **Fase 5** — Funil orgânico+pago e projeção de faturamento.

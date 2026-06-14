@@ -139,7 +139,84 @@ window.SEO_DATA = {
         { mes: 3, titulo: "Melhor horário para se pesar no emagrecimento", funil: "Topo", kw: "melhor horário para se pesar", vol: 0, prioridade: "Baixa", status: "Planejado" },
         { mes: 3, titulo: "Whey protein engorda? Mitos e verdades", funil: "Meio", kw: "whey engorda", vol: 0, prioridade: "Média", status: "Planejado" },
         { mes: 3, titulo: "Nutricionista online vs presencial: qual escolher", funil: "Fundo", kw: "nutricionista online ou presencial", vol: 0, prioridade: "Alta", status: "Planejado" }
-      ]
+      ],
+
+      // ---- Fase 3: Análise de tráfego pago (PPC) — dados reais Semrush (banco br) ----
+      ppc: {
+        leitura:
+          "O concorrente orgânico nº 1 (raphaelnutri.com) NÃO veicula um único anúncio — máquina 100% orgânica. " +
+          "O Fabrício é o espelho oposto: 100% pago. No Semrush, todo o footprint pago detectado do site é UM termo só — " +
+          "'emagrecimento rapido' (pos. 4, CPC R$ 0,15, competição máxima 1,00). É um termo genérico, saturado e " +
+          "desalinhado com o ticket premium (R$ 1.800–2.600/ano): atrai quem busca solução milagrosa, não quem fecha plano anual. " +
+          "Pior: o concorrente que disputa o MESMO termo em #1 é um cirurgião bariátrico (joaohenriquefelicio.com.br). " +
+          "Enquanto isso, os termos de ALTA intenção do nicho — 'nutricionista online' e 'nutricionista esportivo' — custam " +
+          "baratíssimo (R$ 0,56–0,59) e o Fabrício não aparece comprando nenhum. Aí está a eficiência a destravar no pago.",
+
+        // raphaelnutri não faz ads — achado central da fase
+        concorrente_organico_sem_ads: {
+          dominio: "raphaelnutri.com",
+          ads: false,
+          nota: "domain_adwords e domain_adwords_unique retornaram NOTHING FOUND. Ele cresce só com conteúdo orgânico."
+        },
+
+        // Footprint pago atual do Fabrício (o que o Semrush enxerga)
+        footprint_atual: {
+          keywords_detectadas: 1,
+          detalhe: [
+            { kw: "emagrecimento rapido", pos: 4, vol: 3600, cpc: 0.15, competicao: 1.00 }
+          ],
+          nota:
+            "Investe ≈ R$ 22 mil/mês mas o Semrush detecta apenas 1 keyword paga. Ou a verba está concentrada num único " +
+            "termo genérico, ou roda em formatos que o Semrush não rastreia (Performance Max / branded). De todo jeito, " +
+            "não há captura dos termos de intenção de compra do nicho."
+        },
+
+        // Termos-alvo: CPC, volume, competição e se o Fabrício já anuncia (phrase_these)
+        cpcs: [
+          { kw: "nutricionista",                       vol: 49500, cpc: 0.47, comp: 0.39, fabricio_anuncia: false, nota: "Termo-mãe, CPC baixo. Caro só em volume de verba, não em clique." },
+          { kw: "nutricionista online",                vol: 6600,  cpc: 0.56, comp: 0.87, fabricio_anuncia: false, nota: "Casa perfeito com plano anual à distância. PRIORIDADE de entrada no pago." },
+          { kw: "nutricionista esportivo",             vol: 5400,  cpc: 0.59, comp: 0.68, fabricio_anuncia: false, nota: "Termo de dinheiro do nicho — alto encaixe, clique barato." },
+          { kw: "nutricionista esportiva",             vol: 1600,  cpc: 0.59, comp: 0.68, fabricio_anuncia: false, nota: "Mesma intenção, variação de gênero." },
+          { kw: "emagrecimento rapido",                vol: 3600,  cpc: 0.15, comp: 1.00, fabricio_anuncia: true,  nota: "ÚNICO termo que ele compra. Competição máxima e público desalinhado com o ticket." },
+          { kw: "cardapio para quem toma mounjaro",    vol: 260,   cpc: 0.18, comp: 0.08, fabricio_anuncia: false, nota: "Competição quase zero — pago barato para capturar a onda do Mounjaro enquanto o orgânico não amadurece." }
+        ],
+
+        // Concorrentes de PAGO reais do site (domain_adwords_adwords)
+        concorrentes_pagos: [
+          { dominio: "novocare.com.br",            kw_pagas: 119, trafego_pago: 11141, relevancia: 0.00, nota: "Anunciante pesado. Modelo de funil pago: calculadoras grátis (IMC) a CPC R$ 0,01 como isca de topo → compra 'nutricionista online' em #1 (CPC R$ 0,60)." },
+          { dominio: "joaohenriquefelicio.com.br", kw_pagas: 5,   trafego_pago: 216,   relevancia: 0.12, nota: "Cirurgião bariátrico. Disputa o MESMO 'emagrecimento rapido' (#1) que o Fabrício — sinal de que esse termo mistura públicos errados." },
+          { dominio: "clinicaevolv.com.br",        kw_pagas: 1,   trafego_pago: 32,    relevancia: 1.00, nota: "Sobreposição direta, mas footprint mínimo." }
+        ],
+
+        // Quem compra os termos de dinheiro do nicho (phrase_adwords)
+        quem_compra_termo: [
+          { termo: "nutricionista online",    anunciantes: ["novocare.com.br (#1)", "drpandini.com.br", "drthiagocollares.com", "lpfnutrição.com.br", "nutriroberta.com.br", "dracamilahames.com.br"] },
+          { termo: "nutricionista esportivo", anunciantes: ["drpandini.com.br", "ricardosantosnutricionista.com.br", "nutrirodrigosousa.com.br", "jaymecanetto.com.br", "clinicagabrielli.com.br", "carolinaragugnetti.com.br"] }
+        ],
+
+        // Top keywords pagas da novocare (modelo de funil pago a estudar)
+        modelo_novocare: [
+          { kw: "calculo imc",           vol: 60500, cpc: 0.01, pos: 1, trafego_pct: 25.51 },
+          { kw: "como calcular o imc",   vol: 22200, cpc: 0.01, pos: 1, trafego_pct: 9.36 },
+          { kw: "como emagrecer",        vol: 8100,  cpc: 0.13, pos: 1, trafego_pct: 3.41 },
+          { kw: "nutricionista online",  vol: 5400,  cpc: 0.60, pos: 1, trafego_pct: 2.27 },
+          { kw: "peso ideal por altura", vol: 9900,  cpc: 0.02, pos: 2, trafego_pct: 1.14 }
+        ],
+
+        oportunidades: [
+          "Entrar no pago com os termos de intenção 'nutricionista online' e 'nutricionista esportivo/esportiva' (CPC R$ 0,56–0,59) — leads muito mais qualificados que 'emagrecimento rapido'.",
+          "Copiar o modelo da novocare no pago: calculadora grátis (IMC / gasto calórico) como isca de topo a CPC ~R$ 0,01 para alimentar remarketing barato.",
+          "Usar o pago como ponte enquanto o orgânico amadurece em termos de baixa competição (ex.: 'cardapio para quem toma mounjaro', competição 0,08).",
+          "Mercado pago do nicho esportivo é pulverizado em nutricionistas individuais — dá pra ocupar #1 com verba modesta nos termos certos."
+        ],
+
+        desperdicio: [
+          "'emagrecimento rapido' (competição 1,00, público milagreiro) é o único termo comprado e é o de menor encaixe com plano premium — concentrar verba nele tende a elevar o custo por lead qualificado.",
+          "Competir nesse termo com cirurgião bariátrico mistura intenções (cirurgia × acompanhamento nutricional) e desperdiça cliques.",
+          "Sem termos de intenção comprados, o pago não captura quem já procura 'nutricionista online' — demanda quente entregue de graça aos concorrentes.",
+          "Recomendação: negativar termos de cirurgia/bariátrica e de 'solução milagrosa' para parar de pagar por curiosos."
+        ]
+      }
     }
   ],
 
@@ -148,7 +225,7 @@ window.SEO_DATA = {
     { n: 0, nome: "Setup & diagnóstico", desc: "Conectar Semrush, diagnosticar o site, identificar nicho real.", status: "Concluída" },
     { n: 1, nome: "Concorrentes & palavras-chave", desc: "Top 3 concorrentes orgânicos + 5 transacionais + 5 meio/fundo.", status: "Concluída" },
     { n: 2, nome: "Calendário editorial 90 dias", desc: "Engenharia reversa das páginas campeãs do concorrente.", status: "Concluída" },
-    { n: 3, nome: "Análise do tráfego pago", desc: "Palavras que os concorrentes compram, CPC, e onde vaza dinheiro na conta atual.", status: "Pendente" },
+    { n: 3, nome: "Análise do tráfego pago", desc: "Palavras que os concorrentes compram, CPC, e onde vaza dinheiro na conta atual.", status: "Concluída" },
     { n: 4, nome: "SEO técnico & on-page", desc: "Estrutura do site, páginas de serviço/cidade, otimização para converter.", status: "Pendente" },
     { n: 5, nome: "Funil & projeção de faturamento", desc: "Amarrar orgânico+pago no funil e projetar o caminho para dobrar.", status: "Pendente" },
     { n: 6, nome: "Re-análise (revisão periódica)", desc: "Re-rodar Semrush, comparar com snapshot anterior, ajustar plano.", status: "Agendável" }
@@ -162,6 +239,11 @@ window.SEO_DATA = {
     { passo: "SERP / quem rankeia no termo", report: "phrase_organic", params: "{ database:'br', phrase:'nutricionista esportivo' }" },
     { passo: "Métricas das palavras (vol/CPC)", report: "phrase_these", params: "{ database:'br', phrase:'nutricionista esportivo;nutricionista;...' }" },
     { passo: "Palavras de um concorrente", report: "domain_organic", params: "{ database:'br', domain:'raphaelnutri.com', display_sort:'tr_desc' }" },
-    { passo: "Páginas que mais dão tráfego", report: "domain_organic_unique", params: "{ database:'br', domain:'raphaelnutri.com', display_sort:'tr_desc' }" }
+    { passo: "Páginas que mais dão tráfego", report: "domain_organic_unique", params: "{ database:'br', domain:'raphaelnutri.com', display_sort:'tr_desc' }" },
+    { passo: "Palavras PAGAS de um concorrente", report: "domain_adwords", params: "{ database:'br', domain:'raphaelnutri.com', display_sort:'tr_desc' }" },
+    { passo: "Concorrentes de PAGO do site", report: "domain_adwords_adwords", params: "{ database:'br', domain:'fabriciomoura.com' }" },
+    { passo: "Cópias de anúncio de um concorrente", report: "domain_adwords_unique", params: "{ database:'br', domain:'raphaelnutri.com' }" },
+    { passo: "Quem compra um termo no Ads", report: "phrase_adwords", params: "{ database:'br', phrase:'nutricionista online' }" },
+    { passo: "CPC/competição de termos-alvo", report: "phrase_these", params: "{ database:'br', phrase:'nutricionista online;nutricionista esportivo;...' }" }
   ]
 };

@@ -39,7 +39,7 @@ Publicação: Vercel → importar repo → Framework **Other** (estático) → D
 
 ---
 
-## 2. O que já foi feito (status: Fases 0, 1 e 2 CONCLUÍDAS)
+## 2. O que já foi feito (status: Fases 0, 1, 2 e 3 CONCLUÍDAS)
 
 ### Fase 0 — Diagnóstico
 - `fabriciomoura.com` tem tráfego orgânico **≈ ZERO** (só 2 keywords de marca, pos. 40–50).
@@ -70,30 +70,41 @@ engorda" 8%). Calendário de 18 posts em `data.js` (campo `calendario`).
 > Todos os números, tabelas e o calendário completo estão em `data.js` e `docs/PROCESSO.md`.
 > O snapshot bruto do Semrush está em `snapshots/2026-06-14.json`.
 
+### Fase 3 — Análise do tráfego pago (PPC) ✅ CONCLUÍDA
+- **Achado central:** o concorrente nº 1 (raphaelnutri.com) **não veicula um único anúncio** —
+  máquina 100% orgânica. O Fabrício é o espelho oposto (100% pago).
+- **Footprint pago do Fabrício no Semrush = 1 termo só:** "emagrecimento rapido" (CPC R$ 0,15,
+  competição máxima 1,00), genérico e desalinhado com o ticket premium.
+- **Termos de intenção (nutricionista online R$ 0,56, esportivo R$ 0,59) ele NÃO compra** —
+  oportunidade barata e qualificada.
+- **Concorrentes de PAGO** (≠ do orgânico): novocare.com.br (anunciante pesado, modelo de funil
+  via calculadora de IMC a CPC R$ 0,01), joaohenriquefelicio (cirurgião comprando o mesmo
+  "emagrecimento rapido"), clinicaevolv.
+- Tudo na aba **💸 Tráfego Pago** do dashboard (`data.js` → snapshot `ppc`) e em
+  `snapshots/2026-06-14-ppc.json`. Detalhes e tabelas em `docs/PROCESSO.md`.
+
 ---
 
-## 3. PRÓXIMO PASSO — Fase 3: Análise do tráfego pago (FAZER AGORA)
+## 3. PRÓXIMO PASSO — Fase 4: SEO técnico & on-page (FAZER AGORA)
 
-Objetivo: descobrir onde a conta de Google Ads pode estar vazando dinheiro e quais palavras os
-concorrentes compram, para cruzar com a conta do Fabrício e melhorar eficiência (parte do "dobrar").
+Objetivo: estruturar o site para capturar a demanda mapeada — criar páginas de serviço
+("nutricionista online", "nutricionista esportivo") e clusters de conteúdo otimizados para
+converter o tráfego (orgânico + pago) em consulta agendada.
 
-**Queries Semrush a rodar (banco `br`):**
+**Queries Semrush úteis (banco `br`):**
 
 | Passo | Relatório | Parâmetros |
 |---|---|---|
-| Palavras pagas do raphaelnutri | `domain_adwords` | `{ database:'br', domain:'raphaelnutri.com', display_sort:'tr_desc', display_limit:50 }` |
-| Concorrentes de PAGO do site | `domain_adwords_adwords` | `{ database:'br', domain:'fabriciomoura.com' }` |
-| Anúncios usados (cópias) | `domain_adwords_unique` | `{ database:'br', domain:'raphaelnutri.com' }` |
-| Quem compra o termo de dinheiro | `phrase_adwords` | `{ database:'br', phrase:'nutricionista online' }` |
-| CPC/competição de termos-alvo | `phrase_these` | `{ database:'br', phrase:'nutricionista online;nutricionista esportivo;emagrecimento rapido;...' }` |
+| Expandir clusters de conteúdo | `phrase_related` | `{ database:'br', phrase:'nutricionista online' }` |
+| Perguntas que o público faz | `phrase_questions` | `{ database:'br', phrase:'mounjaro' }` |
+| Variações de um termo | `phrase_fullsearch` | `{ database:'br', phrase:'nutricionista esportivo' }` |
+| Dificuldade de ranquear | `phrase_kdi` | `{ database:'br', phrase:'nutricionista online;...' }` |
 
-**Como entregar a Fase 3:**
-1. Adicionar um snapshot novo em `data.js` (`snapshots[]`) com os achados de PPC — sugiro um
-   campo `ppc: { palavras_concorrente, cpcs, oportunidades, desperdicio }`.
-2. Criar uma nova aba no dashboard (`index.html`, array `TABS` + objeto `VIEWS`) chamada
-   "💸 Tráfego Pago" renderizando esses dados.
-3. Atualizar `docs/PROCESSO.md` (marcar Fase 3 concluída + registrar achados e queries).
-4. Marcar a Fase 3 como "Concluída" no campo `fases` de `data.js`.
+**Como entregar a próxima fase (padrão deste projeto):**
+1. Rodar as queries acima (banco `br`) e salvar o bruto em `snapshots/AAAA-MM-DD-*.json`.
+2. Acrescentar os achados ao snapshot mais recente em `data.js` (ou novo snapshot) — nunca apagar.
+3. Criar/atualizar a aba correspondente no dashboard (`index.html`, `TABS` + `VIEWS`).
+4. Atualizar `docs/PROCESSO.md` e o campo `fases` de `data.js`.
 5. `git commit && git push` → Vercel republica.
 
 ---

@@ -75,6 +75,7 @@
       ['transacionais','💰 Transacionais'],
       ['meiofundo','🎯 Meio/Fundo'],
       ['conteudo','📝 Calendário 90d'],
+      ['pago','💸 Tráfego Pago'],
       ['fases','🚀 Roadmap'],
       ['metodo','🔧 Metodologia']
     ];
@@ -174,6 +175,101 @@
         </section>`;
       },
 
+      pago(){
+        const pp = S.ppc;
+        if(!pp) return `<section class="fade"><p class="text-slate-500">Sem dados de tráfego pago neste snapshot.</p></section>`;
+        const compColor = c => c>=0.8?'bg-rose-100 text-rose-700':c>=0.4?'bg-amber-100 text-amber-700':'bg-emerald-100 text-emerald-700';
+        return `<section class="fade space-y-6">
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            ${kpi('Footprint pago atual', pp.footprint_atual.keywords_detectadas+' termo', 'só "emagrecimento rapido"','rose')}
+            ${kpi('Concorrente nº1 orgânico','0 anúncios','raphaelnutri = 100% orgânico','sky')}
+            ${kpi('Termos de intenção','R$ 0,56–0,59','baratos e não comprados','emerald')}
+            ${kpi('Concorrentes pagos', pp.concorrentes_pagos.length, 'detectados pelo Semrush','amber')}
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+            <h3 class="font-bold text-lg mb-2">💸 Leitura do tráfego pago</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">${pp.leitura}</p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
+            <h3 class="font-bold text-lg mb-1">CPC × competição dos termos-alvo</h3>
+            <p class="text-xs text-slate-500 mb-3">Barras vermelhas = o Fabrício já anuncia · verdes = oportunidade não comprada</p>
+            <canvas id="chartCpc" height="120"></canvas>
+          </div>
+
+          <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead class="bg-slate-50 text-slate-500 text-xs uppercase">
+                <tr><th class="text-left p-3">Termo</th><th class="text-left p-3">Volume/mês</th><th class="text-left p-3">CPC</th><th class="text-left p-3">Competição</th><th class="text-left p-3">Fabrício anuncia?</th><th class="text-left p-3">Leitura</th></tr>
+              </thead>
+              <tbody>
+                ${pp.cpcs.map(k=>`<tr class="border-t border-slate-100 ${k.fabricio_anuncia?'bg-rose-50/40':'hover:bg-emerald-50/40'}">
+                  <td class="p-3 font-semibold">${k.kw}</td>
+                  <td class="p-3">${fmt(k.vol)}</td>
+                  <td class="p-3">R$ ${k.cpc.toFixed(2)}</td>
+                  <td class="p-3"><span class="text-[11px] px-2 py-.5 rounded-full ${compColor(k.comp)}">${k.comp.toFixed(2)}</span></td>
+                  <td class="p-3">${k.fabricio_anuncia?'<span class="text-rose-600 font-semibold">Sim</span>':'<span class="text-slate-400">—</span>'}</td>
+                  <td class="p-3 text-slate-600">${k.nota}</td></tr>`).join('')}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-5">
+              <h3 class="font-bold text-emerald-800 mb-2">🟢 Oportunidades</h3>
+              <ul class="list-disc ml-5 text-sm text-emerald-900/80 space-y-1.5">
+                ${pp.oportunidades.map(o=>`<li>${o}</li>`).join('')}
+              </ul>
+            </div>
+            <div class="bg-rose-50 border border-rose-200 rounded-2xl p-5">
+              <h3 class="font-bold text-rose-800 mb-2">🔴 Onde vaza dinheiro</h3>
+              <ul class="list-disc ml-5 text-sm text-rose-900/80 space-y-1.5">
+                ${pp.desperdicio.map(d=>`<li>${d}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
+            <h3 class="font-bold text-lg mb-3">🥊 Concorrentes de PAGO (não são os mesmos do orgânico)</h3>
+            <div class="space-y-3">
+              ${pp.concorrentes_pagos.map(c=>`
+                <div class="border border-slate-100 rounded-xl p-4">
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <h4 class="font-bold">${c.dominio}</h4>
+                    <span class="text-[11px] bg-slate-100 px-2 py-.5 rounded-full">${fmt(c.kw_pagas)} kw pagas</span>
+                    <span class="text-[11px] bg-sky-100 text-sky-700 px-2 py-.5 rounded-full">${fmt(c.trafego_pago)} tráfego pago</span>
+                  </div>
+                  <p class="text-sm text-slate-600 mt-1">${c.nota}</p>
+                </div>`).join('')}
+            </div>
+            <p class="text-xs text-slate-400 italic mt-3">⚠️ ${pp.concorrente_organico_sem_ads.dominio}: ${pp.concorrente_organico_sem_ads.nota}</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
+              <h3 class="font-bold text-lg mb-3">📐 Modelo de funil pago da novocare</h3>
+              <p class="text-xs text-slate-500 mb-2">Calculadoras grátis a CPC ~R$ 0,01 como isca de topo → termos de fundo</p>
+              <table class="w-full text-sm">
+                <thead class="text-slate-400 text-xs uppercase"><tr><th class="text-left py-1">Termo</th><th class="text-left py-1">Vol</th><th class="text-left py-1">CPC</th><th class="text-left py-1">Pos</th></tr></thead>
+                <tbody>${pp.modelo_novocare.map(m=>`<tr class="border-t border-slate-100"><td class="py-1.5 font-medium">${m.kw}</td><td class="py-1.5">${fmt(m.vol)}</td><td class="py-1.5">R$ ${m.cpc.toFixed(2)}</td><td class="py-1.5">#${m.pos}</td></tr>`).join('')}</tbody>
+              </table>
+            </div>
+            <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
+              <h3 class="font-bold text-lg mb-3">🎯 Quem compra os termos de dinheiro</h3>
+              ${pp.quem_compra_termo.map(t=>`
+                <div class="mb-3">
+                  <div class="font-semibold text-sm text-slate-700">"${t.termo}"</div>
+                  <div class="flex flex-wrap gap-1.5 mt-1">
+                    ${t.anunciantes.map(a=>`<span class="text-[11px] bg-slate-100 text-slate-600 px-2 py-.5 rounded-full">${a}</span>`).join('')}
+                  </div>
+                </div>`).join('')}
+            </div>
+          </div>
+        </section>`;
+      },
+
       fases(){
         return `<section class="fade">
           <div class="relative border-l-2 border-slate-200 ml-3 space-y-6 py-2">
@@ -254,6 +350,18 @@
           datasets:[{label:'% do tráfego',data:S.paginas_top_concorrente.map(p=>p.trafego_pct),
             backgroundColor:'#10b981',borderRadius:6}]},
           options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{ticks:{callback:v=>v+'%'}}}}});
+      }
+      if(tab==='pago' && S.ppc){
+        const ctx=document.getElementById('chartCpc');
+        if(chart) chart.destroy();
+        const rows=S.ppc.cpcs;
+        chart=new Chart(ctx,{type:'bar',data:{
+          labels:rows.map(r=>r.kw),
+          datasets:[{label:'CPC (R$)',data:rows.map(r=>r.cpc),
+            backgroundColor:rows.map(r=>r.fabricio_anuncia?'#f43f5e':'#10b981'),borderRadius:6}]},
+          options:{indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{
+            afterLabel:c=>{const r=rows[c.dataIndex];return `Volume: ${r.vol.toLocaleString('pt-BR')}/mês · Competição: ${r.comp}`;}}}},
+            scales:{x:{ticks:{callback:v=>'R$ '+v}}}}});
       }
       location.hash=tab;
     }

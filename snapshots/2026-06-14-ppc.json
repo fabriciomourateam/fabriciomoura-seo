@@ -1,0 +1,80 @@
+{
+  "data": "2026-06-14",
+  "fase": "Fase 3 — Análise de tráfego pago (PPC)",
+  "ferramenta": "Semrush MCP",
+  "database": "br",
+  "queries": [
+    {
+      "report": "domain_adwords",
+      "params": { "database": "br", "domain": "raphaelnutri.com", "display_sort": "tr_desc", "display_limit": 30 },
+      "resultado": "ERROR 50 :: NOTHING FOUND — raphaelnutri.com NÃO faz tráfego pago (0 keywords pagas)."
+    },
+    {
+      "report": "domain_adwords",
+      "params": { "database": "br", "domain": "fabriciomoura.com", "display_sort": "tr_desc", "display_limit": 30 },
+      "resultado": [
+        { "Keyword": "emagrecimento rapido", "Position": 4, "Search Volume": 3600, "CPC": 0.15, "Competition": 1.00, "Visible Url": "https://www.fabriciomoura.com" }
+      ]
+    },
+    {
+      "report": "domain_adwords_adwords",
+      "params": { "database": "br", "domain": "fabriciomoura.com", "display_limit": 20 },
+      "resultado": [
+        { "Domain": "clinicaevolv.com.br", "Competitor Relevance": 1.00, "Common Keywords": 1, "Adwords Keywords": 1, "Adwords Traffic": 32, "Adwords Cost": 4, "Organic Keywords": 0 },
+        { "Domain": "joaohenriquefelicio.com.br", "Competitor Relevance": 0.12, "Common Keywords": 1, "Adwords Keywords": 5, "Adwords Traffic": 216, "Adwords Cost": 36, "Organic Keywords": 501 },
+        { "Domain": "novocare.com.br", "Competitor Relevance": 0.00, "Common Keywords": 1, "Adwords Keywords": 119, "Adwords Traffic": 11141, "Adwords Cost": 483, "Organic Keywords": 4511 }
+      ]
+    },
+    {
+      "report": "domain_adwords_unique",
+      "params": { "database": "br", "domain": "raphaelnutri.com", "display_limit": 15 },
+      "resultado": "ERROR 50 :: NOTHING FOUND — confirma que raphaelnutri.com não veicula anúncios."
+    },
+    {
+      "report": "phrase_adwords",
+      "params": { "database": "br", "phrase": "nutricionista online", "display_limit": 20 },
+      "resultado": ["xn--lpfnutrio-s2a7b.com.br (lpfnutrição)", "drpandini.com.br", "drthiagocollares.com", "nutrialicereino.com.br", "dracamilahames.com.br", "nutriroberta.com.br", "novocare.com.br"]
+    },
+    {
+      "report": "phrase_adwords",
+      "params": { "database": "br", "phrase": "nutricionista esportivo", "display_limit": 20 },
+      "resultado": ["drpandini.com.br", "ricardosantosnutricionista.com.br", "nutrirodrigosousa.com.br", "jaymecanetto.com.br", "clinicagabrielli.com.br", "carolinaragugnetti.com.br", "dietainteligenteja.com.br"]
+    },
+    {
+      "report": "phrase_these",
+      "params": { "database": "br", "phrase": "nutricionista online;nutricionista esportivo;nutricionista esportiva;emagrecimento rapido;nutricionista;cardapio para quem toma mounjaro;arroz engorda;creatina engorda ou emagrece" },
+      "resultado": [
+        { "Keyword": "nutricionista online", "Search Volume": 6600, "CPC": 0.56, "Competition": 0.87 },
+        { "Keyword": "nutricionista esportivo", "Search Volume": 5400, "CPC": 0.59, "Competition": 0.68 },
+        { "Keyword": "nutricionista esportiva", "Search Volume": 1600, "CPC": 0.59, "Competition": 0.68 },
+        { "Keyword": "emagrecimento rapido", "Search Volume": 3600, "CPC": 0.15, "Competition": 1.00 },
+        { "Keyword": "nutricionista", "Search Volume": 49500, "CPC": 0.47, "Competition": 0.39 },
+        { "Keyword": "cardapio para quem toma mounjaro", "Search Volume": 260, "CPC": 0.18, "Competition": 0.08 },
+        { "Keyword": "arroz engorda", "Search Volume": 6600, "CPC": 0.01, "Competition": 0 },
+        { "Keyword": "creatina engorda ou emagrece", "Search Volume": 1900, "CPC": 0.02, "Competition": 0.35 }
+      ]
+    },
+    {
+      "report": "domain_adwords",
+      "params": { "database": "br", "domain": "novocare.com.br", "display_sort": "tr_desc", "display_limit": 15 },
+      "resultado": [
+        { "Keyword": "calculo imc", "Position": 1, "Search Volume": 60500, "CPC": 0.01, "Traffic (%)": 25.51 },
+        { "Keyword": "como calcular o imc", "Position": 1, "Search Volume": 22200, "CPC": 0.01, "Traffic (%)": 9.36 },
+        { "Keyword": "como emagrecer", "Position": 1, "Search Volume": 8100, "CPC": 0.13, "Traffic (%)": 3.41 },
+        { "Keyword": "nutricionista online", "Position": 1, "Search Volume": 5400, "CPC": 0.60, "Traffic (%)": 2.27 },
+        { "Keyword": "obesidade grau 2", "Position": 1, "Search Volume": 4400, "CPC": 0.12, "Traffic (%)": 1.84 },
+        { "Keyword": "peso ideal por altura", "Position": 2, "Search Volume": 9900, "CPC": 0.02, "Traffic (%)": 1.14 }
+      ]
+    },
+    {
+      "report": "domain_adwords",
+      "params": { "database": "br", "domain": "joaohenriquefelicio.com.br", "display_sort": "tr_desc", "display_limit": 15 },
+      "resultado": [
+        { "Keyword": "emagrecimento rapido", "Position": 1, "Search Volume": 3600, "CPC": 0.15, "Competition": 1.00, "Traffic (%)": 78.24 },
+        { "Keyword": "banda gástrica ajustável", "Position": 1, "Search Volume": 260, "CPC": 0.44, "Traffic (%)": 5.55 },
+        { "Keyword": "bariatrica valores", "Position": 1, "Search Volume": 260, "CPC": 0.38, "Traffic (%)": 5.55 },
+        { "Keyword": "qual médico faz cirurgia bariátrica", "Position": 1, "Search Volume": 110, "CPC": 0.00, "Traffic (%)": 2.31 }
+      ]
+    }
+  ]
+}
