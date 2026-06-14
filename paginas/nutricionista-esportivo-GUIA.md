@@ -103,4 +103,36 @@ Mantém tudo igual (título, imagem do acompanhamento, botões, imagem de result
 8. **Link interno:** coloque um link pra essa página no menu do site ou na home (ajuda o Google e os visitantes a encontrarem).
 9. Pronto — agora é aguardar o Google indexar e ranquear (semanas).
 
-> Próxima página ("nutricionista online") vai seguir o mesmo molde — quando essa estiver no ar, eu te mando o guia dela.
+---
+
+## 8) Estrutura técnica de SEO (faça depois de montar a página)
+
+Esses 4 itens não são texto, são "etiquetas" que o Google lê. É o que faz a página ranquear de verdade, sem mexer no design.
+
+### 8.1. Confirmar o H1 (só pode ter UM por página)
+- No Elementor, clica no **título principal** (o headline do topo da página).
+- No painel da esquerda, em **"Tag HTML" / "HTML Tag"**, escolhe **H1**.
+- Confirma que ele contém a palavra-chave (deve conter **"nutricionista esportivo"**).
+- Os títulos das outras seções devem ser **H2** (e subtítulos menores, **H3**). Nunca dois H1 na mesma página.
+
+### 8.2. Ativar o FAQ schema (dados estruturados)
+O accordion de perguntas já aparece na página. Agora avisamos o Google, pra ele poder mostrar suas perguntas direto no resultado de busca.
+- Edita a página → painel do **Rank Math** → aba **"Schema"** → **"Schema Generator"**.
+- Escolhe **"FAQ"** e adiciona cada **pergunta e resposta** (as mesmas da seção 5 deste guia).
+- Salva.
+
+### 8.3. Alt text nas imagens
+O "alt" é a descrição que o Google lê de cada imagem.
+- Vai em **Mídia**, clica em cada imagem usada na página e preenche o campo **"Texto alternativo"**, por exemplo:
+  - sua foto: `nutricionista esportivo Fabricio Moura`
+  - antes/depois: `transformação de aluno do Fabricio Moura`
+- Faça isso nas principais imagens da página.
+
+### 8.4. Links internos
+Conecta a página com o resto do site (ajuda o Google e o visitante):
+- No texto, transforme "calcule seu gasto calórico" num link para `https://fabriciomoura.com/calculadora-de-imc-e-calorias`.
+- Quando fizer sentido, linke também para o artigo do blog.
+- E coloque um link **para** essa página na sua **home** e no **menu**.
+- No Elementor: seleciona o texto → ícone de link → cola a URL.
+
+> Resumo da estrutura: **H1 com a palavra-chave**, seções em **H2**, **FAQ schema** ligado, **imagens com alt** e **links internos**. Com isso somado aos textos das seções 1 a 5, a página fica 100% otimizada sem perder o seu design nem a conversão.
