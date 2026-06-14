@@ -34,7 +34,7 @@
 | 1 | Concorrentes & palavras-chave | ✅ Concluída |
 | 2 | Calendário editorial 90 dias | ✅ Concluída |
 | 3 | Análise do tráfego pago | ✅ Concluída |
-| 4 | SEO técnico & on-page | ⏳ Pendente |
+| 4 | SEO técnico & on-page | 🔄 Em andamento |
 | 5 | Funil & projeção de faturamento | ⏳ Pendente |
 | 6 | Re-análise periódica | 🔁 Agendável |
 
@@ -207,6 +207,27 @@ código se adicionado ao escopo da sessão.
   Conteúdo/anúncios devem ter enquadramento **masculino / performance** (esporte, hipertrofia),
   o que reforça começar por **"nutricionista esportivo"** (KDI 10). O site novo foi desenhado para
   a audiência do Instagram (feminina) → possível descasamento com o comprador real (masculino/Google).
+
+---
+
+### Fase 4 — SEO técnico & on-page (em andamento, 2026-06-14)
+
+Decisão do cliente: páginas de SEO ficam no **WordPress (fabriciomoura.com)** — concentra
+autoridade no domínio que já fatura. Entregas em **HTML pronto pro Gutenberg** (bloco HTML
+personalizado). Preço sempre escondido → CTA pro WhatsApp (+55 11 91484-9797). Identidade
+preto `#080808` + amarelo `#F5C518`, fonte Inter (não foi possível ler o site direto: HTTP 403).
+
+Calendário **reordenado por KDI** (quick wins primeiro):
+1. ✅ `paginas/nutricionista-esportivo.html` — página de serviço (KDI 10, vol 5.400). Hero +
+   "o que faz" + para quem é + como funciona + garantia + FAQ com **dados estruturados (FAQPage
+   JSON-LD)** + CTA WhatsApp. Inclui instruções de publicação no topo do arquivo.
+2. ✅ `ferramentas/calculadora.html` — isca de topo (IMC + gasto calórico), modelo novocare.
+3. ⏳ Página "nutricionista online" (KDI 28, vol 6.600).
+4. ⏳ Artigos quick win: "cardápio p/ quem toma Mounjaro" (KDI 8), "creatina engorda ou emagrece" (KDI 15).
+5. ⏳ Site Audit técnico do WordPress (cliente já tem projeto no Semrush; Google Site Kit já plugado, sem dados ainda).
+
+> Search Console: a propriedade estava **não verificada** (0 cliques/impressões no print). Cliente
+> instalou o Google Site Kit em 2026-06-14 — dados reais devem aparecer em alguns dias.
 
 ---
 

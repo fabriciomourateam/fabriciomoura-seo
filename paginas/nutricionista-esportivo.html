@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--
+  ============================================================================
+  PÁGINA DE SERVIÇO — "Nutricionista Esportivo" (alvo SEO, KDI 10, vol 5.400)
+  ============================================================================
+  COMO PUBLICAR NO WORDPRESS (passo a passo):
+  1. Páginas → Adicionar nova.
+  2. Defina o template "Largura total / em branco (canvas)" se o seu tema tiver
+     (evita o tema duplicar título/H1).
+  3. Adicione um bloco "HTML personalizado" e cole TUDO que está entre
+     <!-- INÍCIO DO BLOCO --> e <!-- FIM DO BLOCO --> (style + conteúdo + script JSON-LD).
+  4. No plugin de SEO (RankMath/Yoast/Site Kit) preencha:
+     • Slug (URL):        nutricionista-esportivo
+     • Título SEO:        Nutricionista Esportivo Online | Fabricio Moura
+     • Meta description:  Nutricionista esportivo online: perca gordura ganhando músculo com
+                          método e garantia. +2.000 físicos transformados em 7 países. Fale no WhatsApp.
+  5. Publicar.
+  Obs.: para trocar o WhatsApp, edite a variável FM_WPP no final do arquivo.
+  ============================================================================
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nutricionista Esportivo Online | Fabricio Moura</title>
+  <meta name="description" content="Nutricionista esportivo online: perca gordura ganhando músculo com método e garantia. +2.000 físicos transformados em 7 países. Fale no WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+<!-- INÍCIO DO BLOCO -->
+<style>
+  .ne-page{--yellow:#F5C518;--yellow-dark:#d4a800;--black:#080808;--dark:#111;--dark2:#1a1a1a;--dark3:#222;--text:#f0f0f0;--muted:#9a9a9a;--green:#28c76f}
+  .ne-page,.ne-page *{box-sizing:border-box;margin:0;padding:0;font-family:'Inter',system-ui,sans-serif}
+  .ne-page{background:var(--black);color:var(--text);line-height:1.65}
+  .ne-wrap{max-width:860px;margin:0 auto;padding:0 20px}
+  .ne-page h1,.ne-page h2,.ne-page h3{line-height:1.2;font-weight:900}
+  .ne-page p{color:#dcdcdc}
+  .ne-page section{padding:56px 0;border-bottom:1px solid var(--dark3)}
+  .ne-badge{display:inline-block;background:var(--yellow);color:#000;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 13px;border-radius:6px}
+  /* HERO */
+  .ne-hero{text-align:center;background:linear-gradient(180deg,#0a0a0a,#111);padding:64px 0 56px}
+  .ne-hero h1{font-size:2.3rem;margin:18px 0 14px}
+  .ne-hero h1 span{color:var(--yellow)}
+  .ne-hero .sub{font-size:1.12rem;color:#cfcfcf;max-width:620px;margin:0 auto 14px}
+  .ne-guar{color:var(--yellow);font-weight:700;font-size:.98rem;margin-bottom:26px}
+  .ne-stats{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:30px}
+  .ne-stat{background:var(--dark2);border:1px solid var(--dark3);border-radius:12px;padding:16px 22px;min-width:130px}
+  .ne-stat .n{font-size:1.7rem;font-weight:900;color:var(--yellow)}
+  .ne-stat .t{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+  /* CTA button */
+  .ne-cta{display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:#000;font-weight:800;font-size:1.05rem;padding:16px 30px;border-radius:10px;text-decoration:none;transition:.18s}
+  .ne-cta:hover{background:var(--yellow-dark)}
+  .ne-center{text-align:center}
+  /* content */
+  .ne-page h2{font-size:1.7rem;margin-bottom:18px}
+  .ne-page h2 span{color:var(--yellow)}
+  .ne-page section > .ne-wrap > p{margin-bottom:14px;font-size:1.05rem}
+  .ne-list{list-style:none;margin-top:8px}
+  .ne-list li{padding:11px 0 11px 32px;position:relative;color:#dcdcdc;border-bottom:1px solid #161616}
+  .ne-list li::before{content:'\2713';position:absolute;left:0;top:11px;color:var(--yellow);font-weight:900}
+  .ne-steps{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:10px}
+  .ne-step{background:var(--dark2);border:1px solid var(--dark3);border-radius:12px;padding:20px}
+  .ne-step .k{color:var(--yellow);font-weight:900;font-size:1.2rem}
+  .ne-step h3{font-size:1.05rem;margin:6px 0}
+  .ne-step p{font-size:.92rem;color:var(--muted)}
+  .ne-guarbox{background:linear-gradient(135deg,#1a1e1a,#111);border:1px solid var(--yellow);border-radius:16px;padding:30px;text-align:center}
+  .ne-faq{margin-top:8px}
+  .ne-faq details{background:var(--dark2);border:1px solid var(--dark3);border-radius:11px;padding:0;margin-bottom:10px;overflow:hidden}
+  .ne-faq summary{padding:16px 20px;cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  .ne-faq summary::-webkit-details-marker{display:none}
+  .ne-faq summary::after{content:'+';color:var(--yellow);font-weight:900}
+  .ne-faq details[open] summary::after{content:'\2212'}
+  .ne-faq .a{padding:0 20px 18px;color:#cfcfcf;font-size:.97rem}
+  .ne-final{text-align:center;background:linear-gradient(180deg,#111,#0a0a0a);border-bottom:0}
+  .ne-final h2{font-size:1.9rem}
+  @media(max-width:680px){.ne-hero h1{font-size:1.7rem}.ne-page h2{font-size:1.4rem}.ne-steps{grid-template-columns:1fr}}
+</style>
+
+<div class="ne-page">
+
+  <!-- HERO -->
+  <header class="ne-hero">
+    <div class="ne-wrap">
+      <span class="ne-badge">Nutricionista Esportivo Online</span>
+      <h1>Perca gordura <span>ganhando músculo</span> com um nutricionista esportivo de verdade</h1>
+      <p class="sub">Acompanhamento personalizado de nutrição e performance para quem treina sério e quer um físico que reflete o esforço — sem dietas malucas e sem passar fome.</p>
+      <p class="ne-guar">✓ Método com garantia: resultados ou seu investimento de volta</p>
+      <div>
+        <a class="ne-cta" data-wpp="Oi Fabricio! Vim pela página de nutricionista esportivo e quero saber como funciona o acompanhamento." href="#">Falar com o Fabricio no WhatsApp</a>
+      </div>
+      <div class="ne-stats">
+        <div class="ne-stat"><div class="n">+2.000</div><div class="t">Físicos transformados</div></div>
+        <div class="ne-stat"><div class="n">7</div><div class="t">Países atendidos</div></div>
+        <div class="ne-stat"><div class="n">100%</div><div class="t">Online, no seu ritmo</div></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- O QUE FAZ -->
+  <section>
+    <div class="ne-wrap">
+      <h2>O que faz um <span>nutricionista esportivo</span>?</h2>
+      <p>O nutricionista esportivo é o profissional que une <strong>nutrição, treino e performance</strong> para um objetivo claro: melhorar a composição corporal — menos gordura, mais músculo — respeitando a sua rotina, seus treinos e sua saúde.</p>
+      <p>Diferente de uma dieta genérica, o acompanhamento é construído sobre o <strong>seu</strong> gasto calórico, seu nível de treino e suas metas. É estratégia individual, não receita de bolo.</p>
+    </div>
+  </section>
+
+  <!-- PARA QUEM É -->
+  <section>
+    <div class="ne-wrap">
+      <h2>Para quem é o acompanhamento</h2>
+      <ul class="ne-list">
+        <li>Quem <strong>treina e faz dieta há anos</strong>, mas o corpo travou e os resultados pararam.</li>
+        <li>Quem já emagreceu, mas ficou <strong>flácido ou insatisfeito</strong> com o resultado.</li>
+        <li>Quem quer <strong>recomposição corporal</strong>: perder gordura e ganhar músculo ao mesmo tempo.</li>
+        <li>Quem busca um profissional que entenda <strong>performance E saúde</strong>, com seriedade.</li>
+        <li>Quem prefere acompanhamento <strong>100% online</strong>, esteja onde estiver.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section>
+    <div class="ne-wrap">
+      <h2>Como funciona</h2>
+      <div class="ne-steps">
+        <div class="ne-step"><div class="k">01</div><h3>Avaliação</h3><p>Entendo seu histórico, rotina, treino e objetivos para montar a estratégia certa.</p></div>
+        <div class="ne-step"><div class="k">02</div><h3>Plano individual</h3><p>Nutrição e orientação de performance feitos sob medida para o seu corpo e a sua meta.</p></div>
+        <div class="ne-step"><div class="k">03</div><h3>Acompanhamento</h3><p>Ajustes contínuos ao longo do caminho — você não fica sozinho em nenhum momento.</p></div>
+        <div class="ne-step"><div class="k">04</div><h3>Resultado</h3><p>Composição corporal melhor, com método e com garantia de resultado.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GARANTIA -->
+  <section>
+    <div class="ne-wrap">
+      <div class="ne-guarbox">
+        <span class="ne-badge">Garantia real</span>
+        <h2 style="margin-top:14px">Eu coloco meu nome nessa garantia</h2>
+        <p style="max-width:620px;margin:0 auto">Se você seguir o protocolo e não tiver resultados, devolvo 100% do seu investimento. Sem burocracia. Faço essa promessa porque confio no meu método e porque a responsabilidade pelos seus resultados também é minha.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="ne-wrap">
+      <h2>Perguntas <span>frequentes</span></h2>
+      <div class="ne-faq">
+        <details open><summary>O que faz um nutricionista esportivo?</summary><div class="a">Ele alinha nutrição, treino e performance para melhorar sua composição corporal — perder gordura e ganhar músculo — de forma individual, considerando sua rotina, seu nível de treino e sua saúde.</div></details>
+        <details><summary>Vale a pena nutricionista esportivo online?</summary><div class="a">Sim. O acompanhamento online te dá a mesma estratégia individual de perto, com a flexibilidade de fazer no seu ritmo e de qualquer lugar — hoje atendo pessoas em 7 países.</div></details>
+        <details><summary>Em quanto tempo vejo resultado?</summary><div class="a">Depende do seu ponto de partida e da sua aderência, mas com plano individual e ajustes contínuos os primeiros resultados costumam aparecer nas primeiras semanas. E você tem garantia.</div></details>
+        <details><summary>Quanto custa o acompanhamento?</summary><div class="a">O investimento varia conforme o plano ideal para o seu caso. Clique no botão do WhatsApp, me conta seu objetivo e eu te apresento as opções e a melhor para você.</div></details>
+        <details><summary>O acompanhamento tem garantia mesmo?</summary><div class="a">Sim, garantia real: se você seguir o protocolo e não tiver resultados, devolvo 100% do investimento. Faço isso porque confio no método.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="ne-final">
+    <div class="ne-wrap">
+      <h2>Pronto para ter o físico que o seu esforço merece?</h2>
+      <p style="max-width:560px;margin:14px auto 24px">Fale comigo agora no WhatsApp. Me conta seu objetivo e eu te mostro como o acompanhamento funciona pra você.</p>
+      <a class="ne-cta" data-wpp="Oi Fabricio! Quero começar o acompanhamento com nutricionista esportivo. Pode me explicar como funciona?" href="#">Quero meu acompanhamento</a>
+    </div>
+  </section>
+
+</div>
+
+<!-- Dados estruturados (FAQ) para o Google — ajuda a aparecer com destaque -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"O que faz um nutricionista esportivo?","acceptedAnswer":{"@type":"Answer","text":"Ele alinha nutrição, treino e performance para melhorar a composição corporal — perder gordura e ganhar músculo — de forma individual, considerando rotina, nível de treino e saúde."}},
+{"@type":"Question","name":"Vale a pena nutricionista esportivo online?","acceptedAnswer":{"@type":"Answer","text":"Sim. O acompanhamento online oferece a mesma estratégia individual com flexibilidade de fazer no seu ritmo e de qualquer lugar."}},
+{"@type":"Question","name":"Em quanto tempo vejo resultado?","acceptedAnswer":{"@type":"Answer","text":"Depende do ponto de partida e da aderência, mas com plano individual e ajustes contínuos os primeiros resultados costumam aparecer nas primeiras semanas, com garantia."}},
+{"@type":"Question","name":"Quanto custa o acompanhamento?","acceptedAnswer":{"@type":"Answer","text":"O investimento varia conforme o plano ideal para cada caso. O contato é feito pelo WhatsApp para apresentar as opções."}},
+{"@type":"Question","name":"O acompanhamento tem garantia?","acceptedAnswer":{"@type":"Answer","text":"Sim, garantia real: seguindo o protocolo e sem resultados, o investimento é 100% devolvido."}}
+]}
+</script>
+
+<script>
+  /* WhatsApp do Fabricio — trocar aqui se mudar o número */
+  var FM_WPP = "+5511914849797";
+  (function(){
+    var base = "https://wa.me/" + FM_WPP.replace(/[^0-9]/g,"") + "?text=";
+    document.querySelectorAll('.ne-page [data-wpp]').forEach(function(a){
+      a.setAttribute('href', base + encodeURIComponent(a.getAttribute('data-wpp')));
+      a.setAttribute('target','_blank'); a.setAttribute('rel','noopener');
+    });
+  })();
+</script>
+<!-- FIM DO BLOCO -->
+</body>
+</html>

@@ -279,7 +279,7 @@ window.SEO_DATA = {
     { n: 1, nome: "Concorrentes & palavras-chave", desc: "Top 3 concorrentes orgânicos + 5 transacionais + 5 meio/fundo.", status: "Concluída" },
     { n: 2, nome: "Calendário editorial 90 dias", desc: "Engenharia reversa das páginas campeãs do concorrente.", status: "Concluída" },
     { n: 3, nome: "Análise do tráfego pago", desc: "Palavras que os concorrentes compram, CPC, e onde vaza dinheiro na conta atual.", status: "Concluída" },
-    { n: 4, nome: "SEO técnico & on-page", desc: "Estrutura do site, páginas de serviço/cidade, otimização para converter.", status: "Pendente" },
+    { n: 4, nome: "SEO técnico & on-page", desc: "Estrutura do site, páginas de serviço/cidade, otimização para converter.", status: "Em andamento" },
     { n: 5, nome: "Funil & projeção de faturamento", desc: "Amarrar orgânico+pago no funil e projetar o caminho para dobrar.", status: "Pendente" },
     { n: 6, nome: "Re-análise (revisão periódica)", desc: "Re-rodar Semrush, comparar com snapshot anterior, ajustar plano.", status: "Agendável" }
   ],
