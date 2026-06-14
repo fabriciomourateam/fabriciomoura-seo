@@ -30,7 +30,19 @@ window.SEO_DATA = {
         ticket_medio: "R$ 1.800 a R$ 2.600 / ano (planos anuais)",
         investimento_ads_mes: "≈ R$ 22.000/mês (R$ 5.094/semana reportado)",
         faturamento_total: "> R$ 150.000 (ads + indicação + renovação)",
-        canal_atual: "100% Google Ads",
+        canal_atual: "100% Google Ads — principal canal de aquisição (Instagram converte pouco)",
+        publico: {
+          instagram: "63% mulheres / 37% homens — audiência fraca em conversão",
+          pacientes_ativos: "63% homens / 37% mulheres — maioria vem do Google",
+          insight:
+            "INVERSÃO IMPORTANTE: o público do Instagram é majoritariamente feminino, mas quem " +
+            "EFETIVAMENTE vira paciente pagante é majoritariamente HOMEM e vem do Google. O Google é " +
+            "o canal que funciona; o Instagram quase não converte. Logo: dobrar a aposta no Google " +
+            "(SEO + Ads) é a decisão certa. Conteúdo e anúncios devem ter enquadramento masculino / " +
+            "performance (esporte, hipertrofia, treino), o que casa com 'nutricionista esportivo' " +
+            "(KDI 10). Atenção: o site time.fabriciomoura.com foi feito para a audiência do Instagram " +
+            "(mulheres) — provável descasamento com o comprador real do Google (homens)."
+        },
         relatorio_ads: {
           periodo: "25/05/2026 a 31/05/2026",
           investimento: 5094.51,

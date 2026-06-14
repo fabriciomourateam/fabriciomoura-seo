@@ -197,6 +197,16 @@ Bruto em `snapshots/2026-06-14-autoridade-kdi.json`. Dados em `data.js` → snap
 **Site novo `time.fabriciomoura.com` (custom, rodando Ads há ~1 mês):** invisível no Semrush —
 0 keywords orgânicas próprias e 0 backlinks (esperado com 1 mês). A página retornou HTTP 403 ao
 crawler, então a auditoria on-page depende de acesso direto / analytics / Semrush Site Audit.
+Repositório identificado: **`fabriciomourateam/meu-acompanhamento`** (TypeScript) — auditável por
+código se adicionado ao escopo da sessão.
+
+**Contexto de público (informado pelo cliente, 2026-06-14) — estratégico para a Fase 4:**
+- Instagram: **63% mulheres / 37% homens**, mas converte muito pouco.
+- Pacientes ativos (pagantes): **63% homens / 37% mulheres**, maioria vinda do **Google**.
+- Conclusão: o Google é o canal que funciona; dobrar a aposta nele (SEO + Ads) é a decisão correta.
+  Conteúdo/anúncios devem ter enquadramento **masculino / performance** (esporte, hipertrofia),
+  o que reforça começar por **"nutricionista esportivo"** (KDI 10). O site novo foi desenhado para
+  a audiência do Instagram (feminina) → possível descasamento com o comprador real (masculino/Google).
 
 ---
 
