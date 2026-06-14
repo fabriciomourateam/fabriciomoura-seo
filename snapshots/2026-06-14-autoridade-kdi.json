@@ -1,0 +1,64 @@
+{
+  "data": "2026-06-14",
+  "fase": "Enriquecimento pré-Fase 4 — autoridade (backlinks), dificuldade (KDI) e site novo",
+  "ferramenta": "Semrush MCP",
+  "database": "br",
+  "queries": [
+    {
+      "report": "phrase_kdi",
+      "params": { "database": "br", "phrase": "nutricionista online;nutricionista esportivo;nutricionista esportiva;nutricionista;emagrecimento rapido;cardapio para quem toma mounjaro;arroz engorda;quem toma mounjaro pode beber;creatina engorda ou emagrece;gordura visceral;deficit calorico;alimentos ricos em fibras" },
+      "resultado": [
+        { "kw": "nutricionista esportivo", "kdi": 10 },
+        { "kw": "cardapio para quem toma mounjaro", "kdi": 8 },
+        { "kw": "creatina engorda ou emagrece", "kdi": 15 },
+        { "kw": "nutricionista esportiva", "kdi": 16 },
+        { "kw": "gordura visceral", "kdi": 22 },
+        { "kw": "deficit calorico", "kdi": 24 },
+        { "kw": "emagrecimento rapido", "kdi": 27 },
+        { "kw": "nutricionista online", "kdi": 28 },
+        { "kw": "nutricionista", "kdi": 28 },
+        { "kw": "alimentos ricos em fibras", "kdi": 29 },
+        { "kw": "arroz engorda", "kdi": 30 },
+        { "kw": "quem toma mounjaro pode beber", "kdi": 37 }
+      ]
+    },
+    {
+      "report": "backlinks_overview",
+      "params": { "target": "fabriciomoura.com", "target_type": "root_domain" },
+      "resultado": { "total_backlinks": 262, "referring_domains": 97, "authority_score": 2, "trust_score": 2, "follow": 118, "nofollow": 144 }
+    },
+    {
+      "report": "backlinks_overview",
+      "params": { "target": "raphaelnutri.com", "target_type": "root_domain" },
+      "resultado": { "total_backlinks": 1340, "referring_domains": 117, "authority_score": 11, "trust_score": 11, "follow": 1000, "nofollow": 341 }
+    },
+    {
+      "report": "backlinks_overview",
+      "params": { "target": "time.fabriciomoura.com", "target_type": "domain" },
+      "resultado": "ERROR 50 :: NOTHING FOUND — site novo, zero backlinks registrados."
+    },
+    {
+      "report": "domain_organic",
+      "params": { "database": "br", "domain": "time.fabriciomoura.com", "display_sort": "tr_desc", "display_limit": 30 },
+      "resultado": "Nenhuma keyword orgânica própria do subdomínio — Semrush só devolve as 2 keywords de marca do domínio raiz (ivy moura, moura academia). Site novo demais para ter footprint."
+    },
+    {
+      "report": "domain_adwords",
+      "params": { "database": "br", "domain": "time.fabriciomoura.com", "display_sort": "tr_desc", "display_limit": 30 },
+      "resultado": "Sem footprint pago distinto do subdomínio — só aparece 'emagrecimento rapido' do domínio raiz."
+    },
+    {
+      "report": "domain_organic",
+      "params": { "database": "br", "domain": "fabriciomoura.com", "display_sort": "tr_desc", "display_limit": 50 },
+      "resultado": [
+        { "kw": "ivy moura", "pos": 50, "vol": 90 },
+        { "kw": "moura academia", "pos": 40, "vol": 320 }
+      ]
+    }
+  ],
+  "notas": [
+    "WebFetch em https://fabriciomoura.com/ e https://time.fabriciomoura.com/ retornou HTTP 403 (proteção anti-bot). Auditoria on-page real depende de acesso/crawl autorizado ou Semrush Site Audit.",
+    "Escala KDI: 0-14 muito fácil · 15-29 fácil · 30-49 possível · 50-69 difícil · 70+ muito difícil.",
+    "Insight: a diferença de autoridade fabriciomoura(AS 2) x raphaelnutri(AS 11) NÃO é de quantidade de domínios referenciadores (97 x 117, perto), e sim de volume/qualidade de links e CONTEÚDO. Conclusão: dá pra competir com conteúdo, sem campanha pesada de link building."
+  ]
+}

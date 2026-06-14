@@ -216,6 +216,46 @@ window.SEO_DATA = {
           "Sem termos de intenção comprados, o pago não captura quem já procura 'nutricionista online' — demanda quente entregue de graça aos concorrentes.",
           "Recomendação: negativar termos de cirurgia/bariátrica e de 'solução milagrosa' para parar de pagar por curiosos."
         ]
+      },
+
+      // ---- Autoridade (backlinks) + dificuldade (KDI) + status do site novo — dados Semrush br ----
+      autoridade: {
+        leitura:
+          "A boa notícia: a distância de autoridade para o concorrente nº 1 é vencível com CONTEÚDO, não com link building pesado. " +
+          "fabriciomoura.com tem Authority Score 2 vs. 11 do raphaelnutri — mas em domínios referenciadores estão quase empatados " +
+          "(97 vs. 117). Ou seja, o que separa os dois é volume/qualidade de links e, principalmente, conteúdo publicado. " +
+          "Cruzando com a dificuldade (KDI), quase todos os termos-alvo são fáceis para um domínio novo (KDI 8–30), com destaque " +
+          "para 'nutricionista esportivo' (KDI 10) — termo de dinheiro E fácil de ranquear ao mesmo tempo. É por aí que se começa.",
+
+        backlinks: [
+          { dominio: "fabriciomoura.com",  authority_score: 2,  total: 262,  ref_domains: 97,  follow: 118,  nofollow: 144, nota: "Site do Fabrício — autoridade baixa, mas base de domínios decente." },
+          { dominio: "raphaelnutri.com",   authority_score: 11, total: 1340, ref_domains: 117, follow: 1000, nofollow: 341, nota: "Concorrente nº1 — vantagem é volume de links + conteúdo, não nº de domínios." }
+        ],
+
+        // KDI: 0-14 muito fácil · 15-29 fácil · 30-49 possível · 50-69 difícil · 70+ muito difícil
+        kdi: [
+          { kw: "cardapio para quem toma mounjaro", kdi: 8,  vol: 260,  faixa: "Muito fácil" },
+          { kw: "nutricionista esportivo",          kdi: 10, vol: 5400, faixa: "Muito fácil" },
+          { kw: "creatina engorda ou emagrece",     kdi: 15, vol: 1900, faixa: "Fácil" },
+          { kw: "nutricionista esportiva",          kdi: 16, vol: 1600, faixa: "Fácil" },
+          { kw: "gordura visceral",                 kdi: 22, vol: 0,    faixa: "Fácil" },
+          { kw: "deficit calorico",                 kdi: 24, vol: 0,    faixa: "Fácil" },
+          { kw: "emagrecimento rapido",             kdi: 27, vol: 3600, faixa: "Fácil" },
+          { kw: "nutricionista online",             kdi: 28, vol: 6600, faixa: "Fácil" },
+          { kw: "nutricionista",                    kdi: 28, vol: 49500,faixa: "Fácil" },
+          { kw: "alimentos ricos em fibras",        kdi: 29, vol: 0,    faixa: "Fácil" },
+          { kw: "arroz engorda",                    kdi: 30, vol: 6600, faixa: "Possível" },
+          { kw: "quem toma mounjaro pode beber",    kdi: 37, vol: 2400, faixa: "Possível" }
+        ],
+
+        // Site novo do Fabrício (custom, feito no Claude) — rodando Ads há ~1 mês
+        site_novo: {
+          url: "time.fabriciomoura.com/acompanhamento-premium",
+          status: "Invisível no Semrush",
+          organico: "0 keywords próprias (novo demais para indexar/ranquear)",
+          backlinks: "0 (NOTHING FOUND)",
+          nota: "Página bloqueia crawler (HTTP 403). Sem footprint no Semrush é esperado com 1 mês. Auditoria depende de acesso/analytics ou Semrush Site Audit. Vantagem: site custom = fácil plugar calculadora como isca de topo."
+        }
       }
     }
   ],

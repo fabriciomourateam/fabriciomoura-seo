@@ -1,8 +1,23 @@
 # HANDOFF — Projeto SEO Nutrição Esportiva (Fabrício Moura)
 
 > **Leia este arquivo primeiro.** Ele dá TODO o contexto para continuar o projeto sem
-> depender de nenhuma conversa anterior. Detalha o que já foi feito (Fases 0–2), onde os
-> dados estão, e exatamente o que fazer a seguir (Fase 3 em diante).
+> depender de nenhuma conversa anterior. Detalha o que já foi feito (Fases 0–3), onde os
+> dados estão, e exatamente o que fazer a seguir (Fase 4 em diante).
+
+---
+
+## ✅ Definition of Done — rodar ANTES de todo push (não pule)
+
+Toda entrega de fase só está completa quando estes 5 passos foram feitos, **nesta ordem**:
+
+1. [ ] **`data.js`** — números/achados no snapshot mais recente + campo `fases` atualizado.
+2. [ ] **`snapshots/AAAA-MM-DD-*.json`** — dump bruto das queries do Semrush (append-only).
+3. [ ] **`docs/PROCESSO.md`** — histórico da fase + tabelas + queries exatas (reprodutível).
+4. [ ] **`HANDOFF.md`** — marcar fase concluída + apontar o próximo passo.
+5. [ ] **`git commit && git push`** na `main` → Vercel republica.
+
+> Regra de ouro dos dados: **nunca invente número** — tudo vem do Semrush (banco `br`). Snapshots
+> são append-only (nunca apague os antigos; são o histórico de evolução).
 
 ---
 

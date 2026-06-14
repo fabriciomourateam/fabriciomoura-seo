@@ -164,6 +164,40 @@ mesmos concorrentes do orgânico:
   competindo com cirurgia bariátrica) eleva o custo por lead qualificado. Negativar termos de
   cirurgia/bariátrica e de "solução milagrosa".
 
+### Enriquecimento pré-Fase 4 — autoridade, KDI e site novo (2026-06-14)
+
+Bruto em `snapshots/2026-06-14-autoridade-kdi.json`. Dados em `data.js` → snapshot `autoridade`.
+
+**Autoridade / backlinks (`backlinks_overview`):**
+
+| Domínio | Authority Score | Backlinks | Domínios ref. | Follow / Nofollow |
+|---|---|---|---|---|
+| fabriciomoura.com | 2 | 262 | 97 | 118 / 144 |
+| raphaelnutri.com | 11 | 1.340 | 117 | 1.000 / 341 |
+
+> Insight: a diferença **não** é de número de domínios referenciadores (97 ≈ 117). É volume/qualidade
+> de links + conteúdo. **Conclusão: dá para competir com CONTEÚDO, sem campanha pesada de link building.**
+
+**Dificuldade dos termos-alvo (`phrase_kdi`)** — escala 0-14 muito fácil · 15-29 fácil · 30-49 possível:
+
+| Termo | KDI | Volume | Leitura |
+|---|---|---|---|
+| cardapio para quem toma mounjaro | 8 | 260 | Quick win |
+| **nutricionista esportivo** | **10** | **5.400** | **Termo de dinheiro E fácil — começar por aqui** |
+| creatina engorda ou emagrece | 15 | 1.900 | Quick win |
+| nutricionista esportiva | 16 | 1.600 | Quick win |
+| gordura visceral | 22 | — | Fácil |
+| déficit calórico | 24 | — | Fácil |
+| emagrecimento rapido | 27 | 3.600 | Fácil |
+| nutricionista online | 28 | 6.600 | Fácil (prioridade comercial) |
+| nutricionista | 28 | 49.500 | Fácil de KDI, mas SERP de marcas — longo prazo |
+| arroz engorda | 30 | 6.600 | Possível |
+| quem toma mounjaro pode beber | 37 | 2.400 | Possível (mais difícil do lote) |
+
+**Site novo `time.fabriciomoura.com` (custom, rodando Ads há ~1 mês):** invisível no Semrush —
+0 keywords orgânicas próprias e 0 backlinks (esperado com 1 mês). A página retornou HTTP 403 ao
+crawler, então a auditoria on-page depende de acesso direto / analytics / Semrush Site Audit.
+
 ---
 
 ## Metodologia
