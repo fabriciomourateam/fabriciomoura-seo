@@ -1,0 +1,103 @@
+# Guia de edição — Página "Nutricionista Online"
+
+> Mesmo processo da página "nutricionista esportivo": duplique sua página de vendas e troque
+> APENAS os textos abaixo. Mantenha fotos, banner, cores, botões e carrosséis.
+> ATENÇÃO: deixe os textos DIFERENTES da página "nutricionista esportivo" (o ângulo aqui é
+> "100% online / à distância"), pra o Google não ver as duas como conteúdo duplicado.
+
+---
+
+## 1) HERO (topo)
+
+**Título (H1)** — escolha UM:
+- Curto (recomendado): `Nutricionista online para transformar o seu corpo`
+- Alternativo: `Nutricionista online: perca gordura ganhando músculo`
+> Antes era: "Perca gordura ganhando músculo"
+
+**Subtítulo**
+- Antes: `conquiste a definição que sempre sonhou EM UM TEMPO RECORDE!`
+- Depois: `acompanhamento de nutrição e treino 100% online, no seu ritmo e de onde você estiver`
+
+**Parágrafo**
+- Antes: `Você vai conseguir um físico forte e definido, sem treinos malucos, sem abrir mão de comer o que você gosta e sem passar fome!`
+- Depois: `Com um nutricionista online, você tem um plano individual de nutrição e treino totalmente à distância — com a mesma proximidade do presencial, sem sair de casa, sem dietas genéricas e sem passar fome.`
+
+**"CLIQUE ABAIXO PARA SABER COMO FUNCIONA!"** → mantém
+**Botão "TENHA RESULTADOS OU SEU INVESTIMENTO DE VOLTA!"** → mantém
+
+---
+
+## 2) SEÇÃO "Eu sei que você não está feliz..." (fundo com sua foto)
+
+**Título**
+- Antes: `Eu sei que você não está feliz com seus resultados E EU posso te ajudar!`
+- Depois: `Rotina corrida ou mora longe? Um nutricionista online resolve isso!`
+
+**Texto 1**
+- Antes: `Sua autoestima está péssima e você se sente sem motivação? Tem dificuldades em seguir sua dieta, pois ela é totalmente fora da sua realidade? Seu treino não está fazendo nenhum efeito?`
+- Depois: `Você tenta seguir dietas da internet que não funcionam? Não tem tempo ou um bom profissional perto de você? Já tentou sozinho e o corpo simplesmente não muda?`
+
+**Texto 2**
+- Antes: `Esses problemas são mais comuns do que você imagina e é por causa deles que você não consegue ter o corpo que tanto deseja!`
+- Depois: `Esses obstáculos somem quando você tem um acompanhamento online individual, feito pro seu corpo e pra sua rotina, com alguém te guiando de perto — mesmo à distância.`
+
+**Botão "QUERO FAZER PARTE DO TIME"** → mantém
+
+---
+
+## 3) SEÇÃO "Eu sei o que impede os seus resultados"
+
+**Título**
+- Antes: `EU SEI O QUE IMPEDE OS SEUS RESULTADOS:`
+- Depois: `O QUE TRAVA OS SEUS RESULTADOS:`
+
+**Texto**
+- Antes: `Alcançar o físico que você deseja vai além de prescrições genéricas! A origem de toda essa dificuldade está na falta de um acompanhamento personalizado e de alguém que esteja ao seu lado durante todo o processo. Alguém que te faça ter RESULTADO DE VERDADE, de maneira MAIS RÁPIDA e MAIS FÁCIL!`
+- Depois: `Seguir uma dieta genérica baixada na internet quase nunca dá certo. O que muda o jogo é ter um nutricionista online acompanhando você de perto, ajustando a nutrição e o treino ao seu corpo e à sua rotina. Alguém que te faça ter RESULTADO DE VERDADE, de maneira MAIS RÁPIDA e MAIS FÁCIL!`
+
+**Botão** → mantém
+
+---
+
+## 4) SEÇÃO "Veja tudo que está incluso"
+Mantém tudo igual (título, imagem do acompanhamento, botões, imagem de resultados).
+
+---
+
+## 5) FAQ (sanfona) — troque as 3 perguntas e respostas
+
+**Pergunta 1**
+- Depois (pergunta): `Como funciona um nutricionista online?`
+- Depois (resposta): `Todo o acompanhamento é feito à distância: avaliação, plano de nutrição e treino individuais, ajustes contínuos e suporte por WhatsApp. Você faz no seu ritmo, de onde estiver.`
+
+**Pergunta 2**
+- Depois (pergunta): `Nutricionista online funciona tão bem quanto presencial?`
+- Depois (resposta): `Sim. Você tem a mesma estratégia individual e o mesmo acompanhamento de perto, com a vantagem da flexibilidade. Hoje atendo pessoas em vários lugares, do Brasil ao exterior.`
+
+**Pergunta 3**
+- Depois (pergunta): `Em quanto tempo vejo resultado com um nutricionista online?`
+- Depois (resposta): `Com plano individual e ajustes contínuos, já no primeiro mês você nota melhora no físico e na saúde — e tudo com garantia.`
+
+---
+
+## 6) Configurações de SEO (no RankMath/Yoast/Site Kit)
+
+- **Slug (URL):** `nutricionista-online`  → fica `fabriciomoura.com/nutricionista-online`
+- **Título SEO:** `Nutricionista Online | Fabricio Moura`
+- **Meta description:** `Nutricionista online: acompanhamento individual de nutrição e treino 100% à distância. Perca gordura e ganhe músculo com método e garantia. Fale no WhatsApp.`
+- **Palavra-chave foco:** `nutricionista online`
+
+---
+
+## 7) Passo a passo (igual ao da outra página)
+
+1. **Duplicar** a página de vendas ("Clonar" com o plugin Yoast Duplicate Post).
+2. Renomear para **"Nutricionista Online"**.
+3. **Editar com Elementor** e trocar os textos (seções 1 a 5).
+4. Definir **slug** `nutricionista-online` + **Título SEO** + **Meta description** (seção 6).
+5. **Publicar.**
+6. **Search Console** → Inspeção de URL → **Solicitar indexação**.
+7. **Link interno** pra ela (menu/home).
+
+> Dica: como as duas páginas (esportivo e online) saem da mesma base, confira que os textos
+> ficaram realmente diferentes entre elas — o ângulo "online/à distância" aqui já cuida disso.
