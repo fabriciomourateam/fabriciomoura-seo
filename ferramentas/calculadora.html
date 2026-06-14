@@ -14,7 +14,7 @@
 <style>
   .fmx{
     --gold1:#FFE9A8;--gold2:#FCD404;--gold3:#C9920A;--y:#FCD404;
-    --blk:#070707;--ink:#0e0e0e;--line:rgba(255,255,255,.08);--tx:#f3f3f3;--mut:#8c8c8c;
+    --blk:#0a0a0a;--ink:#0e0e0e;--line:rgba(255,255,255,.08);--tx:#f3f3f3;--mut:#a8a8a8;
     --green:#3ad07f;--red:#ff6b6b;--mont:'Montserrat',sans-serif;--anton:'Anton',sans-serif;
   }
   .fmx,.fmx *{box-sizing:border-box;margin:0;padding:0;font-family:var(--mont)}
@@ -87,7 +87,12 @@
   .fmx-wpp:hover{transform:translateY(-2px)}
   .fmx-wpp svg{width:20px;height:20px;fill:#1a1300}
 
-  .fmx-disc{font-size:.72rem;color:#666;text-align:center;margin-top:22px;line-height:1.6;max-width:440px;margin-left:auto;margin-right:auto}
+  .fmx-disc{font-size:.72rem;color:#7a7a7a;text-align:center;margin-top:22px;line-height:1.6;max-width:440px;margin-left:auto;margin-right:auto}
+  .fmx-trust{margin-top:16px;font-size:.8rem;color:var(--mut)}
+  .fmx-trust b{color:#fff}
+  .fmx-hint{display:flex;gap:10px;text-align:left;font-size:.86rem;color:#e7d9b0;background:rgba(252,212,4,.06);border:1px solid rgba(252,212,4,.25);border-radius:13px;padding:13px 15px;margin-top:14px;line-height:1.5}
+  .fmx-prot{margin-top:14px;text-align:center;font-size:.95rem;color:#dcdcdc;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:13px;padding:13px}
+  .fmx-prot b{color:var(--gold2);font-weight:800}
   @media(max-width:480px){.fmx-head h1{font-size:1.9rem}.fmx-hero-num .num{font-size:3.6rem}.fmx-grid{grid-template-columns:1fr}}
 </style>
 
@@ -97,6 +102,7 @@
       <span class="fmx-badge">Ferramenta gratuita</span>
       <h1>Calculadora de IMC <br>e Gasto Calórico</h1>
       <p>Descubra em segundos o que o seu corpo precisa para mudar de verdade.</p>
+      <div class="fmx-trust">Criada por <b>Fabricio Moura</b>, consultor esportivo. Mais de 2.000 transformações em 7 países.</div>
     </div>
 
     <div class="fmx-card">
@@ -121,6 +127,7 @@
               <div class="ticks"><span>Abaixo</span><span>Ideal</span><span>Sobrepeso</span><span>Obesidade</span></div>
             </div>
           </div>
+          <div class="fmx-hint"><span>⚠️</span><span>O IMC não separa músculo de gordura. Se você treina pesado, ele pode te marcar como acima do peso sem motivo. Para um número que reflete o seu corpo de verdade, fale comigo.</span></div>
           <div class="fmx-cta">
             <p id="imc-msg"></p>
             <a class="fmx-wpp" id="imc-wpp" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.866 9.866 0 001.51 5.26l-.999 3.648 3.978-1.607z"/></svg>Falar com o Fabricio</a>
@@ -157,6 +164,7 @@
             <div class="fmx-mini"><div class="n red" id="tdee-cut">0</div><div class="t">Para emagrecer</div></div>
             <div class="fmx-mini"><div class="n green" id="tdee-bulk">0</div><div class="t">Para ganhar massa</div></div>
           </div>
+          <div class="fmx-prot">Proteína recomendada: <b><span id="tdee-prot">0</span></b> por dia para preservar e ganhar músculo</div>
           <div class="fmx-cta">
             <p>Saber o número é só o começo. <b>O resultado vem do plano certo para você.</b> Monto sua estratégia de nutrição e treino com acompanhamento de perto e garantia.</p>
             <a class="fmx-wpp" id="tdee-wpp" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.866 9.866 0 001.51 5.26l-.999 3.648 3.978-1.607z"/></svg>Quero meu plano</a>
@@ -207,9 +215,12 @@
     document.getElementById('tdee-tmb').textContent=r(tmb).toLocaleString('pt-BR');
     document.getElementById('tdee-cut').textContent=r(tdee-500).toLocaleString('pt-BR');
     document.getElementById('tdee-bulk').textContent=r(tdee+300).toLocaleString('pt-BR');
+    document.getElementById('tdee-prot').textContent=Math.round(p*1.6)+' a '+Math.round(p*2.2)+' g';
     document.getElementById('tdee-wpp').href=fmxLink('Oi Fabricio! Calculei meu gasto calórico no seu site ('+r(tdee).toLocaleString('pt-BR')+' kcal por dia) e quero um plano para atingir meus objetivos.');
     document.getElementById('tdee-res').classList.add('show');
   }
+  ['imc-peso','imc-altura'].forEach(function(id){document.getElementById(id).addEventListener('keydown',function(e){if(e.key==='Enter')fmxIMC();});});
+  ['tdee-idade','tdee-peso','tdee-altura'].forEach(function(id){document.getElementById(id).addEventListener('keydown',function(e){if(e.key==='Enter')fmxTDEE();});});
 </script>
 <!-- ===== FIM DO WIDGET ===== -->
 </body>

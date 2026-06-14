@@ -27,7 +27,7 @@
 <style>
   .mj{
     --gold1:#FFE9A8;--gold2:#FCD404;--gold3:#C9920A;--y:#FCD404;
-    --blk:#070707;--line:rgba(255,255,255,.08);--tx:#e9e9e9;--mut:#8c8c8c;
+    --blk:#0e0e0e;--line:rgba(255,255,255,.08);--tx:#e9e9e9;--mut:#a8a8a8;
     --mont:'Montserrat',sans-serif;--anton:'Anton',sans-serif;
   }
   .mj,.mj *{box-sizing:border-box;margin:0;padding:0}
@@ -99,8 +99,18 @@
   .mj-btn:hover{transform:translateY(-2px)}
   .mj-btn svg{width:21px;height:21px;fill:#1a1300}
 
-  .mj-disc{font-size:.82rem;color:#6a6a6a;border-top:1px solid var(--line);padding:22px 0 48px;line-height:1.65}
-  @media(max-width:600px){.mj-hero h1{font-size:1.85rem}.mj h2{font-size:1.3rem}.mj-quote{font-size:1.12rem}.mj-meal{grid-template-columns:1fr;gap:3px}.mj-cta h2{font-size:1.5rem}}
+  .mj a{color:var(--gold2);text-decoration:underline;text-underline-offset:3px;font-weight:600}
+  .mj-proof{margin:42px 0}
+  .mj-proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
+  .mj-proof-grid img{width:100%;height:100%;object-fit:cover;border-radius:14px;border:1px solid var(--line);aspect-ratio:3/4;background:#1a1a1a}
+  .mj-proof-cap{text-align:center;color:var(--mut);font-size:.86rem;margin-top:14px;letter-spacing:.02em}
+  .mj-author{display:flex;gap:18px;align-items:center;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:40px 0 10px}
+  .mj-author img{width:82px;height:82px;border-radius:50%;object-fit:cover;object-position:50% 28%;border:2px solid var(--gold2);flex-shrink:0;background:#1a1a1a}
+  .mj-author .nm{font-family:var(--anton);font-weight:400;text-transform:uppercase;color:#fff;font-size:1.3rem;letter-spacing:.5px;line-height:1}
+  .mj-author .rl{color:var(--mut);font-size:.9rem;margin-top:7px;line-height:1.45}
+  .mj-author .rl b{color:var(--gold2)}
+  .mj-disc{font-size:.82rem;color:#7a7a7a;border-top:1px solid var(--line);padding:22px 0 48px;line-height:1.65}
+  @media(max-width:600px){.mj-hero h1{font-size:1.85rem}.mj h2{font-size:1.3rem}.mj-quote{font-size:1.12rem}.mj-meal{grid-template-columns:1fr;gap:3px}.mj-cta h2{font-size:1.5rem}.mj-author{flex-direction:column;text-align:center}}
 </style>
 
 <div class="mj">
@@ -123,7 +133,7 @@
       <h2><span class="kick gold">Os fundamentos</span>Os 4 princípios da alimentação no Mounjaro</h2>
 
       <h3>1. Proteína sempre primeiro</h3>
-      <p>Se você vai comer menos, cada refeição precisa render. Comece sempre pela proteína (ovos, carnes magras, frango, peixe, iogurte). Ela preserva o músculo e segura a fome por mais tempo.</p>
+      <p>Se você vai comer menos, cada refeição precisa render. Comece sempre pela proteína (ovos, carnes magras, frango, peixe, iogurte). Ela preserva o músculo e segura a fome por mais tempo. Uma boa meta é mirar entre <strong>1,6g e 2,2g de proteína por quilo de peso</strong> ao longo do dia.</p>
       <h3>2. Refeições menores e mais frequentes</h3>
       <p>Com o apetite reduzido, pratos enormes incomodam. Prefira porções menores ao longo do dia para bater o que seu corpo precisa sem enjoo.</p>
       <h3>3. Água e fibras todos os dias</h3>
@@ -151,20 +161,38 @@
       </ul>
 
       <h2><span class="kick gold">A verdade que ninguém conta</span>O erro que sabota quase todo mundo</h2>
-      <p>Achar que, "como estou comendo pouco, qualquer coisa serve". Comer pouco <strong>e mal</strong> faz você perder músculo, desacelerar o metabolismo e recuperar o peso assim que parar a medicação. O Mounjaro é uma ferramenta poderosa. Quem constrói o resultado que dura é a estratégia de nutrição e treino por trás dele.</p>
+      <p>Achar que, "como estou comendo pouco, qualquer coisa serve". Comer pouco <strong>e mal</strong> faz você perder músculo, desacelerar o metabolismo e recuperar o peso assim que parar a medicação. O Mounjaro é uma ferramenta poderosa. Quem constrói o resultado que dura é a estratégia de nutrição e treino por trás dele, e é exatamente isso que um <a href="https://fabriciomoura.com/nutricionista-esportivo" target="_blank" rel="noopener">nutricionista esportivo</a> monta para você.</p>
 
       <h2><span class="kick gold">Tira-dúvidas</span>Perguntas frequentes</h2>
       <div class="mj-faq">
         <details open><summary>Pode beber álcool tomando Mounjaro?</summary><div class="a">O ideal é evitar ou reduzir bastante. O álcool atrapalha a hidratação, pode aumentar o desconforto no estômago e prejudica o resultado. Se for beber, faça com muita moderação e converse com o seu médico.</div></details>
-        <details><summary>Quantas calorias devo comer tomando Mounjaro?</summary><div class="a">Depende do seu gasto calórico, que muda conforme peso, altura, idade e treino. Use a calculadora de gasto calórico do site como ponto de partida. O número ideal para emagrecer sem perder músculo é definido no acompanhamento individual.</div></details>
+        <details><summary>Quantas calorias devo comer tomando Mounjaro?</summary><div class="a">Depende do seu gasto calórico, que muda conforme peso, altura, idade e treino. Use a <a href="https://fabriciomoura.com/calculadora-imc" target="_blank" rel="noopener">calculadora de gasto calórico</a> do site como ponto de partida. O número ideal para emagrecer sem perder músculo é definido no acompanhamento individual.</div></details>
         <details><summary>Vou perder músculo tomando Mounjaro?</summary><div class="a">Pode acontecer se você comer pouca proteína e não treinar força. Com proteína adequada e treino de força, você preserva (ou até ganha) músculo enquanto perde gordura.</div></details>
         <details><summary>Preciso de acompanhamento mesmo usando a medicação?</summary><div class="a">Sim. A medicação reduz o apetite, mas não ensina o que comer. O acompanhamento garante que você perca gordura com saúde, mantenha o músculo e sustente o resultado a longo prazo.</div></details>
+      </div>
+
+      <div class="mj-proof">
+        <h2><span class="kick gold">Prova real</span>Transformações de quem fez o acompanhamento</h2>
+        <div class="mj-proof-grid">
+          <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/1-1.png" alt="Transformação de aluno do Fabricio Moura" loading="lazy" />
+          <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/2-1.png" alt="Transformação de aluno do Fabricio Moura" loading="lazy" />
+          <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/3-1.png" alt="Transformação de aluno do Fabricio Moura" loading="lazy" />
+        </div>
+        <p class="mj-proof-cap">Mais de 2.000 transformações reais em 7 países.</p>
       </div>
 
       <div class="mj-cta">
         <h2>Quer um cardápio feito pra você?</h2>
         <p>Eu monto a sua estratégia de nutrição e treino para você aproveitar o Mounjaro ao máximo, perdendo gordura, mantendo músculo e com acompanhamento de perto. Tudo com garantia.</p>
         <a class="mj-btn" href="https://wa.me/+5511914849797?text=Oi%20Fabricio!%20Li%20o%20artigo%20sobre%20card%C3%A1pio%20no%20Mounjaro%20e%20quero%20um%20acompanhamento%20individual." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.866 9.866 0 001.51 5.26l-.999 3.648 3.978-1.607z"/></svg>Falar com o Fabricio</a>
+      </div>
+
+      <div class="mj-author">
+        <img src="https://fabriciomoura.com/wp-content/uploads/2025/07/APRESENTACAO-MASTER-1.png" alt="Fabricio Moura" loading="lazy" />
+        <div>
+          <div class="nm">Fabricio Moura</div>
+          <div class="rl">Consultor esportivo e nutrição. <b>Mais de 2.000 transformações em 7 países</b> e 18 anos de experiência ajudando pessoas a perder gordura e ganhar músculo com método e garantia.</div>
+        </div>
       </div>
 
       <p class="mj-disc">Aviso: o Mounjaro (tirzepatida) é um medicamento de prescrição médica. Este conteúdo é educativo e não substitui a orientação do seu médico nem uma avaliação nutricional individual. Siga sempre as recomendações do profissional que acompanha o seu caso.</p>
