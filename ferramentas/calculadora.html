@@ -95,6 +95,16 @@
   .fmx-hint{display:flex;gap:10px;text-align:left;font-size:.86rem;color:#e7d9b0;background:rgba(252,212,4,.06);border:1px solid rgba(252,212,4,.25);border-radius:13px;padding:13px 15px;margin-top:14px;line-height:1.5}
   .fmx-prot{margin-top:14px;text-align:center;font-size:.95rem;color:#dcdcdc;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:13px;padding:13px}
   .fmx-prot b{color:var(--gold2);font-weight:800}
+  .fmx-seo{margin-top:34px;text-align:left;color:#cfcfcf;width:100%;max-width:580px}
+  .fmx-seo h2{font-family:var(--mont);font-weight:800;color:#fff;font-size:1.22rem;margin:26px 0 10px;padding-left:12px;border-left:3px solid var(--gold2);line-height:1.3}
+  .fmx-seo p{font-size:.97rem;margin-bottom:14px;line-height:1.7}
+  .fmx-seo a{color:var(--gold2);text-decoration:underline;text-underline-offset:3px;font-weight:600}
+  .fmx-seo details{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
+  .fmx-seo summary{padding:14px 16px;cursor:pointer;font-weight:700;color:#fff;list-style:none;display:flex;justify-content:space-between;gap:12px}
+  .fmx-seo summary::-webkit-details-marker{display:none}
+  .fmx-seo summary::after{content:'+';color:var(--gold2);font-weight:800}
+  .fmx-seo details[open] summary::after{content:'\2212'}
+  .fmx-seo .a{padding:0 16px 14px;color:#c2c2c2;font-size:.92rem;line-height:1.6}
   @media(max-width:480px){.fmx-head h1{font-size:1.9rem}.fmx-hero-num .num{font-size:3.6rem}.fmx-grid{grid-template-columns:1fr}}
 </style>
 
@@ -176,6 +186,18 @@
     </div>
 
     <p class="fmx-disc">Estimativas baseadas na fórmula de Mifflin-St Jeor. São valores de referência e não substituem uma avaliação profissional individual.</p>
+
+    <div class="fmx-seo">
+      <h2>Como usar a calculadora de IMC e gasto calórico</h2>
+      <p>A calculadora de IMC mostra a relação entre o seu peso e a sua altura e indica se você está abaixo do peso, no peso normal, com sobrepeso ou obesidade. Já o gasto calórico (TDEE) estima quantas calorias o seu corpo gasta por dia, somando o metabolismo basal ao seu nível de treino. Juntos, esses dois números são um ótimo ponto de partida para montar a sua estratégia.</p>
+      <h2>IMC alto nem sempre é gordura</h2>
+      <p>Se você treina pesado, a calculadora de IMC pode te classificar como acima do peso mesmo com pouca gordura, porque o IMC não separa músculo de gordura. Por isso, encare o resultado como referência. O que realmente define o seu plano é uma avaliação individual, feita por quem entende de performance.</p>
+      <p>Quer transformar esse número em resultado de verdade? Veja como funciona o acompanhamento de <a href="https://fabriciomoura.com/nutricionista-esportivo">nutricionista esportivo</a> ou de <a href="https://fabriciomoura.com/nutricionista-online">nutricionista online</a>. E se você usa medicação para emagrecer, leia o guia de <a href="https://fabriciomoura.com/cardapio-para-quem-toma-mounjaro">cardápio para quem toma Mounjaro</a>.</p>
+      <h2>Perguntas frequentes</h2>
+      <details open><summary>O que é um IMC saudável?</summary><div class="a">Entre 18,5 e 24,9 é considerado peso normal. Abaixo disso é baixo peso e acima é sobrepeso ou obesidade. Lembre que o IMC não considera a quantidade de músculo, então quem treina deve usar o valor apenas como referência.</div></details>
+      <details><summary>Quantas calorias devo comer para emagrecer?</summary><div class="a">Em geral, um pouco abaixo do seu gasto calórico diário, algo em torno de 300 a 500 calorias a menos. O valor ideal, sem perder músculo, é definido de forma individual no acompanhamento.</div></details>
+      <details><summary>A calculadora serve para quem treina?</summary><div class="a">Sim. Ela te dá uma boa referência de calorias e de classificação de peso. Para quem treina e quer ganhar músculo perdendo gordura, a estratégia certa vem de um plano individual.</div></details>
+    </div>
   </div>
 </div>
 
@@ -223,6 +245,13 @@
   }
   ['imc-peso','imc-altura'].forEach(function(id){document.getElementById(id).addEventListener('keydown',function(e){if(e.key==='Enter')fmxIMC();});});
   ['tdee-idade','tdee-peso','tdee-altura'].forEach(function(id){document.getElementById(id).addEventListener('keydown',function(e){if(e.key==='Enter')fmxTDEE();});});
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"O que é um IMC saudável?","acceptedAnswer":{"@type":"Answer","text":"Entre 18,5 e 24,9 é considerado peso normal. Abaixo disso é baixo peso e acima é sobrepeso ou obesidade. O IMC não considera a quantidade de músculo, então quem treina deve usar o valor como referência."}},
+{"@type":"Question","name":"Quantas calorias devo comer para emagrecer?","acceptedAnswer":{"@type":"Answer","text":"Em geral um pouco abaixo do gasto calórico diário, cerca de 300 a 500 calorias a menos. O valor ideal, sem perder músculo, é definido de forma individual."}},
+{"@type":"Question","name":"A calculadora serve para quem treina?","acceptedAnswer":{"@type":"Answer","text":"Sim. Ela dá uma boa referência de calorias e de classificação de peso. Para ganhar músculo perdendo gordura, a estratégia certa vem de um plano individual."}}
+]}
 </script>
 <!-- ===== FIM DO WIDGET ===== -->
 </body>
