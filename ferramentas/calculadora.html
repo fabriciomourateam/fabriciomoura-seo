@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de IMC e Gasto Calórico Diário | Fabricio Moura</title>
+  <meta name="description" content="Calcule grátis seu IMC e seu gasto calórico diário (TMB e TDEE). Descubra quantas calorias comer para emagrecer ou ganhar massa com acompanhamento de nutricionista esportivo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    /* ============================================================
+       CALCULADORA IMC + GASTO CALÓRICO — identidade Fabricio Moura
+       Arquivo único, sem dependências de build. Cole no WordPress
+       (bloco "HTML personalizado") ou hospede como página própria.
+       ============================================================ */
+    :root{
+      --yellow:#F5C518; --yellow-dark:#d4a800;
+      --black:#080808; --dark:#111; --dark2:#1a1a1a; --dark3:#222;
+      --text:#f0f0f0; --muted:#999; --green:#28c76f; --red:#ff5b5b;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    .fm-calc{font-family:'Inter',system-ui,sans-serif;background:var(--black);color:var(--text);
+      line-height:1.6;padding:32px 16px;display:flex;justify-content:center}
+    .fm-calc *{font-family:inherit}
+    .fm-wrap{width:100%;max-width:560px}
+    .fm-head{text-align:center;margin-bottom:24px}
+    .fm-badge{display:inline-block;background:var(--yellow);color:#000;font-size:11px;font-weight:800;
+      letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:6px;margin-bottom:14px}
+    .fm-head h1{font-size:1.7rem;font-weight:900;line-height:1.2}
+    .fm-head h1 span{color:var(--yellow)}
+    .fm-head p{color:var(--muted);font-size:.95rem;margin-top:8px}
+    .fm-tabs{display:flex;gap:8px;background:var(--dark2);padding:6px;border-radius:12px;margin-bottom:20px}
+    .fm-tab{flex:1;text-align:center;padding:12px;border-radius:8px;cursor:pointer;font-weight:700;font-size:.95rem;
+      color:var(--muted);background:transparent;border:0;transition:.18s}
+    .fm-tab.active{background:var(--yellow);color:#000}
+    .fm-card{background:var(--dark);border:1px solid var(--dark3);border-radius:16px;padding:24px}
+    .fm-field{margin-bottom:16px}
+    .fm-field label{display:block;font-size:.85rem;font-weight:600;color:var(--text);margin-bottom:7px}
+    .fm-field input,.fm-field select{width:100%;background:var(--dark2);border:1px solid var(--dark3);color:var(--text);
+      padding:13px 14px;border-radius:9px;font-size:1rem;outline:none;transition:.18s}
+    .fm-field input:focus,.fm-field select:focus{border-color:var(--yellow)}
+    .fm-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .fm-seg{display:flex;gap:8px}
+    .fm-seg button{flex:1;padding:12px;border-radius:9px;border:1px solid var(--dark3);background:var(--dark2);
+      color:var(--text);font-weight:700;cursor:pointer;transition:.18s}
+    .fm-seg button.active{background:var(--yellow);color:#000;border-color:var(--yellow)}
+    .fm-btn{width:100%;background:var(--yellow);color:#000;font-weight:800;font-size:1.05rem;border:0;
+      padding:15px;border-radius:10px;cursor:pointer;margin-top:6px;transition:.18s}
+    .fm-btn:hover{background:var(--yellow-dark)}
+    .fm-result{display:none;margin-top:22px;animation:fmfade .35s ease}
+    .fm-result.show{display:block}
+    @keyframes fmfade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .fm-big{text-align:center;background:var(--dark2);border:1px solid var(--dark3);border-radius:14px;padding:22px;margin-bottom:14px}
+    .fm-big .num{font-size:3rem;font-weight:900;color:var(--yellow);line-height:1}
+    .fm-big .lbl{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:6px}
+    .fm-big .tag{display:inline-block;margin-top:10px;font-weight:800;padding:5px 14px;border-radius:20px;font-size:.9rem}
+    .fm-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px}
+    .fm-mini{background:var(--dark2);border:1px solid var(--dark3);border-radius:11px;padding:14px;text-align:center}
+    .fm-mini .n{font-size:1.35rem;font-weight:800;color:var(--text)}
+    .fm-mini .n.green{color:var(--green)} .fm-mini .n.red{color:var(--red)}
+    .fm-mini .t{font-size:.72rem;color:var(--muted);margin-top:3px}
+    .fm-cta{background:linear-gradient(135deg,#1a1e1a,#111);border:1px solid var(--yellow);border-radius:14px;
+      padding:20px;text-align:center;margin-top:16px}
+    .fm-cta p{font-size:.98rem;margin-bottom:14px}
+    .fm-cta p strong{color:var(--yellow)}
+    .fm-wpp{display:inline-flex;align-items:center;gap:9px;background:var(--yellow);color:#000;font-weight:800;
+      font-size:1rem;padding:14px 26px;border-radius:10px;text-decoration:none;transition:.18s}
+    .fm-wpp:hover{background:var(--yellow-dark)}
+    .fm-disc{font-size:.72rem;color:var(--muted);text-align:center;margin-top:16px;line-height:1.5}
+    @media(max-width:480px){.fm-grid{grid-template-columns:1fr}.fm-head h1{font-size:1.4rem}.fm-big .num{font-size:2.4rem}}
+  </style>
+</head>
+<body>
+  <!-- ===== INÍCIO DO WIDGET (cole deste comentário até o de fim no WordPress) ===== -->
+  <div class="fm-calc">
+    <div class="fm-wrap">
+      <div class="fm-head">
+        <span class="fm-badge">Ferramenta gratuita</span>
+        <h1>Calculadora de <span>IMC</span> e <span>Gasto Calórico</span></h1>
+        <p>Descubra seu índice de massa corporal e quantas calorias seu corpo gasta por dia.</p>
+      </div>
+
+      <div class="fm-tabs">
+        <button class="fm-tab active" data-tab="imc" type="button">IMC</button>
+        <button class="fm-tab" data-tab="tdee" type="button">Gasto calórico</button>
+      </div>
+
+      <!-- ---- IMC ---- -->
+      <div class="fm-card" id="fm-pane-imc">
+        <div class="fm-row">
+          <div class="fm-field">
+            <label>Peso (kg)</label>
+            <input type="number" id="imc-peso" inputmode="decimal" placeholder="Ex.: 82" />
+          </div>
+          <div class="fm-field">
+            <label>Altura (cm)</label>
+            <input type="number" id="imc-altura" inputmode="decimal" placeholder="Ex.: 178" />
+          </div>
+        </div>
+        <button class="fm-btn" type="button" onclick="fmCalcIMC()">Calcular meu IMC</button>
+
+        <div class="fm-result" id="imc-result">
+          <div class="fm-big">
+            <div class="num" id="imc-num">—</div>
+            <div class="lbl">Seu IMC</div>
+            <div><span class="tag" id="imc-tag"></span></div>
+          </div>
+          <div class="fm-cta">
+            <p id="imc-msg"></p>
+            <a class="fm-wpp" id="imc-wpp" href="#" target="_blank" rel="noopener">Falar com o Fabricio no WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- TDEE ---- -->
+      <div class="fm-card" id="fm-pane-tdee" style="display:none">
+        <div class="fm-field">
+          <label>Sexo</label>
+          <div class="fm-seg" id="tdee-sexo">
+            <button type="button" class="active" data-v="h">Homem</button>
+            <button type="button" data-v="m">Mulher</button>
+          </div>
+        </div>
+        <div class="fm-row">
+          <div class="fm-field"><label>Idade</label><input type="number" id="tdee-idade" inputmode="numeric" placeholder="Ex.: 32" /></div>
+          <div class="fm-field"><label>Peso (kg)</label><input type="number" id="tdee-peso" inputmode="decimal" placeholder="Ex.: 82" /></div>
+        </div>
+        <div class="fm-field"><label>Altura (cm)</label><input type="number" id="tdee-altura" inputmode="decimal" placeholder="Ex.: 178" /></div>
+        <div class="fm-field">
+          <label>Nível de atividade</label>
+          <select id="tdee-ativ">
+            <option value="1.2">Sedentário (pouco ou nenhum treino)</option>
+            <option value="1.375">Leve (treino 1–3x por semana)</option>
+            <option value="1.55" selected>Moderado (treino 3–5x por semana)</option>
+            <option value="1.725">Intenso (treino 6–7x por semana)</option>
+            <option value="1.9">Muito intenso (treino 2x/dia, trabalho físico)</option>
+          </select>
+        </div>
+        <button class="fm-btn" type="button" onclick="fmCalcTDEE()">Calcular meu gasto calórico</button>
+
+        <div class="fm-result" id="tdee-result">
+          <div class="fm-big">
+            <div class="num" id="tdee-num">—</div>
+            <div class="lbl">Calorias para manter o peso (por dia)</div>
+          </div>
+          <div class="fm-grid">
+            <div class="fm-mini"><div class="n" id="tdee-tmb">—</div><div class="t">Metabolismo basal (TMB)</div></div>
+            <div class="fm-mini"><div class="n red" id="tdee-cut">—</div><div class="t">Para emagrecer</div></div>
+            <div class="fm-mini"><div class="n green" id="tdee-bulk">—</div><div class="t">Para ganhar massa</div></div>
+          </div>
+          <div class="fm-cta">
+            <p>Saber o número é o começo. <strong>O resultado vem do plano certo pra você.</strong> Monto sua estratégia de nutrição e treino com acompanhamento e garantia.</p>
+            <a class="fm-wpp" id="tdee-wpp" href="#" target="_blank" rel="noopener">Quero meu plano personalizado</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="fm-disc">Estimativas baseadas na fórmula de Mifflin-St Jeor. São valores de referência e não substituem avaliação profissional individual.</p>
+    </div>
+  </div>
+
+  <script>
+    /* WhatsApp do Fabricio — trocar aqui se mudar o número */
+    var FM_WPP = "+5511914849797";
+    function fmLink(msg){ return "https://wa.me/" + FM_WPP.replace(/[^0-9]/g,"") + "?text=" + encodeURIComponent(msg); }
+
+    /* Tabs */
+    document.querySelectorAll('.fm-tab').forEach(function(b){
+      b.addEventListener('click',function(){
+        document.querySelectorAll('.fm-tab').forEach(function(x){x.classList.remove('active')});
+        b.classList.add('active');
+        var t=b.dataset.tab;
+        document.getElementById('fm-pane-imc').style.display = t==='imc'?'block':'none';
+        document.getElementById('fm-pane-tdee').style.display = t==='tdee'?'block':'none';
+      });
+    });
+    /* Segmento sexo */
+    document.querySelectorAll('#tdee-sexo button').forEach(function(b){
+      b.addEventListener('click',function(){
+        document.querySelectorAll('#tdee-sexo button').forEach(function(x){x.classList.remove('active')});
+        b.classList.add('active');
+      });
+    });
+
+    function fmCalcIMC(){
+      var p=parseFloat(document.getElementById('imc-peso').value);
+      var a=parseFloat(document.getElementById('imc-altura').value)/100;
+      if(!p||!a||p<=0||a<=0){alert('Preencha peso e altura corretamente.');return;}
+      var imc=p/(a*a);
+      var cls,cor,msg;
+      if(imc<18.5){cls='Abaixo do peso';cor='#5b8def';msg='Seu IMC indica peso abaixo do ideal. Ganhar massa com qualidade exige estratégia — <strong>posso te ajudar a montar a sua</strong>.';}
+      else if(imc<25){cls='Peso normal';cor='#28c76f';msg='Peso dentro da faixa saudável. O próximo nível é <strong>recomposição corporal</strong>: menos gordura, mais músculo.';}
+      else if(imc<30){cls='Sobrepeso';cor='#F5C518';msg='Seu IMC indica sobrepeso. Dá pra reverter isso ganhando músculo e perdendo gordura — <strong>com o plano certo e garantia</strong>.';}
+      else if(imc<35){cls='Obesidade grau I';cor='#ff9f43';msg='Seu IMC indica obesidade grau I. Acompanhamento profissional muda o jogo — <strong>vamos conversar sobre o seu caso</strong>.';}
+      else if(imc<40){cls='Obesidade grau II';cor='#ff7043';msg='Seu IMC indica obesidade grau II. Recomendo fortemente acompanhamento — <strong>posso te orientar com segurança</strong>.';}
+      else{cls='Obesidade grau III';cor='#ff5b5b';msg='Seu IMC indica obesidade grau III. O acompanhamento profissional é essencial — <strong>fale comigo para começarmos com segurança</strong>.';}
+      document.getElementById('imc-num').textContent=imc.toFixed(1).replace('.',',');
+      var tag=document.getElementById('imc-tag');
+      tag.textContent=cls; tag.style.background=cor; tag.style.color='#000';
+      document.getElementById('imc-msg').innerHTML=msg;
+      document.getElementById('imc-wpp').href=fmLink('Oi Fabricio! Calculei meu IMC no seu site ('+imc.toFixed(1).replace('.',',')+' - '+cls+') e quero saber como melhorar meus resultados.');
+      document.getElementById('imc-result').classList.add('show');
+    }
+
+    function fmCalcTDEE(){
+      var sexo=document.querySelector('#tdee-sexo button.active').dataset.v;
+      var idade=parseInt(document.getElementById('tdee-idade').value,10);
+      var p=parseFloat(document.getElementById('tdee-peso').value);
+      var a=parseFloat(document.getElementById('tdee-altura').value);
+      var fat=parseFloat(document.getElementById('tdee-ativ').value);
+      if(!idade||!p||!a||idade<=0||p<=0||a<=0){alert('Preencha idade, peso e altura corretamente.');return;}
+      var tmb=(10*p)+(6.25*a)-(5*idade)+(sexo==='h'?5:-161);
+      var tdee=tmb*fat;
+      var r=function(n){return Math.round(n/10)*10;};
+      document.getElementById('tdee-num').textContent=r(tdee).toLocaleString('pt-BR')+' kcal';
+      document.getElementById('tdee-tmb').textContent=r(tmb).toLocaleString('pt-BR');
+      document.getElementById('tdee-cut').textContent=r(tdee-500).toLocaleString('pt-BR');
+      document.getElementById('tdee-bulk').textContent=r(tdee+300).toLocaleString('pt-BR');
+      document.getElementById('tdee-wpp').href=fmLink('Oi Fabricio! Calculei meu gasto calórico no seu site ('+r(tdee).toLocaleString('pt-BR')+' kcal/dia) e quero um plano pra atingir meus objetivos.');
+      document.getElementById('tdee-result').classList.add('show');
+    }
+  </script>
+  <!-- ===== FIM DO WIDGET ===== -->
+</body>
+</html>

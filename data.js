@@ -40,8 +40,7 @@ window.SEO_DATA = {
             "o canal que funciona; o Instagram quase não converte. Logo: dobrar a aposta no Google " +
             "(SEO + Ads) é a decisão certa. Conteúdo e anúncios devem ter enquadramento masculino / " +
             "performance (esporte, hipertrofia, treino), o que casa com 'nutricionista esportivo' " +
-            "(KDI 10). Atenção: o site time.fabriciomoura.com foi feito para a audiência do Instagram " +
-            "(mulheres) — provável descasamento com o comprador real do Google (homens)."
+            "(KDI 10) e com o ICP do próprio negócio (≈60% masculino, homens 28-45)."
         },
         relatorio_ads: {
           periodo: "25/05/2026 a 31/05/2026",
@@ -262,11 +261,13 @@ window.SEO_DATA = {
 
         // Site novo do Fabrício (custom, feito no Claude) — rodando Ads há ~1 mês
         site_novo: {
-          url: "time.fabriciomoura.com/acompanhamento-premium",
-          status: "Invisível no Semrush",
-          organico: "0 keywords próprias (novo demais para indexar/ranquear)",
-          backlinks: "0 (NOTHING FOUND)",
-          nota: "Página bloqueia crawler (HTTP 403). Sem footprint no Semrush é esperado com 1 mês. Auditoria depende de acesso/analytics ou Semrush Site Audit. Vantagem: site custom = fácil plugar calculadora como isca de topo."
+          url: "time.fabriciomoura.com (redireciona p/ /acompanhamento-premium)",
+          repo: "fabriciomourateam/instagram-fabricio (HTML estático na Vercel)",
+          status: "Invisível no Semrush (0 keywords, 0 backlinks) — esperado com 1 mês",
+          tipo: "Landing de CONVERSÃO de tráfego pago (Google Ads + Instagram), NÃO é página de SEO",
+          icp: "≈60% masculino (homens 28-45 + mulheres fitness 25-38) — alinhado com o paciente real",
+          tracking: "Google Tag Manager (GTM-MMTBW5SQ) instalado",
+          nota: "Como é landing de pago, não vai ranquear orgânico (sem profundidade de conteúdo) — se 'não vai bem', o problema é CONVERSÃO/Ads, não SEO. Gaps notados pelo próprio projeto: landing 'genérica', sem lead magnet, Pixel Meta ausente. og:url aponta p/ fabriciomoura.com/time (inconsistente). Site custom = fácil plugar calculadora (feita em ferramentas/calculadora.html)."
         }
       }
     }
