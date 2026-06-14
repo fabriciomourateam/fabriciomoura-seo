@@ -1,0 +1,60 @@
+{
+  "data_snapshot": "2026-06-14",
+  "fonte": "Semrush MCP",
+  "database": "br",
+  "site": "fabriciomoura.com",
+  "queries_executadas": [
+    { "report": "domain_organic_organic", "params": { "database": "br", "domain": "fabriciomoura.com" }, "resultado": "ERROR 50 :: NOTHING FOUND (sem dados de concorrentes — site sem footprint orgânico)" },
+    { "report": "domain_organic", "params": { "database": "br", "domain": "fabriciomoura.com", "display_sort": "tr_desc" }, "resultado": "2 keywords: 'ivy moura' (pos 50, vol 90), 'moura academia' (pos 40, vol 320)" },
+    { "report": "domain_adwords", "params": { "database": "br", "domain": "fabriciomoura.com", "display_sort": "tr_desc" }, "resultado": "'emagrecimento rapido' pos 4, vol 3600, CPC 0.15" },
+    { "report": "phrase_organic", "params": { "database": "br", "phrase": "nutricionista esportivo" } },
+    { "report": "phrase_organic", "params": { "database": "br", "phrase": "nutricionista" } },
+    { "report": "phrase_these", "params": { "database": "br", "phrase": "nutricionista esportivo;nutricionista;nutricionista esportiva;emagrecimento rapido;nutricionista online" } },
+    { "report": "domain_organic", "params": { "database": "br", "domain": "raphaelnutri.com" } },
+    { "report": "domain_organic", "params": { "database": "br", "domain": "nutrijoaoortiz.com.br" } },
+    { "report": "domain_organic", "params": { "database": "br", "domain": "nutricionistalucasalves.com.br" } },
+    { "report": "domain_organic_unique", "params": { "database": "br", "domain": "raphaelnutri.com", "display_sort": "tr_desc" } }
+  ],
+  "metricas_keywords": {
+    "nutricionista": { "vol": 49500, "cpc": 0.47, "competition": 0.39 },
+    "nutricionista online": { "vol": 6600, "cpc": 0.56, "competition": 0.87 },
+    "nutricionista esportivo": { "vol": 5400, "cpc": 0.59, "competition": 0.68 },
+    "nutricionista esportiva": { "vol": 1600, "cpc": 0.59, "competition": 0.68 },
+    "nutricionista esportivo perto de mim": { "vol": 480, "cpc": 0.52 },
+    "emagrecimento rapido": { "vol": 3600, "cpc": 0.15, "competition": 1.0 },
+    "arroz engorda": { "vol": 6600, "cpc": 0.05 },
+    "quem toma mounjaro pode beber": { "vol": 2400 },
+    "creatina engorda ou emagrece": { "vol": 1900, "cpc": 0.02 },
+    "cardapio para quem toma mounjaro": { "vol": 1000, "cpc": 0.19 },
+    "dieta da selva funciona": { "vol": 480, "cpc": 0.16 }
+  },
+  "serp_nutricionista_esportivo_top": [
+    "instagram.com/izanutriesportiva", "raphaelnutri.com", "doctoralia.com.br (nutricao-esportiva sao-paulo)",
+    "nutrijoaoortiz.com.br", "nutricionistalucasalves.com.br", "ricardosantosnutricionista.com.br",
+    "nutrisportbh.com.br", "airamhenriquenutri.com.br", "nutricionistaesportivo.com",
+    "nutricionistarobertofilho.com.br", "instagram.com/nutri.natipazinatto", "nutricionistagabrielbueno.com.br"
+  ],
+  "concorrentes_selecionados": ["raphaelnutri.com", "nutrijoaoortiz.com.br", "nutricionistalucasalves.com.br"],
+  "raphaelnutri_top_paginas": [
+    { "titulo": "6 alimentos ricos em fibras", "trafego_pct": 34.22, "keywords": 78, "visitas": 1450 },
+    { "titulo": "Gordura visceral", "trafego_pct": 17.25, "keywords": 18, "visitas": 731 },
+    { "titulo": "Home", "trafego_pct": 14.18, "keywords": 62, "visitas": 601 },
+    { "titulo": "Pode beber tomando Mounjaro", "trafego_pct": 11.82, "keywords": 78, "visitas": 501 },
+    { "titulo": "Comer arroz engorda", "trafego_pct": 8.33, "keywords": 65, "visitas": 353 },
+    { "titulo": "Cardapio para quem toma Mounjaro", "trafego_pct": 7.03, "keywords": 29, "visitas": 298 },
+    { "titulo": "Deficit calorico", "trafego_pct": 3.42, "keywords": 30, "visitas": 145 },
+    { "titulo": "Creatina engorda ou emagrece", "trafego_pct": 1.34, "keywords": 51, "visitas": 57 }
+  ],
+  "negocio_cliente": {
+    "ticket_medio_anual": "1800-2600",
+    "investimento_ads_mes_aprox": 22000,
+    "faturamento_total_aprox": 150000,
+    "canal": "100% Google Ads",
+    "relatorio_ads_semana": {
+      "periodo": "2026-05-25 a 2026-05-31",
+      "investimento": 5094.51, "cliques_whatsapp": 332, "custo_por_whatsapp": 15.34,
+      "impressoes": 44498, "cliques": 2307, "ctr": 5.18, "taxa_conversao": 14.27,
+      "primeira_posicao": 24.26, "topo_geral": 72.16
+    }
+  }
+}

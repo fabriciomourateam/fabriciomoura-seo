@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Dashboard SEO · Nutrição Esportiva — Fabrício Moura</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .glass { background: rgba(255,255,255,.7); backdrop-filter: blur(10px); }
+    .card { transition: transform .18s ease, box-shadow .18s ease; }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 12px 30px -12px rgba(16,185,129,.35); }
+    .nav-btn.active { background:#10b981; color:#fff; }
+    ::-webkit-scrollbar { height:8px; width:8px; } ::-webkit-scrollbar-thumb { background:#cbd5e1; border-radius:8px; }
+    .fade { animation: fade .35s ease; } @keyframes fade { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:none} }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- HEADER -->
+  <header class="bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 text-white">
+    <div class="max-w-6xl mx-auto px-5 py-7">
+      <div class="flex items-center justify-between flex-wrap gap-3">
+        <div>
+          <p class="text-emerald-100 text-xs font-semibold tracking-widest uppercase">Inteligência SEO · Semrush</p>
+          <h1 id="hTitulo" class="text-2xl md:text-3xl font-extrabold mt-1">Dashboard SEO — Nutrição Esportiva</h1>
+          <p id="hSub" class="text-emerald-50/90 text-sm mt-1"></p>
+        </div>
+        <div class="text-right">
+          <div class="glass text-slate-700 rounded-xl px-4 py-2 text-sm">
+            <div class="font-bold" id="hData">—</div>
+            <div class="text-xs text-slate-500">última análise</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav class="sticky top-0 z-20 glass border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-3 flex gap-1 overflow-x-auto py-2 text-sm font-medium" id="nav"></div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-5 py-7" id="main"></main>
+
+  <footer class="max-w-6xl mx-auto px-5 py-10 text-center text-xs text-slate-400">
+    Dados: Semrush (banco BR) · Dashboard estático autossuficiente · Para atualizar, edite <code>data.js</code> e dê push.
+  </footer>
+
+  <script src="./data.js"></script>
+  <script>
+    const D = window.SEO_DATA;
+    const S = D.snapshots[D.snapshots.length - 1]; // snapshot mais recente
+    const P = D.projeto;
+
+    document.getElementById('hTitulo').textContent = P.nome;
+    document.getElementById('hSub').textContent = P.objetivo;
+    document.getElementById('hData').textContent = S.data;
+
+    const fmt = n => n ? n.toLocaleString('pt-BR') : '—';
+    const funilColor = f =>
+      /Fundo|Comercial/i.test(f) ? 'bg-emerald-100 text-emerald-700' :
+      /Meio/i.test(f) ? 'bg-amber-100 text-amber-700' :
+      'bg-sky-100 text-sky-700';
+    const prioColor = p => p==='Alta'?'bg-rose-100 text-rose-700':p==='Média'?'bg-amber-100 text-amber-700':'bg-slate-100 text-slate-600';
+    const statusColor = s => /Conclu/i.test(s)?'bg-emerald-500':/Pendente/i.test(s)?'bg-slate-300':'bg-sky-400';
+
+    const TABS = [
+      ['resumo','📊 Resumo'],
+      ['concorrentes','🏆 Concorrentes'],
+      ['transacionais','💰 Transacionais'],
+      ['meiofundo','🎯 Meio/Fundo'],
+      ['conteudo','📝 Calendário 90d'],
+      ['fases','🚀 Roadmap'],
+      ['metodo','🔧 Metodologia']
+    ];
+
+    const nav = document.getElementById('nav');
+    TABS.forEach(([id,label],i)=>{
+      const b=document.createElement('button');
+      b.className='nav-btn whitespace-nowrap px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition';
+      b.textContent=label; b.dataset.tab=id;
+      b.onclick=()=>show(id);
+      nav.appendChild(b);
+    });
+
+    function kpi(label,value,sub,accent='emerald'){
+      return `<div class="card bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
+        <div class="text-xs font-semibold text-${accent}-600 uppercase tracking-wide">${label}</div>
+        <div class="text-2xl font-extrabold mt-1">${value}</div>
+        <div class="text-xs text-slate-500 mt-1">${sub}</div></div>`;
+    }
+
+    const VIEWS = {
+      resumo(){
+        const r = S.negocio.relatorio_ads;
+        return `
+        <section class="fade space-y-6">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            ${kpi('Tráfego orgânico hoje','~0', S.diagnostico.keywords_organicas+' palavras (marca)','rose')}
+            ${kpi('Investido em Ads','R$ 22k/mês','100% Google Ads','sky')}
+            ${kpi('Custo por WhatsApp','R$ '+r.custo_por_whatsapp, r.cliques_whatsapp+' conversas/sem','amber')}
+            ${kpi('Faturamento','> R$ 150k','ads+indicação+renovação','emerald')}
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+            <h3 class="font-bold text-lg mb-2">🔍 Diagnóstico</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">${S.diagnostico.leitura}</p>
+            <div class="mt-4 grid md:grid-cols-3 gap-3 text-sm">
+              <div class="bg-rose-50 rounded-xl p-4"><div class="font-semibold text-rose-700">Oportunidade #1</div>Canal orgânico 100% intocado — margem pura a destravar.</div>
+              <div class="bg-emerald-50 rounded-xl p-4"><div class="font-semibold text-emerald-700">Modelo a copiar</div>raphaelnutri: conteúdo → "nutricionista online".</div>
+              <div class="bg-sky-50 rounded-xl p-4"><div class="font-semibold text-sky-700">Tese</div>Pago traz venda hoje; orgânico carrega o topo/meio sem custo por clique.</div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+            <h3 class="font-bold text-lg mb-3">Relatório de Ads (semana ${r.periodo})</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+              <div class="bg-slate-50 rounded-xl p-3"><div class="text-slate-400 text-xs">CTR</div><div class="font-bold">${r.ctr}%</div></div>
+              <div class="bg-slate-50 rounded-xl p-3"><div class="text-slate-400 text-xs">Taxa conversão</div><div class="font-bold">${r.taxa_conversao}%</div></div>
+              <div class="bg-slate-50 rounded-xl p-3"><div class="text-slate-400 text-xs">Topo geral</div><div class="font-bold">${r.topo_geral}%</div></div>
+              <div class="bg-slate-50 rounded-xl p-3"><div class="text-slate-400 text-xs">Impressões</div><div class="font-bold">${fmt(r.impressoes)}</div></div>
+            </div>
+          </div>
+        </section>`;
+      },
+
+      concorrentes(){
+        return `<section class="fade space-y-4">
+          ${S.concorrentes.map(c=>`
+            <div class="card bg-white rounded-2xl p-5 border border-slate-100 shadow-sm flex gap-4 items-start">
+              <div class="text-3xl">${c.medalha}</div>
+              <div class="flex-1">
+                <div class="flex items-center gap-2"><h3 class="font-bold text-lg">${c.dominio}</h3>
+                <span class="text-xs bg-slate-100 px-2 py-.5 rounded-full">#${c.rank}</span></div>
+                <p class="text-sm text-slate-600 mt-1"><b>Força:</b> ${c.forca}</p>
+                <p class="text-sm text-emerald-700 mt-1"><b>Jogada:</b> ${c.modelo}</p>
+              </div>
+            </div>`).join('')}
+          <p class="text-xs text-slate-400 italic">Descartados: ${S.concorrentes_descartados}</p>
+        </section>`;
+      },
+
+      transacionais(){ return tabelaKW(S.kw_transacionais, true); },
+      meiofundo(){ return tabelaKW(S.kw_meio_fundo, false); },
+
+      conteudo(){
+        const meses=[1,2,3];
+        return `<section class="fade space-y-6">
+          <div class="bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
+            <h3 class="font-bold text-lg mb-1">📈 Páginas campeãs do concorrente (o que copiar)</h3>
+            <p class="text-xs text-slate-500 mb-3">% do tráfego orgânico total do raphaelnutri por página</p>
+            <canvas id="chartPaginas" height="120"></canvas>
+          </div>
+          ${meses.map(m=>`
+            <div>
+              <h3 class="font-bold text-lg mb-2">Mês ${m}</h3>
+              <div class="grid md:grid-cols-2 gap-3">
+                ${S.calendario.filter(a=>a.mes===m).map(a=>`
+                  <div class="card bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
+                    <div class="flex items-center gap-2 mb-1">
+                      <span class="text-[11px] px-2 py-.5 rounded-full ${funilColor(a.funil)}">${a.funil}</span>
+                      <span class="text-[11px] px-2 py-.5 rounded-full ${prioColor(a.prioridade)}">${a.prioridade}</span>
+                    </div>
+                    <div class="font-semibold text-sm">${a.titulo}</div>
+                    <div class="text-xs text-slate-500 mt-1">🎯 ${a.kw}${a.vol?` · ${fmt(a.vol)}/mês`:''}</div>
+                  </div>`).join('')}
+              </div>
+            </div>`).join('')}
+        </section>`;
+      },
+
+      fases(){
+        return `<section class="fade">
+          <div class="relative border-l-2 border-slate-200 ml-3 space-y-6 py-2">
+            ${D.fases.map(f=>`
+              <div class="relative pl-6">
+                <span class="absolute -left-[9px] top-1 w-4 h-4 rounded-full ${statusColor(f.status)} ring-4 ring-white"></span>
+                <div class="card bg-white rounded-xl p-4 border border-slate-100 shadow-sm">
+                  <div class="flex justify-between items-center">
+                    <h3 class="font-bold">Fase ${f.n} · ${f.nome}</h3>
+                    <span class="text-xs px-2 py-1 rounded-full ${/Conclu/i.test(f.status)?'bg-emerald-100 text-emerald-700':/Pendente/i.test(f.status)?'bg-slate-100 text-slate-500':'bg-sky-100 text-sky-700'}">${f.status}</span>
+                  </div>
+                  <p class="text-sm text-slate-600 mt-1">${f.desc}</p>
+                </div>
+              </div>`).join('')}
+          </div>
+        </section>`;
+      },
+
+      metodo(){
+        return `<section class="fade space-y-4">
+          <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 text-sm">
+            <h3 class="font-bold text-amber-800 mb-1">🔁 Como re-analisar daqui a X meses</h3>
+            <ol class="list-decimal ml-5 text-amber-900/80 space-y-1">
+              <li>Re-rode as queries abaixo no conector Semrush (banco <b>br</b>).</li>
+              <li>Adicione um novo snapshot em <code>data.js</code> (não apague os antigos).</li>
+              <li>Salve o bruto em <code>/seo-analysis/snapshots/AAAA-MM-DD.json</code> e dê push — a Vercel republica.</li>
+            </ol>
+          </div>
+          <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead class="bg-slate-50 text-slate-500 text-xs uppercase">
+                <tr><th class="text-left p-3">Passo</th><th class="text-left p-3">Relatório</th><th class="text-left p-3">Parâmetros</th></tr>
+              </thead>
+              <tbody>
+                ${D.metodologia.map(m=>`<tr class="border-t border-slate-100">
+                  <td class="p-3">${m.passo}</td>
+                  <td class="p-3"><code class="text-emerald-700">${m.report}</code></td>
+                  <td class="p-3"><code class="text-slate-500 text-xs">${m.params}</code></td></tr>`).join('')}
+              </tbody>
+            </table>
+          </div>
+        </section>`;
+      }
+    };
+
+    function tabelaKW(arr, transacional){
+      return `<section class="fade">
+        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="bg-slate-50 text-slate-500 text-xs uppercase">
+              <tr>
+                <th class="text-left p-3">Palavra-chave</th>
+                <th class="text-left p-3">Volume/mês</th>
+                ${transacional?'<th class="text-left p-3">CPC</th>':'<th class="text-left p-3">Funil</th>'}
+                <th class="text-left p-3">Por que importa</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${arr.map(k=>`<tr class="border-t border-slate-100 hover:bg-emerald-50/40">
+                <td class="p-3 font-semibold">${k.kw}</td>
+                <td class="p-3">${fmt(k.vol)}</td>
+                ${transacional?`<td class="p-3">R$ ${k.cpc.toFixed(2)}</td>`:`<td class="p-3"><span class="text-[11px] px-2 py-.5 rounded-full ${funilColor(k.funil)}">${k.funil}</span></td>`}
+                <td class="p-3 text-slate-600">${k.nota}</td></tr>`).join('')}
+            </tbody>
+          </table>
+        </div></section>`;
+    }
+
+    let chart;
+    function show(tab){
+      document.querySelectorAll('.nav-btn').forEach(b=>b.classList.toggle('active', b.dataset.tab===tab));
+      document.getElementById('main').innerHTML = VIEWS[tab]();
+      if(tab==='conteudo'){
+        const ctx=document.getElementById('chartPaginas');
+        if(chart) chart.destroy();
+        chart=new Chart(ctx,{type:'bar',data:{
+          labels:S.paginas_top_concorrente.map(p=>p.titulo),
+          datasets:[{label:'% do tráfego',data:S.paginas_top_concorrente.map(p=>p.trafego_pct),
+            backgroundColor:'#10b981',borderRadius:6}]},
+          options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{ticks:{callback:v=>v+'%'}}}}});
+      }
+      location.hash=tab;
+    }
+    show((location.hash||'#resumo').slice(1));
+  </script>
+</body>
+</html>
