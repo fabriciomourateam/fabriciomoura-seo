@@ -311,7 +311,9 @@ window.SEO_DATA = {
     { tipo: "Página de serviço", nome: "Nutricionista Online", url: "fabriciomoura.com/nutricionista-online", kw: "nutricionista online", kdi: 28, status: "Guia pronto — a montar", arquivo: "paginas/nutricionista-online-GUIA.md",
       nota: "Casa com plano à distância (vol 6.600). Ângulo '100% online'. Guia de→para + estrutura técnica de SEO." },
     { tipo: "Artigo", nome: "Creatina engorda ou emagrece?", url: "fabriciomoura.com/creatina-engorda-ou-emagrece", kw: "creatina engorda ou emagrece", kdi: 15, status: "Pronto — a publicar", arquivo: "blog/creatina-engorda-ou-emagrece.html",
-      nota: "Primeiro artigo gerado pelo fazedor semanal (playbook docs/AGENTE-SEMANAL.md). Padrão premium, FAQ+schema, links internos, CTA." }
+      nota: "Primeiro artigo gerado pelo fazedor semanal (playbook docs/AGENTE-SEMANAL.md). Padrão premium, FAQ+schema, links internos, CTA." },
+    { tipo: "Artigo", nome: "Nutricionista esportiva: o que faz e quando procurar", url: "fabriciomoura.com/nutricionista-esportiva", kw: "nutricionista esportiva", kdi: 16, status: "Pronto — a publicar", arquivo: "blog/nutricionista-esportiva.html",
+      nota: "Artigo semana 3 (fazedor semanal). Cobre o que faz, diferença do generalista, quando procurar, cards de serviços, FAQ 5 perguntas + schema, prova social, CTA WhatsApp. Link interno para /nutricionista-esportivo e /calculadora-de-imc-e-calorias. Publicação automática bloqueada: usuário WP sem permissão de Editor — verificar papel do usuário em Usuários > Editar." }
   ],
 
   // ---- Infraestrutura de SEO configurada (no WordPress / Google) ----

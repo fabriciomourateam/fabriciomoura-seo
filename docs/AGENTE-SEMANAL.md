@@ -11,7 +11,7 @@ Crie uma **sessão agendada** (semanal, ex.: segunda 09:00 BRT) apontando para o
 Marcar `[x]` ao concluir. O agente pega o **primeiro item não marcado**.
 - [x] Cardápio para quem toma Mounjaro (KDI 8) — publicado
 - [x] Creatina engorda ou emagrece? (KDI 15) — pronto (`blog/creatina-engorda-ou-emagrece.html`)
-- [ ] Nutricionista esportiva (variação) / "o que faz" (KDI 16)
+- [x] Nutricionista esportiva (variação) / "o que faz" (KDI 16) — pronto (`blog/nutricionista-esportiva.html`)
 - [ ] Gordura visceral: o que é e como reduzir (KDI 22)
 - [ ] Déficit calórico: a única forma de emagrecer (KDI 24)
 - [ ] Arroz engorda? (KDI 30, vol 6.600)

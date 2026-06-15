@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--
+  PUBLICAR NO WORDPRESS (como POST):
+  1. Publicações (Posts) > Adicionar novo.
+  2. Título: Nutricionista esportiva: o que faz e quando procurar uma
+  3. Bloco "HTML personalizado" > cole tudo entre INÍCIO DO POST e FIM DO POST.
+  4. Astra: Sidebar = Nenhuma + Desativar título. (Fundo do site já está preto.)
+  5. Rank Math:
+     Slug: nutricionista-esportiva
+     Título SEO: Nutricionista Esportiva: o que faz e quando procurar | Fabricio Moura
+     Meta: Nutricionista esportiva cuida da alimentação de quem treina. Veja o que ela faz,
+           quando vale a pena procurar e como o acompanhamento muda o resultado de verdade.
+     Palavra-chave foco: nutricionista esportiva
+  6. Defina imagem destacada (capa) e publique.
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nutricionista Esportiva: o que faz e quando procurar | Fabricio Moura</title>
+  <meta name="description" content="Nutricionista esportiva cuida da alimentação de quem treina. Veja o que ela faz, quando vale a pena procurar e como o acompanhamento muda o resultado de verdade." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+<!-- INÍCIO DO POST -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+  .mj{--gold1:#FFE9A8;--gold2:#FCD404;--gold3:#C9920A;--blk:#0e0e0e;--line:rgba(255,255,255,.08);--tx:#e9e9e9;--mut:#a8a8a8;--mont:'Montserrat',sans-serif;--anton:'Anton',sans-serif}
+  .mj,.mj *{box-sizing:border-box;margin:0;padding:0}
+  .mj{background:var(--blk);color:var(--tx);font-family:var(--mont);line-height:1.78;position:relative;overflow:hidden}
+  .mj .wrap{max-width:720px;margin:0 auto;padding:0 22px;position:relative;z-index:2}
+  .gold{background:linear-gradient(135deg,var(--gold1),var(--gold2) 45%,var(--gold3));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .mj-hero{position:relative;text-align:center;padding:64px 0 44px;border-bottom:1px solid var(--line);overflow:hidden}
+  .mj-hero::before{content:'';position:absolute;top:-220px;left:50%;transform:translateX(-50%);width:760px;height:520px;background:radial-gradient(circle, rgba(252,212,4,.14), transparent 62%);pointer-events:none}
+  .mj-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(252,212,4,.1);border:1px solid rgba(252,212,4,.35);color:var(--gold2);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:8px 16px;border-radius:100px;margin-bottom:22px}
+  .mj-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold2);box-shadow:0 0 10px var(--gold2)}
+  .mj-hero h1{font-family:var(--anton);font-weight:400;text-transform:uppercase;color:#fff;font-size:2.5rem;line-height:1.08;letter-spacing:.5px}
+  .mj-hero h1 span{color:inherit}
+  .mj-hero .sub{color:#cfcfcf;font-size:1.12rem;margin:18px auto 0;max-width:560px}
+  .mj article{padding:40px 0 10px}
+  .mj p{font-size:1.1rem;margin-bottom:18px;color:#dcdcdc}
+  .mj p b,.mj p strong{color:#fff}
+  .mj h2{font-family:var(--mont);font-weight:800;color:#fff;font-size:1.4rem;line-height:1.3;margin:38px 0 14px;padding-left:14px;border-left:4px solid var(--gold2)}
+  .mj h2 span{color:inherit}
+  .mj h3{font-weight:800;font-size:1.18rem;color:#fff;margin:26px 0 6px}
+  .mj-quote{border-left:3px solid var(--gold2);padding:6px 0 6px 22px;margin:30px 0;font-weight:700;font-size:1.32rem;line-height:1.4;color:#fff}
+  .mj-quote b{color:var(--gold2)}
+  .mj-cards{display:grid;gap:14px;margin:24px 0}
+  .mj-card{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--line);border-radius:16px;padding:20px 22px}
+  .mj-card-title{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+  .mj-card-ic{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--gold1),var(--gold3));display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+  .mj-card-title h3{margin:0;font-size:1.05rem;color:#fff}
+  .mj-card p{margin:0;font-size:.98rem;color:#c8c8c8}
+  .mj-checklist{list-style:none;margin:8px 0 18px;display:grid;gap:10px}
+  .mj-checklist li{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:13px;padding:14px 16px;font-size:1.02rem;color:#dcdcdc}
+  .mj-checklist li::before{content:'\2713';color:var(--gold2);font-weight:900;font-size:.95rem;margin-top:2px}
+  .mj-faq{margin-top:10px}
+  .mj-faq details{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;transition:.25s}
+  .mj-faq details[open]{border-color:rgba(252,212,4,.4)}
+  .mj-faq summary{padding:18px 20px;cursor:pointer;font-weight:700;font-size:1.04rem;color:#fff;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+  .mj-faq summary::-webkit-details-marker{display:none}
+  .mj-faq summary::after{content:'+';color:var(--gold2);font-weight:800;font-size:1.4rem;line-height:1}
+  .mj-faq details[open] summary::after{content:'\2013'}
+  .mj-faq .a{padding:0 20px 18px;color:#c8c8c8;font-size:1rem}
+  .mj-cta{position:relative;display:flex;align-items:center;gap:28px;margin:48px 0;padding:36px 32px;border-radius:24px;overflow:hidden;background:linear-gradient(160deg,rgba(252,212,4,.12),rgba(252,212,4,.02));border:1px solid rgba(252,212,4,.4)}
+  .mj-cta::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:480px;height:340px;background:radial-gradient(circle,rgba(252,212,4,.22),transparent 65%)}
+  .mj-cta>*{position:relative;z-index:2}
+  .mj-cta-text{flex:1}
+  .mj-cta-img{width:190px;flex-shrink:0;border-radius:16px;border:1px solid var(--line);display:block}
+  .mj-cta h2{font-family:var(--anton);font-weight:400;text-transform:uppercase;font-size:2rem;margin:0 0 12px;line-height:1.08;padding:0;border:0}
+  .mj-cta p{margin:0 0 22px;color:#eaeaea}
+  .mj-btn{display:inline-flex;align-items:center;gap:11px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;font-weight:800;text-transform:uppercase;letter-spacing:.03em;font-size:1.02rem;padding:17px 34px;border-radius:14px;text-decoration:none;box-shadow:0 16px 40px -12px rgba(252,212,4,.6);transition:.25s}
+  .mj-btn:hover{transform:translateY(-2px)}
+  .mj-btn svg{width:21px;height:21px;fill:#1a1300}
+  .mj p a,.mj-faq .a a{color:var(--gold2);text-decoration:underline;text-underline-offset:3px;font-weight:600}
+  .mj-lead{font-size:1.25rem !important;color:#fff !important;font-weight:600;line-height:1.55}
+  .mj-author{display:flex;gap:18px;align-items:flex-start;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:0 0 32px}
+  .mj-author img{width:82px;height:82px;border-radius:50%;object-fit:cover;object-position:50% 28%;border:2px solid var(--gold2);flex-shrink:0;background:#1a1a1a}
+  .mj-author .rl{color:var(--mut);font-size:.9rem;margin-top:7px;line-height:1.45}
+  .mj-author .rl b{color:var(--gold2)}
+  .mj-byline{color:var(--mut);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:9px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .mj-byline b{color:#fff}
+  .mj-byline i{width:5px;height:5px;border-radius:50%;background:var(--gold2);display:inline-block}
+  .mj-role{font-weight:800;color:#fff;font-size:1.05rem;margin-bottom:7px}
+  .mj-author-btn{display:inline-flex;align-items:center;gap:9px;margin-top:14px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;font-weight:800;text-transform:uppercase;font-size:.82rem;letter-spacing:.03em;padding:12px 22px;border-radius:11px;text-decoration:none}
+  .mj-author-btn svg{width:18px;height:18px;fill:#1a1300}
+  .mj-proof{margin:42px 0}
+  .mj-proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+  .mj-proof-grid img{width:100%;height:100%;object-fit:cover;border-radius:14px;border:1px solid var(--line);aspect-ratio:3/4;background:#1a1a1a}
+  .mj-proof-cap{text-align:center;color:var(--mut);font-size:.86rem;margin-top:14px;letter-spacing:.02em}
+  .mj-midcta{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:linear-gradient(135deg,rgba(252,212,4,.1),rgba(252,212,4,.02));border:1px solid rgba(252,212,4,.32);border-radius:16px;padding:18px 22px;margin:34px 0}
+  .mj-midcta span{font-weight:700;color:#fff;font-size:1.02rem}
+  .mj-midcta a{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;font-weight:800;text-transform:uppercase;font-size:.86rem;letter-spacing:.03em;padding:13px 22px;border-radius:11px;text-decoration:none;white-space:nowrap}
+  @media(max-width:600px){.mj-hero h1{font-size:1.85rem}.mj h2{font-size:1.3rem}.mj-quote{font-size:1.12rem}.mj-cta{flex-direction:column;text-align:center}.mj-cta h2{font-size:1.5rem}.mj-cta-img{width:170px;margin:14px auto 0}.mj-author{flex-direction:column;text-align:center}}
+</style>
+
+<div class="mj">
+  <header class="mj-hero">
+    <div class="wrap">
+      <span class="mj-badge">Nutrição Esportiva</span>
+      <h1>Nutricionista <span class="gold">esportiva</span>: o que faz e quando procurar uma</h1>
+      <p class="sub">O que muda na alimentação de quem treina, o que ela acompanha no dia a dia e como saber se você precisa de uma agora.</p>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <article>
+      <div class="mj-author">
+        <img src="https://fabriciomoura.com/wp-content/uploads/2026/06/Screenshot_20260322_192920_Canva1-scaled.jpg" alt="Fabricio Moura" loading="lazy" style="object-position:50% 50%" />
+        <div>
+          <div class="mj-byline">Por <b>Fabricio Moura</b><i></i>Leitura de 5 min</div>
+          <div class="mj-role">Nutricionista e Treinador</div>
+          <div class="rl"><b>Mais de 2.000 transformações em 7 países</b> e 18 anos de experiência ajudando pessoas a perder gordura e ganhar massa muscular com um método garantido.</div>
+          <a class="mj-author-btn" href="https://wa.me/+5511914849797?text=Oi%20Fabricio!%20Quero%20um%20acompanhamento%20individual%20com%20voc%C3%AA." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.866 9.866 0 001.51 5.26l-.999 3.648 3.978-1.607z"/></svg>Falar com o Fabricio</a>
+        </div>
+      </div>
+
+      <p class="mj-lead">Se você treina e ainda não consegue ver resultado, a alimentação provavelmente está sabotando o seu esforço. Um nutricionista esportivo resolve exatamente isso: monta a estratégia de comida que faz o treino render.</p>
+      <p>A pergunta que mais recebo é: "mas eu preciso mesmo de um nutricionista, ou dá pra fazer sozinho?" Dá pra tentar sozinho. A maioria das pessoas que chegam até mim já tentou. O problema é que tentativa e erro dentro da academia custa meses de treino sem resultado.</p>
+      <p>Abaixo eu explico o que um <a href="https://fabriciomoura.com/nutricionista-esportivo" target="_blank" rel="noopener">nutricionista esportivo</a> faz na prática, em que situações vale procurar um e como funciona o acompanhamento de perto.</p>
+
+      <div class="mj-quote">Nutrição esportiva não é "comer saudável". É <b>sincronizar alimentação com treino</b> para que o corpo gaste gordura e preserve músculo ao mesmo tempo.</div>
+
+      <h2>O que <span class="gold">uma nutricionista esportiva faz</span> na prática</h2>
+      <p>A diferença de um nutricionista esportivo para um generalista está no foco. Um nutricionista clínico costuma cuidar de condições de saúde: colesterol, glicemia, pressão. O esportivo olha para a composição corporal e para a performance, ou seja, menos gordura, mais músculo, mais energia, melhor recuperação.</p>
+      <p>Na prática, o acompanhamento inclui:</p>
+
+      <div class="mj-cards">
+        <div class="mj-card">
+          <div class="mj-card-title"><div class="mj-card-ic">🎯</div><h3>Avaliação da composição corporal</h3></div>
+          <p>Peso, percentual de gordura, massa muscular, metabolismo basal. Esses números definem a estratégia inicial: quanto você pode comer, em qual déficit ou superávit calórico ficar e qual a meta realista.</p>
+        </div>
+        <div class="mj-card">
+          <div class="mj-card-title"><div class="mj-card-ic">🍽️</div><h3>Montagem do plano alimentar</h3></div>
+          <p>Um cardápio personalizado com calorias e macros calculados para o seu treino. Diferente de dietas genéricas da internet, aqui a distribuição de proteínas, carboidratos e gorduras é feita para o seu objetivo e rotina.</p>
+        </div>
+        <div class="mj-card">
+          <div class="mj-card-title"><div class="mj-card-ic">⚡</div><h3>Timing de nutrição</h3></div>
+          <p>O que comer antes e depois do treino muda o resultado de forma concreta. O nutricionista esportivo define o que comer e em qual janela de tempo para maximizar o ganho de músculo e a queima de gordura.</p>
+        </div>
+        <div class="mj-card">
+          <div class="mj-card-title"><div class="mj-card-ic">💊</div><h3>Suplementação com critério</h3></div>
+          <p>Creatina, whey, cafeína, vitamina D. Nem todo mundo precisa de tudo, e suplemento errado é dinheiro jogado fora. O nutricionista esportivo indica o que faz sentido para o seu caso e na dose certa.</p>
+        </div>
+        <div class="mj-card">
+          <div class="mj-card-title"><div class="mj-card-ic">📊</div><h3>Ajustes ao longo do tempo</h3></div>
+          <p>O corpo se adapta. Um plano alimentar que funcionou nos primeiros dois meses precisa de ajuste para continuar progredindo. O acompanhamento identifica estagnações cedo e corrige antes de você perder semanas.</p>
+        </div>
+      </div>
+
+      <h2>Nutricionista esportiva ou <span class="gold">nutricionista comum</span>: qual a diferença?</h2>
+      <p>Ambas são formadas em nutrição. A diferença está na especialização e no foco do trabalho. Um nutricionista clínico generalista trabalha principalmente com saúde metabólica, doenças crônicas e emagrecimento básico. O esportivo adiciona a camada de performance: ele entende como o treino de força, a periodização e a composição corporal se relacionam com a alimentação.</p>
+      <p>Se o seu objetivo é ter mais saúde no geral, um nutricionista generalista resolve. Se você treina e quer perder gordura mantendo ou ganhando músculo, a especialidade esportiva faz diferença prática no resultado.</p>
+
+      <div class="mj-midcta">
+        <span>Quer saber seu gasto calórico real?</span>
+        <a href="https://fabriciomoura.com/calculadora-de-imc-e-calorias" target="_blank" rel="noopener">Calcular agora</a>
+      </div>
+
+      <h2>Quando <span class="gold">vale a pena procurar</span> uma nutricionista esportiva</h2>
+      <p>Tem alguns sinais claros de que está na hora de parar de tentar sozinho:</p>
+      <ul class="mj-checklist">
+        <li>Treina regularmente mas o peso ou a gordura não saem do lugar</li>
+        <li>Perde peso mas perde músculo junto, ficando "flácido" em vez de definido</li>
+        <li>Sente cansaço excessivo durante ou depois do treino, mesmo dormindo bem</li>
+        <li>Segue dietas genéricas da internet mas não sustenta por mais de duas semanas</li>
+        <li>Tem dúvidas sobre suplementos e gasta dinheiro em coisas que não funcionam</li>
+        <li>Treina para algum esporte ou modalidade com exigência maior de performance</li>
+        <li>Está em protocolo de medicação como Mounjaro ou Ozempic e quer preservar músculo</li>
+      </ul>
+      <p>Se algum desses pontos descreve a sua situação, o problema provavelmente não é o treino. É o que vem antes e depois dele.</p>
+
+      <h2>Como funciona o <span class="gold">acompanhamento</span> na prática</h2>
+      <p>No modelo que eu uso com os pacientes, o acompanhamento começa por uma avaliação completa: histórico de saúde, rotina, objetivos, exames se disponíveis e análise da composição corporal. A partir daí é montado o plano alimentar com macros definidos para o seu treino e meta.</p>
+      <p>O acompanhamento regular revisa o progresso, ajusta o plano quando necessário e resolve as dúvidas que aparecem no dia a dia. Emagrecer com qualidade ou ganhar massa muscular de verdade não acontece em duas semanas, mas com a estratégia certa e ajustes consistentes, o resultado aparece e fica.</p>
+
+      <div class="mj-proof">
+        <h2>Resultados <span class="gold">de quem fez o acompanhamento</span></h2>
+        <div class="mj-proof-grid">
+          <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/4-1.png" alt="Transformação de aluno do Fabricio Moura" loading="lazy" />
+          <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/5-1.png" alt="Transformação de aluno do Fabricio Moura" loading="lazy" />
+          <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/6-1.png" alt="Transformação de aluno do Fabricio Moura" loading="lazy" />
+        </div>
+        <p class="mj-proof-cap">Mais de 2.000 transformações reais em 7 países.</p>
+      </div>
+
+      <h2>Perguntas <span class="gold">frequentes</span></h2>
+      <div class="mj-faq">
+        <details open><summary>Nutricionista esportiva pode atender online?</summary><div class="a">Sim. O atendimento online funciona tão bem quanto o presencial para montar e acompanhar planos alimentares. É possível fazer avaliação, ajustar o plano e tirar dúvidas por videochamada ou mensagem, sem precisar se deslocar.</div></details>
+        <details><summary>Quanto tempo leva para ver resultado com uma nutricionista esportiva?</summary><div class="a">Os primeiros resultados aparecem entre 3 e 6 semanas, dependendo da consistência com o plano e do objetivo. Emagrecimento com preservação de músculo costuma mostrar mudança visual antes de mudar muito o peso na balança. Transformações expressivas levam de 3 a 6 meses.</div></details>
+        <details><summary>Qual a diferença entre nutricionista esportiva e personal trainer?</summary><div class="a">O personal trainer cuida do treino: exercícios, cargas, técnica. A nutricionista esportiva cuida da alimentação: calorias, macros, timing, suplementação. Os dois trabalham lados diferentes do mesmo processo. Com os dois alinhados, o resultado é significativamente melhor do que com apenas um deles.</div></details>
+        <details><summary>Preciso de exame de sangue para iniciar com uma nutricionista esportiva?</summary><div class="a">Não obrigatoriamente. Dá para começar o acompanhamento sem exames e solicitar conforme necessário. Se você tiver exames recentes, traz para a consulta, pois ajudam a personalizar ainda mais o plano.</div></details>
+        <details><summary>Nutricionista esportiva prescreve suplemento?</summary><div class="a">Sim. Nutricionistas estão habilitados para indicar suplementos como creatina, whey, vitaminas e minerais. A prescrição de medicamentos como o Mounjaro é exclusiva do médico, mas a nutricionista monta o plano alimentar ao redor do protocolo médico.</div></details>
+      </div>
+
+      <div class="mj-cta">
+        <div class="mj-cta-text">
+          <h2>Quer um acompanhamento que faz o treino render?</h2>
+          <p>Eu monto a sua estratégia de nutrição e treino com base no seu objetivo real, não em receita genérica. Acompanhamento de perto, ajustes quando precisar e garantia de resultado.</p>
+          <a class="mj-btn" href="https://wa.me/+5511914849797?text=Oi%20Fabricio!%20Li%20o%20artigo%20sobre%20nutricionista%20esportiva%20e%20quero%20um%20acompanhamento%20individual." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.866 9.866 0 001.51 5.26l-.999 3.648 3.978-1.607z"/></svg>Falar com o Fabricio</a>
+        </div>
+        <img class="mj-cta-img" src="https://fabriciomoura.com/wp-content/uploads/2024/06/Design-sem-nome-15-e1781459644476.png" alt="Fabricio Moura" loading="lazy" />
+      </div>
+    </article>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Nutricionista esportiva pode atender online?","acceptedAnswer":{"@type":"Answer","text":"Sim. O atendimento online funciona tão bem quanto o presencial para montar e acompanhar planos alimentares. É possível fazer avaliação, ajustar o plano e tirar dúvidas por videochamada ou mensagem, sem precisar se deslocar."}},
+{"@type":"Question","name":"Quanto tempo leva para ver resultado com uma nutricionista esportiva?","acceptedAnswer":{"@type":"Answer","text":"Os primeiros resultados aparecem entre 3 e 6 semanas, dependendo da consistência e do objetivo. Transformações expressivas levam de 3 a 6 meses com plano e acompanhamento corretos."}},
+{"@type":"Question","name":"Qual a diferença entre nutricionista esportiva e personal trainer?","acceptedAnswer":{"@type":"Answer","text":"O personal trainer cuida do treino. A nutricionista esportiva cuida da alimentação: calorias, macros, timing e suplementação. Com os dois alinhados, o resultado é significativamente melhor."}},
+{"@type":"Question","name":"Preciso de exame de sangue para iniciar com uma nutricionista esportiva?","acceptedAnswer":{"@type":"Answer","text":"Não obrigatoriamente. Dá para começar sem exames e solicitá-los conforme necessário. Se você tiver exames recentes, leve para a consulta."}},
+{"@type":"Question","name":"Nutricionista esportiva prescreve suplemento?","acceptedAnswer":{"@type":"Answer","text":"Sim. Nutricionistas estão habilitados para indicar suplementos como creatina, whey, vitaminas e minerais. A prescrição de medicamentos é exclusiva do médico."}}
+]}
+</script>
+<!-- FIM DO POST -->
+</body>
+</html>
