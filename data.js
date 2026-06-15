@@ -306,9 +306,9 @@ window.SEO_DATA = {
       nota: "IMC + gasto calórico (Mifflin-St Jeor), aviso músculo×gordura, meta de proteína, prova social, FAQ + schema, texto de apoio, CTA WhatsApp. Identidade premium preto+ouro. Score Rank Math 76/100." },
     { tipo: "Artigo", nome: "Cardápio para quem toma Mounjaro", url: "fabriciomoura.com/cardapio-para-quem-toma-mounjaro", kw: "cardápio para quem toma mounjaro", kdi: 8, status: "Pronto — a publicar", arquivo: "blog/cardapio-para-quem-toma-mounjaro.html",
       nota: "Artigo premium: cardápio exemplo, FAQ + schema, prova social, caixa de autor, links internos, capa. Aviso médico responsável." },
-    { tipo: "Página de serviço", nome: "Nutricionista Esportivo", url: "fabriciomoura.com/nutricionista-esportivo", kw: "nutricionista esportivo", kdi: 10, status: "Guia pronto — a montar", arquivo: "paginas/nutricionista-esportivo-GUIA.md (+ versão premium de referência)",
+    { tipo: "Página de serviço", nome: "Nutricionista Esportivo", url: "fabriciomoura.com/nutricionista-esportivo", kw: "nutricionista esportivo", kdi: 10, status: "Publicada", arquivo: "paginas/nutricionista-esportivo-GUIA.md (+ versão premium de referência)",
       nota: "Quick win nº1 (KDI 10 + vol 5.400). Guia de→para pra clonar a página de vendas + estrutura técnica de SEO. Versão premium pronta como referência." },
-    { tipo: "Página de serviço", nome: "Nutricionista Online", url: "fabriciomoura.com/nutricionista-online", kw: "nutricionista online", kdi: 28, status: "Guia pronto — a montar", arquivo: "paginas/nutricionista-online-GUIA.md",
+    { tipo: "Página de serviço", nome: "Nutricionista Online", url: "fabriciomoura.com/nutricionista-online", kw: "nutricionista online", kdi: 28, status: "Publicada", arquivo: "paginas/nutricionista-online-GUIA.md",
       nota: "Casa com plano à distância (vol 6.600). Ângulo '100% online'. Guia de→para + estrutura técnica de SEO." },
     { tipo: "Artigo", nome: "Creatina engorda ou emagrece?", url: "fabriciomoura.com/creatina-engorda-ou-emagrece", kw: "creatina engorda ou emagrece", kdi: 15, status: "Pronto — a publicar", arquivo: "blog/creatina-engorda-ou-emagrece.html",
       nota: "Primeiro artigo gerado pelo fazedor semanal (playbook docs/AGENTE-SEMANAL.md). Padrão premium, FAQ+schema, links internos, CTA." }
