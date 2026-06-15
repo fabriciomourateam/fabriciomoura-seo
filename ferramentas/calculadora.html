@@ -128,7 +128,7 @@
           <div class="fmx-field"><label>Peso (kg)</label><input type="number" id="imc-peso" inputmode="decimal" placeholder="82" /></div>
           <div class="fmx-field"><label>Altura (cm)</label><input type="number" id="imc-altura" inputmode="decimal" placeholder="178" /></div>
         </div>
-        <button class="fmx-btn" type="button" onclick="fmxIMC()">Ver meu resultado</button>
+        <button class="fmx-btn" type="button" id="fmx-btn-imc">Ver meu resultado</button>
         <div class="fmx-res" id="imc-res">
           <div class="fmx-hero-num">
             <div class="num gold" id="imc-num">0</div>
@@ -165,7 +165,7 @@
             <option value="1.9">Muito intenso (2x ao dia, trabalho físico)</option>
           </select>
         </div>
-        <button class="fmx-btn" type="button" onclick="fmxTDEE()">Ver meu resultado</button>
+        <button class="fmx-btn" type="button" id="fmx-btn-tdee">Ver meu resultado</button>
         <div class="fmx-res" id="tdee-res">
           <div class="fmx-hero-num">
             <div class="num gold" id="tdee-num">0</div>
@@ -202,49 +202,58 @@
 </div>
 
 <script>
-  var FM_WPP = "+5511914849797";
-  function fmxLink(m){ return "https://wa.me/"+FM_WPP.replace(/[^0-9]/g,"")+"?text="+encodeURIComponent(m); }
-  document.querySelectorAll('.fmx-tab').forEach(function(b){b.addEventListener('click',function(){
-    document.querySelectorAll('.fmx-tab').forEach(function(x){x.classList.remove('active')});b.classList.add('active');
-    var t=b.dataset.tab;document.getElementById('fmx-pane-imc').style.display=t==='imc'?'block':'none';
-    document.getElementById('fmx-pane-tdee').style.display=t==='tdee'?'block':'none';});});
-  document.querySelectorAll('#tdee-sexo button').forEach(function(b){b.addEventListener('click',function(){
-    document.querySelectorAll('#tdee-sexo button').forEach(function(x){x.classList.remove('active')});b.classList.add('active');});});
-
-  function fmxIMC(){
-    var p=parseFloat(document.getElementById('imc-peso').value), a=parseFloat(document.getElementById('imc-altura').value)/100;
-    if(!p||!a||p<=0||a<=0){alert('Preencha peso e altura corretamente.');return;}
-    var imc=p/(a*a), cls, cor, msg;
-    if(imc<18.5){cls='Abaixo do peso';cor='#4f8cff';msg='Seu IMC indica peso abaixo do ideal. Ganhar massa com qualidade pede estratégia, e eu posso montar a sua.';}
-    else if(imc<25){cls='Peso normal';cor='#3ad07f';msg='Peso na faixa saudável. O próximo nível é a recomposição: menos gordura e mais músculo.';}
-    else if(imc<30){cls='Sobrepeso';cor='#FCD404';msg='Seu IMC indica sobrepeso. Dá para virar esse jogo ganhando músculo e perdendo gordura, com método e garantia.';}
-    else if(imc<35){cls='Obesidade grau I';cor='#ff9f43';msg='Seu IMC indica obesidade grau I. Com o acompanhamento certo, a virada acontece. Bora conversar sobre o seu caso.';}
-    else if(imc<40){cls='Obesidade grau II';cor='#ff7a43';msg='Seu IMC indica obesidade grau II. Recomendo acompanhamento profissional, e posso te orientar com segurança.';}
-    else{cls='Obesidade grau III';cor='#ff6b6b';msg='Seu IMC indica obesidade grau III. O acompanhamento é essencial. Fale comigo para começarmos com segurança.';}
-    document.getElementById('imc-num').textContent=imc.toFixed(1).replace('.',',');
-    var tag=document.getElementById('imc-tag');tag.textContent=cls;tag.style.background=cor;tag.style.color='#0a0a0a';
-    var pct=Math.max(0,Math.min(100,(imc-15)/(40-15)*100));
-    document.getElementById('imc-msg').innerHTML=msg;
-    document.getElementById('imc-wpp').href=fmxLink('Oi Fabricio! Calculei meu IMC no seu site ('+imc.toFixed(1).replace('.',',')+', '+cls+') e quero saber como melhorar meus resultados.');
-    document.getElementById('imc-res').classList.add('show');
-    setTimeout(function(){document.getElementById('imc-pin').style.left=pct+'%';},60);
+(function(){
+  function init(){
+    var WPP="+5511914849797";
+    function link(m){return "https://wa.me/"+WPP.replace(/[^0-9]/g,"")+"?text="+encodeURIComponent(m);}
+    var tabs=document.querySelectorAll(".fmx-tab");
+    tabs.forEach(function(b){b.addEventListener("click",function(){
+      tabs.forEach(function(x){x.classList.remove("active");});b.classList.add("active");
+      var t=b.getAttribute("data-tab");
+      document.getElementById("fmx-pane-imc").style.display=(t==="imc")?"block":"none";
+      document.getElementById("fmx-pane-tdee").style.display=(t==="tdee")?"block":"none";
+    });});
+    var seg=document.querySelectorAll("#tdee-sexo button");
+    seg.forEach(function(b){b.addEventListener("click",function(){seg.forEach(function(x){x.classList.remove("active");});b.classList.add("active");});});
+    function calcIMC(){
+      var p=parseFloat(document.getElementById("imc-peso").value), a=parseFloat(document.getElementById("imc-altura").value)/100;
+      if(!p||!a||p<=0||a<=0){alert("Preencha peso e altura corretamente.");return;}
+      var imc=p/(a*a),cls,cor,msg;
+      if(imc<18.5){cls="Abaixo do peso";cor="#4f8cff";msg="Seu IMC indica peso abaixo do ideal. Ganhar massa com qualidade pede estratégia, e eu posso montar a sua.";}
+      else if(imc<25){cls="Peso normal";cor="#3ad07f";msg="Peso na faixa saudável. O próximo nível é a recomposição: menos gordura e mais músculo.";}
+      else if(imc<30){cls="Sobrepeso";cor="#FCD404";msg="Seu IMC indica sobrepeso. Dá para virar esse jogo ganhando músculo e perdendo gordura, com método e garantia.";}
+      else if(imc<35){cls="Obesidade grau I";cor="#ff9f43";msg="Seu IMC indica obesidade grau I. Com o acompanhamento certo, a virada acontece. Bora conversar sobre o seu caso.";}
+      else if(imc<40){cls="Obesidade grau II";cor="#ff7a43";msg="Seu IMC indica obesidade grau II. Recomendo acompanhamento profissional, e posso te orientar com segurança.";}
+      else{cls="Obesidade grau III";cor="#ff6b6b";msg="Seu IMC indica obesidade grau III. O acompanhamento é essencial. Fale comigo para começarmos com segurança.";}
+      document.getElementById("imc-num").textContent=imc.toFixed(1).replace(".",",");
+      var tag=document.getElementById("imc-tag");tag.textContent=cls;tag.style.background=cor;tag.style.color="#0a0a0a";
+      var pct=Math.max(0,Math.min(100,(imc-15)/(40-15)*100));
+      document.getElementById("imc-msg").innerHTML=msg;
+      document.getElementById("imc-wpp").href=link("Oi Fabricio! Calculei meu IMC no seu site ("+imc.toFixed(1).replace(".",",")+", "+cls+") e quero saber como melhorar meus resultados.");
+      document.getElementById("imc-res").classList.add("show");
+      setTimeout(function(){document.getElementById("imc-pin").style.left=pct+"%";},60);
+    }
+    function calcTDEE(){
+      var act=document.querySelector("#tdee-sexo button.active");var sexo=act?act.getAttribute("data-v"):"h";
+      var idade=parseInt(document.getElementById("tdee-idade").value,10), p=parseFloat(document.getElementById("tdee-peso").value),
+          a=parseFloat(document.getElementById("tdee-altura").value), fat=parseFloat(document.getElementById("tdee-ativ").value);
+      if(!idade||!p||!a||idade<=0||p<=0||a<=0){alert("Preencha idade, peso e altura corretamente.");return;}
+      var tmb=(10*p)+(6.25*a)-(5*idade)+((sexo==="h")?5:-161), tdee=tmb*fat, r=function(n){return Math.round(n/10)*10;};
+      document.getElementById("tdee-num").textContent=r(tdee).toLocaleString("pt-BR");
+      document.getElementById("tdee-tmb").textContent=r(tmb).toLocaleString("pt-BR");
+      document.getElementById("tdee-cut").textContent=r(tdee-500).toLocaleString("pt-BR");
+      document.getElementById("tdee-bulk").textContent=r(tdee+300).toLocaleString("pt-BR");
+      document.getElementById("tdee-prot").textContent=Math.round(p*1.6)+" a "+Math.round(p*2.2)+" g";
+      document.getElementById("tdee-wpp").href=link("Oi Fabricio! Calculei meu gasto calórico no seu site ("+r(tdee).toLocaleString("pt-BR")+" kcal por dia) e quero um plano para atingir meus objetivos.");
+      document.getElementById("tdee-res").classList.add("show");
+    }
+    var bi=document.getElementById("fmx-btn-imc"); if(bi) bi.addEventListener("click",calcIMC);
+    var bt=document.getElementById("fmx-btn-tdee"); if(bt) bt.addEventListener("click",calcTDEE);
+    ["imc-peso","imc-altura"].forEach(function(id){var el=document.getElementById(id);if(el)el.addEventListener("keydown",function(e){if(e.key==="Enter")calcIMC();});});
+    ["tdee-idade","tdee-peso","tdee-altura"].forEach(function(id){var el=document.getElementById(id);if(el)el.addEventListener("keydown",function(e){if(e.key==="Enter")calcTDEE();});});
   }
-  function fmxTDEE(){
-    var sexo=document.querySelector('#tdee-sexo button.active').dataset.v;
-    var idade=parseInt(document.getElementById('tdee-idade').value,10), p=parseFloat(document.getElementById('tdee-peso').value),
-        a=parseFloat(document.getElementById('tdee-altura').value), fat=parseFloat(document.getElementById('tdee-ativ').value);
-    if(!idade||!p||!a||idade<=0||p<=0||a<=0){alert('Preencha idade, peso e altura corretamente.');return;}
-    var tmb=(10*p)+(6.25*a)-(5*idade)+(sexo==='h'?5:-161), tdee=tmb*fat, r=function(n){return Math.round(n/10)*10;};
-    document.getElementById('tdee-num').textContent=r(tdee).toLocaleString('pt-BR');
-    document.getElementById('tdee-tmb').textContent=r(tmb).toLocaleString('pt-BR');
-    document.getElementById('tdee-cut').textContent=r(tdee-500).toLocaleString('pt-BR');
-    document.getElementById('tdee-bulk').textContent=r(tdee+300).toLocaleString('pt-BR');
-    document.getElementById('tdee-prot').textContent=Math.round(p*1.6)+' a '+Math.round(p*2.2)+' g';
-    document.getElementById('tdee-wpp').href=fmxLink('Oi Fabricio! Calculei meu gasto calórico no seu site ('+r(tdee).toLocaleString('pt-BR')+' kcal por dia) e quero um plano para atingir meus objetivos.');
-    document.getElementById('tdee-res').classList.add('show');
-  }
-  ['imc-peso','imc-altura'].forEach(function(id){document.getElementById(id).addEventListener('keydown',function(e){if(e.key==='Enter')fmxIMC();});});
-  ['tdee-idade','tdee-peso','tdee-altura'].forEach(function(id){document.getElementById(id).addEventListener('keydown',function(e){if(e.key==='Enter')fmxTDEE();});});
+  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",init);}else{init();}
+})();
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
