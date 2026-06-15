@@ -41,20 +41,49 @@ Marcar `[x]` ao concluir. O agente pega o **primeiro item não marcado**.
 - Imagens reais disponíveis: foto de rosto `…/2026/06/Screenshot_20260322_192920_Canva1-scaled.jpg`,
   transformações `…/2024/10/1-1.png … 9-1.png`, capa `…/2024/06/Design-sem-nome-15-e1781459644476.png`.
 
+## Metadados de publicação (OBRIGATÓRIO em TODO artigo)
+Todo `blog/<slug>.html` DEVE começar com um comentário de cabeçalho com as instruções e os
+metadados prontos, no mesmo formato dos artigos Mounjaro e Creatina. Sem isso o artigo não está pronto.
+```html
+<!--
+  PUBLICAR NO WORDPRESS (como POST):
+  1. Publicações (Posts) > Adicionar novo.
+  2. Título: <título do post>
+  3. Bloco "HTML personalizado" > cole tudo entre INÍCIO DO POST e FIM DO POST.
+  4. Astra: Sidebar = Nenhuma + Desativar título.
+  5. Rank Math:
+     Slug: <slug-em-minusculas-com-hifens>
+     Título SEO: <título> | Fabricio Moura   (até ~60 caracteres)
+     Meta: <descrição com a palavra-chave, até ~155 caracteres>
+     Palavra-chave foco: <palavra-chave exata da fila>
+  6. Defina imagem destacada (capa) e publique. Adicione no menu "Conteúdo Semanal".
+  7. Search Console > Inspeção de URL > Solicitar indexação.
+-->
+```
+Regras dos metadados: **slug** = palavra-chave em minúsculas com hífens (sem acento); **Título SEO**
+termina em `| Fabricio Moura`; **Meta** contém a palavra-chave foco e tem até ~155 caracteres;
+**Palavra-chave foco** = exatamente o termo da fila. O mesmo `<title>` e `<meta name="description">`
+do `<head>` devem bater com o Título SEO e a Meta.
+
 ## Saída esperada do agente
-1. Criar `blog/<slug>.html` (HTML pronto pro bloco "HTML personalizado", com instruções de publicação no topo).
+1. Criar `blog/<slug>.html` (HTML pronto pro bloco "HTML personalizado") **começando pelo comentário
+   de cabeçalho com os metadados de publicação acima** (slug, Título SEO, Meta, palavra-chave foco).
 2. Atualizar a fila acima (marcar `[x]`) e o campo `entregaveis` em `data.js`.
 3. `git commit && git push` na `main`.
-4. Avisar o Fabricio com o arquivo pronto pra colar como **Post** (slug, título SEO, meta, palavra-chave).
+4. Avisar o Fabricio com o arquivo pronto pra colar como **Post**, repetindo na mensagem os 4
+   metadados (slug, Título SEO, Meta, palavra-chave foco) pra ele copiar direto no Rank Math.
 5. (Se WordPress conectado via REST API / Application Password) publicar direto como rascunho ou publicado.
 
 ## Prompt da sessão (colar na sessão agendada)
 ```
 Você é o agente semanal de conteúdo do projeto SEO do fabriciomoura.com.
 Leia docs/AGENTE-SEMANAL.md, data.js e blog/cardapio-para-quem-toma-mounjaro.html (template).
-Pegue o PRIMEIRO artigo não marcado da fila, escreva-o seguindo TODAS as regras de estilo,
-salve em blog/<slug>.html, atualize a fila e o data.js, faça commit e push, e me entregue o
-arquivo pronto pra colar como Post (com slug, título SEO, meta e palavra-chave foco).
+Pegue o PRIMEIRO artigo não marcado da fila, escreva-o seguindo TODAS as regras de estilo.
+OBRIGATÓRIO: o arquivo blog/<slug>.html DEVE começar pelo comentário de cabeçalho com os
+metadados de publicação (slug, Título SEO terminando em "| Fabricio Moura", Meta de até ~155
+caracteres com a palavra-chave, e palavra-chave foco exata da fila), conforme a seção
+"Metadados de publicação" do playbook. Atualize a fila e o data.js, faça commit e push, e me
+entregue o artigo pronto pra colar como Post REPETINDO os 4 metadados na mensagem.
 ```
 
 ## Para publicação automática (via WordPress REST API)
