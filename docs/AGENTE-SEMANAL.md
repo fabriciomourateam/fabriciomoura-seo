@@ -31,7 +31,9 @@ Marcar `[x]` ao concluir. O agente pega o **primeiro item não marcado**.
   "neste artigo você vai aprender", "não é X, é Y" (repetido). Escreva como um profissional humano falaria,
   direto e específico.
 - Estrutura: hero com badge + H1 (palavra-chave, 1 termo em dourado) + subtítulo; **card de autor no topo**
-  (foto + "Por Fabricio Moura · Leitura de X min" + "Nutricionista e Treinador" + bio + botão WhatsApp);
+  (foto + "Por Fabricio Moura · Leitura de X min" + "Nutricionista e Treinador" + bio + botão WhatsApp).
+  No mobile o card mantém a **foto à esquerda e o texto à direita** (não empilhar em coluna): use o CSS
+  do template (`.mj-author` permanece em linha no `@media(max-width:600px)`, foto reduzida p/ 72px);
   corpo com H2 (Montserrat), pull-quote, cards; **FAQ + FAQPage JSON-LD**; CTA final com foto ao lado;
   **links internos** (calculadora `/calculadora-de-imc-e-calorias` + páginas de serviço); aviso responsável
   quando for tema de saúde/medicação.
