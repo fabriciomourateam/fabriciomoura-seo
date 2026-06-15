@@ -34,3 +34,27 @@ tem 60.500 buscas/mês a CPC R$ 0,01 e gera 25% do tráfego pago dela).
 
 ### Trocar o número de WhatsApp
 No `calculadora.html`, edite a linha `var FM_WPP = "+5511914849797";`.
+
+---
+
+## `publicar.mjs` — Publicação automática de artigos no WordPress
+
+Script Node (sem dependências, usa `fetch` nativo do Node 18+) que publica um artigo de `blog/`
+direto no WordPress via REST API. É o que o agente semanal roda para auto-publicar.
+
+```bash
+node ferramentas/publicar.mjs blog/<arquivo>.html            # publica (status publish)
+node ferramentas/publicar.mjs blog/<arquivo>.html --rascunho # publica como rascunho (draft)
+```
+
+Lê as credenciais das **variáveis de ambiente** (NUNCA do repositório nem do chat):
+
+| Variável | Exemplo |
+|---|---|
+| `WP_URL` | `https://fabriciomoura.com` |
+| `WP_USER` | `agente-conteudo` (usuário editor dedicado) |
+| `WP_APP_PASSWORD` | senha de aplicativo do WordPress |
+
+O script extrai do próprio HTML o título, slug, título SEO, meta description e palavra-chave foco
+(do cabeçalho de instruções) e o conteúdo entre `<!-- INÍCIO DO POST -->` e `<!-- FIM DO POST -->`,
+publica o post e grava o SEO do Rank Math (best-effort). No fim imprime a URL publicada.

@@ -53,8 +53,10 @@ Marcar `[x]` ao concluir. O agente pega o **primeiro item não marcado**.
 Você é o agente semanal de conteúdo do projeto SEO do fabriciomoura.com.
 Leia docs/AGENTE-SEMANAL.md, data.js e blog/cardapio-para-quem-toma-mounjaro.html (template).
 Pegue o PRIMEIRO artigo não marcado da fila, escreva-o seguindo TODAS as regras de estilo,
-salve em blog/<slug>.html, atualize a fila e o data.js, faça commit e push, e me entregue o
-arquivo pronto pra colar como Post (com slug, título SEO, meta e palavra-chave foco).
+salve em blog/<slug>.html (com cabeçalho Título/Slug/Título SEO/Meta/Palavra-chave foco).
+Publique direto rodando `node ferramentas/publicar.mjs blog/<slug>.html` (usa as variáveis de
+ambiente WP_*). Depois marque a fila como concluída, atualize o data.js, faça commit e push,
+e me entregue o link publicado (com slug, título SEO, meta e palavra-chave foco).
 ```
 
 ## Para publicação automática (via WordPress REST API)
@@ -69,9 +71,13 @@ Pré-requisitos (uma vez):
   auto-publicado já nasce no padrão dark, sem ajuste manual.
 
 Fluxo do agente ao publicar (status `publish`, conforme escolha do Fabricio):
-1. Gerar o artigo em `blog/<slug>.html` (entre INÍCIO DO POST e FIM DO POST).
-2. `POST {WP_URL}/wp-json/wp/v2/posts` com **Basic Auth** (`WP_USER`:`WP_APP_PASSWORD`), corpo:
-   `{ "title": "<título>", "slug": "<slug>", "status": "publish", "content": "<html entre os marcadores>" }`
-3. (Opcional) Definir imagem destacada via `featured_media` e SEO do Rank Math via meta, se disponível.
+1. Gerar o artigo em `blog/<slug>.html` (cabeçalho com Título/Slug/Título SEO/Meta/Palavra-chave
+   foco + conteúdo entre INÍCIO DO POST e FIM DO POST — igual aos artigos já existentes).
+2. Publicar com o script pronto (lê as variáveis de ambiente, sem dependências):
+   `node ferramentas/publicar.mjs blog/<slug>.html`
+   (use `--rascunho` no fim para publicar como draft em vez de publish).
+   O script extrai os metadados do cabeçalho, faz o `POST` em `/wp-json/wp/v2/posts` com Basic Auth,
+   grava o SEO do Rank Math (best-effort) e imprime a URL publicada.
+3. (Opcional) Definir imagem destacada via `featured_media`, se disponível.
 4. Confirmar a URL publicada, marcar a fila como concluída, commit/push, e avisar o Fabricio com o link.
 
