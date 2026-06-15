@@ -48,7 +48,9 @@ if (start === -1 || end === -1) {
   process.exit(1);
 }
 
-const content = html.slice(start + '<!-- INÍCIO DO POST -->'.length, end).trim();
+const rawContent = html.slice(start + '<!-- INÍCIO DO POST -->'.length, end).trim();
+// Wrap em bloco Gutenberg HTML para o WordPress não aplicar wpautop/wptexturize
+const content = `<!-- wp:html -->\n${rawContent}\n<!-- /wp:html -->`;
 
 console.log('\n== Publicando no WordPress ==');
 console.log('Título :', wpTitle);
