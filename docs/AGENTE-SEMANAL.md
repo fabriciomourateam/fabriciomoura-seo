@@ -24,7 +24,12 @@ Marcar `[x]` ao concluir. O agente pega o **primeiro item não marcado**.
 ## Regras de estilo (OBRIGATÓRIAS)
 - **Identidade:** preto + ouro (gradiente `#FFE9A8→#FCD404→#C9920A`), fontes **Anton** (títulos) +
   **Montserrat** (texto). Use `blog/cardapio-para-quem-toma-mounjaro.html` como TEMPLATE de referência.
-- **Sem travessões (—)** e **sem cara de IA** (nada de "não é X, é Y" repetido, "imagine só", etc.).
+- **Sem travessões (—)** e **sem cara de IA**.
+- **FRASES PROIBIDAS** (clichê de IA, nunca usar em título, H1, H2 ou texto):
+  "a verdade que ninguém te conta", "o que ninguém te conta", "o segredo que", "você não vai acreditar",
+  "isso vai mudar sua vida/tudo", "prepare-se para", "descubra o segredo", "imagine só", "vamos mergulhar",
+  "neste artigo você vai aprender", "não é X, é Y" (repetido). Escreva como um profissional humano falaria,
+  direto e específico.
 - Estrutura: hero com badge + H1 (palavra-chave, 1 termo em dourado) + subtítulo; **card de autor no topo**
   (foto + "Por Fabricio Moura · Leitura de X min" + "Nutricionista e Treinador" + bio + botão WhatsApp);
   corpo com H2 (Montserrat), pull-quote, cards; **FAQ + FAQPage JSON-LD**; CTA final com foto ao lado;
