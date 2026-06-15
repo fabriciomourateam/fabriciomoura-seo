@@ -1,0 +1,50 @@
+{
+  "data": "2026-06-15",
+  "fonte": "Semrush MCP, banco br",
+  "descricao": "Reavaliacao do dominio, concorrentes e similares apos publicacao da calculadora + 2 paginas de servico + artigos. Baseline organico ainda ~zero (paginas novas recem-indexadas, fora da janela do Semrush).",
+  "domain_rank": {
+    "colunas": ["Domain", "Rank", "Organic Keywords", "Organic Traffic", "Organic Cost", "Adwords Keywords", "Adwords Traffic", "Adwords Cost"],
+    "linhas": [
+      ["fabriciomoura.com", 5121539, 2, 0, 0, 1, 25, 3],
+      ["raphaelnutri.com", 66864, 605, 4297, 617, 0, 0, 0],
+      ["nutrijoaoortiz.com.br", 534033, 40, 172, 92, 0, 0, 0]
+    ]
+  },
+  "fabriciomoura_organic_keywords": {
+    "colunas": ["Keyword", "Position", "Search Volume", "CPC", "KD", "Url"],
+    "linhas": [
+      ["ivy moura", 50, 90, 0.00, 24, "https://fabriciomoura.com/"],
+      ["moura academia", 40, 320, 0.00, 34, "https://fabriciomoura.com/"]
+    ]
+  },
+  "fabriciomoura_organic_competitors": "ERROR 50 NOTHING FOUND (footprint organico insuficiente para o Semrush calcular concorrentes)",
+  "raphaelnutri_top_pages": {
+    "colunas": ["Url", "Keywords", "Traffic", "Traffic %"],
+    "linhas": [
+      ["/post/6-alimentos-ricos-em-fibras-...", 78, 1450, 33.74],
+      ["/post/gordura-visceral-o-que-e-riscos-...", 18, 755, 17.57],
+      ["/ (home)", 61, 601, 13.98],
+      ["/post/pode-beber-tomando-mounjaro-...", 78, 501, 11.65],
+      ["/post/comer-arroz-engorda-...", 64, 355, 8.26],
+      ["/post/cardapio-para-quem-toma-mounjaro-...", 29, 327, 7.60],
+      ["/post/deficit-calorico-unica-maneira-de-emagrecer-...", 31, 145, 3.37],
+      ["/post/creatina-engorda-ou-emagrece-...", 51, 57, 1.32],
+      ["/post/dieta-para-quem-toma-mounjaro-...", 11, 32, 0.74],
+      ["/post/recomposicao-corporal-...", 4, 7, 0.16]
+    ]
+  },
+  "raphaelnutri_organic_competitors": {
+    "colunas": ["Domain", "Relevance", "Common Keywords", "Organic Keywords", "Organic Traffic"],
+    "linhas": [
+      ["olina.com.br", 0.22, 72, 1134, 11304],
+      ["veritasaudavel.com.br", 0.10, 17, 618, 4192],
+      ["nutricionistaesportivo.com", 0.07, 13, 102, 594],
+      ["myjuniper.co.uk", 0.07, 11, 239, 727],
+      ["nutricionistaesportivosp.com.br", 0.06, 6, 11, 2],
+      ["brunaburti.com.br", 0.06, 11, 520, 1110],
+      ["ricardosantosnutricionista.com.br", 0.05, 7, 277, 560],
+      ["beda.com.br", 0.04, 17, 756, 12553],
+      ["drbarakat.com.br", 0.04, 39, 4963, 8164]
+    ]
+  }
+}
