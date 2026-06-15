@@ -7,16 +7,18 @@
 Crie uma **sessão agendada** (semanal, ex.: segunda 09:00 BRT) apontando para o repositório
 `fabriciomourateam/fabriciomoura-seo` com o prompt da seção "Prompt da sessão" abaixo.
 
-## Fila de artigos (do calendário da Fase 2, priorizada por KDI = mais fácil primeiro)
+## Fila de artigos (priorizada por TRÁFEGO do líder, ver snapshot 2026-06-15-reavaliacao)
 Marcar `[x]` ao concluir. O agente pega o **primeiro item não marcado**.
+> Reordenado em 2026-06-15: os 2 primeiros não marcados são as páginas que mais geram tráfego no
+> raphaelnutri (juntas = 51% do tráfego orgânico dele). Atacar primeiro o que mais traz visita.
 - [x] Cardápio para quem toma Mounjaro (KDI 8) — publicado
 - [x] Creatina engorda ou emagrece? (KDI 15) — pronto (`blog/creatina-engorda-ou-emagrece.html`)
+- [ ] 6 alimentos ricos em fibras para emagrecer — 33,7% do tráfego do líder (PRIORIDADE)
+- [ ] Gordura visceral: o que é e como reduzir (KDI 22) — 17,6% do tráfego do líder
 - [ ] Nutricionista esportiva (variação) / "o que faz" (KDI 16)
-- [ ] Gordura visceral: o que é e como reduzir (KDI 22)
 - [ ] Déficit calórico: a única forma de emagrecer (KDI 24)
 - [ ] Arroz engorda? (KDI 30, vol 6.600)
 - [ ] Quem toma Mounjaro pode beber? (KDI 37, vol 2.400)
-- [ ] 6 alimentos ricos em fibras para emagrecer
 - [ ] Whey protein engorda? Mitos e verdades
 - [ ] Recomposição corporal: perder gordura e ganhar músculo
 > Fonte completa: campo `calendario` em `data.js`.
