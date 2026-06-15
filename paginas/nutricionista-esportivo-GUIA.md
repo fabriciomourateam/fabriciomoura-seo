@@ -115,11 +115,15 @@ Esses 4 itens não são texto, são "etiquetas" que o Google lê. É o que faz a
 - Confirma que ele contém a palavra-chave (deve conter **"nutricionista esportivo"**).
 - Os títulos das outras seções devem ser **H2** (e subtítulos menores, **H3**). Nunca dois H1 na mesma página.
 
-### 8.2. Ativar o FAQ schema (dados estruturados)
-O accordion de perguntas já aparece na página. Agora avisamos o Google, pra ele poder mostrar suas perguntas direto no resultado de busca.
-- Edita a página → painel do **Rank Math** → aba **"Schema"** → **"Schema Generator"**.
-- Escolhe **"FAQ"** e adiciona cada **pergunta e resposta** (as mesmas da seção 5 deste guia).
-- Salva.
+### 8.2. Ativar o FAQ schema (dados estruturados) — OPCIONAL
+> ⚠️ No **Rank Math grátis**, o FAQ pelo "Schema Generator" é **Pro** (aparece com etiqueta `Pro`).
+> Além disso, desde ago/2023 o Google quase não mostra mais o rich result de FAQ pra sites comuns,
+> então o ganho é baixo. **Pode pular** sem prejuízo. Se quiser ter mesmo assim, faça de graça pelo
+> plugin **HFCM** (já instalado), sem precisar do Pro:
+> 1. Menu **HFCM** → **Add New Snippet**.
+> 2. **Name:** `FAQ Nutricionista Esportivo` · **Type:** **HTML** · **Site Display:** Specific Pages → a página · **Location:** Footer.
+> 3. Cole o bloco `<script type="application/ld+json"> ... </script>` com as 3 perguntas/respostas da seção 5 (tipo `FAQPage`) e salve.
+> 4. Confira em search.google.com/test/rich-results depois de publicar.
 
 ### 8.3. Alt text nas imagens
 O "alt" é a descrição que o Google lê de cada imagem.
