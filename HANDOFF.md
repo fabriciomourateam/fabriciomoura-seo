@@ -100,7 +100,28 @@ engorda" 8%). Calendário de 18 posts em `data.js` (campo `calendario`).
 
 ---
 
-## 3. PRÓXIMO PASSO — Fase 4: SEO técnico & on-page (FAZER AGORA)
+## 3. ESTADO ATUAL — Fase 4 em execução (atualizado 2026-06-15)
+
+**Identidade premium definida:** preto + ouro (gradiente), fontes **Anton** (títulos) + **Montserrat**
+(texto). Acabamento premium, **sem travessões**. Padrão de publicação: bloco **HTML personalizado** no
+WordPress + Astra **Sidebar Nenhuma** + **Desativar título**; widgets **full-bleed**.
+
+**Já entregue (ver `data.js` → `entregaveis` e aba ✅ Entregáveis do dashboard):**
+- ✅ **Calculadora** (`ferramentas/calculadora.html`) — PUBLICADA e indexada em `/calculadora-de-imc-e-calorias`.
+- ✅ **Artigo Mounjaro** (`blog/cardapio-para-quem-toma-mounjaro.html`) — pronto, falta publicar como Post.
+- ✅ **Guias completos** das 2 páginas de serviço (`paginas/*-GUIA.md`) — de→para + estrutura técnica de SEO.
+- ✅ **Página premium de referência** (`paginas/nutricionista-esportivo-premium.html`).
+
+**Infra:** Search Console **verificado** (tag via Rank Math), Rank Math + Site Kit instalados. Falta enviar
+`sitemap_index.xml`. Conta real de Ads analisada (CPA R$ 19, eficiente) em `trafego/brief-gestor-2026-06.md`.
+
+**A fazer agora (pelo cliente, no WordPress):** publicar o artigo do Mounjaro; montar as páginas
+"nutricionista esportivo" e "nutricionista online" pelos guias (clonar a página de vendas no Elementor +
+embutir SEO); enviar sitemap; colocar tudo no menu. Em alguns dias: puxar dados do Search Console para refino.
+
+---
+
+## 3b. Referência da Fase 4 — objetivo e queries
 
 Objetivo: estruturar o site para capturar a demanda mapeada — criar páginas de serviço
 ("nutricionista online", "nutricionista esportivo") e clusters de conteúdo otimizados para

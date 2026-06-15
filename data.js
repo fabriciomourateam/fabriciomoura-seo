@@ -279,7 +279,7 @@ window.SEO_DATA = {
     { n: 1, nome: "Concorrentes & palavras-chave", desc: "Top 3 concorrentes orgânicos + 5 transacionais + 5 meio/fundo.", status: "Concluída" },
     { n: 2, nome: "Calendário editorial 90 dias", desc: "Engenharia reversa das páginas campeãs do concorrente.", status: "Concluída" },
     { n: 3, nome: "Análise do tráfego pago", desc: "Palavras que os concorrentes compram, CPC, e onde vaza dinheiro na conta atual.", status: "Concluída" },
-    { n: 4, nome: "SEO técnico & on-page", desc: "Estrutura do site, páginas de serviço/cidade, otimização para converter.", status: "Em andamento" },
+    { n: 4, nome: "SEO técnico & on-page", desc: "Páginas de serviço, calculadora e blog na identidade premium. Calculadora publicada e indexada; artigo e páginas prontos.", status: "Em andamento" },
     { n: 5, nome: "Funil & projeção de faturamento", desc: "Amarrar orgânico+pago no funil e projetar o caminho para dobrar.", status: "Pendente" },
     { n: 6, nome: "Re-análise (revisão periódica)", desc: "Re-rodar Semrush, comparar com snapshot anterior, ajustar plano.", status: "Agendável" }
   ],
@@ -298,5 +298,37 @@ window.SEO_DATA = {
     { passo: "Cópias de anúncio de um concorrente", report: "domain_adwords_unique", params: "{ database:'br', domain:'raphaelnutri.com' }" },
     { passo: "Quem compra um termo no Ads", report: "phrase_adwords", params: "{ database:'br', phrase:'nutricionista online' }" },
     { passo: "CPC/competição de termos-alvo", report: "phrase_these", params: "{ database:'br', phrase:'nutricionista online;nutricionista esportivo;...' }" }
-  ]
+  ],
+
+  // ---- Entregáveis da Fase 4 (ativos de SEO produzidos) ----
+  entregaveis: [
+    { tipo: "Ferramenta", nome: "Calculadora de IMC e Gasto Calórico", url: "fabriciomoura.com/calculadora-de-imc-e-calorias", kw: "calculadora de imc", kdi: null, status: "Publicada + indexada", arquivo: "ferramentas/calculadora.html",
+      nota: "IMC + gasto calórico (Mifflin-St Jeor), aviso músculo×gordura, meta de proteína, prova social, FAQ + schema, texto de apoio, CTA WhatsApp. Identidade premium preto+ouro. Score Rank Math 76/100." },
+    { tipo: "Artigo", nome: "Cardápio para quem toma Mounjaro", url: "fabriciomoura.com/cardapio-para-quem-toma-mounjaro", kw: "cardápio para quem toma mounjaro", kdi: 8, status: "Pronto — a publicar", arquivo: "blog/cardapio-para-quem-toma-mounjaro.html",
+      nota: "Artigo premium: cardápio exemplo, FAQ + schema, prova social, caixa de autor, links internos, capa. Aviso médico responsável." },
+    { tipo: "Página de serviço", nome: "Nutricionista Esportivo", url: "fabriciomoura.com/nutricionista-esportivo", kw: "nutricionista esportivo", kdi: 10, status: "Guia pronto — a montar", arquivo: "paginas/nutricionista-esportivo-GUIA.md (+ versão premium de referência)",
+      nota: "Quick win nº1 (KDI 10 + vol 5.400). Guia de→para pra clonar a página de vendas + estrutura técnica de SEO. Versão premium pronta como referência." },
+    { tipo: "Página de serviço", nome: "Nutricionista Online", url: "fabriciomoura.com/nutricionista-online", kw: "nutricionista online", kdi: 28, status: "Guia pronto — a montar", arquivo: "paginas/nutricionista-online-GUIA.md",
+      nota: "Casa com plano à distância (vol 6.600). Ângulo '100% online'. Guia de→para + estrutura técnica de SEO." },
+    { tipo: "Artigo", nome: "Creatina engorda ou emagrece?", url: "(a criar)", kw: "creatina engorda ou emagrece", kdi: 15, status: "No calendário — a escrever", arquivo: "—",
+      nota: "Próximo artigo quick win do calendário." }
+  ],
+
+  // ---- Infraestrutura de SEO configurada (no WordPress / Google) ----
+  infra: [
+    { item: "Google Search Console", status: "Verificado (tag via Rank Math)", nota: "Propriedade verificada; coletando dados. Usar 'Inspeção de URL' para solicitar indexação de cada página nova." },
+    { item: "Rank Math SEO", status: "Instalado e ativo", nota: "Title/meta/slug/schema por página. Não perseguir 100/100 — foco em título, descrição, palavra-chave, links internos." },
+    { item: "Google Site Kit", status: "Plugado", nota: "Conecta Search Console + Analytics no painel do WordPress." },
+    { item: "Sitemap", status: "Enviar sitemap_index.xml no Search Console", nota: "Rank Math gera automático; entregar ao Google uma vez." },
+    { item: "Tema Astra", status: "Por página: Sidebar = Nenhuma + Desativar título", nota: "Necessário nas páginas com widget HTML full-bleed para não sobrar barra branca / título duplicado." }
+  ],
+
+  // ---- Conta real de Google Ads (export 15/05–13/06, CPA real) ----
+  conta_real_ads: {
+    periodo: "15/05–13/06/2026",
+    investimento_mes: "≈ R$ 34,2 mil",
+    cpa_medio: "R$ 19,31 por conversa (lead WhatsApp)",
+    leitura: "Conta eficiente e bem gerida — desperdício mínimo (~1%). 'nutricionista online' = 60% da verba a CPA R$ 19. Cidades, convênios (reembolso) e termos de bodybuilder convertem bem. Maior alavanca de crescimento NÃO é cortar pago (já no teto), é construir o ORGÂNICO (hoje zero), onde o lead sai a ~R$ 0.",
+    acao: "Único teste que vale: message match (apontar 'nutricionista online' e 'nutricionista esportivo' para as páginas dedicadas). Detalhe em trafego/brief-gestor-2026-06.md."
+  }
 };

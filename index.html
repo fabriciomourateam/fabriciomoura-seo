@@ -76,6 +76,7 @@
       ['meiofundo','🎯 Meio/Fundo'],
       ['conteudo','📝 Calendário 90d'],
       ['pago','💸 Tráfego Pago'],
+      ['entregaveis','✅ Entregáveis'],
       ['fases','🚀 Roadmap'],
       ['metodo','🔧 Metodologia']
     ];
@@ -266,6 +267,48 @@
                   </div>
                 </div>`).join('')}
             </div>
+          </div>
+        </section>`;
+      },
+
+      entregaveis(){
+        const statColor = s => /Publicada|indexada/i.test(s)?'bg-emerald-100 text-emerald-700':/Pronto/i.test(s)?'bg-amber-100 text-amber-700':'bg-slate-100 text-slate-600';
+        const c = D.conta_real_ads;
+        return `<section class="fade space-y-6">
+          <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+            <h3 class="font-bold text-lg mb-3">✅ Ativos de SEO produzidos (Fase 4)</h3>
+            <div class="space-y-3">
+              ${D.entregaveis.map(e=>`
+                <div class="border border-slate-100 rounded-xl p-4">
+                  <div class="flex items-center gap-2 flex-wrap mb-1">
+                    <span class="text-[11px] bg-slate-100 px-2 py-.5 rounded-full">${e.tipo}</span>
+                    <h4 class="font-bold">${e.nome}</h4>
+                    <span class="text-[11px] px-2 py-.5 rounded-full ${statColor(e.status)}">${e.status}</span>
+                    ${e.kdi?`<span class="text-[11px] bg-emerald-50 text-emerald-700 px-2 py-.5 rounded-full">KDI ${e.kdi}</span>`:''}
+                  </div>
+                  <div class="text-xs text-slate-500">🎯 ${e.kw} · <code>${e.url}</code></div>
+                  <p class="text-sm text-slate-600 mt-1">${e.nota}</p>
+                </div>`).join('')}
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+            <h3 class="font-bold text-lg mb-3">🔧 Infraestrutura configurada</h3>
+            <div class="grid md:grid-cols-2 gap-3">
+              ${D.infra.map(i=>`<div class="bg-slate-50 rounded-xl p-3">
+                <div class="font-semibold text-sm">${i.item} <span class="text-xs text-emerald-600">· ${i.status}</span></div>
+                <div class="text-xs text-slate-500 mt-1">${i.nota}</div></div>`).join('')}
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm">
+            <h3 class="font-bold text-lg mb-2">📈 Conta real de Google Ads (${c.periodo})</h3>
+            <div class="grid grid-cols-2 gap-3 text-sm mb-3">
+              <div class="bg-slate-50 rounded-xl p-3"><div class="text-slate-400 text-xs">Investimento</div><div class="font-bold">${c.investimento_mes}</div></div>
+              <div class="bg-slate-50 rounded-xl p-3"><div class="text-slate-400 text-xs">CPA médio</div><div class="font-bold">${c.cpa_medio}</div></div>
+            </div>
+            <p class="text-sm text-slate-600">${c.leitura}</p>
+            <div class="mt-3 bg-emerald-50 rounded-xl p-3 text-sm"><b class="text-emerald-700">Ação:</b> ${c.acao}</div>
           </div>
         </section>`;
       },

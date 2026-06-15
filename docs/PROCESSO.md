@@ -231,6 +231,40 @@ Calendário **reordenado por KDI** (quick wins primeiro):
 > Search Console: a propriedade estava **não verificada** (0 cliques/impressões no print). Cliente
 > instalou o Google Site Kit em 2026-06-14 — dados reais devem aparecer em alguns dias.
 
+### Fase 4 — execução premium + publicação (2026-06-15)
+
+**Decisão de identidade:** após ver os prints reais do site, a identidade correta é **preto + ouro
+(gradiente), fontes Anton (títulos) + Montserrat (texto)**, não Inter. Acabamento **premium** pedido
+pelo cliente (efeito "uau"), **sem travessões** e sem padrões de IA no texto.
+
+**Ativos produzidos (na identidade premium, full-bleed, FAQ schema, CTA WhatsApp):**
+- ✅ `ferramentas/calculadora.html` — **PUBLICADA e indexada** em `/calculadora-de-imc-e-calorias`.
+  IMC + gasto calórico (Mifflin-St Jeor), aviso músculo×gordura, meta de proteína, foto/credibilidade,
+  texto de apoio + FAQ (Rank Math 76/100).
+- ✅ `blog/cardapio-para-quem-toma-mounjaro.html` — artigo premium (KDI 8). Pronto para publicar como Post.
+- ✅ `paginas/nutricionista-esportivo-GUIA.md` e `nutricionista-online-GUIA.md` — guias completos
+  (de→para + campos de SEO + **estrutura técnica**: H1, FAQ schema, alt text, links internos).
+- ✅ `paginas/nutricionista-esportivo-premium.html` — página de venda premium completa (referência).
+
+**Decisão estratégica (página de serviço):** a página do cliente JÁ converte (CPA R$ 19). Em vez de
+trocar, o caminho é **clonar a página de vendas no Elementor e embutir a estrutura de SEO** (H1 com
+palavra-chave, H2, FAQ schema, alt, links internos) — mantém design/conversão/Elementor e os plugins.
+A versão premium em HTML fica como referência (no bloco HTML não dá pra editar via Elementor).
+
+**Infra configurada no WordPress/Google:**
+- Search Console **verificado** (tag colada via Rank Math) → coletando dados.
+- **Rank Math** instalado (title/meta/slug/schema). Site Kit plugado.
+- Padrão de publicação: bloco **HTML personalizado** + Astra **Sidebar Nenhuma** + **Desativar título**;
+  widget **full-bleed** (`width:100vw; margin-left:calc(50% - 50vw)`) para não sobrar barra branca.
+- A fazer: enviar `sitemap_index.xml` no Search Console.
+
+**Conta real de Google Ads (export do cliente, 15/05–13/06):** ver `trafego/brief-gestor-2026-06.md`.
+CPA médio **R$ 19,31**, conta **eficiente** (desperdício ~1%). "nutricionista online" = 60% da verba a
+R$ 19. Conclusão: o pago já está no teto da eficiência; a alavanca de crescimento é o **orgânico**.
+
+> Estado dos entregáveis também versionado em `data.js` (campos `entregaveis`, `infra`, `conta_real_ads`)
+> e visível na aba **✅ Entregáveis** do dashboard.
+
 ---
 
 ## Metodologia
