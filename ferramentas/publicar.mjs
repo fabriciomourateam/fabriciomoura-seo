@@ -100,13 +100,34 @@ if (catNome && !catId) {
   console.warn(`⚠️  Não consegui resolver a categoria "${catNome}"; o post vai sair sem categoria.`);
 }
 
-// --- Publica ------------------------------------------------------------------
+// --- Publica ou atualiza ------------------------------------------------------
 const payload = { title, status, content };
 if (slug) payload.slug = slug;
 if (catId) payload.categories = [catId];
 
-const url = `${base}/wp-json/wp/v2/posts`;
-console.log(`\n→ Publicando "${title}" (${status}) em ${base} ...`);
+// Procura um post com o mesmo slug: se existir, ATUALIZA (não duplica); senão, cria.
+let existingId = null;
+if (slug) {
+  try {
+    const q = await fetch(
+      `${base}/wp-json/wp/v2/posts?slug=${encodeURIComponent(slug)}&status=any`,
+      { headers: { Authorization: auth } },
+    );
+    if (q.ok) {
+      const arr = await q.json();
+      if (Array.isArray(arr) && arr.length) existingId = arr[0].id;
+    }
+  } catch {
+    /* sem conexão de busca: segue como criação */
+  }
+}
+
+const url = existingId
+  ? `${base}/wp-json/wp/v2/posts/${existingId}`
+  : `${base}/wp-json/wp/v2/posts`;
+console.log(
+  `\n→ ${existingId ? 'Atualizando' : 'Publicando'} "${title}" (${status}) em ${base} ...`,
+);
 
 let res, post;
 try {
@@ -145,5 +166,5 @@ if (seoTitle || seoDesc || focusKw) {
   }
 }
 
-console.log(`\n✅ Publicado: ${post.link}`);
+console.log(`\n✅ ${existingId ? 'Atualizado' : 'Publicado'}: ${post.link}`);
 console.log(`   ID ${post.id} · status ${post.status} · slug ${post.slug}\n`);

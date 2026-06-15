@@ -63,3 +63,8 @@ publica o post e grava o SEO do Rank Math (best-effort). No fim imprime a URL pu
 e cria a categoria se ela não existir). Para usar outro nome, defina a variável de ambiente
 opcional `WP_CATEGORY`. Como é publicado como **Post**, aparece automaticamente na listagem do
 blog, no RSS e no sitemap — sem passo manual.
+
+**Publica OU atualiza (idempotente):** o script procura um post com o mesmo `slug`. Se já existir,
+ele **edita o post que está no ar** (não duplica); se não existir, cria. Por isso o mesmo comando
+serve tanto para publicar pela primeira vez quanto para aplicar uma correção depois — basta editar
+o HTML em `blog/<slug>.html` e rodar de novo.
