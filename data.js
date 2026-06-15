@@ -319,7 +319,7 @@ window.SEO_DATA = {
     { item: "Google Search Console", status: "Verificado (tag via Rank Math)", nota: "Propriedade verificada; coletando dados. Usar 'Inspeção de URL' para solicitar indexação de cada página nova." },
     { item: "Rank Math SEO", status: "Instalado e ativo", nota: "Title/meta/slug/schema por página. Não perseguir 100/100 — foco em título, descrição, palavra-chave, links internos." },
     { item: "Google Site Kit", status: "Plugado", nota: "Conecta Search Console + Analytics no painel do WordPress." },
-    { item: "Sitemap", status: "Enviar sitemap_index.xml no Search Console", nota: "Rank Math gera automático; entregar ao Google uma vez." },
+    { item: "Sitemap", status: "Enviado ao Search Console (sitemap_index.xml)", nota: "Rank Math gera automático; entregue ao Google. Páginas novas também via Inspeção de URL → Solicitar indexação." },
     { item: "Tema Astra", status: "Por página: Sidebar = Nenhuma + Desativar título", nota: "Necessário nas páginas com widget HTML full-bleed para não sobrar barra branca / título duplicado." }
   ],
 
