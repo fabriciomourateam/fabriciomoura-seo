@@ -88,12 +88,14 @@
   .mj-faq details[open] summary::after{content:'\2013'}
   .mj-faq .a{padding:0 20px 18px;color:#c8c8c8;font-size:1rem}
 
-  .mj-cta{position:relative;text-align:center;margin:48px 0;padding:42px 26px;border-radius:24px;overflow:hidden;
+  .mj-cta{position:relative;display:flex;align-items:center;gap:28px;margin:48px 0;padding:36px 32px;border-radius:24px;overflow:hidden;
     background:linear-gradient(160deg,rgba(252,212,4,.12),rgba(252,212,4,.02));border:1px solid rgba(252,212,4,.4)}
   .mj-cta::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:480px;height:340px;background:radial-gradient(circle,rgba(252,212,4,.22),transparent 65%)}
   .mj-cta>*{position:relative;z-index:2}
+  .mj-cta-text{flex:1}
+  .mj-cta-img{width:190px;flex-shrink:0;border-radius:16px;border:1px solid var(--line);display:block}
   .mj-cta h2{font-family:var(--anton);font-weight:400;text-transform:uppercase;font-size:2rem;margin:0 0 12px;line-height:1.08}
-  .mj-cta p{max-width:520px;margin:0 auto 24px;color:#eaeaea}
+  .mj-cta p{margin:0 0 22px;color:#eaeaea}
   .mj-btn{display:inline-flex;align-items:center;gap:11px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;
     font-weight:800;text-transform:uppercase;letter-spacing:.03em;font-size:1.02rem;padding:17px 34px;border-radius:14px;text-decoration:none;
     box-shadow:0 16px 40px -12px rgba(252,212,4,.6);transition:.25s}
@@ -119,7 +121,7 @@
   .mj-midcta span{font-weight:700;color:#fff;font-size:1.02rem}
   .mj-midcta a{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;font-weight:800;text-transform:uppercase;font-size:.86rem;letter-spacing:.03em;padding:13px 22px;border-radius:11px;text-decoration:none;white-space:nowrap}
   .mj-disc{font-size:.82rem;color:#7a7a7a;border-top:1px solid var(--line);padding:22px 0 48px;line-height:1.65}
-  @media(max-width:600px){.mj-hero h1{font-size:1.85rem}.mj h2{font-size:1.3rem}.mj-quote{font-size:1.12rem}.mj-meal{grid-template-columns:1fr;gap:3px}.mj-cta h2{font-size:1.5rem}.mj-author{flex-direction:column;text-align:center}}
+  @media(max-width:600px){.mj-hero h1{font-size:1.85rem}.mj h2{font-size:1.3rem}.mj-quote{font-size:1.12rem}.mj-meal{grid-template-columns:1fr;gap:3px}.mj-cta h2{font-size:1.5rem}.mj-cta{flex-direction:column;text-align:center}.mj-cta-img{width:170px;margin:14px auto 0}.mj-author{flex-direction:column;text-align:center}}
 </style>
 
 <div class="mj">
@@ -133,7 +135,6 @@
   </header>
 
   <div class="wrap">
-    <img class="mj-cover" src="https://fabriciomoura.com/wp-content/uploads/2024/06/Design-sem-nome-15-e1781459644476.png" alt="Fabricio Moura, nutricionista esportivo" />
     <article>
       <p class="mj-lead">Se olhar no espelho daqui a alguns meses e finalmente gostar do que vê, mais seco e mais forte, é o que todo mundo que começa o Mounjaro quer. A medicação ajuda. Quem decide o resultado é o que você coloca no prato.</p>
       <p>O Mounjaro (tirzepatida) reduz bastante o apetite, e é justamente aí que mora o risco. Comendo pouco, fica fácil perder músculo junto com a gordura, ficar sem energia e abrir buracos de nutrientes no seu dia. A medicação segura o apetite. A <strong>alimentação certa</strong> é o que garante que você perca gordura mantendo saúde e massa magra.</p>
@@ -195,9 +196,12 @@
       </div>
 
       <div class="mj-cta">
+        <div class="mj-cta-text">
         <h2>Quer um cardápio feito pra você?</h2>
         <p>Eu monto a sua estratégia de nutrição e treino para você aproveitar o Mounjaro ao máximo, perdendo gordura, mantendo músculo e com acompanhamento de perto. Tudo com garantia.</p>
         <a class="mj-btn" href="https://wa.me/+5511914849797?text=Oi%20Fabricio!%20Li%20o%20artigo%20sobre%20card%C3%A1pio%20no%20Mounjaro%20e%20quero%20um%20acompanhamento%20individual." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.866 9.866 0 001.51 5.26l-.999 3.648 3.978-1.607z"/></svg>Falar com o Fabricio</a>
+        </div>
+        <img class="mj-cta-img" src="https://fabriciomoura.com/wp-content/uploads/2024/06/Design-sem-nome-15-e1781459644476.png" alt="Fabricio Moura" loading="lazy" />
       </div>
 
       <div class="mj-author">
