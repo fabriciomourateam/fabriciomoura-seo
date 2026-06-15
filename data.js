@@ -310,8 +310,8 @@ window.SEO_DATA = {
       nota: "Quick win nº1 (KDI 10 + vol 5.400). Guia de→para pra clonar a página de vendas + estrutura técnica de SEO. Versão premium pronta como referência." },
     { tipo: "Página de serviço", nome: "Nutricionista Online", url: "fabriciomoura.com/nutricionista-online", kw: "nutricionista online", kdi: 28, status: "Guia pronto — a montar", arquivo: "paginas/nutricionista-online-GUIA.md",
       nota: "Casa com plano à distância (vol 6.600). Ângulo '100% online'. Guia de→para + estrutura técnica de SEO." },
-    { tipo: "Artigo", nome: "Creatina engorda ou emagrece?", url: "(a criar)", kw: "creatina engorda ou emagrece", kdi: 15, status: "No calendário — a escrever", arquivo: "—",
-      nota: "Próximo artigo quick win do calendário." }
+    { tipo: "Artigo", nome: "Creatina engorda ou emagrece?", url: "fabriciomoura.com/creatina-engorda-ou-emagrece", kw: "creatina engorda ou emagrece", kdi: 15, status: "Pronto — a publicar", arquivo: "blog/creatina-engorda-ou-emagrece.html",
+      nota: "Primeiro artigo gerado pelo fazedor semanal (playbook docs/AGENTE-SEMANAL.md). Padrão premium, FAQ+schema, links internos, CTA." }
   ],
 
   // ---- Infraestrutura de SEO configurada (no WordPress / Google) ----
