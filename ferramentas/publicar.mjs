@@ -69,9 +69,41 @@ const focusKw = pega('Palavra-chave foco');
 
 if (!title) fail('Não consegui determinar o título do post.');
 
+// --- Categoria (agrupa os artigos no blog) ------------------------------------
+// Resolve o nome para o ID que a API exige; cria a categoria se ainda não existir.
+// Nome padrão "Conteúdo Semanal" (sobrescreva com a variável de ambiente WP_CATEGORY).
+const catNome = (process.env.WP_CATEGORY || 'Conteúdo Semanal').trim();
+async function resolverCategoria(nome) {
+  try {
+    const busca = await fetch(
+      `${base}/wp-json/wp/v2/categories?search=${encodeURIComponent(nome)}`,
+      { headers: { Authorization: auth } },
+    );
+    if (busca.ok) {
+      const lista = await busca.json();
+      const exato = lista.find((c) => c.name.toLowerCase() === nome.toLowerCase());
+      if (exato) return exato.id;
+    }
+    const criar = await fetch(`${base}/wp-json/wp/v2/categories`, {
+      method: 'POST',
+      headers: { Authorization: auth, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: nome }),
+    });
+    if (criar.ok) return (await criar.json()).id;
+  } catch {
+    /* best-effort: cai pro padrão "Sem categoria" se algo falhar */
+  }
+  return null;
+}
+const catId = catNome ? await resolverCategoria(catNome) : null;
+if (catNome && !catId) {
+  console.warn(`⚠️  Não consegui resolver a categoria "${catNome}"; o post vai sair sem categoria.`);
+}
+
 // --- Publica ------------------------------------------------------------------
 const payload = { title, status, content };
 if (slug) payload.slug = slug;
+if (catId) payload.categories = [catId];
 
 const url = `${base}/wp-json/wp/v2/posts`;
 console.log(`\n→ Publicando "${title}" (${status}) em ${base} ...`);

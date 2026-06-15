@@ -58,3 +58,8 @@ Lê as credenciais das **variáveis de ambiente** (NUNCA do repositório nem do 
 O script extrai do próprio HTML o título, slug, título SEO, meta description e palavra-chave foco
 (do cabeçalho de instruções) e o conteúdo entre `<!-- INÍCIO DO POST -->` e `<!-- FIM DO POST -->`,
 publica o post e grava o SEO do Rank Math (best-effort). No fim imprime a URL publicada.
+
+**Categoria:** todo post é marcado na categoria **"Conteúdo Semanal"** (o script procura pelo nome
+e cria a categoria se ela não existir). Para usar outro nome, defina a variável de ambiente
+opcional `WP_CATEGORY`. Como é publicado como **Post**, aparece automaticamente na listagem do
+blog, no RSS e no sitemap — sem passo manual.
