@@ -57,6 +57,21 @@ salve em blog/<slug>.html, atualize a fila e o data.js, faça commit e push, e m
 arquivo pronto pra colar como Post (com slug, título SEO, meta e palavra-chave foco).
 ```
 
-## Para publicação automática (opcional)
-Gerar uma **Senha de Aplicativo** no WordPress (Usuários → Perfil → Senhas de aplicativo) e
-fornecer ao agente. Com isso ele publica via **WordPress REST API** sem necessidade de colar.
+## Para publicação automática (via WordPress REST API)
+Pré-requisitos (uma vez):
+- Usuário **Editor** dedicado + **Senha de Aplicativo** (já criado pelo Fabricio).
+- **Variáveis de ambiente** no ambiente do Claude Code (NUNCA no repositório nem no chat):
+  - `WP_URL=https://fabriciomoura.com`
+  - `WP_USER=<usuario-editor>`
+  - `WP_APP_PASSWORD=<senha de aplicativo>`
+- **Astra (uma vez):** definir GLOBALMENTE para posts **Desativar título** + **Sem sidebar**
+  (Personalizar → Blog → Post único / Single), e fundo do site preto (já feito). Assim todo post
+  auto-publicado já nasce no padrão dark, sem ajuste manual.
+
+Fluxo do agente ao publicar (status `publish`, conforme escolha do Fabricio):
+1. Gerar o artigo em `blog/<slug>.html` (entre INÍCIO DO POST e FIM DO POST).
+2. `POST {WP_URL}/wp-json/wp/v2/posts` com **Basic Auth** (`WP_USER`:`WP_APP_PASSWORD`), corpo:
+   `{ "title": "<título>", "slug": "<slug>", "status": "publish", "content": "<html entre os marcadores>" }`
+3. (Opcional) Definir imagem destacada via `featured_media` e SEO do Rank Math via meta, se disponível.
+4. Confirmar a URL publicada, marcar a fila como concluída, commit/push, e avisar o Fabricio com o link.
+
