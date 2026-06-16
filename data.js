@@ -133,7 +133,7 @@ window.SEO_DATA = {
         { mes: 1, titulo: "Pode beber álcool tomando Mounjaro? Nutricionista explica", funil: "Topo", kw: "quem toma mounjaro pode beber", vol: 2400, prioridade: "Alta", status: "Planejado" },
         { mes: 1, titulo: "Cardápio para quem toma Mounjaro (com acompanhamento)", funil: "Meio", kw: "cardápio para quem toma mounjaro", vol: 1000, prioridade: "Alta", status: "Planejado" },
         { mes: 1, titulo: "Arroz engorda? O que diz o nutricionista", funil: "Meio", kw: "arroz engorda", vol: 6600, prioridade: "Alta", status: "Planejado" },
-        { mes: 1, titulo: "6 alimentos ricos em fibras para emagrecer", funil: "Topo", kw: "alimentos ricos em fibras", vol: 0, prioridade: "Alta", status: "Planejado" },
+        { mes: 1, titulo: "6 alimentos ricos em fibras para emagrecer", funil: "Topo", kw: "alimentos ricos em fibras", vol: 0, prioridade: "Alta", status: "Publicado" },
         { mes: 1, titulo: "Creatina engorda ou emagrece?", funil: "Meio", kw: "creatina engorda ou emagrece", vol: 1900, prioridade: "Alta", status: "Planejado" },
         { mes: 1, titulo: "Como funciona o acompanhamento de nutricionista online", funil: "Fundo", kw: "nutricionista online", vol: 6600, prioridade: "Alta", status: "Planejado" },
         // MÊS 2 — Autoridade + transacional
@@ -311,7 +311,9 @@ window.SEO_DATA = {
     { tipo: "Página de serviço", nome: "Nutricionista Online", url: "fabriciomoura.com/nutricionista-online", kw: "nutricionista online", kdi: 28, status: "Guia pronto — a montar", arquivo: "paginas/nutricionista-online-GUIA.md",
       nota: "Casa com plano à distância (vol 6.600). Ângulo '100% online'. Guia de→para + estrutura técnica de SEO." },
     { tipo: "Artigo", nome: "Creatina engorda ou emagrece?", url: "fabriciomoura.com/creatina-engorda-ou-emagrece", kw: "creatina engorda ou emagrece", kdi: 15, status: "Pronto — a publicar", arquivo: "blog/creatina-engorda-ou-emagrece.html",
-      nota: "Primeiro artigo gerado pelo fazedor semanal (playbook docs/AGENTE-SEMANAL.md). Padrão premium, FAQ+schema, links internos, CTA." }
+      nota: "Primeiro artigo gerado pelo fazedor semanal (playbook docs/AGENTE-SEMANAL.md). Padrão premium, FAQ+schema, links internos, CTA." },
+    { tipo: "Artigo", nome: "6 alimentos ricos em fibras para emagrecer", url: "fabriciomoura.com/alimentos-ricos-em-fibras", kw: "alimentos ricos em fibras", kdi: 29, status: "Publicado", arquivo: "blog/alimentos-ricos-em-fibras.html",
+      nota: "Topo de funil — copia a página nº1 de tráfego do concorrente (34%). Lista dos 6 alimentos, cardápio exemplo, FAQ+schema, links internos (calculadora). Publicado via ferramentas/publicar.mjs." }
   ],
 
   // ---- Infraestrutura de SEO configurada (no WordPress / Google) ----
