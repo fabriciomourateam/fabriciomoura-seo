@@ -131,20 +131,34 @@ async function resolverCategoria() {
     post = await wp('/wp/v2/posts', { method: 'POST', body: payload });
   }
 
-  // ---------- 6. SEO do Rank Math (best-effort) ----------
-  const meta = {};
-  if (seoTitle) meta.rank_math_title = seoTitle;
-  if (metaDesc) meta.rank_math_description = metaDesc;
-  if (focusKw) meta.rank_math_focus_keyword = focusKw;
-  if (Object.keys(meta).length) {
+  // Helper: grava um conjunto de meta de forma isolada (best-effort, não derruba o publish).
+  async function aplicarMeta(rotulo, meta) {
+    if (!Object.keys(meta).length) return;
     try {
       await wp(`/wp/v2/posts/${post.id}`, { method: 'POST', body: { meta } });
-      console.log('  ✓ SEO do Rank Math gravado');
+      console.log(`  ✓ ${rotulo} gravado`);
     } catch (e) {
-      console.log(`  ⚠ SEO do Rank Math não gravado (best-effort): ${e.message}`);
-      console.log('    Confira o título/meta/foco manualmente no Rank Math, se necessário.');
+      console.log(`  ⚠ ${rotulo} não gravado (best-effort): ${e.message}`);
     }
   }
+
+  // ---------- 6a. SEO do Rank Math (best-effort) ----------
+  const seo = {};
+  if (seoTitle) seo.rank_math_title = seoTitle;
+  if (metaDesc) seo.rank_math_description = metaDesc;
+  if (focusKw) seo.rank_math_focus_keyword = focusKw;
+  await aplicarMeta('SEO do Rank Math', seo);
+
+  // ---------- 6b. Layout do Astra (best-effort) ----------
+  // Garante que o post nasce no padrão dark sem ajuste manual:
+  //   - sem o título branco do tema (cabeçalho)
+  //   - sem sidebar
+  //   - "Largura total / Esticada" (page-builder) → remove a caixa/rodapé branco do tema
+  await aplicarMeta('Layout do Astra (sem título + sem sidebar + largura total)', {
+    'site-post-title': 'disabled',
+    'site-sidebar-layout': 'no-sidebar',
+    'site-content-layout': 'page-builder',
+  });
 
   // ---------- 7. URL final ----------
   const url = post.link || `${BASE}/${slug}/`;
