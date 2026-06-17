@@ -24,6 +24,19 @@
 </head>
 <body>
 <!-- INÍCIO DO POST -->
+<!--noptimize-->
+<style>
+  /* Esconde cabeçalho e rodapé do tema SÓ nos posts do blog, à prova de Autoptimize:
+     - escopo body.single-post → nunca afeta a home nem páginas;
+     - wrapper <!--noptimize--> → o Autoptimize NÃO agrega isto no bundle global do site
+       (foi o que vazou antes e escondeu o cabeçalho do site inteiro).
+     Para trazer cabeçalho/rodapé de volta, basta apagar este bloco noptimize. */
+  body.single-post #masthead,
+  body.single-post .ast-above-header-wrap,
+  body.single-post .ast-below-header-wrap,
+  body.single-post .site-footer{display:none !important}
+</style>
+<!--/noptimize-->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
   .mj{
@@ -37,7 +50,7 @@
   .gold{background:linear-gradient(135deg,var(--gold1),var(--gold2) 45%,var(--gold3));-webkit-background-clip:text;background-clip:text;color:transparent}
 
   /* HERO */
-  .mj-hero{position:relative;text-align:center;padding:92px 0 48px;border-bottom:1px solid var(--line);overflow:hidden}
+  .mj-hero{position:relative;text-align:center;padding:120px 0 48px;border-bottom:1px solid var(--line);overflow:hidden}
   .mj-hero::before{content:'';position:absolute;top:-220px;left:50%;transform:translateX(-50%);width:760px;height:520px;
     background:radial-gradient(circle, rgba(252,212,4,.14), transparent 62%);pointer-events:none}
   .mj-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(252,212,4,.1);border:1px solid rgba(252,212,4,.35);
@@ -139,7 +152,7 @@
   .mj-midcta span{font-weight:700;color:#fff;font-size:1.02rem}
   .mj-midcta a{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;font-weight:800;text-transform:uppercase;font-size:.86rem;letter-spacing:.03em;padding:13px 22px;border-radius:11px;text-decoration:none;white-space:nowrap}
   .mj-disc{font-size:.82rem;color:#7a7a7a;border-top:1px solid var(--line);padding:22px 0 48px;line-height:1.65}
-  @media(max-width:600px){.mj-hero{padding-top:64px}.mj-hero h1{font-size:1.85rem}.mj h2{font-size:1.3rem}.mj-quote{font-size:1.12rem}.mj-meal{grid-template-columns:1fr;gap:3px}.mj-cta h2{font-size:1.5rem}.mj-cta{flex-direction:column;text-align:center}.mj-cta-img{width:170px;margin:14px auto 0}.mj-author{gap:13px;padding:17px 16px;text-align:left}.mj-author img{width:62px;height:62px}.mj-author .nm{font-size:1.15rem}}
+  @media(max-width:600px){.mj-hero{padding-top:84px}.mj-hero h1{font-size:1.85rem}.mj h2{font-size:1.3rem}.mj-quote{font-size:1.12rem}.mj-meal{grid-template-columns:1fr;gap:3px}.mj-cta h2{font-size:1.5rem}.mj-cta{flex-direction:column;text-align:center}.mj-cta-img{width:170px;margin:14px auto 0}.mj-author{gap:13px;padding:17px 16px;text-align:left}.mj-author img{width:62px;height:62px}.mj-author .nm{font-size:1.15rem}}
 </style>
 
 <div class="mj">
