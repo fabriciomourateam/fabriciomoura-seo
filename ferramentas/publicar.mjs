@@ -160,6 +160,20 @@ async function resolverCategoria() {
     'site-content-layout': 'page-builder',
   });
 
+  // ---------- 6c. Remover cabeçalho e rodapé do site neste post (best-effort) ----------
+  // Os artigos são dark/premium e o cabeçalho branco (logo + menu) e o rodapé do tema
+  // destoam. Estas metas são do Astra "Disable Sections" e SÓ funcionam com Astra Pro/Addon
+  // ativo (hoje NÃO está). Quando o site não tem o Addon, a remoção de fato é feita pelo CSS
+  // dentro do próprio artigo (#masthead/.site-footer { display:none }). Deixamos as metas aqui
+  // como bônus: se um dia ativarem o Astra Pro, o post já nasce sem cabeçalho/rodapé nativo.
+  await aplicarMeta('Astra Disable Sections (efetivo só com Astra Pro; senão o CSS do post cuida)', {
+    'ast-main-header-display': 'disabled',
+    'ast-hfb-above-header-display': 'disabled',
+    'ast-hfb-below-header-display': 'disabled',
+    'footer-sml-layout': 'disabled',
+    'footer-adv-display': 'disabled',
+  });
+
   // ---------- 7. URL final ----------
   const url = post.link || `${BASE}/${slug}/`;
   console.log(`\n✓ ${existente ? 'Atualizado' : 'Publicado'} (${status}):`);

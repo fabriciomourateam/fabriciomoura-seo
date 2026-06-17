@@ -26,6 +26,13 @@
 <!-- INÍCIO DO POST -->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+  /* Remover cabeçalho e rodapé do tema nesta página (Astra sem addon).
+     Os links continuam no HTML (crawláveis); só somem visualmente, deixando a página limpa.
+     Para trazer cabeçalho/rodapé de volta, basta apagar este bloco. */
+  #masthead,.site-header,.ast-above-header-wrap,.ast-below-header-wrap{display:none !important}
+  .site-footer,footer.site-footer,.ast-small-footer{display:none !important}
+
   .mj{
     --gold1:#FFE9A8;--gold2:#FCD404;--gold3:#C9920A;--y:#FCD404;
     --blk:#0e0e0e;--line:rgba(255,255,255,.08);--tx:#e9e9e9;--mut:#a8a8a8;
@@ -37,7 +44,7 @@
   .gold{background:linear-gradient(135deg,var(--gold1),var(--gold2) 45%,var(--gold3));-webkit-background-clip:text;background-clip:text;color:transparent}
 
   /* HERO */
-  .mj-hero{position:relative;text-align:center;padding:64px 0 44px;border-bottom:1px solid var(--line);overflow:hidden}
+  .mj-hero{position:relative;text-align:center;padding:92px 0 48px;border-bottom:1px solid var(--line);overflow:hidden}
   .mj-hero::before{content:'';position:absolute;top:-220px;left:50%;transform:translateX(-50%);width:760px;height:520px;
     background:radial-gradient(circle, rgba(252,212,4,.14), transparent 62%);pointer-events:none}
   .mj-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(252,212,4,.1);border:1px solid rgba(252,212,4,.35);
@@ -119,8 +126,9 @@
   .mj-author-btn{display:inline-flex;align-items:center;gap:9px;margin-top:14px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;font-weight:800;text-transform:uppercase;font-size:.82rem;letter-spacing:.03em;padding:12px 22px;border-radius:11px;text-decoration:none}
   .mj-author-btn svg{width:18px;height:18px;fill:#1a1300}
   .mj-proof{margin:42px 0}
-  .mj-proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
-  .mj-proof-grid img{width:100%;height:100%;object-fit:cover;border-radius:14px;border:1px solid var(--line);aspect-ratio:3/4;background:#1a1a1a}
+  .mj-proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px;align-items:start}
+  .mj-proof-fig{position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#1a1a1a}
+  .mj-proof-fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
   .mj-proof-cap{text-align:center;color:var(--mut);font-size:.86rem;margin-top:14px;letter-spacing:.02em}
   .mj-author{display:flex;gap:18px;align-items:center;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:40px 0 10px}
   .mj-author img{width:82px;height:82px;border-radius:50%;object-fit:cover;object-position:50% 28%;border:2px solid var(--gold2);flex-shrink:0;background:#1a1a1a}
@@ -138,7 +146,7 @@
   .mj-midcta span{font-weight:700;color:#fff;font-size:1.02rem}
   .mj-midcta a{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;font-weight:800;text-transform:uppercase;font-size:.86rem;letter-spacing:.03em;padding:13px 22px;border-radius:11px;text-decoration:none;white-space:nowrap}
   .mj-disc{font-size:.82rem;color:#7a7a7a;border-top:1px solid var(--line);padding:22px 0 48px;line-height:1.65}
-  @media(max-width:600px){.mj-hero h1{font-size:1.85rem}.mj h2{font-size:1.3rem}.mj-quote{font-size:1.12rem}.mj-meal{grid-template-columns:1fr;gap:3px}.mj-cta h2{font-size:1.5rem}.mj-cta{flex-direction:column;text-align:center}.mj-cta-img{width:170px;margin:14px auto 0}.mj-author{gap:13px;padding:17px 16px;text-align:left}.mj-author img{width:62px;height:62px}.mj-author .nm{font-size:1.15rem}}
+  @media(max-width:600px){.mj-hero{padding-top:64px}.mj-hero h1{font-size:1.85rem}.mj h2{font-size:1.3rem}.mj-quote{font-size:1.12rem}.mj-meal{grid-template-columns:1fr;gap:3px}.mj-cta h2{font-size:1.5rem}.mj-cta{flex-direction:column;text-align:center}.mj-cta-img{width:170px;margin:14px auto 0}.mj-author{gap:13px;padding:17px 16px;text-align:left}.mj-author img{width:62px;height:62px}.mj-author .nm{font-size:1.15rem}}
 </style>
 
 <div class="mj">
@@ -262,9 +270,9 @@
       <div class="mj-proof">
         <h2><span class="kick gold">Prova real</span>Transformações de quem fez o acompanhamento</h2>
         <div class="mj-proof-grid">
-          <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/4-1.png" alt="Transformação de aluno do Fabricio Moura" loading="lazy" />
-          <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/5-1.png" alt="Transformação de aluno do Fabricio Moura" loading="lazy" />
-          <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/6-1.png" alt="Transformação de aluno do Fabricio Moura" loading="lazy" />
+          <div class="mj-proof-fig"><img src="https://fabriciomoura.com/wp-content/uploads/2024/10/4-1.png" alt="Transformação de aluno do Fabricio Moura" /></div>
+          <div class="mj-proof-fig"><img src="https://fabriciomoura.com/wp-content/uploads/2024/10/5-1.png" alt="Transformação de aluno do Fabricio Moura" /></div>
+          <div class="mj-proof-fig"><img src="https://fabriciomoura.com/wp-content/uploads/2024/10/6-1.png" alt="Transformação de aluno do Fabricio Moura" /></div>
         </div>
         <p class="mj-proof-cap">Mais de 2.000 transformações reais em 7 países.</p>
       </div>
