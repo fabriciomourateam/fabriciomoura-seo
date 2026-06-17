@@ -1,0 +1,131 @@
+{
+  "data_snapshot": "2026-06-17",
+  "fonte": "Semrush MCP (trial — capturado antes de expirar)",
+  "database": "br",
+  "site": "fabriciomoura.com",
+  "contexto": "Snapshot tirado logo após começar a publicar conteúdo (artigo 'alimentos ricos em fibras' no ar). Marca o 'antes' de o conteúdo entrar no índice. Conteúdo recém-publicado AINDA NÃO indexado/posicionado — zero movimento orgânico é o esperado nesta janela.",
+
+  "fabriciomoura_estado_atual": {
+    "rank_global": 5127389,
+    "organic_keywords": 2,
+    "organic_traffic": 0,
+    "adwords_keywords": 1,
+    "adwords_traffic": 25,
+    "keywords_organicas": [
+      { "kw": "ivy moura", "pos": 50, "vol": 90, "tipo": "marca" },
+      { "kw": "moura academia", "pos": 40, "vol": 320, "tipo": "marca" }
+    ],
+    "comparacao_baseline_14_06": "IGUAL em tudo (2 kw de marca, tráfego 0, AS 2, 262 backlinks/97 domínios). Sem mudança — esperado: conteúdo novo leva semanas pra ser rastreado, indexado e posicionado pelo Google."
+  },
+
+  "autoridade_backlinks": {
+    "fabriciomoura.com": { "total_backlinks": 262, "referring_domains": 97, "authority_score": 2, "trust_score": 2, "follow": 118, "nofollow": 144 },
+    "raphaelnutri.com": { "total_backlinks": 1356, "referring_domains": 118, "authority_score": 11, "trust_score": 11, "follow": 1011, "nofollow": 346, "imagens": 2 },
+    "leitura": "Gap de autoridade (AS 2 x 11) NÃO vem do nº de domínios referenciadores (97 x 118, quase iguais) e sim de volume/qualidade de links follow (118 x 1011) e CONTEÚDO. Confirma a tese: dá pra competir com conteúdo bom, sem campanha pesada de link building."
+  },
+
+  "kdi_atualizado": {
+    "escala": "0-14 muito fácil · 15-29 fácil · 30-49 possível · 50-69 difícil · 70+ muito difícil",
+    "termos": [
+      { "kw": "o que e deficit calorico", "kdi": 21 },
+      { "kw": "arroz e feijao engorda", "kdi": 21 },
+      { "kw": "gordura visceral", "kdi": 22 },
+      { "kw": "deficit calorico", "kdi": 24 },
+      { "kw": "como perder gordura visceral", "kdi": 25 },
+      { "kw": "arroz engorda", "kdi": 30 },
+      { "kw": "mounjaro e alcool", "kdi": 30 },
+      { "kw": "arroz integral engorda", "kdi": 31 },
+      { "kw": "quem toma mounjaro pode beber", "kdi": 37 }
+    ]
+  },
+
+  "concorrente_raphaelnutri_top_paginas_organicas": [
+    { "kw": "nutricionista esportivo", "pos": 2, "vol": 5400, "trafego_pct": 11.00, "url": "/" },
+    { "kw": "arroz engorda", "pos": 3, "vol": 6600, "trafego_pct": 4.95, "url": "/post/comer-arroz-engorda-o-que-diz-o-nutricionista" },
+    { "kw": "cardapio para quem toma mounjaro", "pos": 1, "vol": 1000, "trafego_pct": 4.13, "url": "/post/cardapio-para-quem-toma-mounjaro" },
+    { "kw": "pode beber tomando mounjaro", "pos": 3, "vol": 1300, "trafego_pct": 1.78, "url": "/post/nutricionista-explica-pode-beber-tomando-mounjaro" },
+    { "kw": "quem toma mounjaro pode beber", "pos": 4, "vol": 2400, "trafego_pct": 1.41, "url": "/post/nutricionista-explica-pode-beber-tomando-mounjaro" },
+    { "kw": "quem toma mounjaro pode beber cerveja", "pos": 4, "vol": 1300, "trafego_pct": 1.41 },
+    { "kw": "receitas para quem toma mounjaro", "pos": 1, "vol": 260, "trafego_pct": 1.06 },
+    { "kw": "creatina engorda ou emagrece", "pos": 6, "vol": 1900, "trafego_pct": 0.75 },
+    { "kw": "arroz branco engorda", "pos": 5, "vol": 590, "trafego_pct": 0.53 },
+    { "kw": "dieta para quem toma mounjaro", "pos": 2, "vol": 390, "trafego_pct": 0.53 }
+  ],
+  "leitura_concorrente": "raphaelnutri rankeia UM ÚNICO post de Mounjaro ('nutricionista explica pode beber tomando mounjaro') para DEZENAS de variações (pode beber, cerveja, vinho, bebida alcoólica) — prova que vale 1 artigo-pilar cobrindo todas as variações de uma intenção. Mesmo padrão no post de arroz (arroz engorda + arroz branco engorda na mesma URL).",
+
+  "banco_keywords_fila": {
+    "nota": "Relacionadas + perguntas reais (phrase_related / phrase_questions, banco br) para alimentar a redação dos próximos artigos sem depender do Semrush. Volume = busca/mês. Ordenado por volume.",
+    "deficit_calorico": {
+      "kdi": 24,
+      "seed_volume": 22200,
+      "relacionadas_top": [
+        { "kw": "déficit calórico", "vol": 22200 },
+        { "kw": "calculadora de calorias", "vol": 14800 },
+        { "kw": "calorias por dia", "vol": 6600 },
+        { "kw": "contador de calorias", "vol": 6600 },
+        { "kw": "calcular quantas calorias", "vol": 5400 },
+        { "kw": "calcular deficit calorico", "vol": 4400 },
+        { "kw": "como fazer déficit calórico", "vol": 3600 },
+        { "kw": "o que é deficit calorico", "vol": 3600 },
+        { "kw": "déficit calórico calculadora", "vol": 2900 },
+        { "kw": "calculadora de deficit calorico", "vol": 2400 },
+        { "kw": "quantas calorias devo ingerir por dia calculadora", "vol": 1900 }
+      ],
+      "perguntas_top": [
+        { "kw": "o que é deficit calorico", "vol": 3600 },
+        { "kw": "como calcular deficit calorico", "vol": 2400 },
+        { "kw": "como calcular o deficit calorico", "vol": 720 },
+        { "kw": "como calcular meu deficit calorico", "vol": 590 },
+        { "kw": "como entrar em deficit calorico", "vol": 480 },
+        { "kw": "como saber meu deficit calorico", "vol": 480 },
+        { "kw": "como fazer o deficit calorico", "vol": 210 },
+        { "kw": "como saber se estou em deficit calorico", "vol": 140 },
+        { "kw": "como fazer deficit calorico sem perder massa muscular", "vol": 90 },
+        { "kw": "qual o deficit calorico para perder 1 kg", "vol": 50 },
+        { "kw": "quanto de deficit calorico para perder 1kg", "vol": 50 }
+      ],
+      "usado_em": "blog/deficit-calorico.html (publicado 2026-06-17)"
+    },
+    "gordura_visceral": {
+      "kdi": 22,
+      "seed_volume_estimado": 8100,
+      "relacionadas_top": [
+        { "kw": "como perder gordura visceral", "vol": 3600 },
+        { "kw": "barriga molenga", "vol": 3600 },
+        { "kw": "gordura visceral ideal", "vol": 2900 },
+        { "kw": "gordura visceral o que é", "vol": 2900 },
+        { "kw": "gordura visceral como perder", "vol": 2400 },
+        { "kw": "como eliminar gordura visceral", "vol": 1900 },
+        { "kw": "gordura subcutânea", "vol": 1900 }
+      ],
+      "perguntas_top": [
+        { "kw": "como perder gordura visceral", "vol": 3600 },
+        { "kw": "o que é gordura visceral", "vol": 2900 },
+        { "kw": "como eliminar gordura visceral", "vol": 1900 },
+        { "kw": "como diminuir a gordura visceral", "vol": 720 },
+        { "kw": "como acabar com a gordura visceral", "vol": 590 },
+        { "kw": "como reduzir gordura visceral", "vol": 390 },
+        { "kw": "como queimar gordura visceral", "vol": 260 },
+        { "kw": "como saber se tenho gordura visceral", "vol": 210 },
+        { "kw": "o que causa gordura visceral", "vol": 170 },
+        { "kw": "como medir gordura visceral", "vol": 140 },
+        { "kw": "onde fica a gordura visceral", "vol": 140 }
+      ],
+      "usado_em": "próximo artigo da fila (a escrever)"
+    },
+    "pendente_proximo_acesso": "Bancar 'arroz engorda' e 'quem toma mounjaro pode beber' (relacionadas + perguntas) não foi concluído nesta sessão — trial encerrando."
+  },
+
+  "queries_executadas": [
+    { "report": "domain_rank", "params": { "database": "br", "domain": "fabriciomoura.com" } },
+    { "report": "domain_organic", "params": { "database": "br", "domain": "fabriciomoura.com", "display_sort": "tr_desc", "display_limit": 50 } },
+    { "report": "backlinks_overview", "params": { "target": "fabriciomoura.com", "target_type": "root_domain" } },
+    { "report": "backlinks_overview", "params": { "target": "raphaelnutri.com", "target_type": "root_domain" } },
+    { "report": "domain_organic", "params": { "database": "br", "domain": "raphaelnutri.com", "display_sort": "tr_desc", "display_limit": 15 } },
+    { "report": "phrase_kdi", "params": { "database": "br", "phrase": "gordura visceral;deficit calorico;arroz engorda;quem toma mounjaro pode beber;como perder gordura visceral;o que e deficit calorico;arroz e feijao engorda;mounjaro e alcool;arroz integral engorda" } },
+    { "report": "phrase_related", "params": { "database": "br", "phrase": "gordura visceral", "display_sort": "nq_desc" } },
+    { "report": "phrase_questions", "params": { "database": "br", "phrase": "gordura visceral", "display_sort": "nq_desc" } },
+    { "report": "phrase_related", "params": { "database": "br", "phrase": "deficit calorico", "display_sort": "nq_desc" } },
+    { "report": "phrase_questions", "params": { "database": "br", "phrase": "deficit calorico", "display_sort": "nq_desc" } }
+  ]
+}

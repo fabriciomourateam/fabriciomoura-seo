@@ -133,13 +133,13 @@ window.SEO_DATA = {
         { mes: 1, titulo: "Pode beber álcool tomando Mounjaro? Nutricionista explica", funil: "Topo", kw: "quem toma mounjaro pode beber", vol: 2400, prioridade: "Alta", status: "Planejado" },
         { mes: 1, titulo: "Cardápio para quem toma Mounjaro (com acompanhamento)", funil: "Meio", kw: "cardápio para quem toma mounjaro", vol: 1000, prioridade: "Alta", status: "Planejado" },
         { mes: 1, titulo: "Arroz engorda? O que diz o nutricionista", funil: "Meio", kw: "arroz engorda", vol: 6600, prioridade: "Alta", status: "Planejado" },
-        { mes: 1, titulo: "6 alimentos ricos em fibras para emagrecer", funil: "Topo", kw: "alimentos ricos em fibras", vol: 0, prioridade: "Alta", status: "Planejado" },
+        { mes: 1, titulo: "6 alimentos ricos em fibras para emagrecer", funil: "Topo", kw: "alimentos ricos em fibras", vol: 0, prioridade: "Alta", status: "Publicado" },
         { mes: 1, titulo: "Creatina engorda ou emagrece?", funil: "Meio", kw: "creatina engorda ou emagrece", vol: 1900, prioridade: "Alta", status: "Planejado" },
         { mes: 1, titulo: "Como funciona o acompanhamento de nutricionista online", funil: "Fundo", kw: "nutricionista online", vol: 6600, prioridade: "Alta", status: "Planejado" },
         // MÊS 2 — Autoridade + transacional
         { mes: 2, titulo: "Gordura visceral: riscos e como reduzir", funil: "Topo", kw: "gordura visceral", vol: 0, prioridade: "Média", status: "Planejado" },
         { mes: 2, titulo: "Nutricionista esportivo: o que faz e quando procurar", funil: "Fundo", kw: "nutricionista esportivo", vol: 5400, prioridade: "Alta", status: "Planejado" },
-        { mes: 2, titulo: "Déficit calórico: a única forma real de emagrecer", funil: "Topo", kw: "déficit calórico", vol: 0, prioridade: "Média", status: "Planejado" },
+        { mes: 2, titulo: "Déficit calórico: a única forma real de emagrecer", funil: "Topo", kw: "déficit calórico", vol: 22200, prioridade: "Média", status: "Publicado" },
         { mes: 2, titulo: "O que comer tomando Mounjaro: guia completo", funil: "Meio", kw: "o que comer tomando mounjaro", vol: 390, prioridade: "Média", status: "Planejado" },
         { mes: 2, titulo: "Nutricionista pode receitar Mounjaro?", funil: "Topo", kw: "nutricionista pode receitar mounjaro", vol: 720, prioridade: "Média", status: "Planejado" },
         { mes: 2, titulo: "Dieta da selva funciona? Nutricionista avalia", funil: "Meio", kw: "dieta da selva funciona", vol: 480, prioridade: "Baixa", status: "Planejado" },
@@ -311,7 +311,11 @@ window.SEO_DATA = {
     { tipo: "Página de serviço", nome: "Nutricionista Online", url: "fabriciomoura.com/nutricionista-online", kw: "nutricionista online", kdi: 28, status: "Guia pronto — a montar", arquivo: "paginas/nutricionista-online-GUIA.md",
       nota: "Casa com plano à distância (vol 6.600). Ângulo '100% online'. Guia de→para + estrutura técnica de SEO." },
     { tipo: "Artigo", nome: "Creatina engorda ou emagrece?", url: "fabriciomoura.com/creatina-engorda-ou-emagrece", kw: "creatina engorda ou emagrece", kdi: 15, status: "Pronto — a publicar", arquivo: "blog/creatina-engorda-ou-emagrece.html",
-      nota: "Primeiro artigo gerado pelo fazedor semanal (playbook docs/AGENTE-SEMANAL.md). Padrão premium, FAQ+schema, links internos, CTA." }
+      nota: "Primeiro artigo gerado pelo fazedor semanal (playbook docs/AGENTE-SEMANAL.md). Padrão premium, FAQ+schema, links internos, CTA." },
+    { tipo: "Artigo", nome: "6 alimentos ricos em fibras para emagrecer", url: "fabriciomoura.com/alimentos-ricos-em-fibras", kw: "alimentos ricos em fibras", kdi: 29, status: "Publicado", arquivo: "blog/alimentos-ricos-em-fibras.html",
+      nota: "Topo de funil — copia a página nº1 de tráfego do concorrente (34%). Lista dos 6 alimentos, cardápio exemplo, FAQ+schema, links internos (calculadora). Publicado via ferramentas/publicar.mjs." },
+    { tipo: "Artigo", nome: "Déficit calórico: como calcular e emagrecer de verdade", url: "fabriciomoura.com/deficit-calorico", kw: "déficit calórico", kdi: 24, status: "Publicado", arquivo: "blog/deficit-calorico.html",
+      nota: "Topo de funil (vol 22.200). O que é, como calcular (passo a passo + exemplo), quanto pra perder 1 kg, como manter sem perder massa. FAQ+schema, links internos (calculadora + fibras). Keywords do snapshots/2026-06-17.json. Publicado via ferramentas/publicar.mjs." }
   ],
 
   // ---- Infraestrutura de SEO configurada (no WordPress / Google) ----

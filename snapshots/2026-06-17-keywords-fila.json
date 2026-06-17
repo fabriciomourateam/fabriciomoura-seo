@@ -1,0 +1,118 @@
+{
+  "data_snapshot": "2026-06-17",
+  "fonte": "Semrush MCP (trial — banco capturado antes de expirar)",
+  "database": "br",
+  "objetivo": "Munição de palavras-chave (relacionadas + perguntas reais) pros próximos 4 artigos da fila. Permite escrever os artigos SEM precisar do Semrush. Volumes = buscas/mês no Brasil. Estratégia: 1 artigo-pilar por tema cobrindo o máximo de variações da mesma intenção (padrão que o concorrente raphaelnutri usa e funciona).",
+  "reports_usados": ["phrase_related (display_sort=nq_desc)", "phrase_questions (display_sort=nq_desc)"],
+
+  "temas": {
+    "gordura_visceral": {
+      "kdi": 22,
+      "kw_principal": { "kw": "gordura visceral", "vol": "alto (termo-pai)" },
+      "relacionadas_alvo": [
+        { "kw": "como perder gordura visceral", "vol": 3600 },
+        { "kw": "gordura visceral o que é / o que é gordura visceral", "vol": 2900 },
+        { "kw": "gordura visceral como perder", "vol": 2400 },
+        { "kw": "como eliminar gordura visceral", "vol": 1900 },
+        { "kw": "gordura visceral ideal", "vol": 2900 },
+        { "kw": "gordura visceral como eliminar", "vol": 1300 },
+        { "kw": "gordura subcutânea (comparar com visceral)", "vol": 1900 }
+      ],
+      "perguntas_alvo": [
+        { "kw": "como perder gordura visceral", "vol": 3600 },
+        { "kw": "o que é gordura visceral", "vol": 2900 },
+        { "kw": "como eliminar gordura visceral", "vol": 1900 },
+        { "kw": "como diminuir a gordura visceral", "vol": 720 },
+        { "kw": "como acabar com a gordura visceral", "vol": 590 },
+        { "kw": "como reduzir gordura visceral", "vol": 390 },
+        { "kw": "como saber se tenho gordura visceral", "vol": 210 },
+        { "kw": "o que causa gordura visceral", "vol": 170 },
+        { "kw": "como medir gordura visceral", "vol": 140 },
+        { "kw": "onde fica a gordura visceral", "vol": 140 }
+      ],
+      "estrutura_sugerida": "H1 o que é → como saber se tenho/como medir → o que causa → riscos → como perder/eliminar/diminuir (dieta+treino) → gordura visceral ideal → visceral x subcutânea"
+    },
+
+    "deficit_calorico": {
+      "kdi": 24,
+      "kw_principal": { "kw": "déficit calórico", "vol": 22200 },
+      "relacionadas_alvo": [
+        { "kw": "déficit calórico", "vol": 22200 },
+        { "kw": "calcular deficit calorico", "vol": 4400 },
+        { "kw": "como fazer déficit calórico", "vol": 3600 },
+        { "kw": "o que é deficit calorico", "vol": 3600 },
+        { "kw": "déficit calórico calculadora", "vol": 2900 },
+        { "kw": "como calcular deficit calorico", "vol": 2400 },
+        { "kw": "calculadora deficit calorico", "vol": 2400 },
+        { "kw": "quantas calorias para perder 1kg", "vol": 1900 },
+        { "kw": "quantas calorias por dia para emagrecer", "vol": 1900 }
+      ],
+      "perguntas_alvo": [
+        { "kw": "o que é deficit calorico", "vol": 3600 },
+        { "kw": "como calcular deficit calorico", "vol": 2400 },
+        { "kw": "como entrar em deficit calorico", "vol": 480 },
+        { "kw": "como saber meu deficit calorico", "vol": 480 },
+        { "kw": "como saber se estou em deficit calorico", "vol": 140 },
+        { "kw": "como fazer deficit calorico sem perder massa muscular", "vol": 90 },
+        { "kw": "qual o deficit calorico para perder 1 kg", "vol": 50 }
+      ],
+      "oportunidade": "Tema com volume gigante e forte intenção de CALCULADORA — casa com a calculadora que já existe em ferramentas/. Linkar artigo ↔ calculadora.",
+      "estrutura_sugerida": "H1 o que é → como funciona (energia) → como calcular (passo a passo + calculadora) → quantas calorias p/ perder 1kg → como entrar/manter sem perder massa → erros comuns"
+    },
+
+    "arroz_engorda": {
+      "kdi": 30,
+      "kw_principal": { "kw": "arroz engorda", "vol": 6600 },
+      "relacionadas_alvo": [
+        { "kw": "arroz é carboidrato", "vol": 4400 },
+        { "kw": "arroz e feijão engorda", "vol": 2400, "kdi_proxy": 21 },
+        { "kw": "arroz integral engorda", "vol": 2400, "kdi": 31 },
+        { "kw": "calorias do arroz / arroz tem quantas calorias", "vol": 2900 },
+        { "kw": "100 g de arroz tem quantas calorias", "vol": 1600 },
+        { "kw": "arroz branco engorda (concorrente rankeia)", "vol": 590 }
+      ],
+      "perguntas_alvo": [
+        { "kw": "o que engorda mais arroz ou macarrão", "vol": 880 },
+        { "kw": "o arroz engorda", "vol": 480 },
+        { "kw": "o que engorda mais o feijão ou arroz", "vol": 480 },
+        { "kw": "qual arroz engorda mais branco ou parboilizado", "vol": 390 },
+        { "kw": "qual engorda mais arroz ou macarrão", "vol": 320 },
+        { "kw": "o que engorda mais arroz ou cuscuz", "vol": 110 }
+      ],
+      "oportunidade": "Muita pergunta comparativa (arroz x macarrão x feijão x cuscuz x pão). Um quadro comparativo de calorias responde dezenas de long-tails de uma vez. raphaelnutri rankeia pos 3 nesse termo com 1 post — dá pra fazer melhor.",
+      "estrutura_sugerida": "H1 arroz engorda? (resposta direta) → calorias do arroz (100g) → arroz branco x integral → arroz x feijão/macarrão/cuscuz/pão (tabela) → como comer arroz sem engordar (porção/déficit) → conclusão"
+    },
+
+    "mounjaro_alcool": {
+      "kdi": 37,
+      "kw_principal": { "kw": "quem toma mounjaro pode beber", "vol": 2400 },
+      "relacionadas_alvo": [
+        { "kw": "pode beber tomando mounjaro", "vol": 1300 },
+        { "kw": "mounjaro pode beber", "vol": 880 },
+        { "kw": "mounjaro e alcool", "vol": 720, "kdi": 30 },
+        { "kw": "quem toma mounjaro pode beber cerveja", "vol": 720 },
+        { "kw": "mounjaro e bebida alcoólica", "vol": 590 },
+        { "kw": "alcool corta o efeito do mounjaro", "vol": 210 },
+        { "kw": "cerveja corta o efeito do mounjaro", "vol": 210 }
+      ],
+      "perguntas_alvo": [
+        { "kw": "quem toma mounjaro pode beber", "vol": 2400 },
+        { "kw": "quem toma mounjaro pode beber cerveja", "vol": 720 },
+        { "kw": "quem toma mounjaro pode beber vinho", "vol": 260 },
+        { "kw": "quem toma mounjaro pode beber bebida alcoólica", "vol": 210 },
+        { "kw": "quem toma mounjaro pode beber cerveja sem álcool", "vol": 110 },
+        { "kw": "quem toma mounjaro pode beber energético", "vol": 110 },
+        { "kw": "quem toma mounjaro pode beber café", "vol": 40 },
+        { "kw": "quem toma mounjaro pode beber refrigerante", "vol": 50 }
+      ],
+      "oportunidade": "Intenção EXPLOSIVA (trend subindo forte — coluna 11-12 dos trends quase tudo 1.00). raphaelnutri rankeia 1 post pra ~10 variações. Complementa o artigo de cardápio Mounjaro que o cliente já tem. KDI 37 é o mais alto da fila, mas a long-tail 'cerveja/vinho/sem álcool' é fácil.",
+      "estrutura_sugerida": "H1 quem toma Mounjaro pode beber? (resposta direta + alerta) → por que álcool interfere (náusea/hipoglicemia/efeito) → cerveja / vinho / destilado / sem álcool / energético / refrigerante (seções) → álcool corta o efeito? → recomendação do nutri"
+    }
+  },
+
+  "notas": [
+    "Volumes em buscas/mês no Brasil (Semrush 'br'). CPC ~0 e competition baixa na maioria = termos informacionais, bons pra SEO de conteúdo (não pra Ads).",
+    "Padrão vencedor confirmado no concorrente: 1 artigo-pilar por intenção cobrindo todas as variações > vários posts rasos.",
+    "Ordem sugerida de produção por facilidade (KDI) + volume: 1) déficit calórico (vol altíssimo, casa com calculadora), 2) gordura visceral (KDI 22), 3) arroz engorda (comparativos), 4) Mounjaro+álcool (trend quente, complementa conteúdo existente)."
+  ]
+}
