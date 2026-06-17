@@ -26,6 +26,13 @@
 <!-- INÍCIO DO POST -->
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+  /* Remover cabeçalho e rodapé do tema nesta página (Astra sem addon).
+     Os links continuam no HTML (crawláveis); só somem visualmente, deixando a página limpa.
+     Para trazer cabeçalho/rodapé de volta, basta apagar este bloco. */
+  #masthead,.site-header,.ast-above-header-wrap,.ast-below-header-wrap{display:none !important}
+  .site-footer,footer.site-footer,.ast-small-footer{display:none !important}
+
   .mj{
     --gold1:#FFE9A8;--gold2:#FCD404;--gold3:#C9920A;--y:#FCD404;
     --blk:#0e0e0e;--line:rgba(255,255,255,.08);--tx:#e9e9e9;--mut:#a8a8a8;
