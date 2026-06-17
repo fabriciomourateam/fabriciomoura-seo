@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--
+  PUBLICAR NO WORDPRESS:
+  1. Publicações (Posts) > Adicionar novo.
+  2. Título: Déficit calórico: como calcular e emagrecer de verdade
+  3. Bloco "HTML personalizado" > cole tudo entre INÍCIO DO POST e FIM DO POST.
+  4. SEO (RankMath/Yoast):
+     Slug: deficit-calorico
+     Título SEO: Déficit Calórico: Como Calcular e Emagrecer de Verdade | Fabricio Moura
+     Meta: O que é déficit calórico, como calcular o seu passo a passo, quanto de déficit
+           para perder 1 kg e como emagrecer sem perder massa muscular. Guia de um nutricionista esportivo.
+     Palavra-chave foco: déficit calórico
+  5. Defina imagem destacada e publique.
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Déficit Calórico: Como Calcular e Emagrecer de Verdade | Fabricio Moura</title>
+  <meta name="description" content="O que é déficit calórico, como calcular o seu passo a passo, quanto de déficit para perder 1 kg e como emagrecer sem perder massa muscular. Guia de um nutricionista esportivo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+<!-- INÍCIO DO POST -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+  .mj{
+    --gold1:#FFE9A8;--gold2:#FCD404;--gold3:#C9920A;--y:#FCD404;
+    --blk:#0e0e0e;--line:rgba(255,255,255,.08);--tx:#e9e9e9;--mut:#a8a8a8;
+    --mont:'Montserrat',sans-serif;--anton:'Anton',sans-serif;
+  }
+  .mj,.mj *{box-sizing:border-box;margin:0;padding:0}
+  .mj{background:var(--blk);color:var(--tx);font-family:var(--mont);line-height:1.78;position:relative;overflow:hidden}
+  .mj .wrap{max-width:720px;margin:0 auto;padding:0 22px;position:relative;z-index:2}
+  .gold{background:linear-gradient(135deg,var(--gold1),var(--gold2) 45%,var(--gold3));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* HERO */
+  .mj-hero{position:relative;text-align:center;padding:64px 0 44px;border-bottom:1px solid var(--line);overflow:hidden}
+  .mj-hero::before{content:'';position:absolute;top:-220px;left:50%;transform:translateX(-50%);width:760px;height:520px;
+    background:radial-gradient(circle, rgba(252,212,4,.14), transparent 62%);pointer-events:none}
+  .mj-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(252,212,4,.1);border:1px solid rgba(252,212,4,.35);
+    color:var(--gold2);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:8px 16px;border-radius:100px;margin-bottom:22px}
+  .mj-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold2);box-shadow:0 0 10px var(--gold2)}
+  .mj-hero h1{font-family:var(--anton);font-weight:400;text-transform:uppercase;color:#fff;font-size:2.7rem;line-height:1.06;letter-spacing:.5px}
+  .mj-hero .sub{color:#cfcfcf;font-size:1.12rem;margin:18px auto 0;max-width:560px}
+  .mj-meta{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:22px;color:var(--mut);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}
+  .mj-meta span{display:inline-flex;align-items:center;gap:7px}
+  .mj-meta i{width:5px;height:5px;border-radius:50%;background:var(--gold2);display:inline-block}
+
+  /* ARTICLE */
+  .mj article{padding:44px 0 10px}
+  .mj p{font-size:1.1rem;margin-bottom:18px;color:#dcdcdc}
+  .mj p b,.mj p strong{color:#fff}
+  .mj h2{font-family:var(--mont);font-weight:800;color:#fff;font-size:1.55rem;line-height:1.25;margin:46px 0 18px;letter-spacing:-.2px}
+  .mj h2 .kick{display:block;font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
+  .mj h3{font-weight:800;font-size:1.18rem;color:#fff;margin:26px 0 6px}
+
+  .mj-quote{border-left:3px solid var(--gold2);padding:6px 0 6px 22px;margin:30px 0;font-family:var(--mont);font-weight:700;
+    font-size:1.32rem;line-height:1.4;color:#fff}
+  .mj-quote b{color:var(--gold2)}
+
+  /* CARDS */
+  .mj-foods{display:grid;gap:14px;margin:26px 0}
+  .mj-food{display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
+    border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+  .mj-food .em{font-size:30px;line-height:1;flex-shrink:0;width:46px;height:46px;border-radius:12px;background:rgba(252,212,4,.1);display:flex;align-items:center;justify-content:center}
+  .mj-food h3{margin:0 0 4px;font-size:1.12rem}
+  .mj-food p{margin:0;font-size:1rem;color:#cfcfcf}
+  .mj-food .fib{display:inline-block;margin-top:8px;font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--gold2);background:rgba(252,212,4,.08);border:1px solid rgba(252,212,4,.3);border-radius:100px;padding:4px 11px}
+
+  .mj-plan{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--line);
+    border-radius:20px;padding:8px 26px 18px;margin:28px 0;box-shadow:0 30px 70px -34px rgba(0,0,0,.9)}
+  .mj-plan .ph{display:flex;align-items:center;gap:12px;padding:20px 0 16px;border-bottom:1px solid var(--line);margin-bottom:6px}
+  .mj-plan .ph .ic{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--gold1),var(--gold3));display:flex;align-items:center;justify-content:center;font-size:20px}
+  .mj-plan .ph h3{margin:0;font-size:1.15rem}
+  .mj-meal{display:grid;grid-template-columns:200px 1fr;gap:12px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+  .mj-meal:last-child{border-bottom:0}
+  .mj-meal .w{font-weight:800;color:var(--gold2);text-transform:uppercase;font-size:.74rem;letter-spacing:.06em;padding-top:2px}
+  .mj-meal .d{font-size:1rem;color:#dcdcdc}
+
+  .mj-note{display:flex;gap:14px;background:linear-gradient(135deg,rgba(252,212,4,.08),rgba(252,212,4,.02));border:1px solid rgba(252,212,4,.3);
+    border-radius:16px;padding:18px 20px;margin:28px 0;font-size:.96rem;color:#ecdcb4}
+  .mj-note .x{font-size:20px;line-height:1.2}
+
+  .mj-avoid{list-style:none;margin:8px 0 18px;display:grid;gap:10px}
+  .mj-avoid li{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:13px;padding:14px 16px;font-size:1.02rem;color:#dcdcdc}
+  .mj-avoid li::before{content:'\2715';color:#ff6b6b;font-weight:900;font-size:.95rem;margin-top:2px}
+  .mj-yes{list-style:none;margin:8px 0 18px;display:grid;gap:10px}
+  .mj-yes li{display:flex;gap:14px;align-items:flex-start;background:rgba(252,212,4,.045);border:1px solid rgba(252,212,4,.22);border-radius:13px;padding:14px 16px;font-size:1.02rem;color:#dcdcdc}
+  .mj-yes li::before{content:'\2713';color:var(--gold2);font-weight:900;font-size:1rem;margin-top:1px}
+
+  .mj-faq{margin-top:10px}
+  .mj-faq details{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;transition:.25s}
+  .mj-faq details[open]{border-color:rgba(252,212,4,.4)}
+  .mj-faq summary{padding:18px 20px;cursor:pointer;font-weight:700;font-size:1.04rem;color:#fff;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+  .mj-faq summary::-webkit-details-marker{display:none}
+  .mj-faq summary::after{content:'+';color:var(--gold2);font-weight:800;font-size:1.4rem;line-height:1}
+  .mj-faq details[open] summary::after{content:'\2013'}
+  .mj-faq .a{padding:0 20px 18px;color:#c8c8c8;font-size:1rem}
+
+  .mj-cta{position:relative;display:flex;align-items:center;gap:28px;margin:48px 0;padding:36px 32px;border-radius:24px;overflow:hidden;
+    background:linear-gradient(160deg,rgba(252,212,4,.12),rgba(252,212,4,.02));border:1px solid rgba(252,212,4,.4)}
+  .mj-cta::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:480px;height:340px;background:radial-gradient(circle,rgba(252,212,4,.22),transparent 65%)}
+  .mj-cta>*{position:relative;z-index:2}
+  .mj-cta-text{flex:1}
+  .mj-cta-img{width:190px;flex-shrink:0;border-radius:16px;border:1px solid var(--line);display:block}
+  .mj-cta h2{font-family:var(--anton);font-weight:400;text-transform:uppercase;font-size:2rem;margin:0 0 12px;line-height:1.08}
+  .mj-cta p{margin:0 0 22px;color:#eaeaea}
+  .mj-btn{display:inline-flex;align-items:center;gap:11px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;
+    font-weight:800;text-transform:uppercase;letter-spacing:.03em;font-size:1.02rem;padding:17px 34px;border-radius:14px;text-decoration:none;
+    box-shadow:0 16px 40px -12px rgba(252,212,4,.6);transition:.25s}
+  .mj-btn:hover{transform:translateY(-2px)}
+  .mj-btn svg{width:21px;height:21px;fill:#1a1300}
+
+  .mj p a,.mj-faq .a a{color:var(--gold2);text-decoration:underline;text-underline-offset:3px;font-weight:600}
+  .mj-lead{font-size:1.25rem !important;color:#fff !important;font-weight:600;line-height:1.55}
+  .mj-author-btn{display:inline-flex;align-items:center;gap:9px;margin-top:14px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;font-weight:800;text-transform:uppercase;font-size:.82rem;letter-spacing:.03em;padding:12px 22px;border-radius:11px;text-decoration:none}
+  .mj-author-btn svg{width:18px;height:18px;fill:#1a1300}
+  .mj-proof{margin:42px 0}
+  .mj-proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
+  .mj-proof-grid img{width:100%;height:100%;object-fit:cover;border-radius:14px;border:1px solid var(--line);aspect-ratio:3/4;background:#1a1a1a}
+  .mj-proof-cap{text-align:center;color:var(--mut);font-size:.86rem;margin-top:14px;letter-spacing:.02em}
+  .mj-author{display:flex;gap:18px;align-items:center;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:40px 0 10px}
+  .mj-author img{width:82px;height:82px;border-radius:50%;object-fit:cover;object-position:50% 28%;border:2px solid var(--gold2);flex-shrink:0;background:#1a1a1a}
+  .mj-author .nm{font-family:var(--anton);font-weight:400;text-transform:uppercase;color:#fff;font-size:1.3rem;letter-spacing:.5px;line-height:1}
+  .mj-author .rl{color:var(--mut);font-size:.9rem;margin-top:7px;line-height:1.45}
+  .mj-author .rl b{color:var(--gold2)}
+  .mj-author-top{margin:0 0 32px;align-items:flex-start}
+  .mj-byline{color:var(--mut);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:9px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .mj-byline b{color:#fff}
+  .mj-byline i{width:5px;height:5px;border-radius:50%;background:var(--gold2);display:inline-block}
+  .mj-role{font-weight:800;color:#fff;font-size:1.05rem;margin-bottom:7px}
+  .mj-logo{height:54px;width:auto;margin:0 auto 20px;display:block;mix-blend-mode:screen}
+  .mj-cover{width:100%;height:auto;border-radius:20px;border:1px solid var(--line);margin-top:30px;display:block;box-shadow:0 30px 70px -34px rgba(0,0,0,.9)}
+  .mj-midcta{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:linear-gradient(135deg,rgba(252,212,4,.1),rgba(252,212,4,.02));border:1px solid rgba(252,212,4,.32);border-radius:16px;padding:18px 22px;margin:34px 0}
+  .mj-midcta span{font-weight:700;color:#fff;font-size:1.02rem}
+  .mj-midcta a{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;font-weight:800;text-transform:uppercase;font-size:.86rem;letter-spacing:.03em;padding:13px 22px;border-radius:11px;text-decoration:none;white-space:nowrap}
+  .mj-disc{font-size:.82rem;color:#7a7a7a;border-top:1px solid var(--line);padding:22px 0 48px;line-height:1.65}
+  @media(max-width:600px){.mj-hero h1{font-size:1.85rem}.mj h2{font-size:1.3rem}.mj-quote{font-size:1.12rem}.mj-meal{grid-template-columns:1fr;gap:3px}.mj-cta h2{font-size:1.5rem}.mj-cta{flex-direction:column;text-align:center}.mj-cta-img{width:170px;margin:14px auto 0}.mj-author{gap:13px;padding:17px 16px;text-align:left}.mj-author img{width:62px;height:62px}.mj-author .nm{font-size:1.15rem}}
+</style>
+
+<div class="mj">
+  <header class="mj-hero">
+    <div class="wrap">
+      <span class="mj-badge">Nutrição & Emagrecimento</span>
+      <h1><span class="gold">Déficit calórico</span>: como calcular e emagrecer de verdade</h1>
+      <p class="sub">O que é, como calcular o seu, quanto de déficit precisa para perder 1 kg e como fazer isso sem perder massa muscular.</p>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <article>
+      <div class="mj-author mj-author-top">
+        <img src="https://fabriciomoura.com/wp-content/uploads/2026/06/Screenshot_20260322_192920_Canva1-scaled.jpg" alt="Fabricio Moura" loading="lazy" style="object-position:50% 50%" />
+        <div>
+          <div class="mj-byline">Por <b>Fabricio Moura</b><i></i>Leitura de 6 min</div>
+          <div class="mj-role">Nutricionista e Treinador</div>
+          <div class="rl"><b>Mais de 2.000 transformações em 7 países</b> e 18 anos de experiência ajudando pessoas a perder gordura e ganhar massa muscular com um método garantido.</div>
+          <a class="mj-author-btn" href="https://wa.me/+5511914849797?text=Oi%20Fabricio!%20Quero%20um%20acompanhamento%20individual%20com%20voc%C3%AA." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.866 9.866 0 001.51 5.26l-.999 3.648 3.978-1.607z"/></svg>Falar com o Fabricio</a>
+        </div>
+      </div>
+      <p class="mj-lead">Toda dieta que funciona, não importa o nome, faz a mesma coisa por baixo: coloca você em déficit calórico. É a única forma de perder gordura. O resto é detalhe de como chegar lá sem sofrer.</p>
+      <p>Déficit calórico significa <strong>gastar mais energia do que você consome</strong>. Quando isso acontece, o corpo precisa buscar energia em algum lugar, e esse lugar é a sua gordura armazenada. É por isso que low carb, jejum, dieta da proteína e contagem de calorias funcionam quando funcionam: todas, no fim, deixam você comendo menos do que gasta.</p>
+      <p>Neste guia você vai entender o que é o déficit, <strong>como calcular o seu</strong>, quanto precisa para perder 1 kg e como manter o processo sem perder músculo nem viver com fome.</p>
+
+      <div class="mj-quote">Não existe emagrecimento sem déficit calórico. <b>Nenhum alimento, chá ou suplemento</b> queima gordura se a conta de energia do dia estiver positiva.</div>
+
+      <h2><span class="kick gold">O conceito</span>O que é déficit calórico</h2>
+      <p>Pense no seu corpo como uma conta de energia. De um lado entra a comida (as calorias que você come). Do outro sai o gasto: respirar, manter os órgãos funcionando, andar, trabalhar e treinar. O resultado dessa conta decide o que acontece com o seu peso:</p>
+      <ul class="mj-yes">
+        <li><b style="color:#fff">Come mais do que gasta:</b>&nbsp;sobra energia, o corpo guarda como gordura. Você engorda.</li>
+        <li><b style="color:#fff">Come igual ao que gasta:</b>&nbsp;empate. O peso fica estável (manutenção).</li>
+        <li><b style="color:#fff">Come menos do que gasta:</b>&nbsp;falta energia, o corpo queima a gordura guardada. Você emagrece. <b style="color:#fff">Isso é o déficit calórico.</b></li>
+      </ul>
+      <p>O número que você precisa conhecer primeiro é o seu <strong>gasto calórico diário</strong> (quanto seu corpo queima por dia somando tudo). É a partir dele que se monta o déficit.</p>
+
+      <div class="mj-midcta"><span>Descubra seu gasto calórico em 1 minuto</span><a href="https://fabriciomoura.com/calculadora-de-imc-e-calorias" target="_blank" rel="noopener">Calcular agora</a></div>
+
+      <h2><span class="kick gold">Passo a passo</span>Como calcular seu déficit calórico</h2>
+      <p>Não precisa de fórmula complicada. São três passos:</p>
+      <div class="mj-foods">
+        <div class="mj-food">
+          <div class="em">1️⃣</div>
+          <div>
+            <h3>Descubra seu gasto diário</h3>
+            <p>É quantas calorias seu corpo queima por dia no total, levando em conta peso, altura, idade e nível de atividade. Use a <a href="https://fabriciomoura.com/calculadora-de-imc-e-calorias" target="_blank" rel="noopener">calculadora de gasto calórico</a> para chegar nesse número.</p>
+          </div>
+        </div>
+        <div class="mj-food">
+          <div class="em">2️⃣</div>
+          <div>
+            <h3>Tire de 300 a 500 calorias</h3>
+            <p>Esse é o déficit. Um corte moderado emagrece de forma constante e sustentável. Cortar demais (passar fome) faz você perder músculo, sentir fraqueza e desistir na primeira semana.</p>
+          </div>
+        </div>
+        <div class="mj-food">
+          <div class="em">3️⃣</div>
+          <div>
+            <h3>Coma nesse novo valor</h3>
+            <p>O resultado é o seu alvo de calorias por dia para emagrecer. Mantenha por algumas semanas, acompanhe o peso e ajuste conforme o corpo responde.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mj-plan">
+        <div class="ph"><div class="ic">🧮</div><h3>Um exemplo prático</h3></div>
+        <div class="mj-meal"><div class="w">Gasto diário</div><div class="d">2.300 calorias por dia (resultado da calculadora).</div></div>
+        <div class="mj-meal"><div class="w">Déficit escolhido</div><div class="d">500 calorias por dia.</div></div>
+        <div class="mj-meal"><div class="w">Alvo para emagrecer</div><div class="d">2.300 − 500 = comer cerca de 1.800 calorias por dia.</div></div>
+        <div class="mj-meal"><div class="w">Resultado esperado</div><div class="d">Em torno de 0,5 kg de gordura por semana, mantendo a constância.</div></div>
+      </div>
+      <div class="mj-note"><div class="x">⚠️</div><div>Esses números são um <b>exemplo genérico</b>. O seu gasto depende do seu corpo e da sua rotina, e o déficit ideal muda se você treina pesado, dorme mal ou já fez muitas dietas. É isso que um acompanhamento individual ajusta.</div></div>
+
+      <h2><span class="kick gold">A conta</span>Quanto de déficit para perder 1 kg</h2>
+      <p>Existe uma referência clássica: <strong>1 kg de gordura equivale a cerca de 7.700 calorias</strong>. Na prática, isso vira uma matemática simples de déficit acumulado:</p>
+      <ul class="mj-yes">
+        <li><b style="color:#fff">Déficit de 500 cal/dia:</b>&nbsp;cerca de 3.500 calorias na semana, perto de 0,5 kg por semana.</li>
+        <li><b style="color:#fff">Déficit de 1.000 cal/dia:</b>&nbsp;perto de 1 kg por semana, mas é agressivo e difícil de sustentar para a maioria.</li>
+      </ul>
+      <p>Na vida real esse número não é exato: o corpo se adapta, a retenção de água mascara a balança e a perda nem sempre é linear. Por isso o mais importante não é o cálculo perfeito, e sim a <strong>constância ao longo das semanas</strong>. Emagrecer de 0,5 a 1 kg por semana é um ritmo saudável e que se mantém.</p>
+
+      <h2><span class="kick gold">Sem virar flacidez</span>Como fazer déficit sem perder massa muscular</h2>
+      <p>Esse é o erro que faz a pessoa emagrecer e ficar "magra mas flácida". Quando você corta calorias sem cuidado, o corpo queima gordura e músculo junto. Para preservar o músculo enquanto perde gordura, três coisas resolvem a maior parte:</p>
+      <div class="mj-foods">
+        <div class="mj-food">
+          <div class="em">🥩</div>
+          <div>
+            <h3>Coma proteína suficiente</h3>
+            <p>É o nutriente que protege a massa muscular no déficit. Carnes, ovos, peixe, frango e laticínios em todas as refeições. Sem proteína suficiente, boa parte do peso perdido é músculo.</p>
+            <span class="fib">O que mais protege o músculo</span>
+          </div>
+        </div>
+        <div class="mj-food">
+          <div class="em">🏋️</div>
+          <div>
+            <h3>Faça musculação</h3>
+            <p>O treino de força é o sinal que diz ao corpo "preciso desse músculo, não queime ele". Treinar pesado no déficit é o que garante que a gordura saia e o músculo fique.</p>
+            <span class="fib">O sinal para manter o músculo</span>
+          </div>
+        </div>
+        <div class="mj-food">
+          <div class="em">😴</div>
+          <div>
+            <h3>Durma e não exagere no corte</h3>
+            <p>Sono ruim e déficit muito agressivo aumentam a perda de músculo e a fome. Um corte moderado, com boas noites de sono, emagrece mais e melhor do que passar fome.</p>
+            <span class="fib">O que sustenta o processo</span>
+          </div>
+        </div>
+      </div>
+      <p>Para segurar a fome durante o déficit, os <a href="https://fabriciomoura.com/alimentos-ricos-em-fibras" target="_blank" rel="noopener">alimentos ricos em fibras</a> e a proteína são os seus melhores aliados: enchem o prato e saciam por mais tempo, comendo menos calorias.</p>
+
+      <h2><span class="kick gold">Cuidado aqui</span>Os erros que sabotam o déficit</h2>
+      <ul class="mj-avoid">
+        <li>Cortar calorias demais de uma vez. Dá fome, perda de músculo e desistência. Comece com um déficit moderado.</li>
+        <li>Esquecer das calorias líquidas: sucos, refrigerante, álcool e cafés adoçados somam muito sem saciar nada.</li>
+        <li>Pesar a comida na semana e comer "livre" no fim de semana, anulando todo o déficit que você criou.</li>
+        <li>Confiar só na balança. Água, intestino e ciclo menstrual mexem no peso do dia. Olhe a tendência de semanas.</li>
+        <li>Ficar sem proteína e sem treino, achando que basta comer pouco. Aí o resultado é flacidez, não definição.</li>
+      </ul>
+
+      <h2><span class="kick gold">Tira-dúvidas</span>Perguntas frequentes</h2>
+      <div class="mj-faq">
+        <details open><summary>O que é déficit calórico em palavras simples?</summary><div class="a">É comer menos calorias do que o seu corpo gasta no dia. Quando falta energia da comida, o corpo usa a gordura guardada como combustível, e é assim que você emagrece. É a base de qualquer dieta que funciona.</div></details>
+        <details><summary>Como calcular meu déficit calórico?</summary><div class="a">Primeiro descubra seu gasto calórico diário na <a href="https://fabriciomoura.com/calculadora-de-imc-e-calorias" target="_blank" rel="noopener">calculadora de calorias</a>. Depois subtraia de 300 a 500 calorias desse valor. O resultado é quanto comer por dia para emagrecer de forma sustentável.</div></details>
+        <details><summary>Qual o déficit calórico para perder 1 kg?</summary><div class="a">Como 1 kg de gordura equivale a cerca de 7.700 calorias, um déficit de 500 calorias por dia leva a perto de 0,5 kg por semana. Para 1 kg na semana seria preciso um déficit perto de 1.000 calorias por dia, o que costuma ser agressivo demais para manter.</div></details>
+        <details><summary>Dá para fazer déficit calórico sem perder massa muscular?</summary><div class="a">Sim. Para isso, coma proteína suficiente em todas as refeições, faça musculação para sinalizar ao corpo que precisa do músculo, use um déficit moderado e durma bem. Assim a gordura sai e o músculo fica.</div></details>
+        <details><summary>Como saber se estou em déficit calórico?</summary><div class="a">O sinal mais confiável é a balança ao longo das semanas: se o peso cai de forma constante (descontando as variações de água do dia a dia), você está em déficit. Se está parado por semanas comendo o que planejou, provavelmente o gasto está menor do que a conta indicava e vale reavaliar.</div></details>
+      </div>
+
+      <div class="mj-proof">
+        <h2><span class="kick gold">Prova real</span>Transformações de quem fez o acompanhamento</h2>
+        <div class="mj-proof-grid">
+          <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/4-1.png" alt="Transformação de aluno do Fabricio Moura" loading="lazy" />
+          <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/5-1.png" alt="Transformação de aluno do Fabricio Moura" loading="lazy" />
+          <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/6-1.png" alt="Transformação de aluno do Fabricio Moura" loading="lazy" />
+        </div>
+        <p class="mj-proof-cap">Mais de 2.000 transformações reais em 7 países.</p>
+      </div>
+
+      <div class="mj-cta">
+        <div class="mj-cta-text">
+        <h2>Quer o déficit certo calculado pra você?</h2>
+        <p>Eu monto a sua estratégia de nutrição e treino com as calorias e a proteína certas para o seu corpo e a sua meta, com acompanhamento de perto e ajuste ao longo do caminho. Tudo com garantia.</p>
+        <a class="mj-btn" href="https://wa.me/+5511914849797?text=Oi%20Fabricio!%20Li%20o%20artigo%20sobre%20d%C3%A9ficit%20cal%C3%B3rico%20e%20quero%20um%20acompanhamento%20individual." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.866 9.866 0 001.51 5.26l-.999 3.648 3.978-1.607z"/></svg>Falar com o Fabricio</a>
+        </div>
+        <img class="mj-cta-img" src="https://fabriciomoura.com/wp-content/uploads/2024/06/Design-sem-nome-15-e1781459644476.png" alt="Fabricio Moura" loading="lazy" />
+      </div>
+
+      <p class="mj-disc">Aviso: este conteúdo é educativo e não substitui uma avaliação nutricional individual. O gasto calórico e o déficit ideal variam de pessoa para pessoa, e dietas muito restritivas podem ser inadequadas em alguns casos. Em caso de doença, gravidez ou uso de medicação, siga sempre a orientação do profissional que acompanha o seu caso.</p>
+    </article>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"O que é déficit calórico em palavras simples?","acceptedAnswer":{"@type":"Answer","text":"É comer menos calorias do que o corpo gasta no dia. Quando falta energia da comida, o corpo usa a gordura guardada como combustível, e é assim que você emagrece. É a base de qualquer dieta que funciona."}},
+{"@type":"Question","name":"Como calcular meu déficit calórico?","acceptedAnswer":{"@type":"Answer","text":"Primeiro descubra seu gasto calórico diário em uma calculadora de calorias. Depois subtraia de 300 a 500 calorias desse valor. O resultado é quanto comer por dia para emagrecer de forma sustentável."}},
+{"@type":"Question","name":"Qual o déficit calórico para perder 1 kg?","acceptedAnswer":{"@type":"Answer","text":"Como 1 kg de gordura equivale a cerca de 7.700 calorias, um déficit de 500 calorias por dia leva a perto de 0,5 kg por semana. Para 1 kg na semana seria preciso um déficit perto de 1.000 calorias por dia, o que costuma ser agressivo demais para manter."}},
+{"@type":"Question","name":"Dá para fazer déficit calórico sem perder massa muscular?","acceptedAnswer":{"@type":"Answer","text":"Sim. Para isso, coma proteína suficiente em todas as refeições, faça musculação para sinalizar ao corpo que precisa do músculo, use um déficit moderado e durma bem. Assim a gordura sai e o músculo fica."}},
+{"@type":"Question","name":"Como saber se estou em déficit calórico?","acceptedAnswer":{"@type":"Answer","text":"O sinal mais confiável é a balança ao longo das semanas: se o peso cai de forma constante, descontando as variações de água do dia a dia, você está em déficit. Se está parado por semanas comendo o que planejou, o gasto pode estar menor do que a conta indicava."}}
+]}
+</script>
+<!-- FIM DO POST -->
+</body>
+</html>

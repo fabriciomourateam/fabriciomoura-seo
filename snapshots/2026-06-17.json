@@ -53,12 +53,79 @@
   ],
   "leitura_concorrente": "raphaelnutri rankeia UM ÚNICO post de Mounjaro ('nutricionista explica pode beber tomando mounjaro') para DEZENAS de variações (pode beber, cerveja, vinho, bebida alcoólica) — prova que vale 1 artigo-pilar cobrindo todas as variações de uma intenção. Mesmo padrão no post de arroz (arroz engorda + arroz branco engorda na mesma URL).",
 
+  "banco_keywords_fila": {
+    "nota": "Relacionadas + perguntas reais (phrase_related / phrase_questions, banco br) para alimentar a redação dos próximos artigos sem depender do Semrush. Volume = busca/mês. Ordenado por volume.",
+    "deficit_calorico": {
+      "kdi": 24,
+      "seed_volume": 22200,
+      "relacionadas_top": [
+        { "kw": "déficit calórico", "vol": 22200 },
+        { "kw": "calculadora de calorias", "vol": 14800 },
+        { "kw": "calorias por dia", "vol": 6600 },
+        { "kw": "contador de calorias", "vol": 6600 },
+        { "kw": "calcular quantas calorias", "vol": 5400 },
+        { "kw": "calcular deficit calorico", "vol": 4400 },
+        { "kw": "como fazer déficit calórico", "vol": 3600 },
+        { "kw": "o que é deficit calorico", "vol": 3600 },
+        { "kw": "déficit calórico calculadora", "vol": 2900 },
+        { "kw": "calculadora de deficit calorico", "vol": 2400 },
+        { "kw": "quantas calorias devo ingerir por dia calculadora", "vol": 1900 }
+      ],
+      "perguntas_top": [
+        { "kw": "o que é deficit calorico", "vol": 3600 },
+        { "kw": "como calcular deficit calorico", "vol": 2400 },
+        { "kw": "como calcular o deficit calorico", "vol": 720 },
+        { "kw": "como calcular meu deficit calorico", "vol": 590 },
+        { "kw": "como entrar em deficit calorico", "vol": 480 },
+        { "kw": "como saber meu deficit calorico", "vol": 480 },
+        { "kw": "como fazer o deficit calorico", "vol": 210 },
+        { "kw": "como saber se estou em deficit calorico", "vol": 140 },
+        { "kw": "como fazer deficit calorico sem perder massa muscular", "vol": 90 },
+        { "kw": "qual o deficit calorico para perder 1 kg", "vol": 50 },
+        { "kw": "quanto de deficit calorico para perder 1kg", "vol": 50 }
+      ],
+      "usado_em": "blog/deficit-calorico.html (publicado 2026-06-17)"
+    },
+    "gordura_visceral": {
+      "kdi": 22,
+      "seed_volume_estimado": 8100,
+      "relacionadas_top": [
+        { "kw": "como perder gordura visceral", "vol": 3600 },
+        { "kw": "barriga molenga", "vol": 3600 },
+        { "kw": "gordura visceral ideal", "vol": 2900 },
+        { "kw": "gordura visceral o que é", "vol": 2900 },
+        { "kw": "gordura visceral como perder", "vol": 2400 },
+        { "kw": "como eliminar gordura visceral", "vol": 1900 },
+        { "kw": "gordura subcutânea", "vol": 1900 }
+      ],
+      "perguntas_top": [
+        { "kw": "como perder gordura visceral", "vol": 3600 },
+        { "kw": "o que é gordura visceral", "vol": 2900 },
+        { "kw": "como eliminar gordura visceral", "vol": 1900 },
+        { "kw": "como diminuir a gordura visceral", "vol": 720 },
+        { "kw": "como acabar com a gordura visceral", "vol": 590 },
+        { "kw": "como reduzir gordura visceral", "vol": 390 },
+        { "kw": "como queimar gordura visceral", "vol": 260 },
+        { "kw": "como saber se tenho gordura visceral", "vol": 210 },
+        { "kw": "o que causa gordura visceral", "vol": 170 },
+        { "kw": "como medir gordura visceral", "vol": 140 },
+        { "kw": "onde fica a gordura visceral", "vol": 140 }
+      ],
+      "usado_em": "próximo artigo da fila (a escrever)"
+    },
+    "pendente_proximo_acesso": "Bancar 'arroz engorda' e 'quem toma mounjaro pode beber' (relacionadas + perguntas) não foi concluído nesta sessão — trial encerrando."
+  },
+
   "queries_executadas": [
     { "report": "domain_rank", "params": { "database": "br", "domain": "fabriciomoura.com" } },
     { "report": "domain_organic", "params": { "database": "br", "domain": "fabriciomoura.com", "display_sort": "tr_desc", "display_limit": 50 } },
     { "report": "backlinks_overview", "params": { "target": "fabriciomoura.com", "target_type": "root_domain" } },
     { "report": "backlinks_overview", "params": { "target": "raphaelnutri.com", "target_type": "root_domain" } },
     { "report": "domain_organic", "params": { "database": "br", "domain": "raphaelnutri.com", "display_sort": "tr_desc", "display_limit": 15 } },
-    { "report": "phrase_kdi", "params": { "database": "br", "phrase": "gordura visceral;deficit calorico;arroz engorda;quem toma mounjaro pode beber;como perder gordura visceral;o que e deficit calorico;arroz e feijao engorda;mounjaro e alcool;arroz integral engorda" } }
+    { "report": "phrase_kdi", "params": { "database": "br", "phrase": "gordura visceral;deficit calorico;arroz engorda;quem toma mounjaro pode beber;como perder gordura visceral;o que e deficit calorico;arroz e feijao engorda;mounjaro e alcool;arroz integral engorda" } },
+    { "report": "phrase_related", "params": { "database": "br", "phrase": "gordura visceral", "display_sort": "nq_desc" } },
+    { "report": "phrase_questions", "params": { "database": "br", "phrase": "gordura visceral", "display_sort": "nq_desc" } },
+    { "report": "phrase_related", "params": { "database": "br", "phrase": "deficit calorico", "display_sort": "nq_desc" } },
+    { "report": "phrase_questions", "params": { "database": "br", "phrase": "deficit calorico", "display_sort": "nq_desc" } }
   ]
 }
