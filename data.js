@@ -137,7 +137,7 @@ window.SEO_DATA = {
         { mes: 1, titulo: "Creatina engorda ou emagrece?", funil: "Meio", kw: "creatina engorda ou emagrece", vol: 1900, prioridade: "Alta", status: "Planejado" },
         { mes: 1, titulo: "Como funciona o acompanhamento de nutricionista online", funil: "Fundo", kw: "nutricionista online", vol: 6600, prioridade: "Alta", status: "Planejado" },
         // MÊS 2 — Autoridade + transacional
-        { mes: 2, titulo: "Gordura visceral: riscos e como reduzir", funil: "Topo", kw: "gordura visceral", vol: 0, prioridade: "Média", status: "Planejado" },
+        { mes: 2, titulo: "Gordura visceral: riscos e como reduzir", funil: "Topo", kw: "gordura visceral", vol: 22200, prioridade: "Média", status: "Publicado" },
         { mes: 2, titulo: "Nutricionista esportivo: o que faz e quando procurar", funil: "Fundo", kw: "nutricionista esportivo", vol: 5400, prioridade: "Alta", status: "Planejado" },
         { mes: 2, titulo: "Déficit calórico: a única forma real de emagrecer", funil: "Topo", kw: "déficit calórico", vol: 22200, prioridade: "Média", status: "Publicado" },
         { mes: 2, titulo: "O que comer tomando Mounjaro: guia completo", funil: "Meio", kw: "o que comer tomando mounjaro", vol: 390, prioridade: "Média", status: "Planejado" },
@@ -315,7 +315,9 @@ window.SEO_DATA = {
     { tipo: "Artigo", nome: "6 alimentos ricos em fibras para emagrecer", url: "fabriciomoura.com/alimentos-ricos-em-fibras", kw: "alimentos ricos em fibras", kdi: 29, status: "Publicado", arquivo: "blog/alimentos-ricos-em-fibras.html",
       nota: "Topo de funil — copia a página nº1 de tráfego do concorrente (34%). Lista dos 6 alimentos, cardápio exemplo, FAQ+schema, links internos (calculadora). Publicado via ferramentas/publicar.mjs." },
     { tipo: "Artigo", nome: "Déficit calórico: como calcular e emagrecer de verdade", url: "fabriciomoura.com/deficit-calorico", kw: "déficit calórico", kdi: 24, status: "Publicado", arquivo: "blog/deficit-calorico.html",
-      nota: "Topo de funil (vol 22.200). O que é, como calcular (passo a passo + exemplo), quanto pra perder 1 kg, como manter sem perder massa. FAQ+schema, links internos (calculadora + fibras). Keywords do snapshots/2026-06-17.json. Publicado via ferramentas/publicar.mjs." }
+      nota: "Topo de funil (vol 22.200). O que é, como calcular (passo a passo + exemplo), quanto pra perder 1 kg, como manter sem perder massa. FAQ+schema, links internos (calculadora + fibras). Keywords do snapshots/2026-06-17.json. Publicado via ferramentas/publicar.mjs." },
+    { tipo: "Artigo", nome: "Gordura visceral: o que é, riscos e como reduzir", url: "fabriciomoura.com/gordura-visceral", kw: "gordura visceral", kdi: 22, status: "Publicado", arquivo: "blog/gordura-visceral.html",
+      nota: "Pilar topo de funil (vol 22.200). Cobre o cluster: o que é, onde fica, riscos, como medir (cintura), valor ideal, gordura subcutânea x visceral, como reduzir/eliminar. FAQ+schema, links internos (déficit + fibras + calculadora). Keywords do snapshots/2026-06-19.json." }
   ],
 
   // ---- Infraestrutura de SEO configurada (no WordPress / Google) ----
