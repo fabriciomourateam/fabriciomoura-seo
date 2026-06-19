@@ -317,7 +317,11 @@ window.SEO_DATA = {
     { tipo: "Artigo", nome: "Déficit calórico: como calcular e emagrecer de verdade", url: "fabriciomoura.com/deficit-calorico", kw: "déficit calórico", kdi: 24, status: "Publicado", arquivo: "blog/deficit-calorico.html",
       nota: "Topo de funil (vol 22.200). O que é, como calcular (passo a passo + exemplo), quanto pra perder 1 kg, como manter sem perder massa. FAQ+schema, links internos (calculadora + fibras). Keywords do snapshots/2026-06-17.json. Publicado via ferramentas/publicar.mjs." },
     { tipo: "Artigo", nome: "Gordura visceral: o que é, riscos e como reduzir", url: "fabriciomoura.com/gordura-visceral", kw: "gordura visceral", kdi: 22, status: "Publicado", arquivo: "blog/gordura-visceral.html",
-      nota: "Pilar topo de funil (vol 22.200). Cobre o cluster: o que é, onde fica, riscos, como medir (cintura), valor ideal, gordura subcutânea x visceral, como reduzir/eliminar. FAQ+schema, links internos (déficit + fibras + calculadora). Keywords do snapshots/2026-06-19.json." }
+      nota: "Pilar topo de funil (vol 22.200). Cobre o cluster: o que é, onde fica, riscos, como medir (cintura), valor ideal, gordura subcutânea x visceral, como reduzir/eliminar. FAQ+schema, links internos (déficit + fibras + calculadora). Keywords do snapshots/2026-06-19.json." },
+    { tipo: "Estratégia", nome: "Roadmap orgânico (varredura final Semrush)", url: "docs/ROADMAP-ORGANICO.md", kw: "—", kdi: null, status: "Pronto", arquivo: "docs/ROADMAP-ORGANICO.md",
+      nota: "Última análise antes de cancelar o Semrush (2026-06-19). Fila priorizada por volume×KDI, estratégia de pilar por intenção, banco de keywords dos próximos artigos e ações de GSC. Dados brutos em snapshots/2026-06-19.json." },
+    { tipo: "SEO técnico", nome: "Disavow de backlinks tóxicos", url: "trafego/disavow.txt", kw: "—", kdi: null, status: "Pronto — subir no GSC", arquivo: "trafego/disavow.txt",
+      nota: "Perfil de backlinks quase todo spam (~97 domínios: diretórios, link networks, encurtadores). Arquivo pronto pra upload no Google Search Console (Disavow Tool) — manda o Google ignorar todos." }
   ],
 
   // ---- Infraestrutura de SEO configurada (no WordPress / Google) ----
