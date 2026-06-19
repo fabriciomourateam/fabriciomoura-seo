@@ -13,7 +13,7 @@ Marcar `[x]` ao concluir. O agente pega o **primeiro item não marcado**.
 - [x] Creatina engorda ou emagrece? (KDI 15) — pronto (`blog/creatina-engorda-ou-emagrece.html`)
 - [~] Nutricionista esportiva (variação) / "o que faz" (KDI 16) — pulado a pedido do Fabricio (cobre página de serviço "nutricionista esportivo")
 - [x] 6 alimentos ricos em fibras para emagrecer — publicado (`blog/alimentos-ricos-em-fibras.html` → /alimentos-ricos-em-fibras)
-- [ ] Gordura visceral: o que é e como reduzir (KDI 22)
+- [x] Gordura visceral: o que é e como reduzir (KDI 22) — publicado (`blog/gordura-visceral.html` → /gordura-visceral)
 - [x] Déficit calórico: a única forma de emagrecer (KDI 24) — publicado (`blog/deficit-calorico.html` → /deficit-calorico)
 - [ ] Arroz engorda? (KDI 30, vol 6.600)
 - [ ] Quem toma Mounjaro pode beber? (KDI 37, vol 2.400)

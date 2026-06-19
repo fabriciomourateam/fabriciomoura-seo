@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--
+  PUBLICAR NO WORDPRESS:
+  1. Publicações (Posts) > Adicionar novo.
+  2. Título: Gordura visceral: o que é, riscos e como reduzir
+  3. Bloco "HTML personalizado" > cole tudo entre INÍCIO DO POST e FIM DO POST.
+  4. SEO (RankMath/Yoast):
+     Slug: gordura-visceral
+     Título SEO: Gordura Visceral: O Que É, Riscos e Como Reduzir | Fabricio Moura
+     Meta: O que é gordura visceral, onde fica, por que é perigosa, como saber se você tem e
+           o passo a passo para reduzir. Guia de um nutricionista esportivo.
+     Palavra-chave foco: gordura visceral
+  5. Defina imagem destacada e publique.
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gordura Visceral: O Que É, Riscos e Como Reduzir | Fabricio Moura</title>
+  <meta name="description" content="O que é gordura visceral, onde fica, por que é perigosa, como saber se você tem e o passo a passo para reduzir. Guia de um nutricionista esportivo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+<!-- INÍCIO DO POST -->
+<!--noptimize-->
+<style>
+  /* Esconde cabeçalho e rodapé do tema SÓ nos posts do blog, à prova de Autoptimize:
+     - escopo body.single-post → nunca afeta a home nem páginas;
+     - wrapper <!--noptimize--> → o Autoptimize NÃO agrega isto no bundle global do site.
+     Para trazer cabeçalho/rodapé de volta, basta apagar este bloco noptimize. */
+  body.single-post #masthead,
+  body.single-post .ast-above-header-wrap,
+  body.single-post .ast-below-header-wrap,
+  body.single-post .site-footer{display:none !important}
+</style>
+<!--/noptimize-->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+  .mj{
+    --gold1:#FFE9A8;--gold2:#FCD404;--gold3:#C9920A;--y:#FCD404;
+    --blk:#0e0e0e;--line:rgba(255,255,255,.08);--tx:#e9e9e9;--mut:#a8a8a8;
+    --mont:'Montserrat',sans-serif;--anton:'Anton',sans-serif;
+  }
+  .mj,.mj *{box-sizing:border-box;margin:0;padding:0}
+  .mj{background:var(--blk);color:var(--tx);font-family:var(--mont);line-height:1.78;position:relative;overflow:hidden}
+  .mj .wrap{max-width:720px;margin:0 auto;padding:0 22px;position:relative;z-index:2}
+  .gold{background:linear-gradient(135deg,var(--gold1),var(--gold2) 45%,var(--gold3));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* HERO */
+  .mj-hero{position:relative;text-align:center;padding:120px 0 48px;border-bottom:1px solid var(--line);overflow:hidden}
+  .mj-hero::before{content:'';position:absolute;top:-220px;left:50%;transform:translateX(-50%);width:760px;height:520px;
+    background:radial-gradient(circle, rgba(252,212,4,.14), transparent 62%);pointer-events:none}
+  .mj-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(252,212,4,.1);border:1px solid rgba(252,212,4,.35);
+    color:var(--gold2);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:8px 16px;border-radius:100px;margin-bottom:22px}
+  .mj-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold2);box-shadow:0 0 10px var(--gold2)}
+  .mj-hero h1{font-family:var(--anton);font-weight:400;text-transform:uppercase;color:#fff;font-size:2.7rem;line-height:1.06;letter-spacing:.5px}
+  .mj-hero .sub{color:#cfcfcf;font-size:1.12rem;margin:18px auto 0;max-width:560px}
+
+  /* ARTICLE */
+  .mj article{padding:44px 0 10px}
+  .mj p{font-size:1.1rem;margin-bottom:18px;color:#dcdcdc}
+  .mj p b,.mj p strong{color:#fff}
+  .mj h2{font-family:var(--mont);font-weight:800;color:#fff;font-size:1.55rem;line-height:1.25;margin:46px 0 18px;letter-spacing:-.2px}
+  .mj h2 .kick{display:block;font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
+  .mj h3{font-weight:800;font-size:1.18rem;color:#fff;margin:26px 0 6px}
+
+  .mj-quote{border-left:3px solid var(--gold2);padding:6px 0 6px 22px;margin:30px 0;font-family:var(--mont);font-weight:700;
+    font-size:1.32rem;line-height:1.4;color:#fff}
+  .mj-quote b{color:var(--gold2)}
+
+  /* CARDS */
+  .mj-foods{display:grid;gap:14px;margin:26px 0}
+  .mj-food{display:flex;gap:16px;align-items:flex-start;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
+    border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+  .mj-food .em{font-size:30px;line-height:1;flex-shrink:0;width:46px;height:46px;border-radius:12px;background:rgba(252,212,4,.1);display:flex;align-items:center;justify-content:center}
+  .mj-food h3{margin:0 0 4px;font-size:1.12rem}
+  .mj-food p{margin:0;font-size:1rem;color:#cfcfcf}
+  .mj-food .fib{display:inline-block;margin-top:8px;font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--gold2);background:rgba(252,212,4,.08);border:1px solid rgba(252,212,4,.3);border-radius:100px;padding:4px 11px}
+
+  .mj-plan{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--line);
+    border-radius:20px;padding:8px 26px 18px;margin:28px 0;box-shadow:0 30px 70px -34px rgba(0,0,0,.9)}
+  .mj-plan .ph{display:flex;align-items:center;gap:12px;padding:20px 0 16px;border-bottom:1px solid var(--line);margin-bottom:6px}
+  .mj-plan .ph .ic{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--gold1),var(--gold3));display:flex;align-items:center;justify-content:center;font-size:20px}
+  .mj-plan .ph h3{margin:0;font-size:1.15rem}
+  .mj-meal{display:grid;grid-template-columns:200px 1fr;gap:12px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+  .mj-meal:last-child{border-bottom:0}
+  .mj-meal .w{font-weight:800;color:var(--gold2);text-transform:uppercase;font-size:.74rem;letter-spacing:.06em;padding-top:2px}
+  .mj-meal .d{font-size:1rem;color:#dcdcdc}
+
+  .mj-note{display:flex;gap:14px;background:linear-gradient(135deg,rgba(252,212,4,.08),rgba(252,212,4,.02));border:1px solid rgba(252,212,4,.3);
+    border-radius:16px;padding:18px 20px;margin:28px 0;font-size:.96rem;color:#ecdcb4}
+  .mj-note .x{font-size:20px;line-height:1.2}
+
+  .mj-avoid{list-style:none;margin:8px 0 18px;display:grid;gap:10px}
+  .mj-avoid li{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:13px;padding:14px 16px;font-size:1.02rem;color:#dcdcdc}
+  .mj-avoid li::before{content:'\2715';color:#ff6b6b;font-weight:900;font-size:.95rem;margin-top:2px}
+  .mj-yes{list-style:none;margin:8px 0 18px;display:grid;gap:10px}
+  .mj-yes li{display:flex;gap:14px;align-items:flex-start;background:rgba(252,212,4,.045);border:1px solid rgba(252,212,4,.22);border-radius:13px;padding:14px 16px;font-size:1.02rem;color:#dcdcdc}
+  .mj-yes li::before{content:'\2713';color:var(--gold2);font-weight:900;font-size:1rem;margin-top:1px}
+
+  .mj-faq{margin-top:10px}
+  .mj-faq details{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;transition:.25s}
+  .mj-faq details[open]{border-color:rgba(252,212,4,.4)}
+  .mj-faq summary{padding:18px 20px;cursor:pointer;font-weight:700;font-size:1.04rem;color:#fff;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+  .mj-faq summary::-webkit-details-marker{display:none}
+  .mj-faq summary::after{content:'+';color:var(--gold2);font-weight:800;font-size:1.4rem;line-height:1}
+  .mj-faq details[open] summary::after{content:'\2013'}
+  .mj-faq .a{padding:0 20px 18px;color:#c8c8c8;font-size:1rem}
+
+  .mj-cta{position:relative;display:flex;align-items:center;gap:28px;margin:48px 0;padding:36px 32px;border-radius:24px;overflow:hidden;
+    background:linear-gradient(160deg,rgba(252,212,4,.12),rgba(252,212,4,.02));border:1px solid rgba(252,212,4,.4)}
+  .mj-cta::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:480px;height:340px;background:radial-gradient(circle,rgba(252,212,4,.22),transparent 65%)}
+  .mj-cta>*{position:relative;z-index:2}
+  .mj-cta-text{flex:1}
+  .mj-cta-img{width:190px;flex-shrink:0;border-radius:16px;border:1px solid var(--line);display:block}
+  .mj-cta h2{font-family:var(--anton);font-weight:400;text-transform:uppercase;font-size:2rem;margin:0 0 12px;line-height:1.08}
+  .mj-cta p{margin:0 0 22px;color:#eaeaea}
+  .mj-btn{display:inline-flex;align-items:center;gap:11px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;
+    font-weight:800;text-transform:uppercase;letter-spacing:.03em;font-size:1.02rem;padding:17px 34px;border-radius:14px;text-decoration:none;
+    box-shadow:0 16px 40px -12px rgba(252,212,4,.6);transition:.25s}
+  .mj-btn:hover{transform:translateY(-2px)}
+  .mj-btn svg{width:21px;height:21px;fill:#1a1300}
+
+  .mj p a,.mj-faq .a a{color:var(--gold2);text-decoration:underline;text-underline-offset:3px;font-weight:600}
+  .mj-lead{font-size:1.25rem !important;color:#fff !important;font-weight:600;line-height:1.55}
+  .mj-author-btn{display:inline-flex;align-items:center;gap:9px;margin-top:14px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;font-weight:800;text-transform:uppercase;font-size:.82rem;letter-spacing:.03em;padding:12px 22px;border-radius:11px;text-decoration:none}
+  .mj-author-btn svg{width:18px;height:18px;fill:#1a1300}
+  .mj-proof{margin:42px 0}
+  .mj-proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px;align-items:start}
+  .mj-proof-fig{position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#1a1a1a}
+  .mj-proof-fig img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .mj-proof-cap{text-align:center;color:var(--mut);font-size:.86rem;margin-top:14px;letter-spacing:.02em}
+  .mj-author{display:flex;gap:18px;align-items:center;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:40px 0 10px}
+  .mj-author img{width:82px;height:82px;border-radius:50%;object-fit:cover;object-position:50% 28%;border:2px solid var(--gold2);flex-shrink:0;background:#1a1a1a}
+  .mj-author .nm{font-family:var(--anton);font-weight:400;text-transform:uppercase;color:#fff;font-size:1.3rem;letter-spacing:.5px;line-height:1}
+  .mj-author .rl{color:var(--mut);font-size:.9rem;margin-top:7px;line-height:1.45}
+  .mj-author .rl b{color:var(--gold2)}
+  .mj-author-top{margin:0 0 32px;align-items:flex-start}
+  .mj-byline{color:var(--mut);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:9px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .mj-byline b{color:#fff}
+  .mj-byline i{width:5px;height:5px;border-radius:50%;background:var(--gold2);display:inline-block}
+  .mj-role{font-weight:800;color:#fff;font-size:1.05rem;margin-bottom:7px}
+  .mj-midcta{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:linear-gradient(135deg,rgba(252,212,4,.1),rgba(252,212,4,.02));border:1px solid rgba(252,212,4,.32);border-radius:16px;padding:18px 22px;margin:34px 0}
+  .mj-midcta span{font-weight:700;color:#fff;font-size:1.02rem}
+  .mj-midcta a{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;font-weight:800;text-transform:uppercase;font-size:.86rem;letter-spacing:.03em;padding:13px 22px;border-radius:11px;text-decoration:none;white-space:nowrap}
+  .mj-disc{font-size:.82rem;color:#7a7a7a;border-top:1px solid var(--line);padding:22px 0 48px;line-height:1.65}
+  @media(max-width:600px){.mj-hero{padding-top:84px}.mj-hero h1{font-size:1.85rem}.mj h2{font-size:1.3rem}.mj-quote{font-size:1.12rem}.mj-meal{grid-template-columns:1fr;gap:3px}.mj-cta h2{font-size:1.5rem}.mj-cta{flex-direction:column;text-align:center}.mj-cta-img{width:170px;margin:14px auto 0}.mj-author{gap:13px;padding:17px 16px;text-align:left}.mj-author img{width:62px;height:62px}.mj-author .nm{font-size:1.15rem}}
+</style>
+
+<div class="mj">
+  <header class="mj-hero">
+    <div class="wrap">
+      <span class="mj-badge">Saúde & Emagrecimento</span>
+      <h1><span class="gold">Gordura visceral</span>: o que é, riscos e como reduzir</h1>
+      <p class="sub">A gordura que fica por dentro da barriga, em volta dos órgãos. Entenda por que ela é a mais perigosa, como saber se você tem e o que fazer para eliminar.</p>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <article>
+      <div class="mj-author mj-author-top">
+        <img src="https://fabriciomoura.com/wp-content/uploads/2026/06/Screenshot_20260322_192920_Canva1-scaled.jpg" alt="Fabricio Moura" loading="lazy" style="object-position:50% 50%" />
+        <div>
+          <div class="mj-byline">Por <b>Fabricio Moura</b><i></i>Leitura de 7 min</div>
+          <div class="mj-role">Nutricionista e Treinador</div>
+          <div class="rl"><b>Mais de 2.000 transformações em 7 países</b> e 18 anos de experiência ajudando pessoas a perder gordura e ganhar massa muscular com um método garantido.</div>
+          <a class="mj-author-btn" href="https://wa.me/+5511914849797?text=Oi%20Fabricio!%20Quero%20um%20acompanhamento%20individual%20com%20voc%C3%AA." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.866 9.866 0 001.51 5.26l-.999 3.648 3.978-1.607z"/></svg>Falar com o Fabricio</a>
+        </div>
+      </div>
+      <p class="mj-lead">Existem dois tipos de gordura na barriga. Uma fica logo embaixo da pele, é a que você pega com a mão. A outra fica escondida lá dentro, em volta dos órgãos, e é a que realmente coloca a sua saúde em risco. Essa é a gordura visceral.</p>
+      <p>Dá para estar "magro por fora" e ainda assim ter muita gordura visceral, principalmente quem tem a barriga dura e saliente mesmo sem estar acima do peso. A boa notícia é que ela também é a primeira a sair quando você acerta a alimentação e o treino.</p>
+      <p>Abaixo você entende <strong>o que é, onde fica, por que é perigosa, como saber se você tem</strong> e, principalmente, o passo a passo para reduzir.</p>
+
+      <div class="mj-quote">A gordura visceral é a mais perigosa do corpo, mas também é a <b>mais fácil de perder</b>. Ela responde rápido quando você muda a alimentação e começa a treinar.</div>
+
+      <h2><span class="kick gold">O conceito</span>O que é gordura visceral e onde fica</h2>
+      <p>A <strong>gordura visceral</strong> é a gordura que se acumula dentro da cavidade abdominal, em volta de órgãos como fígado, intestino e pâncreas. Ela fica "por dentro", diferente da gordura subcutânea, que é a camada mole logo abaixo da pele.</p>
+      <p>É por isso que algumas pessoas têm a <strong>barriga dura e estufada</strong> (às vezes chamada de barriga de chope), enquanto a "barriga molenga" costuma ter mais gordura subcutânea. A visceral não é só uma questão estética: ela é metabolicamente ativa e libera substâncias que inflamam o corpo.</p>
+      <ul class="mj-yes">
+        <li><b style="color:#fff">Gordura subcutânea:</b>&nbsp;a de baixo da pele, que você "belisca". Mais visível, menos perigosa.</li>
+        <li><b style="color:#fff">Gordura visceral:</b>&nbsp;a de dentro, em volta dos órgãos. Menos visível, muito mais perigosa para a saúde.</li>
+      </ul>
+
+      <h2><span class="kick gold">O alerta</span>Por que a gordura visceral é perigosa</h2>
+      <p>O excesso de gordura visceral está ligado a vários problemas sérios de saúde, porque ela interfere direto no funcionamento do corpo:</p>
+      <ul class="mj-avoid">
+        <li>Aumenta o risco de diabetes tipo 2 (ela atrapalha a ação da insulina).</li>
+        <li>Eleva a pressão e o risco de problemas no coração e nos vasos.</li>
+        <li>Está ligada ao colesterol e aos triglicerídeos alterados.</li>
+        <li>Favorece a gordura no fígado (esteatose hepática).</li>
+        <li>Mantém o corpo em estado de inflamação de baixo grau, que piora quase tudo.</li>
+      </ul>
+      <p>Por isso reduzir a gordura visceral não é vaidade, é saúde. E quase sempre o mesmo plano que diminui ela também melhora a sua composição corporal por inteiro.</p>
+
+      <h2><span class="kick gold">O diagnóstico</span>Como saber se você tem gordura visceral</h2>
+      <p>Não dá para enxergar a gordura visceral diretamente, mas existem sinais e medidas simples que indicam o risco:</p>
+      <div class="mj-foods">
+        <div class="mj-food">
+          <div class="em">📏</div>
+          <div>
+            <h3>Circunferência da cintura</h3>
+            <p>É o método mais prático. Meça na altura do umbigo. De forma geral, acima de <strong>94 cm em homens</strong> e <strong>80 cm em mulheres</strong> já indica risco aumentado, e quanto maior, maior a atenção.</p>
+          </div>
+        </div>
+        <div class="mj-food">
+          <div class="em">🤰</div>
+          <div>
+            <h3>O formato da barriga</h3>
+            <p>Barriga dura, saliente e estufada, mesmo em quem não está muito acima do peso, costuma indicar mais gordura visceral do que a barriga mole e flácida.</p>
+          </div>
+        </div>
+        <div class="mj-food">
+          <div class="em">⚖️</div>
+          <div>
+            <h3>Bioimpedância e exames</h3>
+            <p>Balanças de bioimpedância e exames como a ultrassonografia dão uma estimativa do nível de gordura visceral. São úteis para acompanhar a evolução ao longo do tempo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="mj-note"><div class="x">⚠️</div><div>Esses números são <b>referências gerais</b>. O ideal é avaliar junto com altura, idade e histórico de saúde. Um acompanhamento profissional define o seu ponto de partida e a meta certa.</div></div>
+
+      <h2><span class="kick gold">A solução</span>Como reduzir a gordura visceral</h2>
+      <p>Não existe truque para queimar gordura "só da barriga". O corpo elimina gordura do todo, e a visceral costuma ser das primeiras a ir embora. O que funciona é um conjunto de hábitos, e o ponto de partida é sempre o <a href="https://fabriciomoura.com/deficit-calorico" target="_blank" rel="noopener">déficit calórico</a>:</p>
+      <div class="mj-foods">
+        <div class="mj-food">
+          <div class="em">🔥</div>
+          <div>
+            <h3>1. Entre em déficit calórico</h3>
+            <p>Comer um pouco menos do que você gasta é o que obriga o corpo a usar a gordura guardada, inclusive a visceral. Sem isso, nenhum alimento ou treino resolve. Use a <a href="https://fabriciomoura.com/calculadora-de-imc-e-calorias" target="_blank" rel="noopener">calculadora de calorias</a> como ponto de partida.</p>
+            <span class="fib">A base de tudo</span>
+          </div>
+        </div>
+        <div class="mj-food">
+          <div class="em">🥦</div>
+          <div>
+            <h3>2. Priorize comida de verdade</h3>
+            <p>Mais proteína e <a href="https://fabriciomoura.com/alimentos-ricos-em-fibras" target="_blank" rel="noopener">alimentos ricos em fibras</a>, menos ultraprocessado, açúcar e refrigerante. Isso reduz a fome e ataca direto a gordura do fígado e da barriga.</p>
+            <span class="fib">Saciedade e menos inflamação</span>
+          </div>
+        </div>
+        <div class="mj-food">
+          <div class="em">🏋️</div>
+          <div>
+            <h3>3. Treine força e movimento</h3>
+            <p>A musculação aumenta o gasto e preserva o músculo no déficit; o exercício aeróbico (caminhada, corrida, bike) ajuda a queimar a gordura visceral. A combinação dos dois é o que mais funciona.</p>
+            <span class="fib">Queima e preserva músculo</span>
+          </div>
+        </div>
+        <div class="mj-food">
+          <div class="em">😴</div>
+          <div>
+            <h3>4. Cuide do sono, do estresse e do álcool</h3>
+            <p>Noites mal dormidas, estresse crônico e bebida em excesso aumentam o acúmulo de gordura visceral. Dormir bem e maneirar no álcool acelera bastante o resultado.</p>
+            <span class="fib">Os fatores escondidos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mj-midcta"><span>Quer saber quantas calorias comer por dia?</span><a href="https://fabriciomoura.com/calculadora-de-imc-e-calorias" target="_blank" rel="noopener">Calcular agora</a></div>
+
+      <h2><span class="kick gold">Cuidado aqui</span>Os erros que travam o resultado</h2>
+      <ul class="mj-avoid">
+        <li>Fazer só abdominal achando que vai "secar" a barriga. Abdominal fortalece o músculo, não queima a gordura por cima dele.</li>
+        <li>Cortar carboidrato de forma radical e voltar a comer tudo depois. O que conta é o saldo de calorias da semana.</li>
+        <li>Apostar em chá, suplemento ou cinta "detox". Nada disso elimina gordura visceral, só o déficit e o treino fazem.</li>
+        <li>Beber muito álcool no fim de semana. Ele vai direto para o fígado e favorece a barriga.</li>
+        <li>Dormir mal e viver no estresse, o que mantém o cortisol alto e segura a gordura abdominal.</li>
+      </ul>
+
+      <h2><span class="kick gold">Tira-dúvidas</span>Perguntas frequentes</h2>
+      <div class="mj-faq">
+        <details open><summary>O que é gordura visceral em palavras simples?</summary><div class="a">É a gordura que fica por dentro da barriga, em volta dos órgãos como fígado e intestino, diferente da gordura subcutânea que fica embaixo da pele. Por ficar perto dos órgãos, ela é a mais perigosa para a saúde.</div></details>
+        <details><summary>Como saber se tenho gordura visceral?</summary><div class="a">O jeito mais prático é medir a circunferência da cintura na altura do umbigo: acima de 94 cm em homens e 80 cm em mulheres já indica risco aumentado. Barriga dura e estufada e exames de bioimpedância também ajudam a avaliar.</div></details>
+        <details><summary>Qual o nível ideal de gordura visceral?</summary><div class="a">O ideal é manter a cintura abaixo dos valores de risco (cerca de 94 cm para homens e 80 cm para mulheres) e, nas balanças de bioimpedância, ficar dentro da faixa considerada saudável pelo aparelho. O acompanhamento ao longo do tempo importa mais do que um número isolado.</div></details>
+        <details><summary>Como reduzir a gordura visceral rápido?</summary><div class="a">Combinando déficit calórico, comida de verdade (mais proteína e fibras, menos ultraprocessado e açúcar), musculação com exercício aeróbico, e cuidando do sono e do álcool. A gordura visceral costuma ser das primeiras a sair, então o resultado aparece relativamente rápido.</div></details>
+        <details><summary>Abdominal elimina a gordura da barriga?</summary><div class="a">Não. O abdominal fortalece o músculo da região, mas não queima a gordura que está por cima nem a visceral. Para reduzir a barriga é preciso baixar a gordura do corpo todo com déficit calórico e treino.</div></details>
+        <details><summary>Em quanto tempo dá para reduzir a gordura visceral?</summary><div class="a">Depende do ponto de partida e da constância, mas como a visceral responde rápido, muita gente nota diferença já nas primeiras semanas de alimentação e treino bem feitos. O importante é manter o processo, não buscar atalho.</div></details>
+      </div>
+
+      <div class="mj-proof">
+        <h2><span class="kick gold">Prova real</span>Transformações de quem fez o acompanhamento</h2>
+        <div class="mj-proof-grid">
+          <div class="mj-proof-fig"><img src="https://fabriciomoura.com/wp-content/uploads/2024/10/4-1.png" alt="Transformação de aluno do Fabricio Moura" /></div>
+          <div class="mj-proof-fig"><img src="https://fabriciomoura.com/wp-content/uploads/2024/10/5-1.png" alt="Transformação de aluno do Fabricio Moura" /></div>
+          <div class="mj-proof-fig"><img src="https://fabriciomoura.com/wp-content/uploads/2024/10/6-1.png" alt="Transformação de aluno do Fabricio Moura" /></div>
+        </div>
+        <p class="mj-proof-cap">Mais de 2.000 transformações reais em 7 países.</p>
+      </div>
+
+      <div class="mj-cta">
+        <div class="mj-cta-text">
+        <h2>Quer eliminar a gordura visceral com um plano feito pra você?</h2>
+        <p>Eu monto a sua estratégia de nutrição e treino com as calorias, a proteína e os treinos certos para o seu corpo e a sua meta, com acompanhamento de perto e ajuste ao longo do caminho. Tudo com garantia.</p>
+        <a class="mj-btn" href="https://wa.me/+5511914849797?text=Oi%20Fabricio!%20Li%20o%20artigo%20sobre%20gordura%20visceral%20e%20quero%20um%20acompanhamento%20individual." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.866 9.866 0 001.51 5.26l-.999 3.648 3.978-1.607z"/></svg>Falar com o Fabricio</a>
+        </div>
+        <img class="mj-cta-img" src="https://fabriciomoura.com/wp-content/uploads/2024/06/Design-sem-nome-15-e1781459644476.png" alt="Fabricio Moura" loading="lazy" />
+      </div>
+
+      <p class="mj-disc">Aviso: este conteúdo é educativo e não substitui avaliação médica ou nutricional individual. Os valores de cintura e de gordura visceral são referências gerais e variam de pessoa para pessoa. Em caso de doença, uso de medicação ou alteração nos exames, siga sempre a orientação do profissional que acompanha o seu caso.</p>
+    </article>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"O que é gordura visceral em palavras simples?","acceptedAnswer":{"@type":"Answer","text":"É a gordura que fica por dentro da barriga, em volta dos órgãos como fígado e intestino, diferente da gordura subcutânea que fica embaixo da pele. Por ficar perto dos órgãos, ela é a mais perigosa para a saúde."}},
+{"@type":"Question","name":"Como saber se tenho gordura visceral?","acceptedAnswer":{"@type":"Answer","text":"O jeito mais prático é medir a circunferência da cintura na altura do umbigo: acima de 94 cm em homens e 80 cm em mulheres já indica risco aumentado. Barriga dura e estufada e exames de bioimpedância também ajudam a avaliar."}},
+{"@type":"Question","name":"Qual o nível ideal de gordura visceral?","acceptedAnswer":{"@type":"Answer","text":"O ideal é manter a cintura abaixo dos valores de risco (cerca de 94 cm para homens e 80 cm para mulheres) e, nas balanças de bioimpedância, ficar dentro da faixa saudável do aparelho. O acompanhamento ao longo do tempo importa mais do que um número isolado."}},
+{"@type":"Question","name":"Como reduzir a gordura visceral rápido?","acceptedAnswer":{"@type":"Answer","text":"Combinando déficit calórico, comida de verdade (mais proteína e fibras, menos ultraprocessado e açúcar), musculação com exercício aeróbico, e cuidando do sono e do álcool. A gordura visceral costuma ser das primeiras a sair."}},
+{"@type":"Question","name":"Abdominal elimina a gordura da barriga?","acceptedAnswer":{"@type":"Answer","text":"Não. O abdominal fortalece o músculo da região, mas não queima a gordura por cima nem a visceral. Para reduzir a barriga é preciso baixar a gordura do corpo todo com déficit calórico e treino."}},
+{"@type":"Question","name":"Em quanto tempo dá para reduzir a gordura visceral?","acceptedAnswer":{"@type":"Answer","text":"Depende do ponto de partida e da constância, mas como a visceral responde rápido, muita gente nota diferença já nas primeiras semanas de alimentação e treino bem feitos."}}
+]}
+</script>
+<!-- FIM DO POST -->
+</body>
+</html>
