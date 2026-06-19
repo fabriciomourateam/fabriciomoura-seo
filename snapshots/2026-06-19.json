@@ -1,0 +1,156 @@
+{
+  "data_snapshot": "2026-06-19",
+  "fonte": "Semrush MCP",
+  "database": "br",
+  "site": "fabriciomoura.com",
+  "contexto": "VARREDURA FINAL antes de cancelar a assinatura do Semrush. Captura tudo que agrega para o roadmap orgânico: estado do domínio, perfil de backlinks (incl. tóxicos), mapa de conteúdo do concorrente 100% orgânico (raphaelnutri), KDI/volumes de todos os alvos e banco de keywords dos temas da fila. Resumo acionável em docs/ROADMAP-ORGANICO.md.",
+
+  "fabriciomoura_estado": {
+    "rank_global": 5132062,
+    "organic_keywords": 2,
+    "organic_traffic": 0,
+    "adwords_keywords": 1,
+    "adwords_traffic": 25,
+    "keywords_organicas": [
+      { "kw": "ivy moura", "pos": 50, "vol": 90, "tipo": "marca" },
+      { "kw": "moura academia", "pos": 40, "vol": 320, "tipo": "marca" }
+    ],
+    "nota": "Orgânico ainda zero (só 2 kw de marca). Conteúdo publicado (calculadora, cardápio mounjaro, fibras, déficit calórico) ainda não rastreado/posicionado — normal nesta janela."
+  },
+
+  "backlinks": {
+    "fabriciomoura.com": { "total": 264, "referring_domains": 97, "authority_score": 2, "trust_score": 2, "follow": 119, "nofollow": 145 },
+    "raphaelnutri.com_ref_06_17": { "total": 1356, "referring_domains": 118, "authority_score": 11, "trust_score": 11 },
+    "anchors_principais": [
+      { "anchor": "fabriciomoura.com", "domains": 88, "backlinks": 160 },
+      { "anchor": "https://fabriciomoura.com/", "domains": 3, "backlinks": 98 }
+    ],
+    "backlinks_toxicos_para_disavow": [
+      "amplify results with fabriciomoura.com on seo-high-ranking.shop",
+      "check how we raised fabriciomoura.com's clicks by 400% in 8 weeks on seoflox.com",
+      "visit site seo fabriciomoura.com premium backlinks"
+    ],
+    "leitura": "Gap de autoridade (AS 2 x 11) vem de volume/qualidade de links follow (119 x ~1011) e CONTEÚDO, não de nº de domínios (97 x 118, quase iguais). Dá pra competir com conteúdo. Há âncoras de spam SEO (lojas de backlink) — recomendado disavow no GSC."
+  },
+
+  "kdi_todos_os_alvos": {
+    "escala": "0-14 muito fácil · 15-29 fácil · 30-49 possível · 50-69 difícil · 70+ muito difícil",
+    "termos": [
+      { "kw": "nutricionista esportivo", "kdi": 10, "vol": 5400, "cpc": 0.59, "tipo": "serviço" },
+      { "kw": "recomposição corporal", "kdi": 21, "vol": 720, "cpc": 0.27 },
+      { "kw": "gordura visceral", "kdi": 22, "vol": 22200, "cpc": 0.05 },
+      { "kw": "whey protein engorda", "kdi": 23, "vol": 8100, "cpc": 0.02 },
+      { "kw": "nutricionista pode receitar mounjaro", "kdi": 23, "vol": 720, "cpc": 0.63 },
+      { "kw": "o que comer tomando mounjaro", "kdi": 23, "vol": 390, "cpc": 0.20 },
+      { "kw": "deficit calorico", "kdi": 24, "vol": 2900, "cpc": 0.10, "seed_deficit_calorico": 22200 },
+      { "kw": "creatina engorda", "kdi": 26, "vol": 22200, "cpc": 0.02 },
+      { "kw": "nutricionista online", "kdi": 28, "vol": 6600, "cpc": 0.56, "tipo": "serviço" },
+      { "kw": "alimentos ricos em fibras", "kdi": 29, "vol": 49500, "cpc": 0.01 },
+      { "kw": "arroz engorda", "kdi": 30, "vol": 6600, "cpc": 0.01 },
+      { "kw": "como emagrecer", "kdi": 32, "vol": 12100, "cpc": 0.12 },
+      { "kw": "alimentação pós treino", "kdi": 32 },
+      { "kw": "dieta da selva funciona", "kdi": 34, "vol": 260, "cpc": 0.25 },
+      { "kw": "quem toma mounjaro pode beber", "kdi": 37, "vol": 2400, "cpc": 0.00, "nota": "pilar pega dezenas de variações" }
+    ]
+  },
+
+  "concorrente_raphaelnutri_mapa_conteudo": {
+    "nota": "raphaelnutri.com é 100% orgânico (zero Ads). Cada post-pilar rankeia para DEZENAS de variações da mesma intenção. Este é o roadmap a copiar/superar.",
+    "posts_e_keywords": [
+      { "url": "/ (home)", "kws": ["nutricionista esportivo pos2 (5400)", "nutricionista esportivo perto de mim pos2 (480)", "nutricionista online pos22 (5400)"] },
+      { "url": "/post/comer-arroz-engorda...", "kws": ["arroz engorda pos3 (6600)", "arroz branco engorda pos5 (590)", "o arroz engorda pos2 (480)", "comer arroz engorda pos4 (320)", "arroz emagrece ou engorda pos5 (390)", "muito arroz engorda pos3 (260)"] },
+      { "url": "/post/cardapio-para-quem-toma-mounjaro...", "kws": ["cardapio para quem toma mounjaro pos1 (1000)", "receitas para quem toma mounjaro pos1 (260)", "dieta para quem toma mounjaro pos2 (390)", "o que comer tomando mounjaro pos3 (390)", "dieta para mounjaro pos3 (260)"] },
+      { "url": "/post/nutricionista-explica-pode-beber-tomando-mounjaro...", "kws": ["quem toma mounjaro pode beber pos4 (2400)", "pode beber tomando mounjaro pos3 (1300)", "quem toma mounjaro pode beber cerveja pos4 (1300)", "mounjaro pode beber pos3 (880)", "mounjaro e bebida alcoólica pos5 (880)", "+ 20 variações (vinho, whisky, energético, café, coca zero...)"] },
+      { "url": "/post/creatina-engorda-ou-emagrece...", "kws": ["creatina engorda pos10 (22200!)", "creatina engorda ou emagrece pos6 (1900)", "creatina emagrece ou engorda pos8 (1300)", "creatina emagrece ou define pos4 (480)"] },
+      { "url": "/post/gordura-visceral-o-que-e-riscos...", "kws": ["gordura visceral pos29 (22200!)"] },
+      { "url": "/post/nutricionista-pode-receitar-mounjaro...", "kws": ["nutricionista pode receitar mounjaro pos5 (720)"] },
+      { "url": "/post/dieta-da-selva...", "kws": ["dieta da selva funciona pos9 (480)"] }
+    ]
+  },
+
+  "banco_keywords_fila": {
+    "arroz_engorda": {
+      "kdi": 30, "vol": 6600,
+      "perguntas_top": [
+        { "kw": "o que engorda mais arroz ou macarrão", "vol": 880 },
+        { "kw": "o que engorda mais o feijão ou arroz", "vol": 480 },
+        { "kw": "qual arroz engorda mais branco ou parboilizado", "vol": 390 },
+        { "kw": "o que engorda mais arroz ou feijão", "vol": 390 },
+        { "kw": "o arroz integral engorda", "vol": 70 }
+      ]
+    },
+    "mounjaro_alcool": {
+      "kdi": 37, "vol_principal": 2400,
+      "nota": "Pilar 'pode beber tomando Mounjaro' — captura todo o cluster de bebidas.",
+      "perguntas_top": [
+        { "kw": "quem toma mounjaro pode beber", "vol": 2400 },
+        { "kw": "quem toma mounjaro pode beber cerveja", "vol": 720 },
+        { "kw": "quem toma mounjaro pode beber vinho", "vol": 260 },
+        { "kw": "quem toma mounjaro pode beber alcool", "vol": 210 },
+        { "kw": "quem toma mounjaro pode beber bebida alcoólica", "vol": 210 },
+        { "kw": "quem toma mounjaro pode beber energético", "vol": 110 },
+        { "kw": "quem toma mounjaro pode beber whisky", "vol": 70 },
+        { "kw": "quem toma mounjaro pode beber refrigerante", "vol": 50 },
+        { "kw": "quem toma mounjaro pode beber coca zero", "vol": 50 },
+        { "kw": "quem toma mounjaro pode beber café", "vol": 40 }
+      ]
+    },
+    "whey_protein_engorda": {
+      "kdi": 23, "vol": 8100,
+      "relacionadas_top": [
+        { "kw": "whey engorda", "vol": 6600 },
+        { "kw": "como tomar whey", "vol": 12100 },
+        { "kw": "para que serve whey protein", "vol": 18100 },
+        { "kw": "benefícios do whey protein", "vol": 4400 }
+      ]
+    },
+    "creatina_engorda": {
+      "kdi": 26, "vol": 22200,
+      "nota": "Vol gigante. O artigo atual (creatina-engorda-ou-emagrece) mira o termo de 1.900 — vale otimizar/ampliar para 'creatina engorda' (22.200).",
+      "perguntas_top": [
+        { "kw": "a creatina engorda", "vol": 480 },
+        { "kw": "qual creatina engorda", "vol": 30 },
+        { "kw": "quem toma creatina engorda", "vol": 20 }
+      ]
+    },
+    "como_emagrecer": {
+      "kdi": 32, "vol": 12100,
+      "perguntas_top": [
+        { "kw": "como emagrecer rapido", "vol": 40500 },
+        { "kw": "como emagrecer em uma semana", "vol": 4400 },
+        { "kw": "como emagrecer a barriga", "vol": 2900 },
+        { "kw": "o que comer para emagrecer", "vol": 2900 },
+        { "kw": "como emagrecer em casa", "vol": 2400 }
+      ]
+    },
+    "recomposicao_corporal": {
+      "kdi": 21, "vol": 720,
+      "relacionadas_top": [
+        { "kw": "hipertrofia emagrece", "vol": 720 },
+        { "kw": "hipertrofia e emagrecimento", "vol": 590 },
+        { "kw": "dieta de recomposição corporal", "vol": 110 }
+      ]
+    },
+    "nutricionista_esportivo_servico": {
+      "kdi": 10, "vol": 5400,
+      "perguntas_top": [
+        { "kw": "quanto ganha um nutricionista esportivo", "vol": 480 },
+        { "kw": "o que faz um nutricionista esportivo", "vol": 40 },
+        { "kw": "qual a diferença entre nutricionista e nutricionista esportivo", "vol": 20 }
+      ]
+    }
+  },
+
+  "queries_executadas": [
+    { "report": "domain_rank", "params": { "database": "br", "domain": "fabriciomoura.com" } },
+    { "report": "domain_organic", "params": { "database": "br", "domain": "fabriciomoura.com", "display_sort": "tr_desc", "display_limit": 50 } },
+    { "report": "domain_organic_organic", "params": { "database": "br", "domain": "fabriciomoura.com" }, "resultado": "ERROR 50 NOTHING FOUND (site sem footprint orgânico para mapear concorrentes)" },
+    { "report": "domain_organic", "params": { "database": "br", "domain": "raphaelnutri.com", "display_sort": "tr_desc", "display_limit": 50 } },
+    { "report": "backlinks_anchors", "params": { "target": "fabriciomoura.com", "target_type": "root_domain", "display_limit": 20 } },
+    { "report": "backlinks_overview", "params": { "target": "fabriciomoura.com", "target_type": "root_domain" } },
+    { "report": "phrase_kdi", "params": { "database": "br", "phrase": "(14 termos-alvo)" } },
+    { "report": "phrase_these", "params": { "database": "br", "phrase": "(20 termos-alvo)" } },
+    { "report": "phrase_questions", "params": { "database": "br", "phrase": "arroz engorda / quem toma mounjaro pode beber / creatina engorda / como emagrecer / nutricionista esportivo" } },
+    { "report": "phrase_related", "params": { "database": "br", "phrase": "whey protein engorda / recomposição corporal" } }
+  ]
+}
