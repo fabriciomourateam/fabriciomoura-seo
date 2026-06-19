@@ -10,7 +10,7 @@ Crie uma **sessão agendada** (semanal, ex.: segunda 09:00 BRT) apontando para o
 ## Fila de artigos (do calendário da Fase 2, priorizada por KDI = mais fácil primeiro)
 Marcar `[x]` ao concluir. O agente pega o **primeiro item não marcado**.
 - [x] Cardápio para quem toma Mounjaro (KDI 8) — publicado
-- [x] Creatina engorda ou emagrece? (KDI 15) — pronto (`blog/creatina-engorda-ou-emagrece.html`)
+- [x] Creatina engorda (KDI 26, vol 22.200) — publicado (`blog/creatina-engorda.html` → /creatina-engorda). Substitui o rascunho `creatina-engorda-ou-emagrece.html` (mirava só o termo de 1.900).
 - [~] Nutricionista esportiva (variação) / "o que faz" (KDI 16) — pulado a pedido do Fabricio (cobre página de serviço "nutricionista esportivo")
 - [x] 6 alimentos ricos em fibras para emagrecer — publicado (`blog/alimentos-ricos-em-fibras.html` → /alimentos-ricos-em-fibras)
 - [x] Gordura visceral: o que é e como reduzir (KDI 22) — publicado (`blog/gordura-visceral.html` → /gordura-visceral)
