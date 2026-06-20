@@ -42,6 +42,27 @@ tema Astra, Rank Math (SEO), fundo do site preto.
 5. **Daqui a alguns dias:** puxar dados reais do Search Console (palavras que trazem clique) e refinar a estratégia.
 6. **Pago (com o gestor):** testar message match (apontar "nutricionista online/esportivo" pras páginas dedicadas). Ver `trafego/brief-gestor-2026-06.md`.
 
+## ⏰ Como deixar o conteúdo AUTOMÁTICO (agendar o agente semanal)
+A esteira já está pronta; falta só criar a sessão agendada (isso é feito no painel do Claude Code na web — o assistente não agenda sozinho).
+
+**Passo a passo (uma vez):**
+1. No **Claude Code (web)**, com este repositório aberto (`fabriciomourateam/fabriciomoura-seo`), crie uma
+   **sessão agendada / recorrente** (ex.: toda segunda 09:00 BRT). É o recurso de *scheduled sessions / triggers*
+   do Claude Code on the web — ver https://code.claude.com/docs/en/claude-code-on-the-web.
+2. **Prompt da sessão** (cole isto):
+   > Você é o agente semanal de conteúdo do fabriciomoura.com. Leia `docs/AGENTE-SEMANAL.md`, `data.js` e
+   > `blog/gordura-visceral.html` (template). Pegue o PRIMEIRO artigo não marcado da fila, escreva seguindo
+   > TODAS as regras de estilo, salve em `blog/<slug>.html`, publique via `node ferramentas/publicar.mjs blog/<slug>.html`,
+   > atualize a fila (`docs/AGENTE-SEMANAL.md`) e o `data.js`, e faça commit/push na `main`. Me entregue o link publicado.
+3. **Variáveis de ambiente** já configuradas neste ambiente (a publicação funciona): `WP_URL`, `WP_USER`, `WP_APP_PASSWORD`.
+   Se criar um ambiente novo, defina-as de novo (nunca no repositório nem no chat).
+4. Cada execução publica **1 artigo** da fila e marca como concluído. Fila atual (prioridade) em `docs/AGENTE-SEMANAL.md`:
+   whey protein engorda → arroz engorda (pilar) → pode beber tomando Mounjaro (pilar) → como emagrecer → recomposição corporal.
+5. Keywords dos próximos já bancadas em `snapshots/2026-06-19.json` (não precisa de Semrush para escrever).
+
+> Observação: a publicação no WordPress é via REST API (`ferramentas/publicar.mjs`) e o dashboard na Vercel
+> republica sozinho a cada push na `main`. Então, uma vez agendado, roda ponta a ponta sem intervenção.
+
 ## Regras inegociáveis (estilo e técnica)
 - **Identidade:** preto + ouro (gradiente `#FFE9A8→#FCD404→#C9920A`), fontes **Anton** (títulos) + **Montserrat** (texto).
 - **Sem travessões (—)** e **sem clichês de IA** (lista de frases proibidas no AGENTE-SEMANAL.md).
