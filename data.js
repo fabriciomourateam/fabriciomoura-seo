@@ -321,7 +321,9 @@ window.SEO_DATA = {
     { tipo: "Estratégia", nome: "Roadmap orgânico (varredura final Semrush)", url: "docs/ROADMAP-ORGANICO.md", kw: "—", kdi: null, status: "Pronto", arquivo: "docs/ROADMAP-ORGANICO.md",
       nota: "Última análise antes de cancelar o Semrush (2026-06-19). Fila priorizada por volume×KDI, estratégia de pilar por intenção, banco de keywords dos próximos artigos e ações de GSC. Dados brutos em snapshots/2026-06-19.json." },
     { tipo: "SEO técnico", nome: "Disavow de backlinks tóxicos", url: "trafego/disavow.txt", kw: "—", kdi: null, status: "Pronto — subir no GSC", arquivo: "trafego/disavow.txt",
-      nota: "Perfil de backlinks quase todo spam (~97 domínios: diretórios, link networks, encurtadores). Arquivo pronto pra upload no Google Search Console (Disavow Tool) — manda o Google ignorar todos." }
+      nota: "Perfil de backlinks quase todo spam (~97 domínios: diretórios, link networks, encurtadores). Arquivo pronto pra upload no Google Search Console (Disavow Tool) — manda o Google ignorar todos." },
+    { tipo: "Artigo", nome: "Arroz engorda? O que diz o nutricionista", url: "fabriciomoura.com/arroz-engorda", kw: "arroz engorda", kdi: 30, status: "Publicado", arquivo: "blog/arroz-engorda.html",
+      nota: "Meio de funil (vol 6.600). Desmonta o mito do arroz como vilão: excesso calórico é a causa real do ganho de gordura. Branco vs integral, porção ideal, mito do horário noturno, exemplo de refeição. FAQ+schema, links internos (déficit calórico + calculadora). Cobre o cluster: arroz engorda ou emagrece, arroz branco engorda, arroz à noite engorda." }
   ],
 
   // ---- Infraestrutura de SEO configurada (no WordPress / Google) ----

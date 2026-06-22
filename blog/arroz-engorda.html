@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--
+  PUBLICAR NO WORDPRESS:
+  1. Publicações (Posts) > Adicionar novo.
+  2. Título: Arroz Engorda? O que Diz o Nutricionista
+  3. Bloco "HTML personalizado" > cole tudo entre INÍCIO DO POST e FIM DO POST.
+  4. SEO (RankMath/Yoast):
+     Slug: arroz-engorda
+     Título SEO: Arroz Engorda? O que Diz o Nutricionista | Fabricio Moura
+     Meta: Arroz engorda ou emagrece? Nutricionista explica o que a ciência diz, diferença entre branco e integral e como comer sem atrapalhar o emagrecimento.
+     Palavra-chave foco: arroz engorda
+  5. Defina imagem destacada e publique.
+-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arroz Engorda? O que Diz o Nutricionista | Fabricio Moura</title>
+  <meta name="description" content="Arroz engorda ou emagrece? Nutricionista explica o que a ciência diz, diferença entre branco e integral e como comer sem atrapalhar o emagrecimento." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+<!-- INÍCIO DO POST -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+  .mj{
+    --gold1:#FFE9A8;--gold2:#FCD404;--gold3:#C9920A;--y:#FCD404;
+    --blk:#0e0e0e;--line:rgba(255,255,255,.08);--tx:#e9e9e9;--mut:#a8a8a8;
+    --mont:'Montserrat',sans-serif;--anton:'Anton',sans-serif;
+  }
+  .mj,.mj *{box-sizing:border-box;margin:0;padding:0}
+  .mj{background:var(--blk);color:var(--tx);font-family:var(--mont);line-height:1.78;position:relative;overflow:hidden}
+  .mj .wrap{max-width:720px;margin:0 auto;padding:0 22px;position:relative;z-index:2}
+  .gold{background:linear-gradient(135deg,var(--gold1),var(--gold2) 45%,var(--gold3));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* HERO */
+  .mj-hero{position:relative;text-align:center;padding:64px 0 44px;border-bottom:1px solid var(--line);overflow:hidden}
+  .mj-hero::before{content:'';position:absolute;top:-220px;left:50%;transform:translateX(-50%);width:760px;height:520px;
+    background:radial-gradient(circle, rgba(252,212,4,.14), transparent 62%);pointer-events:none}
+  .mj-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(252,212,4,.1);border:1px solid rgba(252,212,4,.35);
+    color:var(--gold2);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;padding:8px 16px;border-radius:100px;margin-bottom:22px}
+  .mj-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold2);box-shadow:0 0 10px var(--gold2)}
+  .mj-hero h1{font-family:var(--anton);font-weight:400;text-transform:uppercase;color:#fff;font-size:2.7rem;line-height:1.06;letter-spacing:.5px}
+  .mj-hero .sub{color:#cfcfcf;font-size:1.12rem;margin:18px auto 0;max-width:560px}
+  .mj-meta{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:22px;color:var(--mut);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em}
+  .mj-meta span{display:inline-flex;align-items:center;gap:7px}
+  .mj-meta i{width:5px;height:5px;border-radius:50%;background:var(--gold2);display:inline-block}
+
+  /* ARTICLE */
+  .mj article{padding:44px 0 10px}
+  .mj p{font-size:1.1rem;margin-bottom:18px;color:#dcdcdc}
+  .mj p b,.mj p strong{color:#fff}
+  .mj h2{font-family:var(--mont);font-weight:800;color:#fff;font-size:1.55rem;line-height:1.25;margin:46px 0 18px;letter-spacing:-.2px}
+  .mj h2 .kick{display:block;font-size:.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
+  .mj h3{font-weight:800;font-size:1.18rem;color:#fff;margin:26px 0 6px}
+
+  .mj-quote{border-left:3px solid var(--gold2);padding:6px 0 6px 22px;margin:30px 0;font-family:var(--mont);font-weight:700;
+    font-size:1.32rem;line-height:1.4;color:#fff}
+  .mj-quote b{color:var(--gold2)}
+
+  .mj-card{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--line);
+    border-radius:20px;padding:8px 26px 18px;margin:28px 0;box-shadow:0 30px 70px -34px rgba(0,0,0,.9)}
+  .mj-card .ph{display:flex;align-items:center;gap:12px;padding:20px 0 16px;border-bottom:1px solid var(--line);margin-bottom:6px}
+  .mj-card .ph .ic{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--gold1),var(--gold3));display:flex;align-items:center;justify-content:center;font-size:20px}
+  .mj-card .ph h3{margin:0;font-size:1.15rem}
+
+  .mj-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+  .mj-col{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .mj-col h4{font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+  .mj-col h4.ok{color:var(--gold2)}
+  .mj-col h4.ng{color:#ff6b6b}
+  .mj-col ul{list-style:none;display:grid;gap:8px}
+  .mj-col ul li{font-size:.97rem;color:#dcdcdc;display:flex;gap:10px;align-items:flex-start}
+  .mj-col ul li::before{content:'•';color:var(--gold2);font-weight:900;flex-shrink:0}
+  .mj-col ul li.ng::before{content:'•';color:#ff6b6b}
+
+  .mj-stat{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}
+  .mj-stat-item{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:14px;padding:18px 16px;text-align:center}
+  .mj-stat-item .val{font-family:var(--anton);font-size:1.8rem;color:var(--gold2);line-height:1}
+  .mj-stat-item .lbl{font-size:.78rem;color:var(--mut);margin-top:8px;line-height:1.4}
+
+  .mj-note{display:flex;gap:14px;background:linear-gradient(135deg,rgba(252,212,4,.08),rgba(252,212,4,.02));border:1px solid rgba(252,212,4,.3);
+    border-radius:16px;padding:18px 20px;margin:28px 0;font-size:.96rem;color:#ecdcb4}
+  .mj-note .x{font-size:20px;line-height:1.2}
+
+  .mj-steps{list-style:none;display:grid;gap:14px;margin:10px 0 18px}
+  .mj-steps li{display:flex;gap:16px;align-items:flex-start;background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:13px;padding:16px 18px;font-size:1.02rem;color:#dcdcdc}
+  .mj-steps .num{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--gold1),var(--gold3));color:#1a1300;font-weight:900;font-size:.9rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+
+  .mj-faq{margin-top:10px}
+  .mj-faq details{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden;transition:.25s}
+  .mj-faq details[open]{border-color:rgba(252,212,4,.4)}
+  .mj-faq summary{padding:18px 20px;cursor:pointer;font-weight:700;font-size:1.04rem;color:#fff;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+  .mj-faq summary::-webkit-details-marker{display:none}
+  .mj-faq summary::after{content:'+';color:var(--gold2);font-weight:800;font-size:1.4rem;line-height:1}
+  .mj-faq details[open] summary::after{content:'\2013'}
+  .mj-faq .a{padding:0 20px 18px;color:#c8c8c8;font-size:1rem}
+
+  .mj-cta{position:relative;display:flex;align-items:center;gap:28px;margin:48px 0;padding:36px 32px;border-radius:24px;overflow:hidden;
+    background:linear-gradient(160deg,rgba(252,212,4,.12),rgba(252,212,4,.02));border:1px solid rgba(252,212,4,.4)}
+  .mj-cta::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:480px;height:340px;background:radial-gradient(circle,rgba(252,212,4,.22),transparent 65%)}
+  .mj-cta>*{position:relative;z-index:2}
+  .mj-cta-text{flex:1}
+  .mj-cta-img{width:190px;flex-shrink:0;border-radius:16px;border:1px solid var(--line);display:block}
+  .mj-cta h2{font-family:var(--anton);font-weight:400;text-transform:uppercase;font-size:2rem;margin:0 0 12px;line-height:1.08}
+  .mj-cta p{margin:0 0 22px;color:#eaeaea}
+  .mj-btn{display:inline-flex;align-items:center;gap:11px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;
+    font-weight:800;text-transform:uppercase;letter-spacing:.03em;font-size:1.02rem;padding:17px 34px;border-radius:14px;text-decoration:none;
+    box-shadow:0 16px 40px -12px rgba(252,212,4,.6);transition:.25s}
+  .mj-btn:hover{transform:translateY(-2px)}
+  .mj-btn svg{width:21px;height:21px;fill:#1a1300}
+
+  .mj p a,.mj-faq .a a{color:var(--gold2);text-decoration:underline;text-underline-offset:3px;font-weight:600}
+  .mj-lead{font-size:1.25rem !important;color:#fff !important;font-weight:600;line-height:1.55}
+  .mj-author-btn{display:inline-flex;align-items:center;gap:9px;margin-top:14px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;font-weight:800;text-transform:uppercase;font-size:.82rem;letter-spacing:.03em;padding:12px 22px;border-radius:11px;text-decoration:none}
+  .mj-author-btn svg{width:18px;height:18px;fill:#1a1300}
+  .mj-proof{margin:42px 0}
+  .mj-proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
+  .mj-proof-grid img{width:100%;height:100%;object-fit:cover;border-radius:14px;border:1px solid var(--line);aspect-ratio:3/4;background:#1a1a1a}
+  .mj-proof-cap{text-align:center;color:var(--mut);font-size:.86rem;margin-top:14px;letter-spacing:.02em}
+  .mj-author{display:flex;gap:18px;align-items:center;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin:40px 0 10px}
+  .mj-author img{width:82px;height:82px;border-radius:50%;object-fit:cover;object-position:50% 28%;border:2px solid var(--gold2);flex-shrink:0;background:#1a1a1a}
+  .mj-author .nm{font-family:var(--anton);font-weight:400;text-transform:uppercase;color:#fff;font-size:1.3rem;letter-spacing:.5px;line-height:1}
+  .mj-author .rl{color:var(--mut);font-size:.9rem;margin-top:7px;line-height:1.45}
+  .mj-author .rl b{color:var(--gold2)}
+  .mj-author-top{margin:0 0 32px;align-items:flex-start}
+  .mj-byline{color:var(--mut);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:9px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .mj-byline b{color:#fff}
+  .mj-byline i{width:5px;height:5px;border-radius:50%;background:var(--gold2);display:inline-block}
+  .mj-role{font-weight:800;color:#fff;font-size:1.05rem;margin-bottom:7px}
+  .mj-midcta{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:linear-gradient(135deg,rgba(252,212,4,.1),rgba(252,212,4,.02));border:1px solid rgba(252,212,4,.32);border-radius:16px;padding:18px 22px;margin:34px 0}
+  .mj-midcta span{font-weight:700;color:#fff;font-size:1.02rem}
+  .mj-midcta a{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold1),var(--gold2) 50%,var(--gold3));color:#1a1300;font-weight:800;text-transform:uppercase;font-size:.86rem;letter-spacing:.03em;padding:13px 22px;border-radius:11px;text-decoration:none;white-space:nowrap}
+  .mj-disc{font-size:.82rem;color:#7a7a7a;border-top:1px solid var(--line);padding:22px 0 48px;line-height:1.65}
+  @media(max-width:600px){.mj-hero h1{font-size:1.85rem}.mj h2{font-size:1.3rem}.mj-quote{font-size:1.12rem}.mj-row{grid-template-columns:1fr}.mj-stat{grid-template-columns:1fr 1fr}.mj-cta h2{font-size:1.5rem}.mj-cta{flex-direction:column;text-align:center}.mj-cta-img{width:170px;margin:14px auto 0}.mj-author{gap:13px;padding:17px 16px;text-align:left}.mj-author img{width:62px;height:62px}.mj-author .nm{font-size:1.15rem}}
+</style>
+
+<div class="mj">
+  <header class="mj-hero">
+    <div class="wrap">
+      <span class="mj-badge">Nutrição & Emagrecimento</span>
+      <h1>Arroz <span class="gold">Engorda?</span> O que Diz o Nutricionista</h1>
+      <p class="sub">O cereal mais consumido do Brasil virou vilão nas dietas. Mas a ciência conta uma história diferente.</p>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <article>
+      <div class="mj-author mj-author-top">
+        <img src="https://fabriciomoura.com/wp-content/uploads/2026/06/Screenshot_20260322_192920_Canva1-scaled.jpg" alt="Fabricio Moura" loading="lazy" style="object-position:50% 50%" />
+        <div>
+          <div class="mj-byline">Por <b>Fabricio Moura</b><i></i>Leitura de 5 min</div>
+          <div class="mj-role">Nutricionista e Treinador</div>
+          <div class="rl"><b>Mais de 2.000 transformações em 7 países</b> e 18 anos de experiência ajudando pessoas a perder gordura e ganhar massa muscular com um método garantido.</div>
+          <a class="mj-author-btn" href="https://wa.me/+5511914849797?text=Oi%20Fabricio!%20Quero%20um%20acompanhamento%20individual%20com%20voc%C3%AA." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.866 9.866 0 001.51 5.26l-.999 3.648 3.978-1.607z"/></svg>Falar com o Fabricio</a>
+        </div>
+      </div>
+
+      <p class="mj-lead">Arroz engorda. Todo mundo já ouviu isso. É o tipo de conselho que circula em família, academia e grupo de WhatsApp. O problema é que não é verdade, pelo menos não da forma que te contaram.</p>
+
+      <p>O arroz por si só não é o responsável pelo ganho de gordura. O que engorda é <strong>comer mais calorias do que seu corpo gasta</strong>, seja vindo do arroz, do pão, da fruta ou da salada. Quando se entende isso, a pergunta deixa de ser "arroz engorda?" e passa a ser "quanto arroz cabe no meu cardápio?".</p>
+
+      <p>Ao longo de 18 anos atendendo mais de 2.000 pessoas, vi muita gente cortar o arroz, ficar frustrada, voltar a comer e se sentir culpada. Esse ciclo não resolve nada. O que resolve é ter um plano que encaixa os alimentos certos nas proporções certas.</p>
+
+      <div class="mj-quote">Nenhum alimento, sozinho, faz você engordar. <b>O excesso calórico</b> é o único responsável pelo acúmulo de gordura.</div>
+
+      <h2><span class="kick gold">O básico</span>O que faz uma comida engordar de verdade</h2>
+
+      <p>Quando você come mais calorias do que gasta, o corpo armazena o excesso como gordura. Simples assim. Essa conta vale para qualquer alimento, arroz incluído.</p>
+
+      <p>O arroz branco tem cerca de <strong>130 kcal por 100g cozido</strong>. Uma porção comum de 3 colheres de sopa cheia (150g) entrega por volta de 195 kcal. Isso é razoável dentro de um almoço balanceado. O problema aparece quando a porção vira metade do prato, a refeição tem pouca proteína e o saldo calórico do dia está no vermelho.</p>
+
+      <div class="mj-stat">
+        <div class="mj-stat-item">
+          <div class="val">130</div>
+          <div class="lbl">kcal por 100g de arroz branco cozido</div>
+        </div>
+        <div class="mj-stat-item">
+          <div class="val">111</div>
+          <div class="lbl">kcal por 100g de arroz integral cozido</div>
+        </div>
+        <div class="mj-stat-item">
+          <div class="val">~3</div>
+          <div class="lbl">colheres de sopa = porção razoável por refeição</div>
+        </div>
+      </div>
+
+      <h2><span class="kick gold">Branco vs integral</span>Qual a diferença real entre arroz branco e integral</h2>
+
+      <p>Essa comparação vale a pena fazer, porque existe diferença prática, mas ela nao e tao dramatica quanto as dietas da moda sugerem.</p>
+
+      <div class="mj-row">
+        <div class="mj-col">
+          <h4 class="ok">Arroz integral</h4>
+          <ul>
+            <li>Mais fibras (1,8g vs 0,3g por 100g)</li>
+            <li>Mais saciedade por mais tempo</li>
+            <li>Indice glicemico mais baixo (50 vs 72)</li>
+            <li>Mais minerais como magnesio e zinco</li>
+            <li>Ligeira vantagem para quem quer emagrecer</li>
+          </ul>
+        </div>
+        <div class="mj-col">
+          <h4 class="ng">Arroz branco</h4>
+          <ul>
+            <li class="ng">Menos fibras</li>
+            <li class="ng">Indice glicemico mais alto</li>
+            <li>Facil de digerir (util em treinos)</li>
+            <li>Combina bem com feijao (fibras completam)</li>
+            <li>Sem problema se a porcao estiver correta</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>Na pratica: o integral e a melhor escolha para o dia a dia por ter mais fibras e gerar mais saciedade. Mas o branco nao precisa sair do cardapio. Quem come arroz branco dentro do seu <a href="https://fabriciomoura.com/deficit-calorico" target="_blank" rel="noopener">deficit calorico</a> emagrece normalmente.</p>
+
+      <div class="mj-note"><div class="x">💡</div><div>A diferenca calorica entre branco e integral e pequena (cerca de 20 kcal por 100g). O que muda mesmo e a fibra e o indice glicemico, que afetam a saciedade e o controle do apetite.</div></div>
+
+      <h2><span class="kick gold">Porcao</span>O tamanho da porcao e o que define tudo</h2>
+
+      <p>Esse e o ponto que mais gente ignora. Nao e o arroz que engorda, e quanto arroz voce come. Um prato com 2 a 3 colheres de sopa de arroz branco cozido ao lado de proteina e bastante vegetal esta dentro da logica de um cardapio de emagrecimento. Meio quilo de arroz no prato, todo dia, sem controle das outras refeicoes, ja e outra historia.</p>
+
+      <ul class="mj-steps">
+        <li><div class="num">1</div><div>Comece pelo <strong>proteico</strong>: frango, peixe, carne, ovos. Isso garante saciedade e protege o musculo.</div></li>
+        <li><div class="num">2</div><div>Encha <strong>metade do prato com vegetais</strong>: salada, legumes, verduras. Pouco calorico, muito volume.</div></li>
+        <li><div class="num">3</div><div>Acrescente <strong>2 a 3 colheres de sopa de arroz</strong>. Voce ja tem proteina e fibra; o arroz completa a energia.</div></li>
+        <li><div class="num">4</div><div>Adicione <strong>feijao ou lentilha</strong>. A combinacao arroz mais feijao e uma das mais completas nutricionalmente que existe.</div></li>
+      </ul>
+
+      <div class="mj-midcta"><span>Calcule seu gasto calorico e saiba o quanto voce pode comer</span><a href="https://fabriciomoura.com/calculadora-de-imc-e-calorias" target="_blank" rel="noopener">Calcular agora</a></div>
+
+      <h2><span class="kick gold">Mito classico</span>Arroz a noite engorda mais?</h2>
+
+      <p>Nao. O horario da refeicao nao e o que determina se voce vai acumular gordura. O que importa e o total calorico do dia.</p>
+
+      <p>O metabolismo nao para a meia-noite e comeca a estocar tudo que voce comeu. O que acontece e que muita gente chega na janta ja com o dia calorico estourado e ainda adiciona uma porcao grande de arroz. Nesse caso, o problema nao e o horario nem o arroz, e o acumulo de calorias acima do que o corpo gasta.</p>
+
+      <p>Se voce tem espaco calorico no seu dia e quer comer arroz no jantar, pode. Se voce esta num <a href="https://fabriciomoura.com/deficit-calorico" target="_blank" rel="noopener">deficit calorico</a> e come arroz a noite, vai continuar emagrecendo.</p>
+
+      <div class="mj-quote">Nao e o arroz das 20h que faz voce engordar. E o <b>dia inteiro</b> fora do controle.</div>
+
+      <h2><span class="kick gold">Na pratica</span>Como encaixar o arroz num cardapio de emagrecimento</h2>
+
+      <p>O arroz pode e deve estar presente num cardapio de emagrecimento. Ele e uma fonte de carboidrato acessivel, cultural e que combina com praticamente tudo. A chave e colocar ele no lugar certo, na quantidade certa.</p>
+
+      <div class="mj-card">
+        <div class="ph"><div class="ic">🍽️</div><h3>Exemplo de refeicao equilibrada com arroz</h3></div>
+        <div style="padding:14px 0 6px;display:grid;gap:10px">
+          <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+            <div style="color:var(--gold2);font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;min-width:120px;padding-top:2px">Proteina</div>
+            <div style="font-size:1rem;color:#dcdcdc">150g de frango grelhado, peixe, carne vermelha magra ou ovos. Sempre presente, sempre primeiro no prato.</div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+            <div style="color:var(--gold2);font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;min-width:120px;padding-top:2px">Vegetais</div>
+            <div style="font-size:1rem;color:#dcdcdc">Salada verde, tomate, cebola, brocolis, abobrinha, cenoura. Sem limite, quanto mais melhor.</div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.05)">
+            <div style="color:var(--gold2);font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;min-width:120px;padding-top:2px">Arroz</div>
+            <div style="font-size:1rem;color:#dcdcdc">2 a 3 colheres de sopa cheias (arroz integral de preferencia). Complementa a energia da refeicao.</div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0">
+            <div style="color:var(--gold2);font-weight:800;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;min-width:120px;padding-top:2px">Feijao</div>
+            <div style="font-size:1rem;color:#dcdcdc">Uma colher de concha. A combinacao com o arroz e altamente nutritiva e completa o perfil de aminoacidos.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mj-note"><div class="x">⚠️</div><div>Este e um <b>exemplo orientativo</b>. As quantidades ideais dependem do seu peso, altura, composicao corporal, nivel de atividade fisica e meta. Esses numeros sao personalizados no acompanhamento individual.</div></div>
+
+      <p>O maior erro de quem quer emagrecer nao e comer arroz. E tirar o arroz sem entender o contexto, ficar frustrado, abandonar o plano e voltar ao comeco. Uma estrategia real de nutricao encaixa os alimentos que voce gosta dentro das suas necessidades calorias, sem abrir mao da vida social nem da comida brasileira.</p>
+
+      <h2><span class="kick gold">Tira-duvidas</span>Perguntas frequentes</h2>
+      <div class="mj-faq">
+        <details open><summary>Arroz engorda se comer todo dia?</summary><div class="a">Nao, desde que a porcao esteja dentro do seu total calorico diario. Comer arroz todo dia e muito comum em quem emagrece com sucesso no Brasil. O problema nao e a frequencia, e o tamanho da porcao e o saldo de calorias do dia inteiro.</div></details>
+        <details><summary>Arroz branco ou integral: qual e melhor para emagrecer?</summary><div class="a">O integral leva vantagem: tem mais fibras, maior saciedade e indice glicemico mais baixo. Mas o arroz branco nao precisa ser eliminado. Se voce esta dentro do seu deficit calorico, os dois funcionam para o emagrecimento.</div></details>
+        <details><summary>Posso comer arroz com feijao fazendo dieta?</summary><div class="a">Sim, e com tranquilidade. Arroz com feijao e uma das combinacoes mais completas nutricionalmente: o feijao tem fibras e proteina vegetal que complementam o carboidrato do arroz. O que precisa estar no controle e a porcao total.</div></details>
+        <details><summary>Arroz a noite engorda mais?</summary><div class="a">Nao. O horario da refeicao nao determina o acumulo de gordura. O que conta e o saldo calorico do dia. Se voce tem espaco calorico disponivel, pode comer arroz no jantar sem problema.</div></details>
+        <details><summary>Quanto arroz posso comer por dia para emagrecer?</summary><div class="a">Depende do seu gasto calorico total. Um ponto de partida razoavel e 2 a 3 colheres de sopa por refeicao principal. Para saber o numero exato para voce, use a <a href="https://fabriciomoura.com/calculadora-de-imc-e-calorias" target="_blank" rel="noopener">calculadora de calorias</a> ou faca um acompanhamento individual.</div></details>
+      </div>
+
+      <div class="mj-proof">
+        <h2><span class="kick gold">Prova real</span>Transformacoes de quem fez o acompanhamento</h2>
+        <div class="mj-proof-grid">
+          <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/4-1.png" alt="Transformacao de aluno do Fabricio Moura" loading="lazy" />
+          <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/5-1.png" alt="Transformacao de aluno do Fabricio Moura" loading="lazy" />
+          <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/6-1.png" alt="Transformacao de aluno do Fabricio Moura" loading="lazy" />
+        </div>
+        <p class="mj-proof-cap">Mais de 2.000 transformacoes reais em 7 paises.</p>
+      </div>
+
+      <div class="mj-cta">
+        <div class="mj-cta-text">
+          <h2>Monte seu cardapio do zero com um especialista</h2>
+          <p>Nao precisa adivinhar o que comer nem cortar alimentos sem motivo. Eu monto sua estrategia de nutricao personalizada, com arroz, feijao e tudo que voce gosta, dentro de um plano que funciona de verdade. Com garantia.</p>
+          <a class="mj-btn" href="https://wa.me/+5511914849797?text=Oi%20Fabricio!%20Li%20o%20artigo%20sobre%20arroz%20e%20quero%20um%20acompanhamento%20individual." target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.866 9.866 0 001.51 5.26l-.999 3.648 3.978-1.607z"/></svg>Falar com o Fabricio</a>
+        </div>
+        <img class="mj-cta-img" src="https://fabriciomoura.com/wp-content/uploads/2024/06/Design-sem-nome-15-e1781459644476.png" alt="Fabricio Moura" loading="lazy" />
+      </div>
+
+      <p class="mj-disc">Este conteudo e educativo e nao substitui uma avaliacao nutricional individual. Cada pessoa tem necessidades caloricas e metabolicas diferentes. Para um plano alimentar personalizado, consulte um nutricionista.</p>
+    </article>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Arroz engorda se comer todo dia?","acceptedAnswer":{"@type":"Answer","text":"Nao, desde que a porcao esteja dentro do total calorico diario. Comer arroz todo dia e compativel com o emagrecimento. O que importa e a porcao e o saldo de calorias do dia."}},
+{"@type":"Question","name":"Arroz branco ou integral: qual e melhor para emagrecer?","acceptedAnswer":{"@type":"Answer","text":"O integral tem mais fibras e maior saciedade, o que facilita o controle do apetite. Mas o branco tambem funciona para emagrecer desde que voce esteja no deficit calorico."}},
+{"@type":"Question","name":"Posso comer arroz com feijao fazendo dieta?","acceptedAnswer":{"@type":"Answer","text":"Sim. Arroz com feijao e uma das combinacoes mais completas nutricionalmente. O feijao tem fibras e proteina vegetal que complementam o carboidrato do arroz. O controle da porcao total e o que importa."}},
+{"@type":"Question","name":"Arroz a noite engorda mais?","acceptedAnswer":{"@type":"Answer","text":"Nao. O horario nao determina o acumulo de gordura. O que conta e o saldo calorico do dia inteiro. Com espaco calorico disponivel, comer arroz no jantar nao faz voce engordar."}},
+{"@type":"Question","name":"Quanto arroz posso comer por dia para emagrecer?","acceptedAnswer":{"@type":"Answer","text":"Um ponto de partida razoavel e 2 a 3 colheres de sopa por refeicao principal. O numero ideal depende do seu gasto calorico, composicao corporal e nivel de atividade fisica."}}
+]}
+</script>
+<!-- FIM DO POST -->
+</body>
+</html>

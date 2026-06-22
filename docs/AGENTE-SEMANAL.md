@@ -15,7 +15,7 @@ Marcar `[x]` ao concluir. O agente pega o **primeiro item não marcado**.
 - [x] 6 alimentos ricos em fibras para emagrecer — publicado (`blog/alimentos-ricos-em-fibras.html` → /alimentos-ricos-em-fibras)
 - [x] Gordura visceral: o que é e como reduzir (KDI 22) — publicado (`blog/gordura-visceral.html` → /gordura-visceral)
 - [x] Déficit calórico: a única forma de emagrecer (KDI 24) — publicado (`blog/deficit-calorico.html` → /deficit-calorico)
-- [ ] Arroz engorda? (KDI 30, vol 6.600)
+- [x] Arroz engorda? (KDI 30, vol 6.600) — publicado (`blog/arroz-engorda.html` → /arroz-engorda)
 - [ ] Quem toma Mounjaro pode beber? (KDI 37, vol 2.400)
 - [ ] Whey protein engorda? Mitos e verdades
 - [ ] Recomposição corporal: perder gordura e ganhar músculo
