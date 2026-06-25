@@ -49,6 +49,35 @@ WP_URL=https://fabriciomoura.com WP_USER=seu_user WP_APP_PASSWORD='abcd EFGH ijk
   node scripts/publish-to-wp.mjs blog/creatina-engorda.html draft
 ```
 
+---
+
+# Geração automática 2x por semana
+
+Além do publicador manual acima, há uma rotina que **escreve e publica sozinha**
+um artigo novo **terça e sexta às 10h (BRT)**.
+
+**Como funciona:** o script `scripts/seo-auto-run.mjs` pega o próximo tópico
+**"Planejado"** do calendário editorial (`data.js`), de maior prioridade/volume e
+que ainda não tem artigo, gera o HTML no mesmo template premium (via IA), salva em
+`blog/`, publica no WordPress e marca como feito em `scripts/seo-published.json`.
+Não regera artigos que já existem escritos à mão.
+
+**Secret a mais (além dos 3 do WordPress):**
+
+| Nome | Valor |
+|---|---|
+| `ANTHROPIC_API_KEY` | sua chave da API da Anthropic (console.anthropic.com) |
+
+**Primeira vez — rode vigiado:** vá em **Actions → "SEO — gerar e publicar artigo" →
+Run workflow**, escolha `draft` pra revisar o primeiro artigo no WordPress antes de
+confiar no automático. Se ficou bom, deixa o cron seguir publicando direto.
+
+**Pausar:** Actions → o workflow → **⋯ → Disable workflow**.
+**Reverter um artigo ruim:** `git revert` do commit + apague o post no WordPress.
+
+> ⚠️ Publicação direta sem revisão tem risco de SEO se algum artigo sair fraco
+> (o Google penaliza conteúdo raso em massa). Por isso o run manual permite `draft`.
+
 ## Observações
 
 - **SEO (RankMath/Yoast):** o script tenta preencher Título SEO, Meta e Palavra-chave,
