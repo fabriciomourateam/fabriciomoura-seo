@@ -56,12 +56,19 @@ const metaDesc = pick(/Meta:\s*([\s\S]*?)\n\s*Palavra-chave foco:/).replace(/\s+
              || pick(/<meta name="description" content="([^"]*)"/);
 const focusKw  = pick(/Palavra-chave foco:\s*(.+)/);
 
-// Corpo: tudo entre os marcadores
-const bodyMatch = html.match(/<!--\s*INÍCIO DO POST\s*-->([\s\S]*?)<!--\s*FIM DO POST\s*-->/);
-const content = bodyMatch ? bodyMatch[1].trim() : '';
+// Corpo: tenta os marcadores; se não houver, cai pro conteúdo do <body>
+// (que inclui o <style> do artigo — precisa viajar junto pro WordPress).
+let content = '';
+const markerMatch = html.match(/<!--\s*IN[IÍ]CIO DO POST\s*-->([\s\S]*?)<!--\s*FIM DO POST\s*-->/i);
+if (markerMatch) {
+  content = markerMatch[1].trim();
+} else {
+  const bodyMatch = html.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+  content = bodyMatch ? bodyMatch[1].trim() : '';
+}
 
 if (!title)   { console.error('❌ Não achei o Título no artigo.'); process.exit(1); }
-if (!content) { console.error('❌ Não achei o corpo (marcadores INÍCIO/FIM DO POST).'); process.exit(1); }
+if (!content) { console.error('❌ Não achei o corpo (nem marcadores INÍCIO/FIM DO POST, nem <body>).'); process.exit(1); }
 
 console.log('📄 Artigo:', file);
 console.log('   Título :', title);
