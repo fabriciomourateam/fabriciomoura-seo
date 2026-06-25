@@ -107,10 +107,15 @@ ${template}`;
       'anthropic-version': '2023-06-01',
       'content-type': 'application/json',
     },
-    body: JSON.stringify({ model, max_tokens: 8000, system, messages: [{ role: 'user', content: user }] }),
+    body: JSON.stringify({ model, max_tokens: 20000, system, messages: [{ role: 'user', content: user }] }),
   });
   if (!res.ok) throw new Error(`Anthropic ${res.status}: ${(await res.text()).slice(0, 300)}`);
   const data = await res.json();
+  // Se truncou por limite de tokens, o fim do HTML (</body>, marcadores) não vem —
+  // melhor abortar com mensagem clara do que publicar artigo cortado.
+  if (data.stop_reason === 'max_tokens') {
+    throw new Error('Artigo truncado (bateu o limite de tokens). Aumente max_tokens em seo-auto-run.mjs.');
+  }
   let html = (data.content?.[0]?.text || '').trim();
   // tira cercas de markdown se vierem
   html = html.replace(/^```html?\s*/i, '').replace(/```\s*$/, '').trim();
