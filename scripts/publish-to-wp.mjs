@@ -56,7 +56,6 @@ const metaDesc = pick(/Meta:\s*([\s\S]*?)\n\s*Palavra-chave foco:/).replace(/\s+
              || pick(/<meta name="description" content="([^"]*)"/);
 const focusKw  = pick(/Palavra-chave foco:\s*(.+)/);
 
-// Corpo: tudo entre os marcadores
 // Corpo: tenta os marcadores; se não houver, cai pro conteúdo do <body>
 // (que inclui o <style> do artigo — precisa viajar junto pro WordPress).
 let content = '';
