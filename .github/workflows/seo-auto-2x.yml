@@ -1,0 +1,49 @@
+name: SEO — gerar e publicar artigo (2x/semana)
+
+# Roda automático terça e sexta às 10h (BRT) e também por botão (Run workflow).
+on:
+  schedule:
+    - cron: '0 13 * * 2,5'   # 13:00 UTC = 10:00 BRT — terça e sexta
+  workflow_dispatch:
+    inputs:
+      status:
+        description: 'Publicar direto ou rascunho? (só no run manual)'
+        required: true
+        default: 'publish'
+        type: choice
+        options:
+          - publish
+          - draft
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Gerar e publicar
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          WP_URL: ${{ secrets.WP_URL }}
+          WP_USER: ${{ secrets.WP_USER }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+          PUBLISH_STATUS: ${{ inputs.status || 'publish' }}
+        run: node scripts/seo-auto-run.mjs
+
+      - name: Commit do artigo gerado
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add blog/ scripts/seo-published.json
+          if git diff --staged --quiet; then
+            echo "Nada novo para commitar (fila vazia ou sem mudanças)."
+          else
+            git commit -m "chore(seo): artigo automático publicado [skip ci]"
+            git push
+          fi
