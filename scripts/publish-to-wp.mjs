@@ -131,7 +131,28 @@ if (!res.ok) {
   const txt = await res.text();
   console.error(`\n❌ WordPress respondeu ${res.status}:`);
   console.error(txt.slice(0, 500));
-  if (res.status === 401) console.error('\n→ 401 = usuário/Application Password errados, ou Basic Auth bloqueado por plugin de segurança.');
+
+  // Diagnóstico: pergunta ao WP "quem sou eu?" para separar problema de FUNÇÃO x AUTENTICAÇÃO.
+  if (res.status === 401 || res.status === 403) {
+    try {
+      const meR = await fetch(`${base}/wp-json/wp/v2/users/me?context=edit`, { headers: { Authorization: auth } });
+      const me = await meR.json().catch(() => ({}));
+      console.error(`\n🔎 Diagnóstico GET /users/me → HTTP ${meR.status}`);
+      if (meR.ok) {
+        const caps = me.capabilities || {};
+        console.error(`   Autenticou como: ${me.name} | roles: ${JSON.stringify(me.roles)}`);
+        console.error(`   publish_posts: ${caps.publish_posts} | edit_posts: ${caps.edit_posts}`);
+        console.error('   → AUTENTICAÇÃO OK. Se roles não tem editor/author/administrator, mude a FUNÇÃO do usuário no WP.');
+      } else {
+        console.error(`   resposta: ${JSON.stringify(me).slice(0, 200)}`);
+        console.error('   → /users/me também falhou = a AUTENTICAÇÃO não chega ao WordPress.');
+        console.error('     Causa comum: o servidor remove o header Authorization. Fix no .htaccess (antes das regras do WP):');
+        console.error('     SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1');
+      }
+    } catch (e) {
+      console.error('   (não consegui rodar o diagnóstico /users/me:', e.message, ')');
+    }
+  }
   process.exit(1);
 }
 
