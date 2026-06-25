@@ -21,6 +21,10 @@
 
 import { readFileSync } from 'node:fs';
 import { basename } from 'node:path';
+import dns from 'node:dns';
+// Alguns hosts (ex.: Hostinger) resolvem IPv6 que o runner do GitHub não alcança
+// (ENETUNREACH). Forçar IPv4 primeiro deixa a conexão confiável.
+dns.setDefaultResultOrder('ipv4first');
 
 const file   = process.argv[2] || process.env.INPUT_FILE;
 const status = (process.argv[3] || process.env.INPUT_STATUS || 'draft').trim();
