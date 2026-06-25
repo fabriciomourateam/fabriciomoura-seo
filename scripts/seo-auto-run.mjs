@@ -118,9 +118,11 @@ ${template}`;
 }
 
 function validate(html) {
-  for (const marker of ['INÍCIO DO POST', 'FIM DO POST', '<title>', 'Slug:']) {
-    if (!html.includes(marker)) throw new Error(`Artigo gerado sem "${marker}" — abortando sem publicar.`);
-  }
+  if (!/<title>[\s\S]*?<\/title>/i.test(html)) throw new Error('Artigo gerado sem <title> — abortando sem publicar.');
+  // o corpo pode vir com os marcadores OU dentro de <body> (o publicador aceita os dois)
+  const hasMarkers = /<!--\s*IN[IÍ]CIO DO POST\s*-->[\s\S]*?<!--\s*FIM DO POST\s*-->/i.test(html);
+  const hasBody = /<body[^>]*>[\s\S]*?<\/body>/i.test(html);
+  if (!hasMarkers && !hasBody) throw new Error('Artigo sem corpo (sem marcadores e sem <body>) — abortando sem publicar.');
 }
 const slugFromHtml = (html) => {
   const m = html.match(/Slug:\s*([a-z0-9-]+)/i);
