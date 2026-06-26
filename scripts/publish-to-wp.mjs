@@ -97,9 +97,23 @@ if (!WP_URL || !WP_USER || !WP_APP_PASSWORD) {
 const base = WP_URL.replace(/\/+$/, '');
 const auth = 'Basic ' + Buffer.from(`${WP_USER}:${WP_APP_PASSWORD}`).toString('base64');
 
+// Retry em erros de rede transitórios (ENETUNREACH/ETIMEDOUT/ECONNRESET) — comuns
+// no runner do GitHub batendo na Hostinger. Não repete erros de HTTP (4xx/5xx).
+async function fetchRetry(url, opts, tries = 4) {
+  for (let i = 1; ; i++) {
+    try {
+      return await fetch(url, opts);
+    } catch (e) {
+      if (i >= tries) throw e;
+      console.error(`   ⚠️ rede falhou (${e.cause?.code || e.code || e.message}); tentativa ${i}/${tries}, repetindo...`);
+      await new Promise((r) => setTimeout(r, i * 2500));
+    }
+  }
+}
+
 // Se já existe um post com o mesmo slug, atualiza em vez de duplicar.
 async function findExisting() {
-  const r = await fetch(`${base}/wp-json/wp/v2/posts?slug=${encodeURIComponent(slug)}&status=any`, {
+  const r = await fetchRetry(`${base}/wp-json/wp/v2/posts?slug=${encodeURIComponent(slug)}&status=any`, {
     headers: { Authorization: auth },
   });
   if (!r.ok) return null;
@@ -125,7 +139,7 @@ const url = existingId
   ? `${base}/wp-json/wp/v2/posts/${existingId}`
   : `${base}/wp-json/wp/v2/posts`;
 
-const res = await fetch(url, {
+const res = await fetchRetry(url, {
   method: 'POST',
   headers: { Authorization: auth, 'Content-Type': 'application/json' },
   body: JSON.stringify(payload),
