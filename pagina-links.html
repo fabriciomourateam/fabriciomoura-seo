@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!--
+  PÁGINA DE LINKS (link da bio) — Fabricio Moura
+  ================================================
+  COMO PUBLICAR NO WORDPRESS:
+  1. Páginas > Adicionar nova. Título: Links (ou "Conteúdos").
+  2. Bloco "HTML personalizado" > cole TUDO entre INÍCIO e FIM.
+  3. Link permanente (slug): link   → fica fabriciomoura.com/link
+  4. Publicar. Use essa URL na bio do Instagram.
+
+  COMO EDITAR OS LINKS (sem mexer no código):
+  1. Abra a página no navegador ADICIONANDO #admin no final:
+        fabriciomoura.com/link#admin
+  2. Vai aparecer o PAINEL DE EDIÇÃO. Adicione/edite/remova/reordene os links.
+  3. Clique em "📋 Copiar página atualizada".
+  4. No WordPress, abra a página, apague o conteúdo do bloco HTML e cole o novo.
+     (é a mesma coisa que publicar de novo — 30 segundos)
+  Visitantes normais NUNCA veem o painel (só aparece com #admin na URL).
+-->
+<!-- INÍCIO -->
+<!--noptimize-->
+<div id="fmlink-root">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+  #fmlink-root{
+    --bg:#0a0a0b; --card:#0e0e0f;
+    --gold-a:#f4dfa0; --gold-b:#e6b450; --gold-c:#b8860b;
+    --amber-400:#FBBF24; --amber-500:#F59E0B; --amber-600:#D97706;
+    --ink:#fafafa; --ink-2:#d4d4d8; --ink-3:#a1a1aa;
+    --line:rgba(230,180,80,.20); --line-strong:rgba(230,180,80,.55);
+    --serif:"Playfair Display",Georgia,serif;
+    --sans:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --maxw:600px;
+    all:initial;
+    display:block; position:relative;
+    background:var(--bg); color:var(--ink); font-family:var(--sans); font-weight:300;
+    line-height:1.5; -webkit-font-smoothing:antialiased; min-height:100vh;
+    padding:0; margin:0;
+  }
+  #fmlink-root *{box-sizing:border-box; font-family:inherit;}
+  #fmlink-root .warm-glow{
+    position:absolute; inset:0; pointer-events:none; z-index:0;
+    background:radial-gradient(60% 55% at 50% 0%,rgba(230,180,80,.20) 0%,rgba(184,134,11,.07) 40%,rgba(10,10,11,0) 72%);
+  }
+  #fmlink-root .wrap{position:relative; z-index:1; max-width:var(--maxw); margin:0 auto; padding:40px 20px 56px;}
+  #fmlink-root .gold{
+    background:linear-gradient(120deg,var(--gold-a) 0%,var(--gold-b) 42%,var(--gold-c) 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+
+  /* ---- AUTOR (topo) ---- */
+  #fmlink-root .author{display:flex; flex-direction:column; align-items:center; text-align:center; margin-bottom:34px;}
+  #fmlink-root .author-photo{
+    width:104px; height:104px; border-radius:50%; object-fit:cover; object-position:50% 25%;
+    border:2px solid transparent; background:
+      linear-gradient(#0a0a0b,#0a0a0b) padding-box,
+      linear-gradient(120deg,var(--gold-a),var(--gold-c)) border-box;
+    box-shadow:0 12px 40px -12px rgba(230,180,80,.5);
+  }
+  #fmlink-root .author-name{font-family:var(--serif); font-weight:800; font-size:clamp(26px,6vw,34px); margin:16px 0 2px; letter-spacing:.01em;}
+  #fmlink-root .author-verified{display:inline-block; vertical-align:middle; width:20px; height:20px; margin-left:6px;}
+  #fmlink-root .author-role{font-size:11px; font-weight:700; letter-spacing:.28em; text-transform:uppercase; color:var(--amber-400); margin-bottom:14px;}
+  #fmlink-root .author-bio{color:var(--ink-2); font-size:14.5px; max-width:46ch; margin:0 auto;}
+  #fmlink-root .author-bio strong{color:var(--ink); font-weight:600;}
+  #fmlink-root .author-handle{margin-top:12px; font-size:13px; color:var(--ink-3); font-weight:500;}
+
+  /* ---- LINKS ---- */
+  #fmlink-root .section-eyebrow{font-size:10.5px; font-weight:700; letter-spacing:.3em; text-transform:uppercase; color:var(--amber-400); text-align:center; margin:0 0 16px;}
+  #fmlink-root .links{display:flex; flex-direction:column; gap:12px;}
+  #fmlink-root a.link-card{
+    display:flex; align-items:center; gap:14px; text-decoration:none; cursor:pointer;
+    background:var(--card); border:1px solid var(--line); border-radius:15px;
+    padding:16px 18px; color:var(--ink);
+    transition:transform .18s, border-color .18s, box-shadow .18s, background .18s;
+  }
+  #fmlink-root a.link-card:hover{transform:translateY(-2px); border-color:var(--line-strong); box-shadow:0 18px 44px -22px rgba(230,180,80,.45);}
+  #fmlink-root .link-emoji{
+    flex:none; width:44px; height:44px; display:grid; place-items:center; font-size:21px;
+    border-radius:12px; background:radial-gradient(120% 120% at 30% 20%,#15130c,#0a0a0b);
+    border:1px solid var(--line);
+  }
+  #fmlink-root .link-tx{flex:1; min-width:0;}
+  #fmlink-root .link-title{font-weight:600; font-size:15.5px; line-height:1.25;}
+  #fmlink-root .link-desc{font-size:12.5px; color:var(--ink-3); margin-top:2px;}
+  #fmlink-root .link-arrow{flex:none; color:var(--ink-3); font-size:18px; transition:transform .18s, color .18s;}
+  #fmlink-root a.link-card:hover .link-arrow{color:var(--amber-400); transform:translateX(3px);}
+
+  #fmlink-root .hair{height:1px; background:linear-gradient(90deg,rgba(230,180,80,0),rgba(230,180,80,.6),rgba(230,180,80,0)); margin:40px 0;}
+
+  /* ---- PROVA ---- */
+  #fmlink-root .prova-title{font-family:var(--serif); font-weight:700; font-size:clamp(22px,5vw,28px); text-align:center; margin:0 0 6px;}
+  #fmlink-root .prova-sub{text-align:center; color:var(--ink-3); font-size:13.5px; margin:0 0 22px;}
+  #fmlink-root .prova-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;}
+  #fmlink-root .prova-grid img{width:100%; aspect-ratio:3/4; object-fit:cover; border-radius:12px; border:1px solid var(--line);}
+  #fmlink-root .prova-foot{text-align:center; color:var(--ink-3); font-size:12.5px; margin-top:16px;}
+  #fmlink-root .prova-foot strong{color:var(--amber-400); font-weight:600;}
+
+  /* ---- CTA CONSULTORIA ---- */
+  #fmlink-root .cta{
+    margin-top:40px; background:linear-gradient(180deg,rgba(251,191,36,.10),rgba(251,191,36,.02));
+    border:1px solid var(--line-strong); border-radius:20px; padding:30px 24px; text-align:center;
+  }
+  #fmlink-root .cta-eyebrow{font-size:10.5px; font-weight:700; letter-spacing:.3em; text-transform:uppercase; color:var(--amber-400); margin:0 0 10px;}
+  #fmlink-root .cta-title{font-family:var(--serif); font-weight:800; font-size:clamp(22px,5.5vw,30px); margin:0 0 12px; line-height:1.15;}
+  #fmlink-root .cta-text{color:var(--ink-2); font-size:14.5px; max-width:44ch; margin:0 auto 22px;}
+  #fmlink-root .cta-btn{
+    display:inline-flex; align-items:center; gap:9px; text-decoration:none;
+    background:linear-gradient(90deg,var(--amber-400),var(--amber-500) 50%,var(--amber-600));
+    color:#0a0a0b; font-weight:700; font-size:16px; padding:16px 34px; border-radius:13px;
+    transition:filter .18s, transform .18s;
+  }
+  #fmlink-root .cta-btn:hover{filter:brightness(1.08); transform:translateY(-1px);}
+  #fmlink-root .foot-note{text-align:center; color:#71717a; font-size:11px; margin-top:26px;}
+
+  /* ---- PAINEL ADMIN (só com #admin) ---- */
+  #fmlink-admin{display:none; position:relative; z-index:2; max-width:var(--maxw); margin:0 auto 10px; padding:20px; background:#141414; border:1px solid var(--line-strong); border-radius:16px;}
+  #fmlink-root.admin-on #fmlink-admin{display:block;}
+  #fmlink-admin h3{font-family:var(--serif); font-size:19px; margin:0 0 4px; color:var(--ink);}
+  #fmlink-admin .hint{color:var(--ink-3); font-size:12.5px; margin:0 0 16px;}
+  #fmlink-admin .row{display:flex; gap:8px; align-items:center; background:#0e0e0f; border:1px solid var(--line); border-radius:10px; padding:8px 10px; margin-bottom:8px;}
+  #fmlink-admin .row .grab{cursor:grab; color:var(--ink-3); font-size:16px; user-select:none;}
+  #fmlink-admin .row input{flex:1; min-width:0; background:transparent; border:none; color:var(--ink); font-size:13.5px; padding:6px 4px;}
+  #fmlink-admin .row input:focus{outline:none;}
+  #fmlink-admin .row .emoji-in{flex:none; width:44px; text-align:center;}
+  #fmlink-admin .row .del{cursor:pointer; color:#ef6a6a; background:none; border:none; font-size:16px; flex:none;}
+  #fmlink-admin .sep{height:1px; background:var(--line); margin:6px 0;}
+  #fmlink-admin .btns{display:flex; gap:10px; margin-top:14px; flex-wrap:wrap;}
+  #fmlink-admin button.act{cursor:pointer; border:1px solid var(--line-strong); background:#0e0e0f; color:var(--ink); font-weight:600; font-size:13px; padding:11px 16px; border-radius:10px; transition:.15s;}
+  #fmlink-admin button.act:hover{border-color:var(--amber-400);}
+  #fmlink-admin button.gold{background:linear-gradient(90deg,var(--amber-400),var(--amber-600)); color:#0a0a0b; border:none;}
+  #fmlink-admin .ok{color:#4ade80; font-size:12.5px; margin-top:10px; min-height:16px;}
+
+  @media (max-width:420px){ #fmlink-root .prova-grid{grid-template-columns:1fr 1fr;} }
+</style>
+
+<div class="warm-glow"></div>
+
+<!-- dados dos links (editados pelo painel; é isso que os visitantes veem) -->
+<script id="fmlink-data" type="application/json">
+[
+  {"emoji":"🔥","title":"A dieta que seca sem passar fome","desc":"O guia completo do método","url":"https://fabriciomoura.com/dieta-que-seca-sem-fome"},
+  {"emoji":"🧮","title":"Calculadora de IMC e calorias","desc":"Descubra seu gasto e sua meta","url":"https://fabriciomoura.com/calculadora-de-imc-e-calorias"},
+  {"emoji":"🍽️","title":"Déficit calórico: como fazer certo","desc":"Emagrecer sem se matar de fome","url":"https://fabriciomoura.com/deficit-calorico"},
+  {"emoji":"💉","title":"Cardápio para quem toma Mounjaro","desc":"O que comer pra não perder músculo","url":"https://fabriciomoura.com/cardapio-para-quem-toma-mounjaro"},
+  {"emoji":"🥦","title":"Alimentos ricos em fibras","desc":"O que segura a fome de verdade","url":"https://fabriciomoura.com/alimentos-ricos-em-fibras"},
+  {"emoji":"⚠️","title":"Gordura visceral: o perigo escondido","desc":"Por que a barriga não sai","url":"https://fabriciomoura.com/gordura-visceral"},
+  {"emoji":"🍚","title":"Arroz engorda?","desc":"A verdade sobre o carboidrato","url":"https://fabriciomoura.com/arroz-engorda"},
+  {"emoji":"💪","title":"Creatina: engorda ou emagrece?","desc":"O que ela faz de verdade","url":"https://fabriciomoura.com/creatina-engorda-ou-emagrece"}
+]
+</script>
+
+<div id="fmlink-admin"></div>
+
+<div class="wrap">
+
+  <!-- AUTOR -->
+  <div class="author">
+    <img class="author-photo" src="https://fabriciomoura.com/wp-content/uploads/2024/06/Design-sem-nome-15-e1781459644476.png" alt="Fabricio Moura">
+    <div class="author-name"><span class="gold">Fabricio Moura</span><svg class="author-verified" viewBox="0 0 24 24" fill="#1D9BF0"><path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"/></svg></div>
+    <div class="author-role">Nutricionista e Treinador</div>
+    <p class="author-bio">Mais de <strong>2.000 transformações</strong> em <strong>7 países</strong> e <strong>18 anos</strong> de experiência ajudando pessoas a perder gordura e ganhar massa muscular com um método garantido.</p>
+    <div class="author-handle">@fabriciomourateam</div>
+  </div>
+
+  <!-- LINKS -->
+  <p class="section-eyebrow">Conteúdos que vão te ajudar</p>
+  <div class="links" id="fmlink-list"></div>
+
+  <div class="hair"></div>
+
+  <!-- PROVA -->
+  <h2 class="prova-title">Prova <span class="gold">real</span></h2>
+  <p class="prova-sub">Transformações de quem fez o acompanhamento</p>
+  <div class="prova-grid">
+    <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/4-1.png" alt="Transformação de aluno do Fabricio Moura">
+    <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/5-1.png" alt="Transformação de aluno do Fabricio Moura">
+    <img src="https://fabriciomoura.com/wp-content/uploads/2024/10/6-1.png" alt="Transformação de aluno do Fabricio Moura">
+  </div>
+  <p class="prova-foot">Mais de <strong>2.000 transformações reais</strong> em 7 países.</p>
+
+  <!-- CTA CONSULTORIA -->
+  <div class="cta">
+    <p class="cta-eyebrow">Consultoria Premium com Fabricio Moura</p>
+    <h2 class="cta-title">Quer um plano que <span class="gold">realmente funciona</span>?</h2>
+    <p class="cta-text">Eu monto a sua estratégia de nutrição e treino personalizada para você perder gordura, preservar músculo e manter o resultado — com acompanhamento de perto e garantia.</p>
+    <a class="cta-btn" href="https://wa.me/+5511914849797?text=Oi%20Fabricio!%20Vim%20pela%20p%C3%A1gina%20de%20links%20e%20quero%20saber%20da%20consultoria." target="_blank" rel="noopener">Falar com o Fabricio &nbsp;→</a>
+  </div>
+
+  <p class="foot-note">© Fabricio Moura · Nutricionista e Treinador</p>
+</div>
+
+<script>
+(function(){
+  var root = document.getElementById('fmlink-root');
+  var dataTag = document.getElementById('fmlink-data');
+  function getLinks(){ try { return JSON.parse(dataTag.textContent) || []; } catch(e){ return []; } }
+  function setLinks(arr){ dataTag.textContent = "\n" + JSON.stringify(arr, null, 2) + "\n"; }
+  function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+  // ---- render (o que os visitantes veem) ----
+  function render(){
+    var list = document.getElementById('fmlink-list');
+    var links = getLinks();
+    list.innerHTML = links.map(function(l){
+      var desc = l.desc ? '<div class="link-desc">'+esc(l.desc)+'</div>' : '';
+      var emoji = l.emoji ? '<span class="link-emoji">'+esc(l.emoji)+'</span>' : '';
+      return '<a class="link-card" href="'+esc(l.url)+'" target="_blank" rel="noopener">'+emoji+
+             '<span class="link-tx"><span class="link-title">'+esc(l.title)+'</span>'+desc+'</span>'+
+             '<span class="link-arrow">→</span></a>';
+    }).join('');
+  }
+  render();
+
+  // ---- painel admin (só aparece com #admin na URL) ----
+  function isAdmin(){ return (location.hash||'').toLowerCase().indexOf('admin') !== -1; }
+
+  function buildAdmin(){
+    if(!isAdmin()){ root.classList.remove('admin-on'); return; }
+    root.classList.add('admin-on');
+    var box = document.getElementById('fmlink-admin');
+    var links = getLinks();
+    var rows = links.map(function(l,i){
+      return '<div class="row" data-i="'+i+'">'+
+        '<span class="grab" title="arrastar">⋮⋮</span>'+
+        '<input class="emoji-in" data-k="emoji" value="'+esc(l.emoji||'')+'" placeholder="🔗">'+
+        '<input data-k="title" value="'+esc(l.title||'')+'" placeholder="Título">'+
+        '<input data-k="url" value="'+esc(l.url||'')+'" placeholder="https://...">'+
+        '<button class="del" title="remover">✕</button>'+
+      '</div>'+
+      '<div class="row" style="margin-top:-4px"><span class="grab" style="visibility:hidden">⋮⋮</span>'+
+        '<input data-k="desc" value="'+esc(l.desc||'')+'" placeholder="Descrição curta (opcional)"></div>';
+    }).join('<div class="sep"></div>');
+
+    box.innerHTML =
+      '<h3>✏️ Editar links</h3>'+
+      '<p class="hint">Mude, adicione ou remova. Depois clique em <b>Copiar página atualizada</b> e cole no WordPress. Visitantes não veem este painel.</p>'+
+      '<div id="adm-rows">'+rows+'</div>'+
+      '<div class="btns">'+
+        '<button class="act" id="adm-add">+ Adicionar link</button>'+
+        '<button class="act" id="adm-apply">Pré-visualizar</button>'+
+        '<button class="act gold" id="adm-copy">📋 Copiar página atualizada</button>'+
+      '</div>'+
+      '<div class="ok" id="adm-ok"></div>';
+
+    function readRows(){
+      var out = [];
+      var rowsEls = box.querySelectorAll('#adm-rows .row[data-i]');
+      rowsEls.forEach(function(r){
+        var obj = {};
+        // esta row tem emoji/title/url; a próxima irmã tem desc
+        r.querySelectorAll('input').forEach(function(inp){ obj[inp.dataset.k] = inp.value.trim(); });
+        var descRow = r.nextElementSibling;
+        if(descRow){ var di = descRow.querySelector('input[data-k=desc]'); if(di) obj.desc = di.value.trim(); }
+        if(obj.title || obj.url) out.push({emoji:obj.emoji||'', title:obj.title||'', desc:obj.desc||'', url:obj.url||''});
+      });
+      return out;
+    }
+    function apply(){ setLinks(readRows()); render(); }
+
+    document.getElementById('adm-add').onclick = function(){
+      var arr = readRows(); arr.push({emoji:'🔗', title:'Novo link', desc:'', url:'https://'}); setLinks(arr); buildAdmin();
+    };
+    document.getElementById('adm-apply').onclick = function(){ apply(); document.getElementById('adm-ok').textContent='Pré-visualização atualizada ↓'; };
+    box.querySelectorAll('.del').forEach(function(b){ b.onclick=function(){ var r=b.closest('.row'); var arr=readRows(); var idx=parseInt(r.dataset.i,10); arr.splice(idx,1); setLinks(arr); buildAdmin(); }; });
+    document.getElementById('adm-copy').onclick = function(){
+      apply();
+      // remove a classe admin-on do clone pra exportar a página limpa
+      var clone = root.cloneNode(true);
+      clone.classList.remove('admin-on');
+      var adm = clone.querySelector('#fmlink-admin'); if(adm) adm.innerHTML='';
+      var html = clone.outerHTML;
+      var full = '<!-- INÍCIO -->\n<!--noptimize-->\n'+html+'\n<!--/noptimize-->\n<!-- FIM -->';
+      navigator.clipboard.writeText(full).then(function(){
+        document.getElementById('adm-ok').textContent='✅ Copiado! Cole no bloco HTML da página no WordPress.';
+      }, function(){
+        // fallback
+        var ta=document.createElement('textarea'); ta.value=full; document.body.appendChild(ta); ta.select();
+        try{document.execCommand('copy'); document.getElementById('adm-ok').textContent='✅ Copiado! Cole no WordPress.';}catch(e){document.getElementById('adm-ok').textContent='Selecione e copie manualmente.';}
+        document.body.removeChild(ta);
+      });
+    };
+  }
+  buildAdmin();
+  window.addEventListener('hashchange', buildAdmin);
+})();
+</script>
+</div>
+<!--/noptimize-->
+<!-- FIM -->
+</html>
