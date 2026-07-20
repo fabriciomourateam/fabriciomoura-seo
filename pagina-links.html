@@ -9,14 +9,12 @@
   3. Link permanente (slug): link   → fica fabriciomoura.com/link
   4. Publicar. Use essa URL na bio do Instagram.
 
-  COMO EDITAR OS LINKS (sem mexer no código):
-  1. Abra a página no navegador ADICIONANDO #admin no final:
-        fabriciomoura.com/link#admin
-  2. Vai aparecer o PAINEL DE EDIÇÃO. Adicione/edite/remova/reordene os links.
-  3. Clique em "📋 Copiar página atualizada".
-  4. No WordPress, abra a página, apague o conteúdo do bloco HTML e cole o novo.
-     (é a mesma coisa que publicar de novo — 30 segundos)
-  Visitantes normais NUNCA veem o painel (só aparece com #admin na URL).
+  COMO EDITAR OS LINKS (sem mexer no código, via Google Sheet):
+  1. Você tem uma planilha com as colunas: emoji | titulo | descricao | link
+  2. Quer um link novo? Adicione uma LINHA. Tirar? Apague a linha. Reordenar? Arraste.
+  3. A página lê a planilha sozinha e mostra na hora. Zero HTML, zero copiar/colar.
+  SETUP (uma vez só): dentro do <script>, cole o link CSV da sua planilha publicada
+  na variável SHEET_CSV_URL. Enquanto estiver vazio, usa a lista padrão embutida.
 -->
 <!-- INÍCIO -->
 <!--noptimize-->
@@ -151,7 +149,6 @@
 ]
 </script>
 
-<div id="fmlink-admin"></div>
 
 <div class="wrap">
 
@@ -193,97 +190,66 @@
 
 <script>
 (function(){
-  var root = document.getElementById('fmlink-root');
+  // ==================================================================
+  //  COLE AQUI O LINK CSV DA SUA PLANILHA GOOGLE (entre as aspas).
+  //  Como pegar: na planilha > Arquivo > Compartilhar > Publicar na web
+  //  > escolha "Valores separados por vírgula (.csv)" > Publicar > copie o link.
+  //  Deixe "" (vazio) pra usar a lista padrao embutida.
+  var SHEET_CSV_URL = "";
+  // ==================================================================
+
   var dataTag = document.getElementById('fmlink-data');
-  function getLinks(){ try { return JSON.parse(dataTag.textContent) || []; } catch(e){ return []; } }
-  function setLinks(arr){ dataTag.textContent = "\n" + JSON.stringify(arr, null, 2) + "\n"; }
+  var list = document.getElementById('fmlink-list');
+  function defaults(){ try { return JSON.parse(dataTag.textContent) || []; } catch(e){ return []; } }
   function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
-  // ---- render (o que os visitantes veem) ----
-  function render(){
-    var list = document.getElementById('fmlink-list');
-    var links = getLinks();
+  function render(links){
+    if(!links || !links.length) links = defaults();
     list.innerHTML = links.map(function(l){
+      if(!l.title || !l.url) return '';
+      var url = /^https?:\/\//i.test(l.url) ? l.url : 'https://'+l.url;
       var desc = l.desc ? '<div class="link-desc">'+esc(l.desc)+'</div>' : '';
       var emoji = l.emoji ? '<span class="link-emoji">'+esc(l.emoji)+'</span>' : '';
-      return '<a class="link-card" href="'+esc(l.url)+'" target="_blank" rel="noopener">'+emoji+
+      return '<a class="link-card" href="'+esc(url)+'" target="_blank" rel="noopener">'+emoji+
              '<span class="link-tx"><span class="link-title">'+esc(l.title)+'</span>'+desc+'</span>'+
-             '<span class="link-arrow">→</span></a>';
+             '<span class="link-arrow">\u2192</span></a>';
     }).join('');
   }
-  render();
 
-  // ---- painel admin (só aparece com #admin na URL) ----
-  function isAdmin(){ return (location.hash||'').toLowerCase().indexOf('admin') !== -1; }
-
-  function buildAdmin(){
-    if(!isAdmin()){ root.classList.remove('admin-on'); return; }
-    root.classList.add('admin-on');
-    var box = document.getElementById('fmlink-admin');
-    var links = getLinks();
-    var rows = links.map(function(l,i){
-      return '<div class="row" data-i="'+i+'">'+
-        '<span class="grab" title="arrastar">⋮⋮</span>'+
-        '<input class="emoji-in" data-k="emoji" value="'+esc(l.emoji||'')+'" placeholder="🔗">'+
-        '<input data-k="title" value="'+esc(l.title||'')+'" placeholder="Título">'+
-        '<input data-k="url" value="'+esc(l.url||'')+'" placeholder="https://...">'+
-        '<button class="del" title="remover">✕</button>'+
-      '</div>'+
-      '<div class="row" style="margin-top:-4px"><span class="grab" style="visibility:hidden">⋮⋮</span>'+
-        '<input data-k="desc" value="'+esc(l.desc||'')+'" placeholder="Descrição curta (opcional)"></div>';
-    }).join('<div class="sep"></div>');
-
-    box.innerHTML =
-      '<h3>✏️ Editar links</h3>'+
-      '<p class="hint">Mude, adicione ou remova. Depois clique em <b>Copiar página atualizada</b> e cole no WordPress. Visitantes não veem este painel.</p>'+
-      '<div id="adm-rows">'+rows+'</div>'+
-      '<div class="btns">'+
-        '<button class="act" id="adm-add">+ Adicionar link</button>'+
-        '<button class="act" id="adm-apply">Pré-visualizar</button>'+
-        '<button class="act gold" id="adm-copy">📋 Copiar página atualizada</button>'+
-      '</div>'+
-      '<div class="ok" id="adm-ok"></div>';
-
-    function readRows(){
-      var out = [];
-      var rowsEls = box.querySelectorAll('#adm-rows .row[data-i]');
-      rowsEls.forEach(function(r){
-        var obj = {};
-        // esta row tem emoji/title/url; a próxima irmã tem desc
-        r.querySelectorAll('input').forEach(function(inp){ obj[inp.dataset.k] = inp.value.trim(); });
-        var descRow = r.nextElementSibling;
-        if(descRow){ var di = descRow.querySelector('input[data-k=desc]'); if(di) obj.desc = di.value.trim(); }
-        if(obj.title || obj.url) out.push({emoji:obj.emoji||'', title:obj.title||'', desc:obj.desc||'', url:obj.url||''});
-      });
-      return out;
+  // CSV parser (aguenta virgula dentro de aspas)
+  function parseCSV(text){
+    var rows=[], row=[], cur='', q=false, c; text=text.replace(/\r/g,'');
+    for(var i=0;i<text.length;i++){ c=text[i];
+      if(q){ if(c=='"'){ if(text[i+1]=='"'){cur+='"';i++;} else q=false; } else cur+=c; }
+      else { if(c=='"') q=true; else if(c==',') { row.push(cur); cur=''; }
+        else if(c=='\n'){ row.push(cur); rows.push(row); row=[]; cur=''; } else cur+=c; }
     }
-    function apply(){ setLinks(readRows()); render(); }
-
-    document.getElementById('adm-add').onclick = function(){
-      var arr = readRows(); arr.push({emoji:'🔗', title:'Novo link', desc:'', url:'https://'}); setLinks(arr); buildAdmin();
-    };
-    document.getElementById('adm-apply').onclick = function(){ apply(); document.getElementById('adm-ok').textContent='Pré-visualização atualizada ↓'; };
-    box.querySelectorAll('.del').forEach(function(b){ b.onclick=function(){ var r=b.closest('.row'); var arr=readRows(); var idx=parseInt(r.dataset.i,10); arr.splice(idx,1); setLinks(arr); buildAdmin(); }; });
-    document.getElementById('adm-copy').onclick = function(){
-      apply();
-      // remove a classe admin-on do clone pra exportar a página limpa
-      var clone = root.cloneNode(true);
-      clone.classList.remove('admin-on');
-      var adm = clone.querySelector('#fmlink-admin'); if(adm) adm.innerHTML='';
-      var html = clone.outerHTML;
-      var full = '<!-- INÍCIO -->\n<!--noptimize-->\n'+html+'\n<!--/noptimize-->\n<!-- FIM -->';
-      navigator.clipboard.writeText(full).then(function(){
-        document.getElementById('adm-ok').textContent='✅ Copiado! Cole no bloco HTML da página no WordPress.';
-      }, function(){
-        // fallback
-        var ta=document.createElement('textarea'); ta.value=full; document.body.appendChild(ta); ta.select();
-        try{document.execCommand('copy'); document.getElementById('adm-ok').textContent='✅ Copiado! Cole no WordPress.';}catch(e){document.getElementById('adm-ok').textContent='Selecione e copie manualmente.';}
-        document.body.removeChild(ta);
-      });
-    };
+    if(cur.length||row.length){ row.push(cur); rows.push(row); }
+    return rows;
   }
-  buildAdmin();
-  window.addEventListener('hashchange', buildAdmin);
+  function norm(s){ return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim(); }
+  function rowsToLinks(rows){
+    if(!rows.length) return [];
+    var head = rows[0].map(norm);
+    function idx(names){ for(var j=0;j<head.length;j++){ for(var k=0;k<names.length;k++){ if(head[j].indexOf(names[k])!==-1) return j; } } return -1; }
+    var iE=idx(['emoji','icone']), iT=idx(['titulo','title','nome']), iD=idx(['desc']), iU=idx(['link','url','endereco']);
+    var out=[];
+    for(var r=1;r<rows.length;r++){ var c=rows[r]||[];
+      var o={ emoji:iE>=0?(c[iE]||'').trim():'', title:iT>=0?(c[iT]||'').trim():'', desc:iD>=0?(c[iD]||'').trim():'', url:iU>=0?(c[iU]||'').trim():'' };
+      if(o.title || o.url) out.push(o);
+    }
+    return out;
+  }
+
+  if(SHEET_CSV_URL){
+    render(defaults()); // mostra a lista padrao enquanto a planilha carrega
+    fetch(SHEET_CSV_URL, {cache:'no-store'})
+      .then(function(r){ return r.text(); })
+      .then(function(t){ var l=rowsToLinks(parseCSV(t)); render(l.length?l:defaults()); })
+      .catch(function(){ render(defaults()); });
+  } else {
+    render(defaults());
+  }
 })();
 </script>
 </div>
