@@ -131,6 +131,19 @@
   #fmlink-admin .ok{color:#4ade80; font-size:12.5px; margin-top:10px; min-height:16px;}
 
   @media (max-width:420px){ #fmlink-root .prova-grid{grid-template-columns:1fr 1fr;} }
+
+  /* BLINDAGEM contra o tema do WordPress (que força cor em h1/h2/h3/p/a).
+     Sem isso, textos que herdavam a cor apareciam pretos no fundo escuro. */
+  #fmlink-root .author-name, #fmlink-root .cta-title, #fmlink-root .prova-title{ color:var(--ink) !important; }
+  #fmlink-root a.link-card, #fmlink-root .link-title{ color:var(--ink) !important; }
+  #fmlink-root .cta-text, #fmlink-root .author-bio{ color:var(--ink-2) !important; }
+  #fmlink-root .prova-sub, #fmlink-root .link-desc, #fmlink-root .author-handle, #fmlink-root .foot-note{ color:var(--ink-3) !important; }
+  #fmlink-root .cta-eyebrow, #fmlink-root .section-eyebrow, #fmlink-root .author-role{ color:var(--amber-400) !important; }
+  #fmlink-root .cta-btn{ color:#0a0a0b !important; }
+  #fmlink-root .link-arrow{ color:var(--ink-3) !important; }
+  #fmlink-root a.link-card:hover .link-arrow{ color:var(--amber-400) !important; }
+  /* texto dourado (gradiente) — garante que não vire preto */
+  #fmlink-root .gold{ color:transparent !important; -webkit-text-fill-color:transparent !important; }
 </style>
 
 <div class="warm-glow"></div>
