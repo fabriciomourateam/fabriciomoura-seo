@@ -47,6 +47,12 @@
   #fmreno-root h1, #fmreno-root h2, #fmreno-root h3, #fmreno-root h4,
   #fmreno-root p, #fmreno-root a, #fmreno-root span, #fmreno-root strong,
   #fmreno-root b, #fmreno-root li, #fmreno-root summary, #fmreno-root div{color:var(--ink);}
+  /* o WordPress (wp-emoji) troca emojis por imagens; sem isso elas ficam gigantes (ex.: no painel #admin) */
+  #fmreno-root img.emoji, #fmreno-admin img.emoji{
+    display:inline-block !important; height:1em !important; width:1em !important;
+    margin:0 .07em !important; vertical-align:-.1em !important;
+    padding:0 !important; border:none !important; box-shadow:none !important; background:none !important;
+  }
   #fmreno-root .warm-glow{
     position:absolute; inset:0; pointer-events:none; z-index:0;
     background:radial-gradient(60% 55% at 50% 0%,rgba(230,180,80,.20) 0%,rgba(184,134,11,.07) 40%,rgba(10,10,11,0) 72%);
