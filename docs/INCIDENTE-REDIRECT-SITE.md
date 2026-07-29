@@ -87,6 +87,44 @@ pelo link da bio do Instagram** (o referrer é o gatilho). Ferramentas: `siteche
 - Manter Wordfence com **Firewall (WAF)** ativo.
 - Backups automáticos (foi o backup da Hostinger que salvou agora).
 
+## Ações concluídas (sessão de 29/07)
+- Backup completo via UpdraftPlus (29/07 13:32).
+- Malware removido/confirmado limpo pelo Wordfence e pelo Monarx (Hostinger):
+  `wp-includes/load.php` (reparado) e arquivos plantados em `wp-includes/blocks/`
+  (`post-featured-image-blocks.php`, `query-pagination-numbers-avatar.php`) removidos.
+  Nenhum arquivo malicioso novo desde o restore.
+- Restauração completa (arquivos + banco) para o backup de 22/07.
+- Senhas trocadas: wp-admin + Hostinger.
+- Plugins legítimos atualizados: Rank Math (1.0.275), Jetpack (16.0.1), Site Kit
+  (1.184.0), UpdraftPlus (1.26.6), Header Footer Code Manager (1.1.46).
+- Plugins pirata/redundantes removidos: All-in-One WP Migration (+ Unlimited
+  Extension), Autoptimize.
+- **Wordfence Firewall (WAF) ativo e "Enabled and Protecting"** — principal proteção
+  contra novas tentativas de exploração.
+- Search Console: remoção do prefixo `/de/` + reindexação dos artigos principais.
+
+## Decisão sobre o Elementor Pro (em aberto → risco residual aceito)
+O dono optou por **não** comprar a licença oficial por ora. Como o site depende
+estruturalmente do Pro (widget "Post Content" renderiza o corpo de todas as páginas;
+"Nav Menu" monta o menu), **não é seguro simplesmente remover** sem reconstruir essas
+partes no Elementor free/Astra. Situação atual: **mantém o Elementor Pro pirata, com o
+WAF do Wordfence mitigando.** Risco reduzido, não eliminado — se reinfectar, revisar
+entre comprar o oficial (~US$59/ano) ou reconstruir. Não atualizar Elementor/Elementor
+Pro pelo painel da Hostinger (quebra o "destrave" e derruba o site).
+
+## Efeito colateral do restore: página `/renovacao`
+A restauração ao dia 22/07 removeu páginas criadas depois dessa data (ex.:
+`fabriciomoura.com/renovacao`). Recuperar via: Lixeira/Rascunhos do WordPress, ou
+staging a partir de um backup de 27–29/07 (sem restaurar o backup infectado no site
+ao vivo), ou recriar. Páginas feitas à mão no WP vivem só no banco — não estão no git.
+
+## Monitoramento — próximas semanas
+- Semanal: Search Console → "Segurança e ações manuais" (manter limpo).
+- A cada 2–3 dias: busca `site:fabriciomoura.com` no Google (o total deve cair).
+- Semanal: scan Wordfence/Monarx (0 resultados).
+- Confirmar backups automáticos da Hostinger ativos.
+- Pedir a um aluno testar o link da bio (celular, anônima, via Instagram) — sem redirect.
+
 ## Impacto na automação de blog
 Nenhum. A publicação automática usa a **Application Password** (segredo
 `WP_APP_PASSWORD` no GitHub) + o mu-plugin `rank-math-rest-meta.php`. Reparos, restore
