@@ -1,0 +1,81 @@
+{
+  "data_snapshot": "2026-08-29",
+  "fonte": "Semrush MCP",
+  "database": "br",
+  "site": "fabriciomoura.com",
+  "contexto": "RE-ANÁLISE de acompanhamento (~2,5 meses após a varredura final de 2026-06-19). Objetivo: medir se o orgânico melhorou desde a última análise. Resultado: melhora forte e consistente — o conteúdo publicado (creatina, arroz, cardápio mounjaro, gordura visceral, déficit calórico) foi indexado e começou a rankear. Domínio saiu de ~zero orgânico para 135 keywords.",
+
+  "fabriciomoura_estado": {
+    "rank_global": 1054513,
+    "organic_keywords": 135,
+    "organic_traffic": 39,
+    "organic_traffic_cost": 0,
+    "adwords_keywords": 0,
+    "adwords_traffic": 0,
+    "nota": "Orgânico saiu do zero. As 2 keywords de marca de junho (ivy moura, moura academia) saíram do top por tráfego, substituídas por conteúdo comercial/informacional real. O footprint pago rastreável zerou (era 1 kw / 25 de tráfego em junho)."
+  },
+
+  "evolucao_mensal": {
+    "nota": "Série do resource_rank_history (db br). Trajetória de crescimento clara mês a mês.",
+    "meses": [
+      { "data": "2026-04-15", "rank": 0,       "organic_keywords": 0,   "organic_traffic": 0,  "adwords_keywords": 1, "adwords_traffic": 25 },
+      { "data": "2026-05-15", "rank": 6376679, "organic_keywords": 1,   "organic_traffic": 0,  "adwords_keywords": 1, "adwords_traffic": 25 },
+      { "data": "2026-06-15", "rank": 3592299, "organic_keywords": 11,  "organic_traffic": 0,  "adwords_keywords": 0, "adwords_traffic": 0 },
+      { "data": "2026-07-15", "rank": 1021395, "organic_keywords": 67,  "organic_traffic": 42, "adwords_keywords": 0, "adwords_traffic": 0 },
+      { "data": "2026-08-29", "rank": 1054513, "organic_keywords": 135, "organic_traffic": 39, "adwords_keywords": 0, "adwords_traffic": 0 }
+    ]
+  },
+
+  "comparacao_vs_2026_06_19": {
+    "rank_global":        { "antes": 5132062, "agora": 1054513, "delta": "≈4,9x melhor (número menor = melhor)" },
+    "organic_keywords":   { "antes": 2,       "agora": 135,     "delta": "+133" },
+    "organic_traffic":    { "antes": 0,       "agora": 39,      "delta": "+39" },
+    "authority_score":    { "antes": 2,       "agora": 7,       "delta": "+5" },
+    "trust_score":        { "antes": 2,       "agora": 7,       "delta": "+5" },
+    "backlinks_total":    { "antes": 264,     "agora": 303,     "delta": "+39" },
+    "referring_domains":  { "antes": 97,      "agora": 115,     "delta": "+18" },
+    "follow_links":       { "antes": 119,     "agora": 137,     "delta": "+18" }
+  },
+
+  "backlinks": {
+    "fabriciomoura.com": { "authority_score": 7, "trust_score": 7, "total": 303, "referring_domains": 115, "follow": 137, "nofollow": 164 },
+    "leitura": "Authority Score subiu de 2 para 7 (raphaelnutri estava em 11 na última medição). O gap de autoridade caiu bastante. Mais domínios follow entrando naturalmente com o conteúdo."
+  },
+
+  "keywords_com_trafego": [
+    { "kw": "creatina engorda",                          "pos": 32, "vol": 18100, "cpc": 0.02, "trafego": 12, "url": "/creatina-engorda/" },
+    { "kw": "arroz engorda",                             "pos": 18, "vol": 5400,  "cpc": 0.05, "trafego": 8,  "url": "/arroz-engorda/" },
+    { "kw": "cardápio para quem toma mounjaro",          "pos": 17, "vol": 1600,  "cpc": 0.19, "trafego": 4,  "url": "/cardapio-para-quem-toma-mounjaro/" },
+    { "kw": "dieta para quem toma mounjaro",             "pos": 17, "vol": 1300,  "cpc": 0.20, "trafego": 3,  "url": "/cardapio-para-quem-toma-mounjaro/" },
+    { "kw": "cardapio para quem toma mounjaro",          "pos": 16, "vol": 1000,  "cpc": 0.19, "trafego": 3,  "url": "/cardapio-para-quem-toma-mounjaro/" },
+    { "kw": "o que comer tomando mounjaro",              "pos": 16, "vol": 880,   "cpc": 0.26, "trafego": 2,  "url": "/cardapio-para-quem-toma-mounjaro/" },
+    { "kw": "cardapio para quem esta tomando mounjaro",  "pos": 11, "vol": 170,   "cpc": 0.18, "trafego": 1,  "url": "/cardapio-para-quem-toma-mounjaro/" },
+    { "kw": "dieta da selva funciona",                   "pos": 17, "vol": 480,   "cpc": 0.16, "trafego": 1,  "url": "/dieta-da-selva-funciona/" }
+  ],
+
+  "quase_pagina_1": {
+    "nota": "Cluster Mounjaro (cardápio) é o mais perto do topo — KDI baixo (6-21) e já em pos 11-17. Um empurrão on-page (título, FAQ, links internos, backlink interno) pode furar a página 1 e destravar tráfego real.",
+    "termos": [
+      { "kw": "o que comer quando toma mounjaro", "pos": 15, "vol": 210, "kdi": 9 },
+      { "kw": "cardapio mounjaro",                "pos": 15, "vol": 90,  "kdi": 20 },
+      { "kw": "cardapio para quem esta tomando mounjaro", "pos": 11, "vol": 170, "kdi": 21 }
+    ]
+  },
+
+  "precisa_de_reforco": {
+    "nota": "Páginas indexadas mas ainda no fundo (pos 43-81) — potencial alto travado. Volume grande, mas longe de tráfego. São os próximos alvos de otimização on-page e links internos.",
+    "clusters": [
+      { "pagina": "/gordura-visceral/",  "faixa_pos": "43-69", "destaque": "o que é gordura visceral (vol 3600) em pos 60; gordura visceral ideal (vol 2400) em pos 69" },
+      { "pagina": "/deficit-calorico/",  "faixa_pos": "48-81", "destaque": "como calcular deficit calorico (vol 1300) em pos 52; déficit calórico calcular (vol 1000) em pos 49" }
+    ]
+  },
+
+  "leitura_geral": "Melhorou — e muito. Em ~2,5 meses o site saiu de presença orgânica praticamente nula (2 keywords de marca, tráfego 0) para 135 keywords e tráfego orgânico estimado começando a aparecer, com Authority Score 2→7. A tese do projeto (conteúdo vence o gap de autoridade) está se confirmando. Ainda não há nada na página 1, mas a trajetória é de crescimento acelerado (2→11→67→135 keywords) e o cluster Mounjaro está a um empurrão do topo. Próximos ganhos: (1) otimizar on-page o cluster Mounjaro para furar a pág. 1; (2) reforçar gordura visceral e déficit calórico, que estão indexados mas no fundo.",
+
+  "queries_executadas": [
+    { "report": "domain_rank",          "params": { "database": "br", "target": "fabriciomoura.com" } },
+    { "report": "resource_rank_history", "params": { "database": "br", "target": "fabriciomoura.com", "display_sort": "date_desc" } },
+    { "report": "resource_organic",      "params": { "database": "br", "target": "fabriciomoura.com", "display_sort": "traffic_desc", "display_limit": 40 } },
+    { "report": "backlinks_overview",    "params": { "target": "fabriciomoura.com", "target_type": "root_domain" } }
+  ]
+}
