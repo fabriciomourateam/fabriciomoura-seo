@@ -149,7 +149,19 @@ window.SEO_DATA = {
         { mes: 3, titulo: "Recomposição corporal: como perder gordura e ganhar músculo", funil: "Topo", kw: "recomposição corporal", vol: 0, prioridade: "Média", status: "Planejado" },
         { mes: 3, titulo: "Melhor horário para se pesar no emagrecimento", funil: "Topo", kw: "melhor horário para se pesar", vol: 0, prioridade: "Baixa", status: "Planejado" },
         { mes: 3, titulo: "Whey protein engorda? Mitos e verdades", funil: "Meio", kw: "whey engorda", vol: 0, prioridade: "Média", status: "Planejado" },
-        { mes: 3, titulo: "Nutricionista online vs presencial: qual escolher", funil: "Fundo", kw: "nutricionista online ou presencial", vol: 0, prioridade: "Alta", status: "Planejado" }
+        { mes: 3, titulo: "Nutricionista online vs presencial: qual escolher", funil: "Fundo", kw: "nutricionista online ou presencial", vol: 0, prioridade: "Alta", status: "Planejado" },
+
+        // MÊS 4 — Reabastecimento (cluster Mounjaro/GLP-1 + emagrecimento de alto volume)
+        { mes: 4, titulo: "Efeitos colaterais do Mounjaro e como amenizar com a alimentação", funil: "Topo", kw: "efeitos colaterais mounjaro", vol: 8100, prioridade: "Alta", status: "Planejado" },
+        { mes: 4, titulo: "Quantas calorias por dia para emagrecer de verdade", funil: "Topo", kw: "quantas calorias por dia para emagrecer", vol: 6600, prioridade: "Alta", status: "Planejado" },
+        { mes: 4, titulo: "Cardápio simples para emagrecer com saúde", funil: "Fundo", kw: "cardápio para emagrecer", vol: 5400, prioridade: "Alta", status: "Planejado" },
+        { mes: 4, titulo: "O que acontece quando para de tomar Mounjaro (efeito rebote)", funil: "Topo", kw: "parar de tomar mounjaro", vol: 2900, prioridade: "Alta", status: "Planejado" },
+        { mes: 4, titulo: "Como não perder músculo tomando Mounjaro", funil: "Meio", kw: "perder massa muscular mounjaro", vol: 1300, prioridade: "Alta", status: "Planejado" },
+        { mes: 4, titulo: "Mounjaro ou Ozempic: qual a diferença para emagrecer", funil: "Topo", kw: "mounjaro ou ozempic", vol: 4400, prioridade: "Média", status: "Planejado" },
+        { mes: 4, titulo: "Como acelerar o metabolismo de verdade", funil: "Topo", kw: "como acelerar o metabolismo", vol: 3600, prioridade: "Média", status: "Planejado" },
+        { mes: 4, titulo: "Ovo engorda? O que diz o nutricionista", funil: "Meio", kw: "ovo engorda", vol: 2400, prioridade: "Média", status: "Planejado" },
+        { mes: 4, titulo: "Jejum intermitente emagrece mesmo? Nutricionista avalia", funil: "Meio", kw: "jejum intermitente emagrece", vol: 2900, prioridade: "Média", status: "Planejado" },
+        { mes: 4, titulo: "Quanta proteína por dia para ganhar massa muscular", funil: "Meio", kw: "quantas gramas de proteina por dia", vol: 1900, prioridade: "Média", status: "Planejado" }
       ],
 
       // ---- Fase 3: Análise de tráfego pago (PPC) — dados reais Semrush (banco br) ----
