@@ -161,7 +161,21 @@ window.SEO_DATA = {
         { mes: 4, titulo: "Como acelerar o metabolismo de verdade", funil: "Topo", kw: "como acelerar o metabolismo", vol: 3600, prioridade: "Média", status: "Planejado" },
         { mes: 4, titulo: "Ovo engorda? O que diz o nutricionista", funil: "Meio", kw: "ovo engorda", vol: 2400, prioridade: "Média", status: "Planejado" },
         { mes: 4, titulo: "Jejum intermitente emagrece mesmo? Nutricionista avalia", funil: "Meio", kw: "jejum intermitente emagrece", vol: 2900, prioridade: "Média", status: "Planejado" },
-        { mes: 4, titulo: "Quanta proteína por dia para ganhar massa muscular", funil: "Meio", kw: "quantas gramas de proteina por dia", vol: 1900, prioridade: "Média", status: "Planejado" }
+        { mes: 4, titulo: "Quanta proteína por dia para ganhar massa muscular", funil: "Meio", kw: "quantas gramas de proteina por dia", vol: 1900, prioridade: "Média", status: "Planejado" },
+        // MÊS 0 — Retatrutida (GLP-1 explodindo, baixa concorrência): publica JÁ, vantagem de 1º.
+        // Ângulo educativo/decisão + preservação de músculo (funil pro acompanhamento). Nada de dose/compra.
+        { mes: 0, titulo: "Retatrutida: o que é, como age e o que avaliar antes de considerar", funil: "Topo", kw: "retatrutida", vol: 40500, prioridade: "Alta", status: "Planejado" },
+        { mes: 0, titulo: "Retatrutida ou Mounjaro: diferenças, resultados e qual faz mais sentido", funil: "Meio", kw: "retatrutida ou mounjaro", vol: 590, prioridade: "Alta", status: "Planejado" },
+        { mes: 0, titulo: "Efeitos colaterais da retatrutida: o que esperar e como se cuidar", funil: "Topo", kw: "retatrutida efeitos colaterais", vol: 170, prioridade: "Alta", status: "Planejado" },
+        { mes: 0, titulo: "Retatrutida e músculo: como emagrecer sem perder massa magra", funil: "Meio", kw: "retatrutida massa muscular", vol: 0, prioridade: "Alta", status: "Planejado" },
+        // MÊS 5 — Cluster hormonal/esteroides no ângulo EDUCATIVO / redução de dano / TPC.
+        // ⚠ ANTI-BAN: sem dose, sem "onde comprar", sem promessa. Educação, riscos e recuperação → funil.
+        { mes: 5, titulo: "Andropausa: sintomas de testosterona baixa e o que fazer", funil: "Topo", kw: "andropausa sintomas", vol: 8100, prioridade: "Alta", status: "Planejado" },
+        { mes: 5, titulo: "Terapia pós-ciclo (TPC): como recuperar sua testosterona com saúde", funil: "Meio", kw: "terapia pos ciclo", vol: 260, prioridade: "Alta", status: "Planejado" },
+        { mes: 5, titulo: "Deca Durabolin: para que serve, o que faz no corpo e os riscos reais", funil: "Topo", kw: "deca durabolin para que serve", vol: 6600, prioridade: "Média", status: "Planejado" },
+        { mes: 5, titulo: "Masteron: o que é, para que serve e por que exige acompanhamento", funil: "Topo", kw: "masteron para que serve", vol: 5400, prioridade: "Média", status: "Planejado" },
+        { mes: 5, titulo: "Efeitos colaterais do Deca Durabolin no corpo e nos seus hormônios", funil: "Topo", kw: "deca durabolin efeitos colaterais", vol: 1000, prioridade: "Média", status: "Planejado" },
+        { mes: 5, titulo: "Efeitos colaterais do Masteron: o que ninguém te conta antes", funil: "Topo", kw: "masteron efeitos colaterais", vol: 880, prioridade: "Média", status: "Planejado" }
       ],
 
       // ---- Fase 3: Análise de tráfego pago (PPC) — dados reais Semrush (banco br) ----
