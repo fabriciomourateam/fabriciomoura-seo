@@ -173,9 +173,9 @@ window.SEO_DATA = {
         { mes: 5, titulo: "Andropausa: sintomas de testosterona baixa e o que fazer", funil: "Topo", kw: "andropausa sintomas", vol: 8100, prioridade: "Alta", status: "Planejado" },
         { mes: 5, titulo: "Terapia pós-ciclo (TPC): como recuperar sua testosterona com saúde", funil: "Meio", kw: "terapia pos ciclo", vol: 260, prioridade: "Alta", status: "Planejado" },
         { mes: 5, titulo: "Deca Durabolin: para que serve, o que faz no corpo e os riscos reais", funil: "Topo", kw: "deca durabolin para que serve", vol: 6600, prioridade: "Média", status: "Planejado" },
-        { mes: 5, titulo: "Masteron: o que é, para que serve e por que exige acompanhamento", funil: "Topo", kw: "masteron para que serve", vol: 5400, prioridade: "Média", status: "Planejado" },
+        { mes: 0, titulo: "Masteron: o que é, para que serve e por que exige acompanhamento", funil: "Topo", kw: "masteron para que serve", vol: 5400, prioridade: "Média", status: "Planejado" },
         { mes: 5, titulo: "Efeitos colaterais do Deca Durabolin no corpo e nos seus hormônios", funil: "Topo", kw: "deca durabolin efeitos colaterais", vol: 1000, prioridade: "Média", status: "Planejado" },
-        { mes: 5, titulo: "Efeitos colaterais do Masteron: o que ninguém te conta antes", funil: "Topo", kw: "masteron efeitos colaterais", vol: 880, prioridade: "Média", status: "Planejado" }
+        { mes: 0, titulo: "Efeitos colaterais do Masteron: o que ninguém te conta antes", funil: "Topo", kw: "masteron efeitos colaterais", vol: 880, prioridade: "Média", status: "Planejado" }
       ],
 
       // ---- Fase 3: Análise de tráfego pago (PPC) — dados reais Semrush (banco br) ----
