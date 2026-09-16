@@ -1,0 +1,74 @@
+{
+  "data_snapshot": "2026-09-16",
+  "fonte": "Semrush MCP",
+  "database": "br",
+  "site": "fabriciomoura.com",
+  "contexto": "Re-análise de acompanhamento ~2,5 semanas após a grande rodada de otimização on-page de 2026-08-29 (cluster Mounjaro, dieta da selva, creatina, gordura visceral, déficit calórico, links internos p/ páginas de serviço, disavow). Objetivo: medir o efeito. Leitura: indicadores de base (autoridade, backlinks, nº de keywords) continuam subindo; posições nos termos de dinheiro ainda NÃO se moveram (janela curta demais para o Google reavaliar um refresh grande).",
+
+  "fabriciomoura_estado": {
+    "rank_global": 1238770,
+    "organic_keywords": 152,
+    "organic_traffic": 25,
+    "organic_traffic_cost": 0,
+    "adwords_keywords": 0,
+    "adwords_traffic": 0,
+    "nota": "Keywords continuam subindo (135->152). Tráfego estimado oscilou pra baixo (39->25) — ruído normal do modelo do Semrush nessa escala minúscula (25-40 visitas). Rank global piorou de leve, dentro do ruído."
+  },
+
+  "backlinks": {
+    "fabriciomoura.com": { "authority_score": 8, "trust_score": 8, "total": 337, "referring_domains": 157, "follow": 164, "nofollow": 173 },
+    "raphaelnutri.com": { "authority_score": 12, "trust_score": 12, "total": 1433, "referring_domains": 200, "follow": 1074 },
+    "leitura": "AS 7->8. Domínios referenciadores deram um salto (115->157, +42) — provável efeito do disavow limpando o perfil + novos links naturais. Segue colado no concorrente em nº de domínios (157 vs 200 = 78%)."
+  },
+
+  "raphaelnutri_estado": {
+    "rank_global": 52343, "organic_keywords": 861, "organic_traffic": 5969, "authority_score": 12,
+    "nota": "O concorrente também cresceu no período (tráfego 5548->5969, AS 11->12, ref domains 148->200). Alvo em movimento, não parado."
+  },
+
+  "comparacao_vs_2026_08_29": {
+    "rank_global":        { "antes": 1054513, "agora": 1238770, "delta": "levemente pior (ruído)" },
+    "organic_keywords":   { "antes": 135,     "agora": 152,     "delta": "+17 (segue subindo)" },
+    "organic_traffic":    { "antes": 39,      "agora": 25,      "delta": "-14 (ruído do modelo nessa escala)" },
+    "authority_score":    { "antes": 7,       "agora": 8,       "delta": "+1" },
+    "trust_score":        { "antes": 7,       "agora": 8,       "delta": "+1" },
+    "backlinks_total":    { "antes": 303,     "agora": 337,     "delta": "+34" },
+    "referring_domains":  { "antes": 115,     "agora": 157,     "delta": "+42" },
+    "follow_links":       { "antes": 137,     "agora": 164,     "delta": "+27" }
+  },
+
+  "perguntas_do_ciclo": {
+    "a_mounjaro_top10": "NÃO ainda. O cluster está estável a levemente pior: 'cardapio para quem toma mounjaro' (2400) caiu de pos 16 para 23; 'dieta para quem toma mounjaro' e 'o que comer tomando mounjaro' estáveis (17 e 16); o mais perto do top 10 é 'cardapio para quem esta tomando mounjaro' pos 11 (vol só 170).",
+    "b_paginas_servico_top100": "NÃO. Filtro por 'nutricionista' retornou NOTHING FOUND — /nutricionista-esportivo e /nutricionista-online seguem fora do top 100, igual em agosto.",
+    "c_evolucao_base_vs_concorrente": "Keywords +17, AS +1, +42 domínios referenciadores. A distância de tráfego pro raphael continua grande (25 vs 5.969) e o gap de AS segue em 4 pontos (8 vs 12), porque ele também cresceu.",
+    "d_paginas_reforcadas": "creatina engorda SUBIU (pos 32->26, vol 18.100, página 3). gordura visceral (head 22.200) segue ~pos 57, página 6, estável. déficit calórico segue no fundo (48-81), estável. dieta da selva saiu do top 40 por tráfego (tráfego estimado zerou)."
+  },
+
+  "keywords_com_trafego": [
+    { "kw": "creatina engorda",                          "pos": 26, "prev": 32, "vol": 18100, "trafego": 12, "url": "/creatina-engorda/", "nota": "subiu 6 posições" },
+    { "kw": "cardápio para quem toma mounjaro",          "pos": 23, "vol": 2900, "trafego": 4,  "url": "/cardapio-para-quem-toma-mounjaro/" },
+    { "kw": "dieta para quem toma mounjaro",             "pos": 17, "vol": 1300, "trafego": 3,  "url": "/cardapio-para-quem-toma-mounjaro/" },
+    { "kw": "cardapio para quem toma mounjaro",          "pos": 23, "prev": 16, "vol": 2400, "trafego": 3, "url": "/cardapio-para-quem-toma-mounjaro/", "nota": "caiu de 16 para 23" },
+    { "kw": "o que comer tomando mounjaro",              "pos": 16, "vol": 880,  "trafego": 2,  "url": "/cardapio-para-quem-toma-mounjaro/" },
+    { "kw": "cardapio para quem esta tomando mounjaro",  "pos": 11, "vol": 170,  "trafego": 1,  "url": "/cardapio-para-quem-toma-mounjaro/", "nota": "o mais perto do top 10" }
+  ],
+
+  "leitura_geral": "Cedo demais para veredito. Republicamos o grosso do conteúdo em ~29/08 e o Google costuma levar de 1 a 3 meses para reavaliar posições após um refresh grande. Os indicadores ANTECEDENTES (autoridade, backlinks, domínios referenciadores, nº de keywords) continuam na direção certa e subindo. Os indicadores CONSEQUENTES (posição nos termos comerciais, tráfego) ainda não reagiram, e 'cardapio para quem toma mounjaro' até recuou. Sem alarme: é o padrão de uma janela curta. Recomendo próxima medição em ~4-6 semanas.",
+
+  "recomendacoes": [
+    "Paciência com a janela: medir de novo por volta de 2026-10-20 (6-8 semanas do refresh) para o veredito real.",
+    "Investigar o recuo de 'cardapio para quem toma mounjaro' (16->23): confirmar no GSC que o 301 de /o-que-comer-tomando-mounjaro está ativo e que a página do cardápio não teve queda de indexação após a republicação.",
+    "Garantir reindexação no GSC de todas as páginas mexidas (se ainda houver alguma pendente).",
+    "Manter o link building leve: os +42 domínios referenciadores mostram que essa alavanca está funcionando; continuar."
+  ],
+
+  "queries_executadas": [
+    { "report": "domain_rank",          "params": { "database": "br", "target": "fabriciomoura.com" } },
+    { "report": "resource_rank_history", "params": { "database": "br", "target": "fabriciomoura.com", "display_sort": "date_desc" } },
+    { "report": "resource_organic",      "params": { "database": "br", "target": "fabriciomoura.com", "display_sort": "traffic_desc", "display_limit": 40 } },
+    { "report": "resource_organic",      "params": { "database": "br", "target": "fabriciomoura.com", "display_filter": "keyword contains nutricionista", "resultado": "NOTHING FOUND" } },
+    { "report": "backlinks_overview",    "params": { "target": "fabriciomoura.com", "target_type": "root_domain" } },
+    { "report": "domain_rank",          "params": { "database": "br", "target": "raphaelnutri.com" } },
+    { "report": "backlinks_overview",    "params": { "target": "raphaelnutri.com", "target_type": "root_domain" } }
+  ]
+}
