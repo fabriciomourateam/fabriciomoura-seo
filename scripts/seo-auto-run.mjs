@@ -7,10 +7,12 @@
  *      que ainda não foi publicado (controle em scripts/seo-published.json).
  *   2. Gera o artigo HTML completo no MESMO template premium (usa um artigo
  *      existente como modelo de formato) via API da Anthropic.
- *   3. Salva em blog/<slug>.html e publica no WordPress (publish-to-wp.mjs).
+ *   3. Salva em blog/<slug>.html e publica no site (publish-to-site.mjs, Next.js na Vercel).
+ *      Sem os segredos do site, cai no WordPress antigo (publish-to-wp.mjs).
  *   4. Marca o tópico como publicado. A Action faz commit dos arquivos alterados.
  *
- * Segredos (env): ANTHROPIC_API_KEY, WP_URL, WP_USER, WP_APP_PASSWORD
+ * Segredos (env): ANTHROPIC_API_KEY + SITE_URL, BLOG_API_TOKEN (site novo)
+ *                 ou WP_URL, WP_USER, WP_APP_PASSWORD (WordPress antigo, usado só se faltar o do site)
  * Opcionais: SEO_MODEL (default claude-sonnet-4-6), PUBLISH_STATUS (default publish)
  * Teste: GEN_DRY_RUN=1  → não chama IA nem WordPress; valida seleção/fila/escrita.
  */
@@ -155,13 +157,16 @@ writeFileSync(ROOT + outFile, html, 'utf8');
 console.log(`✅ Artigo escrito: ${outFile} (${html.length} caracteres)`);
 
 if (dryRun) {
-  console.log('🟡 GEN_DRY_RUN — não publiquei no WordPress nem atualizei a fila.');
+  console.log('🟡 GEN_DRY_RUN — não publiquei nem atualizei a fila.');
   process.exit(0);
 }
 
 // 3. Publicar
 const status = process.env.PUBLISH_STATUS || 'publish';
-execFileSync('node', [ROOT + 'scripts/publish-to-wp.mjs', ROOT + outFile, status], { stdio: 'inherit' });
+const paraSite = !!(process.env.SITE_URL && process.env.BLOG_API_TOKEN);
+const publisher = paraSite ? 'scripts/publish-to-site.mjs' : 'scripts/publish-to-wp.mjs';
+console.log(`Publicando em: ${paraSite ? 'site novo (' + process.env.SITE_URL + ')' : 'WordPress'}`);
+execFileSync('node', [ROOT + publisher, ROOT + outFile, status], { stdio: 'inherit' });
 
 // 4. Marcar como publicado
 published.push({ kw: topic.kw, slug, titulo: topic.titulo, file: outFile, date: new Date().toISOString().slice(0, 10) });

@@ -1,0 +1,35 @@
+name: Publicar artigo no site
+
+# Botão manual: aba Actions → "Publicar artigo no site" → Run workflow.
+# Publica um arquivo de blog/ no site novo (fabriciomoura.com/<slug>/). Mesmo slug = atualiza.
+on:
+  workflow_dispatch:
+    inputs:
+      file:
+        description: 'Arquivo do artigo (ex.: blog/creatina-engorda.html)'
+        required: true
+        type: string
+      status:
+        description: 'Publicar direto ou deixar como rascunho?'
+        required: true
+        default: 'draft'
+        type: choice
+        options:
+          - draft
+          - publish
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Publicar
+        env:
+          SITE_URL: ${{ secrets.SITE_URL }}
+          BLOG_API_TOKEN: ${{ secrets.BLOG_API_TOKEN }}
+          INPUT_FILE: ${{ inputs.file }}
+          INPUT_STATUS: ${{ inputs.status }}
+        run: node scripts/publish-to-site.mjs
