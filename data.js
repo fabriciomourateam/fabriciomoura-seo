@@ -171,10 +171,10 @@ window.SEO_DATA = {
         // MÊS 5 — Cluster hormonal/esteroides no ângulo EDUCATIVO / redução de dano / TPC.
         // ⚠ ANTI-BAN: sem dose, sem "onde comprar", sem promessa. Educação, riscos e recuperação → funil.
         { mes: 5, titulo: "Andropausa: sintomas de testosterona baixa e o que fazer", funil: "Topo", kw: "andropausa sintomas", vol: 8100, prioridade: "Alta", status: "Planejado" },
-        { mes: 5, titulo: "Terapia pós-ciclo (TPC): como recuperar sua testosterona com saúde", funil: "Meio", kw: "terapia pos ciclo", vol: 260, prioridade: "Alta", status: "Planejado" },
-        { mes: 5, titulo: "Deca Durabolin: para que serve, o que faz no corpo e os riscos reais", funil: "Topo", kw: "deca durabolin para que serve", vol: 6600, prioridade: "Média", status: "Planejado" },
+        { mes: 5, titulo: "Terapia pós-ciclo (TPC): como recuperar sua testosterona com saúde", funil: "Meio", kw: "terapia pos ciclo", vol: 260, prioridade: "Alta", status: "Cancelado", nota: "Cancelado 23/10/2026: Google Ads reprovou o domínio por Substâncias não aprovadas (anabolizante). Não publicar." },
+        { mes: 5, titulo: "Deca Durabolin: para que serve, o que faz no corpo e os riscos reais", funil: "Topo", kw: "deca durabolin para que serve", vol: 6600, prioridade: "Média", status: "Cancelado", nota: "Cancelado 23/10/2026: Google Ads reprovou o domínio por Substâncias não aprovadas (anabolizante). Não publicar." },
         { mes: 0, titulo: "Masteron: o que é, para que serve e por que exige acompanhamento", funil: "Topo", kw: "masteron para que serve", vol: 5400, prioridade: "Média", status: "Planejado" },
-        { mes: 5, titulo: "Efeitos colaterais do Deca Durabolin no corpo e nos seus hormônios", funil: "Topo", kw: "deca durabolin efeitos colaterais", vol: 1000, prioridade: "Média", status: "Planejado" },
+        { mes: 5, titulo: "Efeitos colaterais do Deca Durabolin no corpo e nos seus hormônios", funil: "Topo", kw: "deca durabolin efeitos colaterais", vol: 1000, prioridade: "Média", status: "Cancelado", nota: "Cancelado 23/10/2026: Google Ads reprovou o domínio por Substâncias não aprovadas (anabolizante). Não publicar." },
         { mes: 0, titulo: "Efeitos colaterais do Masteron: o que ninguém te conta antes", funil: "Topo", kw: "masteron efeitos colaterais", vol: 880, prioridade: "Média", status: "Planejado" }
       ],
 
