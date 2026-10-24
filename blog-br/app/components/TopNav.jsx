@@ -18,7 +18,7 @@ export default function TopNav({ inicio = false, variant, artigos = true }) {
           )}
         </div>
         <span className="topnav__sep" aria-hidden="true">|</span>
-        <a className="topnav__item" href={CALCULADORA}>Calculadora de IMC e Calorias</a>
+        <a className="topnav__item" href={CALCULADORA} target="_blank" rel="noopener">Calculadora de IMC e Calorias</a>
       </nav>
       <details className="topnav__mobile">
         <summary aria-label="Abrir menu"><span /><span /><span /></summary>
@@ -27,7 +27,7 @@ export default function TopNav({ inicio = false, variant, artigos = true }) {
           <li><a href="/">Conteúdo Semanal</a></li>
           {posts.map((p) => <li key={p.slug} className="sub"><a href={postUrl(p.slug)}>{p.title}</a></li>)}
           {artigos && <li className="sub"><a href="/"><b>Ver todos os artigos</b></a></li>}
-          <li><a href={CALCULADORA}>Calculadora de IMC e Calorias</a></li>
+          <li><a href={CALCULADORA} target="_blank" rel="noopener">Calculadora de IMC e Calorias</a></li>
         </ul>
       </details>
     </header>
