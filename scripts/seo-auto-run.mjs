@@ -52,7 +52,8 @@ function pickTopic(items, doneKws) {
   const pending = items
     .filter(i => i.status === 'Planejado' && !doneKws.has(norm(i.kw)))
     // trava 24/10: tema de anabolizante/medicamento nunca vai pro domínio principal
-    .filter(i => { const t = termosProibidos(`${i.titulo} ${i.kw}`); if (t.length) console.log(`⏭️  Pulado (tema proibido: ${t.join(', ')}): ${i.titulo}`); return !t.length; })
+    // trava 24/10: tema de anabolizante/medicamento nunca vai pro domínio principal; vai pro blog separado (fabriciomoura.blog.br)
+    .map(i => ({ ...i, destino: termosProibidos(`${i.titulo} ${i.kw}`).length ? 'blogbr' : 'site' }))
     // não sobrescreve artigo que já existe escrito à mão em blog/
     .filter(i => !existsSync(`${ROOT}blog/${slugify(i.kw)}.html`))
     .sort((a, b) =>
@@ -154,7 +155,12 @@ console.log('📝 Próximo tópico:', topic.titulo, `(kw: ${topic.kw}, mês ${to
 const template = readFileSync(TEMPLATE_FILE, 'utf8');
 const html = await generate(topic, template);
 validate(html);
-travarSeProibido(html, 'Artigo gerado');
+// texto com tema proibido também vai pro blog separado, nunca pro fabriciomoura.com
+if (topic.destino !== 'blogbr' && termosProibidos(html).length) {
+  console.log(`↪️  Texto gerado cita ${termosProibidos(html).join(', ')}: vai para o blog separado.`);
+  topic.destino = 'blogbr';
+}
+if (topic.destino !== 'blogbr') travarSeProibido(html, 'Artigo gerado');
 const slug = slugFromHtml(html) || slugify(topic.kw);
 const outFile = `blog/${slug}.html`;
 writeFileSync(ROOT + outFile, html, 'utf8');
@@ -167,12 +173,19 @@ if (dryRun) {
 
 // 3. Publicar
 const status = process.env.PUBLISH_STATUS || 'publish';
+if (topic.destino === 'blogbr') {
+  // blog separado: vira blog-br/posts/<slug>.json; o workflow commita e a Vercel publica (projeto blog-fabriciomoura)
+  if (status !== 'publish') { console.log('🟡 Rascunho pedido: não publiquei no blog separado.'); process.exit(0); }
+  console.log('Publicando em: blog separado (https://fabriciomoura.blog.br)');
+  execFileSync('node', [ROOT + 'blog-br/scripts/html-para-post.mjs', ROOT + outFile], { stdio: 'inherit' });
+} else {
 const paraSite = !!(process.env.SITE_URL && process.env.BLOG_API_TOKEN);
 const publisher = paraSite ? 'scripts/publish-to-site.mjs' : 'scripts/publish-to-wp.mjs';
 console.log(`Publicando em: ${paraSite ? 'site novo (' + process.env.SITE_URL + ')' : 'WordPress'}`);
 execFileSync('node', [ROOT + publisher, ROOT + outFile, status], { stdio: 'inherit' });
+}
 
 // 4. Marcar como publicado
-published.push({ kw: topic.kw, slug, titulo: topic.titulo, file: outFile, date: new Date().toISOString().slice(0, 10) });
+published.push({ kw: topic.kw, slug, titulo: topic.titulo, file: outFile, destino: topic.destino, date: new Date().toISOString().slice(0, 10) });
 writeFileSync(PUBLISHED_FILE, JSON.stringify(published, null, 2) + '\n', 'utf8');
 console.log('✅ Marcado como publicado na fila. Total publicados:', published.length);
