@@ -16,6 +16,7 @@
  *   BLOG_API_TOKEN  o mesmo valor configurado na Vercel (projeto site-fabriciomoura)
  */
 import { readFileSync } from 'node:fs';
+import { travarSeProibido } from './temas-proibidos.mjs';
 import { basename } from 'node:path';
 
 const file   = process.argv[2] || process.env.INPUT_FILE;
@@ -26,6 +27,7 @@ if (!file) { console.error('❌ Informe o arquivo. Ex.: node scripts/publish-to-
 if (!['draft', 'publish'].includes(status)) { console.error(`❌ status inválido: "${status}". Use draft ou publish.`); process.exit(1); }
 
 const html = readFileSync(file, 'utf8');
+travarSeProibido(html, file);
 const pick = (re) => { const m = html.match(re); return m ? m[1].trim() : ''; };
 
 let title = pick(/(?:^|\n)\s*\d*\.?\s*Título:\s*(.+)/);
