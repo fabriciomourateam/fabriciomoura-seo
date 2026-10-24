@@ -85,7 +85,7 @@
 .bl-hero__sub { margin: 20px 0 0; max-width: 54ch; color: var(--mut); font-size: .98rem; line-height: 1.65; text-wrap: pretty; }
 .bl-autor { padding: 6px; border-radius: var(--r-out); background: rgba(255, 233, 168, .03); border: 1px solid var(--line); }
 .bl-autor__core {
-  display: grid; grid-template-columns: 1fr; gap: 14px 16px; align-items: center; padding: 18px; border-radius: var(--r-in);
+  display: grid; grid-template-columns: auto 1fr; gap: 14px 16px; align-items: center; padding: 18px; border-radius: var(--r-in);
   background: linear-gradient(160deg, var(--s2), var(--s1)); box-shadow: inset 0 1px 0 rgba(255, 233, 168, .08);
 }
 .bl-autor__foto { width: 64px; height: 64px; border-radius: 22px; overflow: hidden; padding: 2px; background: var(--gold); }
@@ -317,3 +317,12 @@
   .cx-trust { border-radius: 22px; }
   .cx-field select { font-size: .86rem; padding-left: 12px; }
 }
+
+/* ---------- Extras do blog.br (aviso médico e caixa do autor nos artigos) ---------- */
+.bl-wrap-narrow { width: min(760px, 100% - 40px); margin-inline: auto; }
+.bl-aviso { margin: 48px auto 0; padding: 18px 20px; border-radius: 14px; border: 1px solid rgba(252, 212, 4, .35); background: rgba(252, 212, 4, .06); color: #f4efe4; font-size: .9rem; line-height: 1.6; }
+.bl-aviso strong { color: #fcd404; }
+.bl-autor--post { margin: 24px auto 0; }
+.bl-notfound { text-align: center; padding: 100px 20px 120px; }
+.bl-notfound h1 { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; font-size: clamp(2.4rem, 6vw, 4rem); margin: 0 0 16px; color: #fcd404; }
+.bl-notfound p { color: #a8a191; margin: 0 0 28px; }

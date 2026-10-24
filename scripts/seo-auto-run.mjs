@@ -183,6 +183,8 @@ const paraSite = !!(process.env.SITE_URL && process.env.BLOG_API_TOKEN);
 const publisher = paraSite ? 'scripts/publish-to-site.mjs' : 'scripts/publish-to-wp.mjs';
 console.log(`Publicando em: ${paraSite ? 'site novo (' + process.env.SITE_URL + ')' : 'WordPress'}`);
 execFileSync('node', [ROOT + publisher, ROOT + outFile, status], { stdio: 'inherit' });
+// cópia no blog separado (blog completo), com canonical apontando pro fabriciomoura.com (sem conteúdo duplicado pro Google)
+if (status === 'publish') execFileSync('node', [ROOT + 'blog-br/scripts/html-para-post.mjs', ROOT + outFile, '--canonical-principal'], { stdio: 'inherit' });
 }
 
 // 4. Marcar como publicado
