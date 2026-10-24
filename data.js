@@ -130,8 +130,8 @@ window.SEO_DATA = {
       // ---- Calendário editorial de 90 dias (Fase 1 entregue) ----
       calendario: [
         // MÊS 1 — Quick wins (copiar campeões do concorrente + onda Mounjaro)
-        { mes: 1, titulo: "Pode beber álcool tomando Mounjaro? Nutricionista explica", funil: "Topo", kw: "quem toma mounjaro pode beber", vol: 2400, prioridade: "Alta", status: "Planejado" },
-        { mes: 1, titulo: "Cardápio para quem toma Mounjaro (com acompanhamento)", funil: "Meio", kw: "cardápio para quem toma mounjaro", vol: 1000, prioridade: "Alta", status: "Planejado" },
+        { mes: 1, titulo: "Pode beber álcool tomando Mounjaro? Nutricionista explica", funil: "Topo", kw: "quem toma mounjaro pode beber", vol: 2400, prioridade: "Alta", status: "Pausado", nota: "Pausado 24/10/2026: remédio fora do fabriciomoura.com enquanto o Google Ads revisa (Substâncias não aprovadas). Ir pro domínio separado." },
+        { mes: 1, titulo: "Cardápio para quem toma Mounjaro (com acompanhamento)", funil: "Meio", kw: "cardápio para quem toma mounjaro", vol: 1000, prioridade: "Alta", status: "Pausado", nota: "Pausado 24/10/2026: remédio fora do fabriciomoura.com enquanto o Google Ads revisa (Substâncias não aprovadas). Ir pro domínio separado." },
         { mes: 1, titulo: "Arroz engorda? O que diz o nutricionista", funil: "Meio", kw: "arroz engorda", vol: 6600, prioridade: "Alta", status: "Planejado" },
         { mes: 1, titulo: "6 alimentos ricos em fibras para emagrecer", funil: "Topo", kw: "alimentos ricos em fibras", vol: 0, prioridade: "Alta", status: "Publicado" },
         { mes: 1, titulo: "Creatina engorda ou emagrece?", funil: "Meio", kw: "creatina engorda ou emagrece", vol: 1900, prioridade: "Alta", status: "Planejado" },
@@ -140,8 +140,8 @@ window.SEO_DATA = {
         { mes: 2, titulo: "Gordura visceral: riscos e como reduzir", funil: "Topo", kw: "gordura visceral", vol: 22200, prioridade: "Média", status: "Publicado" },
         { mes: 2, titulo: "Nutricionista esportivo: o que faz e quando procurar", funil: "Fundo", kw: "nutricionista esportivo", vol: 5400, prioridade: "Alta", status: "Planejado" },
         { mes: 2, titulo: "Déficit calórico: a única forma real de emagrecer", funil: "Topo", kw: "déficit calórico", vol: 22200, prioridade: "Média", status: "Publicado" },
-        { mes: 2, titulo: "O que comer tomando Mounjaro: guia completo", funil: "Meio", kw: "o que comer tomando mounjaro", vol: 390, prioridade: "Média", status: "Planejado" },
-        { mes: 2, titulo: "Nutricionista pode receitar Mounjaro?", funil: "Topo", kw: "nutricionista pode receitar mounjaro", vol: 720, prioridade: "Média", status: "Planejado" },
+        { mes: 2, titulo: "O que comer tomando Mounjaro: guia completo", funil: "Meio", kw: "o que comer tomando mounjaro", vol: 390, prioridade: "Média", status: "Pausado", nota: "Pausado 24/10/2026: remédio fora do fabriciomoura.com enquanto o Google Ads revisa (Substâncias não aprovadas). Ir pro domínio separado." },
+        { mes: 2, titulo: "Nutricionista pode receitar Mounjaro?", funil: "Topo", kw: "nutricionista pode receitar mounjaro", vol: 720, prioridade: "Média", status: "Pausado", nota: "Pausado 24/10/2026: remédio fora do fabriciomoura.com enquanto o Google Ads revisa (Substâncias não aprovadas). Ir pro domínio separado." },
         { mes: 2, titulo: "Dieta da selva funciona? Nutricionista avalia", funil: "Meio", kw: "dieta da selva funciona", vol: 480, prioridade: "Baixa", status: "Planejado" },
         // MÊS 3 — Escala + conversão
         { mes: 3, titulo: "Quanto custa um nutricionista esportivo? Vale a pena?", funil: "Fundo", kw: "quanto custa nutricionista esportivo", vol: 0, prioridade: "Alta", status: "Planejado" },
@@ -152,22 +152,22 @@ window.SEO_DATA = {
         { mes: 3, titulo: "Nutricionista online vs presencial: qual escolher", funil: "Fundo", kw: "nutricionista online ou presencial", vol: 0, prioridade: "Alta", status: "Planejado" },
 
         // MÊS 4 — Reabastecimento (cluster Mounjaro/GLP-1 + emagrecimento de alto volume)
-        { mes: 4, titulo: "Efeitos colaterais do Mounjaro e como amenizar com a alimentação", funil: "Topo", kw: "efeitos colaterais mounjaro", vol: 8100, prioridade: "Alta", status: "Planejado" },
+        { mes: 4, titulo: "Efeitos colaterais do Mounjaro e como amenizar com a alimentação", funil: "Topo", kw: "efeitos colaterais mounjaro", vol: 8100, prioridade: "Alta", status: "Pausado", nota: "Pausado 24/10/2026: remédio fora do fabriciomoura.com enquanto o Google Ads revisa (Substâncias não aprovadas). Ir pro domínio separado." },
         { mes: 4, titulo: "Quantas calorias por dia para emagrecer de verdade", funil: "Topo", kw: "quantas calorias por dia para emagrecer", vol: 6600, prioridade: "Alta", status: "Planejado" },
         { mes: 4, titulo: "Cardápio simples para emagrecer com saúde", funil: "Fundo", kw: "cardápio para emagrecer", vol: 5400, prioridade: "Alta", status: "Planejado" },
-        { mes: 4, titulo: "O que acontece quando para de tomar Mounjaro (efeito rebote)", funil: "Topo", kw: "parar de tomar mounjaro", vol: 2900, prioridade: "Alta", status: "Planejado" },
-        { mes: 4, titulo: "Como não perder músculo tomando Mounjaro", funil: "Meio", kw: "perder massa muscular mounjaro", vol: 1300, prioridade: "Alta", status: "Planejado" },
-        { mes: 4, titulo: "Mounjaro ou Ozempic: qual a diferença para emagrecer", funil: "Topo", kw: "mounjaro ou ozempic", vol: 4400, prioridade: "Média", status: "Planejado" },
+        { mes: 4, titulo: "O que acontece quando para de tomar Mounjaro (efeito rebote)", funil: "Topo", kw: "parar de tomar mounjaro", vol: 2900, prioridade: "Alta", status: "Pausado", nota: "Pausado 24/10/2026: remédio fora do fabriciomoura.com enquanto o Google Ads revisa (Substâncias não aprovadas). Ir pro domínio separado." },
+        { mes: 4, titulo: "Como não perder músculo tomando Mounjaro", funil: "Meio", kw: "perder massa muscular mounjaro", vol: 1300, prioridade: "Alta", status: "Pausado", nota: "Pausado 24/10/2026: remédio fora do fabriciomoura.com enquanto o Google Ads revisa (Substâncias não aprovadas). Ir pro domínio separado." },
+        { mes: 4, titulo: "Mounjaro ou Ozempic: qual a diferença para emagrecer", funil: "Topo", kw: "mounjaro ou ozempic", vol: 4400, prioridade: "Média", status: "Pausado", nota: "Pausado 24/10/2026: remédio fora do fabriciomoura.com enquanto o Google Ads revisa (Substâncias não aprovadas). Ir pro domínio separado." },
         { mes: 4, titulo: "Como acelerar o metabolismo de verdade", funil: "Topo", kw: "como acelerar o metabolismo", vol: 3600, prioridade: "Média", status: "Planejado" },
         { mes: 4, titulo: "Ovo engorda? O que diz o nutricionista", funil: "Meio", kw: "ovo engorda", vol: 2400, prioridade: "Média", status: "Planejado" },
         { mes: 4, titulo: "Jejum intermitente emagrece mesmo? Nutricionista avalia", funil: "Meio", kw: "jejum intermitente emagrece", vol: 2900, prioridade: "Média", status: "Planejado" },
         { mes: 4, titulo: "Quanta proteína por dia para ganhar massa muscular", funil: "Meio", kw: "quantas gramas de proteina por dia", vol: 1900, prioridade: "Média", status: "Planejado" },
         // MÊS 0 — Retatrutida (GLP-1 explodindo, baixa concorrência): publica JÁ, vantagem de 1º.
         // Ângulo educativo/decisão + preservação de músculo (funil pro acompanhamento). Nada de dose/compra.
-        { mes: 0, titulo: "Retatrutida: o que é, como age e o que avaliar antes de considerar", funil: "Topo", kw: "retatrutida", vol: 40500, prioridade: "Alta", status: "Planejado" },
-        { mes: 0, titulo: "Retatrutida ou Mounjaro: diferenças, resultados e qual faz mais sentido", funil: "Meio", kw: "retatrutida ou mounjaro", vol: 590, prioridade: "Alta", status: "Planejado" },
-        { mes: 0, titulo: "Efeitos colaterais da retatrutida: o que esperar e como se cuidar", funil: "Topo", kw: "retatrutida efeitos colaterais", vol: 170, prioridade: "Alta", status: "Planejado" },
-        { mes: 0, titulo: "Retatrutida e músculo: como emagrecer sem perder massa magra", funil: "Meio", kw: "retatrutida massa muscular", vol: 0, prioridade: "Alta", status: "Planejado" },
+        { mes: 0, titulo: "Retatrutida: o que é, como age e o que avaliar antes de considerar", funil: "Topo", kw: "retatrutida", vol: 40500, prioridade: "Alta", status: "Pausado", nota: "Pausado 24/10/2026: remédio fora do fabriciomoura.com enquanto o Google Ads revisa (Substâncias não aprovadas). Ir pro domínio separado." },
+        { mes: 0, titulo: "Retatrutida ou Mounjaro: diferenças, resultados e qual faz mais sentido", funil: "Meio", kw: "retatrutida ou mounjaro", vol: 590, prioridade: "Alta", status: "Pausado", nota: "Pausado 24/10/2026: remédio fora do fabriciomoura.com enquanto o Google Ads revisa (Substâncias não aprovadas). Ir pro domínio separado." },
+        { mes: 0, titulo: "Efeitos colaterais da retatrutida: o que esperar e como se cuidar", funil: "Topo", kw: "retatrutida efeitos colaterais", vol: 170, prioridade: "Alta", status: "Pausado", nota: "Pausado 24/10/2026: remédio fora do fabriciomoura.com enquanto o Google Ads revisa (Substâncias não aprovadas). Ir pro domínio separado." },
+        { mes: 0, titulo: "Retatrutida e músculo: como emagrecer sem perder massa magra", funil: "Meio", kw: "retatrutida massa muscular", vol: 0, prioridade: "Alta", status: "Pausado", nota: "Pausado 24/10/2026: remédio fora do fabriciomoura.com enquanto o Google Ads revisa (Substâncias não aprovadas). Ir pro domínio separado." },
         // MÊS 5 — Cluster hormonal/esteroides no ângulo EDUCATIVO / redução de dano / TPC.
         // ⚠ ANTI-BAN: sem dose, sem "onde comprar", sem promessa. Educação, riscos e recuperação → funil.
         { mes: 5, titulo: "Andropausa: sintomas de testosterona baixa e o que fazer", funil: "Topo", kw: "andropausa sintomas", vol: 8100, prioridade: "Alta", status: "Planejado" },
