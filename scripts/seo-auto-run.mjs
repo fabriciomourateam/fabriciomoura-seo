@@ -17,6 +17,7 @@
  * Teste: GEN_DRY_RUN=1  → não chama IA nem WordPress; valida seleção/fila/escrita.
  */
 
+import { termosProibidos, travarSeProibido } from './temas-proibidos.mjs';
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 
@@ -50,6 +51,8 @@ const PRIO = { Alta: 0, 'Média': 1, Media: 1, 'Baixa': 2 };
 function pickTopic(items, doneKws) {
   const pending = items
     .filter(i => i.status === 'Planejado' && !doneKws.has(norm(i.kw)))
+    // trava 24/10: tema de anabolizante/medicamento nunca vai pro domínio principal
+    .filter(i => { const t = termosProibidos(`${i.titulo} ${i.kw}`); if (t.length) console.log(`⏭️  Pulado (tema proibido: ${t.join(', ')}): ${i.titulo}`); return !t.length; })
     // não sobrescreve artigo que já existe escrito à mão em blog/
     .filter(i => !existsSync(`${ROOT}blog/${slugify(i.kw)}.html`))
     .sort((a, b) =>
@@ -151,6 +154,7 @@ console.log('📝 Próximo tópico:', topic.titulo, `(kw: ${topic.kw}, mês ${to
 const template = readFileSync(TEMPLATE_FILE, 'utf8');
 const html = await generate(topic, template);
 validate(html);
+travarSeProibido(html, 'Artigo gerado');
 const slug = slugFromHtml(html) || slugify(topic.kw);
 const outFile = `blog/${slug}.html`;
 writeFileSync(ROOT + outFile, html, 'utf8');

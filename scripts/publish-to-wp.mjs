@@ -20,6 +20,7 @@
  */
 
 import { readFileSync } from 'node:fs';
+import { travarSeProibido } from './temas-proibidos.mjs';
 import { basename } from 'node:path';
 import dns from 'node:dns';
 // Alguns hosts (ex.: Hostinger) resolvem IPv6 que o runner do GitHub não alcança
@@ -40,6 +41,7 @@ if (!['draft', 'publish'].includes(status)) {
 }
 
 const html = readFileSync(file, 'utf8');
+travarSeProibido(html, file);
 
 // ── Extração ──────────────────────────────────────────────────────────────────
 const pick = (re) => { const m = html.match(re); return m ? m[1].trim() : ''; };
