@@ -44,9 +44,16 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add blog/ scripts/seo-published.json
-          if git diff --staged --quiet; then
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(seo): artigo automático publicado [skip ci]"
+          fi
+          # artigo do blog separado (fabriciomoura.blog.br): commit por último e SEM [skip ci], para a Vercel publicar
+          git add blog-br/posts/
+          if ! git diff --staged --quiet; then
+            git commit -m "blog-br: artigo automático publicado"
+          fi
+          if [ "$(git rev-list --count origin/main..HEAD)" = "0" ]; then
             echo "Nada novo para commitar (fila vazia ou sem mudanças)."
           else
-            git commit -m "chore(seo): artigo automático publicado [skip ci]"
             git push
           fi
