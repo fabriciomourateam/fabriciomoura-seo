@@ -6,10 +6,10 @@ import { listPosts, categoria, CATEGORIAS_ORDEM, FOTO, WA_LINK } from "@/lib/blo
 import { bento } from "@/lib/blog-ui";
 
 export const metadata = {
-  title: { absolute: "Blog: nutrição, emagrecimento e hipertrofia | Fabricio Moura" },
+  title: { absolute: "Nutrição e Treinamento - Fabricio Moura" },
   description: "Artigos do nutricionista esportivo Fabricio Moura sobre emagrecimento, dieta, suplementos e ganho de massa muscular. Conteúdo novo toda semana.",
   alternates: { canonical: "/" },
-  openGraph: { title: "Blog | Fabricio Moura", url: "/", type: "website", locale: "pt_BR" },
+  openGraph: { title: "Nutrição e Treinamento - Fabricio Moura", url: "/", type: "website", locale: "pt_BR" },
 };
 
 const Whats = () => (
