@@ -9,7 +9,7 @@ const montserrat = Montserrat({ subsets: ["latin"], display: "swap", variable: "
 const DESC = "Artigos do nutricionista esportivo Fabricio Moura sobre emagrecimento, dieta, suplementos e ganho de massa muscular. Conteúdo novo toda semana.";
 export const metadata = {
   metadataBase: new URL(SITE),
-  verification: { google: "zkNAiaDFqUXFKxVVaZxqbveU7TVHTUAv1xJAqRKPOD4" }, // Search Console (fabriciomouratreinador@gmail.com)
+  verification: { google: ["vSVjEyZVmvcUIuZD92Gr2YOdq9yj-0XANYBAQV9YaHA", "zkNAiaDFqUXFKxVVaZxqbveU7TVHTUAv1xJAqRKPOD4"] }, // Search Console (fabriciomouratreinador@gmail.com)
   title: SITE_NAME,
   description: DESC,
   alternates: { canonical: "/" },
