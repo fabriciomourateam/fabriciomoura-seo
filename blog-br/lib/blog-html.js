@@ -16,5 +16,8 @@ export function limparHtml(html = "") {
     .replace(/'Montserrat',\s*sans-serif/g, "var(--f-body)")
     .replace(/'Anton',\s*sans-serif/g, "var(--f-display)")
     // links para artigos deste blog viram relativos; os demais fabriciomoura.com (e as imagens) ficam absolutos
-    .replace(/https?:\/\/(?:www\.)?fabriciomoura\.com\/([a-z0-9-]+)\/?(?=["'#?\s>])/g, (m, s) => (slugs.has(s) ? `/${s}/` : m));
+    .replace(/https?:\/\/(?:www\.)?fabriciomoura\.com\/([a-z0-9-]+)\/?(?=["'#?\s>])/g, (m, s) => (slugs.has(s) ? `/${s}/` : m))
+    // o que ainda leva pro site principal (calculadora) abre em outra aba, pra o leitor não sair do blog
+    .replace(/<a\b([^>]*?)href="(https?:\/\/(?:www\.)?fabriciomoura\.com[^"]*)"([^>]*)>/g, (m, a, href, b) =>
+      /target=/.test(a + b) ? m : `<a${a}href="${href}" target="_blank" rel="noopener"${b}>`);
 }
