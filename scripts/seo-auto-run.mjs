@@ -96,6 +96,7 @@ REGRAS:
 - Faça links internos para artigos existentes quando fizer sentido: /creatina-engorda, /deficit-calorico, /gordura-visceral, /calculadora-de-imc-e-calorias.
 - 1200 a 1800 palavras, conteúdo REAL que responde a intenção de busca da palavra-chave. Sem inventar estudos ou números falsos.
 - Respeite o enquadramento de saúde: nada de prometer cura, dose de medicamento, ou promessa milagrosa.
+${topic.destino === 'blogbr' ? '- Este artigo vai para o blog fabriciomoura.blog.br (conteúdo informativo sobre medicamentos/hormônios): deixe claro que uso de medicamento ou hormônio só com prescrição e acompanhamento médico.' : '- Este artigo vai para o site principal: NÃO cite hormônios (testosterona, cortisol, estrogênio etc.), anabolizantes nem medicamentos (Mounjaro, Ozempic etc.). Se o tema pedir, explique pelo lado da alimentação, treino e sono, sem nomear hormônios.'}
 
 TEMA DO NOVO ARTIGO:
 - Título sugerido: ${topic.titulo}
