@@ -8,13 +8,16 @@
  *
  * Usada em: seo-auto-run.mjs (pula o tópico e confere o texto gerado), publish-to-site.mjs e
  * publish-to-wp.mjs (última barreira antes de enviar). Para liberar um termo, edite a lista abaixo.
- * "testosterona" sozinha NÃO trava (artigos naturais como creatina/testosterona natural são ok); TRT/reposição hormonal travam.
+ * Desde 26/10 QUALQUER tema de hormônio (inclusive testosterona natural/andropausa) trava: vai só pro blog separado.
  */
 const TERMOS = [
   // anabolizantes e afins
   'anabolizante', 'anabolizantes', 'esteroide', 'esteroides', 'esteróide', 'esteróides',
   'masteron', 'drostanolona', 'deca durabolin', 'deca-durabolin', 'nandrolona', 'durateston',
-  'trt', 'reposição hormonal', 'oxandrolona', 'stanozolol', 'winstrol',
+  'trt', 'reposição hormonal',
+  // hormônios em geral (pedido do Fabricio 26/10: NADA de hormônio no site principal)
+  'testosterona', 'andropausa', 'hormonio', 'hormonios', 'hormônio', 'hormônios', 'hormonal', 'hormonais',
+  'estrogenio', 'estrogênio', 'progesterona', 'cortisol', 'oxandrolona', 'stanozolol', 'winstrol',
   'trembolona', 'boldenona', 'hemogenin', 'oximetolona', 'dianabol', 'metandrostenolona',
   'clembuterol', 'sarm', 'sarms', 'ostarina', 'ligandrol', 'somatropina', 'hormônio do crescimento',
   'pós-ciclo', 'pos-ciclo', 'pós ciclo', 'tpc', 'tamoxifeno', 'clomifeno', 'hcg',
