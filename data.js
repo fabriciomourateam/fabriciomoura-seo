@@ -170,12 +170,28 @@ window.SEO_DATA = {
         { mes: 0, titulo: "Retatrutida e músculo: como emagrecer sem perder massa magra", funil: "Meio", kw: "retatrutida massa muscular", vol: 0, prioridade: "Alta", status: "Planejado", nota: "Pausado 24/10/2026: remédio fora do fabriciomoura.com enquanto o Google Ads revisa (Substâncias não aprovadas). Ir pro domínio separado." },
         // MÊS 5 — Cluster hormonal/esteroides no ângulo EDUCATIVO / redução de dano / TPC.
         // ⚠ ANTI-BAN: sem dose, sem "onde comprar", sem promessa. Educação, riscos e recuperação → funil.
-        { mes: 5, titulo: "Andropausa: sintomas de testosterona baixa e o que fazer", funil: "Topo", kw: "andropausa sintomas", vol: 8100, prioridade: "Alta", status: "Planejado" },
+        { mes: 11, titulo: "Andropausa: sintomas de testosterona baixa e o que fazer", funil: "Topo", kw: "andropausa sintomas", vol: 8100, prioridade: "Alta", status: "Planejado", nota: "Só blog.br (hormônio). Fila 26/10: sai sex 13/11." },
         { mes: 5, titulo: "Terapia pós-ciclo (TPC): como recuperar sua testosterona com saúde", funil: "Meio", kw: "terapia pos ciclo", vol: 260, prioridade: "Alta", status: "Cancelado", nota: "Cancelado 23/10/2026: Google Ads reprovou o domínio por Substâncias não aprovadas (anabolizante). Não publicar." },
         { mes: 5, titulo: "Deca Durabolin: para que serve, o que faz no corpo e os riscos reais", funil: "Topo", kw: "deca durabolin para que serve", vol: 6600, prioridade: "Média", status: "Cancelado", nota: "Cancelado 23/10/2026: Google Ads reprovou o domínio por Substâncias não aprovadas (anabolizante). Não publicar." },
         { mes: 0, titulo: "Masteron: o que é, para que serve e por que exige acompanhamento", funil: "Topo", kw: "masteron para que serve", vol: 5400, prioridade: "Média", status: "Planejado" },
         { mes: 5, titulo: "Efeitos colaterais do Deca Durabolin no corpo e nos seus hormônios", funil: "Topo", kw: "deca durabolin efeitos colaterais", vol: 1000, prioridade: "Média", status: "Cancelado", nota: "Cancelado 23/10/2026: Google Ads reprovou o domínio por Substâncias não aprovadas (anabolizante). Não publicar." },
-        { mes: 0, titulo: "Efeitos colaterais do Masteron: o que ninguém te conta antes", funil: "Topo", kw: "masteron efeitos colaterais", vol: 880, prioridade: "Média", status: "Planejado" }
+        { mes: 0, titulo: "Efeitos colaterais do Masteron: o que ninguém te conta antes", funil: "Topo", kw: "masteron efeitos colaterais", vol: 880, prioridade: "Média", status: "Planejado" },
+        // FILA 26/10/2026 (aprovada pelo Fabricio): 16 temas, ter e sex, volumes Semrush BR. mes = ordem de saída.
+        // Remédio/hormônio vai sozinho pro blog.br (temas-proibidos.mjs); o resto vai pro site + cópia no blog.br.
+        { mes: 6, titulo: "O que comer antes do treino: o guia do nutricionista", funil: "Meio", kw: "o que comer antes do treino", vol: 9900, prioridade: "Alta", status: "Planejado", nota: "Fila 26/10: site, sex 30/10." },
+        { mes: 7, titulo: "Tirzepatida: o que é, como age e o que avaliar antes de usar", funil: "Topo", kw: "tirzepatida", vol: 550000, prioridade: "Alta", status: "Planejado", nota: "Fila 26/10: blog.br, ter 03/11." },
+        { mes: 8, titulo: "Dieta para ganhar massa muscular: como montar a sua", funil: "Meio", kw: "dieta para ganhar massa muscular", vol: 5400, prioridade: "Alta", status: "Planejado", nota: "Fila 26/10: site, sex 06/11." },
+        { mes: 9, titulo: "Creatina: para que serve, como tomar e quando funciona", funil: "Meio", kw: "creatina para que serve", vol: 110000, prioridade: "Alta", status: "Planejado", nota: "Fila 26/10: site, ter 10/11." },
+        { mes: 12, titulo: "Batata doce engorda? O que diz o nutricionista", funil: "Meio", kw: "batata doce engorda", vol: 12100, prioridade: "Alta", status: "Planejado", nota: "Fila 26/10: site, ter 17/11." },
+        { mes: 13, titulo: "Taxa metabólica basal: o que é e como calcular a sua", funil: "Topo", kw: "taxa metabolica basal", vol: 14800, prioridade: "Alta", status: "Planejado", nota: "Fila 26/10: site, sex 20/11." },
+        { mes: 14, titulo: "Cortisol alto: sintomas, causas e o que fazer", funil: "Topo", kw: "cortisol alto sintomas", vol: 14800, prioridade: "Alta", status: "Planejado", nota: "Fila 26/10: blog.br, ter 24/11." },
+        { mes: 15, titulo: "Bioimpedância: como funciona e se vale a pena fazer", funil: "Topo", kw: "bioimpedancia", vol: 12100, prioridade: "Alta", status: "Planejado", nota: "Fila 26/10: site, sex 27/11." },
+        { mes: 16, titulo: "Dieta low carb funciona? Como fazer do jeito certo", funil: "Meio", kw: "dieta low carb", vol: 14800, prioridade: "Alta", status: "Planejado", nota: "Fila 26/10: site, ter 01/12." },
+        { mes: 17, titulo: "Wegovy: o que é, como age e o que esperar", funil: "Topo", kw: "wegovy", vol: 201000, prioridade: "Alta", status: "Planejado", nota: "Fila 26/10: blog.br, sex 04/12." },
+        { mes: 18, titulo: "Pré-treino: o que é, quando tomar e se vale a pena", funil: "Meio", kw: "pre treino", vol: 135000, prioridade: "Alta", status: "Planejado", nota: "Fila 26/10: site, ter 08/12." },
+        { mes: 19, titulo: "Glutamina: para que serve e quando vale a pena", funil: "Meio", kw: "glutamina para que serve", vol: 49500, prioridade: "Alta", status: "Planejado", nota: "Fila 26/10: site, sex 11/12." },
+        { mes: 20, titulo: "Caneta emagrecedora: como funciona e o que avaliar antes", funil: "Topo", kw: "caneta emagrecedora", vol: 74000, prioridade: "Alta", status: "Planejado", nota: "Fila 26/10: blog.br, ter 15/12." },
+        { mes: 21, titulo: "Ômega 3: para que serve e quem deve tomar", funil: "Meio", kw: "omega 3 para que serve", vol: 49500, prioridade: "Alta", status: "Planejado", nota: "Fila 26/10: site, sex 18/12." }
       ],
 
       // ---- Fase 3: Análise de tráfego pago (PPC) — dados reais Semrush (banco br) ----
