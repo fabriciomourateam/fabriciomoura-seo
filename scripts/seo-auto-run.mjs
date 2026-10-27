@@ -8,11 +8,10 @@
  *   2. Gera o artigo HTML completo no MESMO template premium (usa um artigo
  *      existente como modelo de formato) via API da Anthropic.
  *   3. Salva em blog/<slug>.html e publica no site (publish-to-site.mjs, Next.js na Vercel).
- *      Sem os segredos do site, cai no WordPress antigo (publish-to-wp.mjs).
+ *      Sem os segredos do site, o robô para (desde 27/10 o WordPress não é mais destino).
  *   4. Marca o tópico como publicado. A Action faz commit dos arquivos alterados.
  *
  * Segredos (env): ANTHROPIC_API_KEY + SITE_URL, BLOG_API_TOKEN (site novo)
- *                 ou WP_URL, WP_USER, WP_APP_PASSWORD (WordPress antigo, usado só se faltar o do site)
  * Opcionais: SEO_MODEL (default claude-sonnet-4-6), PUBLISH_STATUS (default publish)
  * Teste: GEN_DRY_RUN=1  → não chama IA nem WordPress; valida seleção/fila/escrita.
  */
@@ -180,9 +179,14 @@ if (topic.destino === 'blogbr') {
   console.log('Publicando em: blog separado (https://fabriciomoura.blog.br)');
   execFileSync('node', [ROOT + 'blog-br/scripts/html-para-post.mjs', ROOT + outFile], { stdio: 'inherit' });
 } else {
+// 27/10/2026: o WordPress foi desligado do fluxo. Sem os segredos do site, o robô PARA (não cai mais no WP).
 const paraSite = !!(process.env.SITE_URL && process.env.BLOG_API_TOKEN);
-const publisher = paraSite ? 'scripts/publish-to-site.mjs' : 'scripts/publish-to-wp.mjs';
-console.log(`Publicando em: ${paraSite ? 'site novo (' + process.env.SITE_URL + ')' : 'WordPress'}`);
+if (!paraSite && topic.destino !== 'blogbr') {
+  console.error('⛔ Faltam SITE_URL/BLOG_API_TOKEN: nada foi publicado (o WordPress não é mais destino).');
+  process.exit(1);
+}
+const publisher = 'scripts/publish-to-site.mjs';
+console.log(`Publicando em: site novo (${process.env.SITE_URL || '-'})`);
 execFileSync('node', [ROOT + publisher, ROOT + outFile, status], { stdio: 'inherit' });
 // cópia no blog separado (blog completo), com canonical apontando pro fabriciomoura.com (sem conteúdo duplicado pro Google)
 if (status === 'publish') execFileSync('node', [ROOT + 'blog-br/scripts/html-para-post.mjs', ROOT + outFile, '--canonical-principal'], { stdio: 'inherit' });

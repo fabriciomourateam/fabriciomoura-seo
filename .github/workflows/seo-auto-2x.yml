@@ -30,12 +30,9 @@ jobs:
       - name: Gerar e publicar
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          # Site novo (Next.js). Com estes dois segredos o artigo vai pro site; sem eles, pro WordPress.
+          # Site novo (Next.js). Sem estes dois segredos o robô PARA (o WordPress não é mais destino desde 27/10).
           SITE_URL: ${{ secrets.SITE_URL }}
           BLOG_API_TOKEN: ${{ secrets.BLOG_API_TOKEN }}
-          WP_URL: ${{ secrets.WP_URL }}
-          WP_USER: ${{ secrets.WP_USER }}
-          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
           PUBLISH_STATUS: ${{ inputs.status || 'publish' }}
         run: node scripts/seo-auto-run.mjs
 
