@@ -210,5 +210,13 @@
     "file": "blog/o-que-comer-antes-do-treino.html",
     "destino": "site",
     "date": "2026-10-30"
+  },
+  {
+    "kw": "tirzepatida",
+    "slug": "tirzepatida",
+    "titulo": "Tirzepatida: o que é, como age e o que avaliar antes de usar",
+    "file": "blog/tirzepatida.html",
+    "destino": "blogbr",
+    "date": "2026-11-03"
   }
 ]
