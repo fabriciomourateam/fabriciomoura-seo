@@ -242,5 +242,13 @@
     "file": "blog/andropausa-sintomas.html",
     "destino": "blogbr",
     "date": "2026-11-13"
+  },
+  {
+    "kw": "batata doce engorda",
+    "slug": "batata-doce-engorda",
+    "titulo": "Batata doce engorda? O que diz o nutricionista",
+    "file": "blog/batata-doce-engorda.html",
+    "destino": "site",
+    "date": "2026-11-17"
   }
 ]
