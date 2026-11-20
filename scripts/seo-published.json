@@ -250,5 +250,13 @@
     "file": "blog/batata-doce-engorda.html",
     "destino": "site",
     "date": "2026-11-17"
+  },
+  {
+    "kw": "taxa metabolica basal",
+    "slug": "taxa-metabolica-basal",
+    "titulo": "Taxa metabólica basal: o que é e como calcular a sua",
+    "file": "blog/taxa-metabolica-basal.html",
+    "destino": "site",
+    "date": "2026-11-20"
   }
 ]
