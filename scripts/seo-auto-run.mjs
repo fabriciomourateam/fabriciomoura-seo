@@ -92,6 +92,8 @@ async function generate(topic, template) {
 REGRAS:
 - Copie VERBATIM o bloco <style>, as classes (mj-hero, mj-quote, mj-author, mj-plan, mj-meal, mj-midcta, mj-yes, mj-avoid, kick gold, etc.), o bloco de autor, os CTAs e os links para fabriciomoura.com e o WhatsApp. Só muda o CONTEÚDO textual.
 - Preencha o comentário de publicação no topo (Título, Slug, Título SEO, Meta, Palavra-chave foco) e mantenha os marcadores <!-- INÍCIO DO POST --> e <!-- FIM DO POST -->.
+- Logo depois do bloco de autor do topo, o PRIMEIRO parágrafo do texto começa com "<strong>A resposta curta:</strong>" e responde a pergunta do título em 2 ou 3 frases, com o número ou a regra principal. Só depois vem o desenvolvimento.
+- Mantenha no bloco de autor o texto do modelo com os registros (CRN3 95563/P e CREF 201974-G/SP), sem mudar.
 - Faça links internos para artigos existentes quando fizer sentido: /creatina-engorda, /deficit-calorico, /gordura-visceral, /calculadora-de-imc-e-calorias.
 - 1200 a 1800 palavras, conteúdo REAL que responde a intenção de busca da palavra-chave. Sem inventar estudos ou números falsos.
 - Respeite o enquadramento de saúde: nada de prometer cura, dose de medicamento, ou promessa milagrosa.
